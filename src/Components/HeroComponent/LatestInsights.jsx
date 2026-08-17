@@ -11,28 +11,28 @@ const insightsData = [
     gradient: "from-blue-600 via-indigo-600 to-blue-500",
     link: "/about",
     artwork: (
-      <div className="w-full h-full relative flex items-center justify-center p-6 gap-3 overflow-hidden">
+      <div className="w-full h-full relative flex items-center justify-center p-3.5 sm:p-4 gap-2 sm:gap-2.5 overflow-hidden">
         {/* Left Dark Squircle with < / > Code Braces */}
-        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-300">
-          <span className="font-mono text-emerald-400 text-3xl sm:text-4xl font-black">&lt;/&gt;</span>
+        <div className="w-16 h-20 sm:w-20 sm:h-24 rounded-xl bg-slate-950/80 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-xl shrink-0 group-hover:scale-105 transition-transform duration-300">
+          <span className="font-mono text-emerald-400 text-2xl sm:text-3xl font-bold">&lt;/&gt;</span>
         </div>
 
         {/* Middle Wireframe Map Panel */}
-        <div className="w-20 h-24 sm:w-24 sm:h-28 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 flex flex-col justify-between p-2.5 shrink-0">
-          <div className="w-full h-2 rounded bg-cyan-300/40" />
+        <div className="flex-1 h-20 sm:h-24 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 flex flex-col justify-between p-2 shrink-0">
+          <div className="w-full h-1.5 rounded bg-cyan-300/40" />
           <div className="space-y-1">
-            <div className="w-3/4 h-1.5 rounded bg-white/40" />
-            <div className="w-1/2 h-1.5 rounded bg-white/30" />
+            <div className="w-3/4 h-1 rounded bg-white/40" />
+            <div className="w-1/2 h-1 rounded bg-white/30" />
           </div>
-          <div className="w-full h-8 rounded bg-cyan-500/20 flex items-center justify-center">
-            <div className="w-3 h-3 rounded-full bg-cyan-300 animate-pulse" />
+          <div className="w-full h-6 rounded bg-cyan-500/20 flex items-center justify-center">
+            <div className="w-2.5 h-2.5 rounded-full bg-cyan-300 animate-pulse" />
           </div>
         </div>
 
         {/* Right Data Grid Panel */}
-        <div className="w-20 h-24 sm:w-24 sm:h-28 rounded-2xl bg-slate-900/60 backdrop-blur-sm border border-white/15 p-2 grid grid-cols-3 gap-1 shrink-0">
+        <div className="w-16 h-20 sm:w-20 sm:h-24 rounded-xl bg-slate-900/60 backdrop-blur-sm border border-white/15 p-1.5 grid grid-cols-3 gap-1 shrink-0">
           {Array.from({ length: 9 }).map((_, i) => (
-            <div key={i} className={`rounded-sm ${i % 2 === 0 ? "bg-cyan-400/40" : "bg-blue-400/20"}`} />
+            <div key={i} className={`rounded-xs ${i % 2 === 0 ? "bg-cyan-400/40" : "bg-blue-400/20"}`} />
           ))}
         </div>
       </div>
@@ -46,30 +46,30 @@ const insightsData = [
     gradient: "from-[#004658] via-[#006077] to-[#0D9488]",
     link: "/web-development",
     artwork: (
-      <div className="w-full h-full relative flex items-center justify-center p-6 gap-3 overflow-hidden">
+      <div className="w-full h-full relative flex items-center justify-center p-3.5 sm:p-4 gap-2.5 sm:gap-3 overflow-hidden">
         {/* 3x3 Matrix Blocks Panel */}
-        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-slate-900/80 backdrop-blur-md border border-white/20 p-3 grid grid-cols-3 gap-1.5 items-center justify-items-center shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-300">
+        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-900/80 backdrop-blur-md border border-white/20 p-2.5 grid grid-cols-3 gap-1 items-center justify-items-center shadow-xl shrink-0 group-hover:scale-105 transition-transform duration-300">
           {Array.from({ length: 9 }).map((_, i) => (
             <div
               key={i}
-              className={`w-3.5 h-3.5 rounded-full ${i === 4 ? "bg-emerald-400 shadow-sm shadow-emerald-400" : "bg-slate-100/90"}`}
+              className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full ${i === 4 ? "bg-emerald-400 shadow-xs shadow-emerald-400" : "bg-slate-100/90"}`}
             />
           ))}
         </div>
 
         {/* Sprint Dashboard Cards */}
-        <div className="flex-1 h-24 sm:h-28 flex flex-col justify-between p-2 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20">
-          <div className="flex items-center gap-1.5">
-            <div className="w-2 h-2 rounded-full bg-emerald-300" />
-            <div className="w-2 h-2 rounded-full bg-cyan-300" />
-            <div className="w-2 h-2 rounded-full bg-blue-300" />
+        <div className="flex-1 h-20 sm:h-24 flex flex-col justify-between p-2 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20">
+          <div className="flex items-center gap-1">
+            <div className="w-1.5 h-1.5 rounded-full bg-emerald-300" />
+            <div className="w-1.5 h-1.5 rounded-full bg-cyan-300" />
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-300" />
           </div>
-          <div className="space-y-1.5">
-            <div className="w-full h-3 rounded bg-white/25 flex items-center px-1">
-              <div className="w-1/3 h-1.5 rounded bg-emerald-400" />
+          <div className="space-y-1">
+            <div className="w-full h-2.5 rounded bg-white/25 flex items-center px-1">
+              <div className="w-1/3 h-1 rounded bg-emerald-400" />
             </div>
-            <div className="w-4/5 h-3 rounded bg-white/20 flex items-center px-1">
-              <div className="w-2/3 h-1.5 rounded bg-cyan-300" />
+            <div className="w-4/5 h-2.5 rounded bg-white/20 flex items-center px-1">
+              <div className="w-2/3 h-1 rounded bg-cyan-300" />
             </div>
           </div>
         </div>
@@ -84,27 +84,27 @@ const insightsData = [
     gradient: "from-[#4A0E4E] via-[#6B21A8] to-[#9333EA]",
     link: "/team",
     artwork: (
-      <div className="w-full h-full relative flex items-center justify-center p-6 gap-3 overflow-hidden">
+      <div className="w-full h-full relative flex items-center justify-center p-3.5 sm:p-4 gap-2.5 sm:gap-3 overflow-hidden">
         {/* Center Team Collaboration Hub */}
-        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-300">
-          <div className="relative w-14 h-14 flex items-center justify-center">
-            <div className="absolute w-12 h-12 rounded-full border-2 border-purple-300/40" />
-            <div className="w-4 h-4 rounded-full bg-purple-300" />
-            <div className="absolute -top-1 w-3 h-3 rounded-full bg-cyan-300" />
-            <div className="absolute -bottom-1 w-3 h-3 rounded-full bg-emerald-300" />
-            <div className="absolute -left-1 w-3 h-3 rounded-full bg-amber-300" />
-            <div className="absolute -right-1 w-3 h-3 rounded-full bg-pink-300" />
+        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-950/80 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-xl shrink-0 group-hover:scale-105 transition-transform duration-300">
+          <div className="relative w-11 h-11 flex items-center justify-center">
+            <div className="absolute w-10 h-10 rounded-full border-2 border-purple-300/40" />
+            <div className="w-3.5 h-3.5 rounded-full bg-purple-300" />
+            <div className="absolute -top-1 w-2.5 h-2.5 rounded-full bg-cyan-300" />
+            <div className="absolute -bottom-1 w-2.5 h-2.5 rounded-full bg-emerald-300" />
+            <div className="absolute -left-1 w-2.5 h-2.5 rounded-full bg-amber-300" />
+            <div className="absolute -right-1 w-2.5 h-2.5 rounded-full bg-pink-300" />
           </div>
         </div>
 
         {/* Right Talent Cards Matrix */}
-        <div className="w-28 h-24 sm:w-32 sm:h-28 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-2.5 flex flex-col justify-between">
-          <div className="w-full h-3 rounded bg-purple-300/30 flex items-center px-1">
-            <div className="w-1/2 h-1.5 rounded bg-white" />
+        <div className="flex-1 h-20 sm:h-24 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex flex-col justify-between">
+          <div className="w-full h-2.5 rounded bg-purple-300/30 flex items-center px-1">
+            <div className="w-1/2 h-1 rounded bg-white" />
           </div>
           <div className="grid grid-cols-4 gap-1">
             {Array.from({ length: 8 }).map((_, i) => (
-              <div key={i} className="h-4 rounded bg-white/20" />
+              <div key={i} className="h-3 rounded bg-white/20" />
             ))}
           </div>
         </div>
@@ -119,22 +119,22 @@ const insightsData = [
     gradient: "from-[#EA580C] via-[#C2410C] to-[#D97706]",
     link: "/software/erp",
     artwork: (
-      <div className="w-full h-full relative flex items-center justify-center p-6 gap-3 overflow-hidden">
+      <div className="w-full h-full relative flex items-center justify-center p-3.5 sm:p-4 gap-2.5 sm:gap-3 overflow-hidden">
         {/* Neural Network Center Hub */}
-        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-slate-950/80 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-2xl shrink-0 group-hover:scale-105 transition-transform duration-300">
-          <svg className="w-12 h-12 text-amber-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-xl bg-slate-950/80 backdrop-blur-md border border-white/20 flex items-center justify-center shadow-xl shrink-0 group-hover:scale-105 transition-transform duration-300">
+          <svg className="w-9 h-9 sm:w-10 sm:h-10 text-amber-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
           </svg>
         </div>
 
         {/* Vector Embeddings Stream */}
-        <div className="flex-1 h-24 sm:h-28 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/20 p-2.5 flex flex-col justify-between">
-          <div className="w-full h-2 rounded bg-amber-300/50" />
+        <div className="flex-1 h-20 sm:h-24 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-2 flex flex-col justify-between">
+          <div className="w-full h-1.5 rounded bg-amber-300/50" />
           <div className="space-y-1">
-            <div className="w-full h-2 rounded bg-white/30" />
-            <div className="w-3/4 h-2 rounded bg-white/20" />
+            <div className="w-full h-1.5 rounded bg-white/30" />
+            <div className="w-3/4 h-1.5 rounded bg-white/20" />
           </div>
-          <div className="w-1/2 h-2 rounded bg-amber-400" />
+          <div className="w-1/2 h-1.5 rounded bg-amber-400" />
         </div>
       </div>
     )
@@ -146,7 +146,7 @@ const LatestInsights = () => {
 
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = direction === "left" ? -420 : 420;
+      const scrollAmount = direction === "left" ? -320 : 320;
       scrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
@@ -160,6 +160,10 @@ const LatestInsights = () => {
           
           {/* Main Headline */}
           <div>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2.5 shadow-2xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
+              <span>ENGINEERING PLAYBOOK</span>
+            </div>
             <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-tight">
               Our latest insights<span className="text-[#EA580C]">.</span>
             </h2>
@@ -175,8 +179,8 @@ const LatestInsights = () => {
               <span>→</span>
             </Link>
 
-            {/* Slider Navigation Arrow Buttons */}
-            <div className="hidden sm:flex items-center gap-1.5">
+            {/* Slider Navigation Arrow Buttons (Visible on Mobile/Tablet) */}
+            <div className="flex lg:hidden items-center gap-1.5">
               <button
                 onClick={() => scroll("left")}
                 aria-label="Previous Insights"
@@ -201,22 +205,22 @@ const LatestInsights = () => {
 
         </div>
 
-        {/* Horizontal Carousel of Insight Cards */}
+        {/* Responsive Grid on Desktop / Smooth Slider on Mobile & Tablet */}
         <div
           ref={scrollRef}
-          className="flex gap-5 sm:gap-6 overflow-x-auto no-scrollbar scroll-smooth pb-3 pt-0.5 select-none"
+          className="flex lg:grid lg:grid-cols-4 gap-5 sm:gap-6 overflow-x-auto lg:overflow-x-visible no-scrollbar scroll-smooth pb-3 pt-0.5 select-none"
           style={{ scrollSnapType: "x mandatory" }}
         >
           {insightsData.map((item) => (
             <motion.div
               key={item.id}
-              className="w-[280px] sm:w-[320px] lg:w-[350px] shrink-0"
+              className="w-[280px] sm:w-[310px] lg:w-auto shrink-0 lg:shrink"
               style={{ scrollSnapAlign: "start" }}
             >
-              <Link to={item.link} className="group block text-left">
+              <Link to={item.link} className="group block text-left h-full">
                 
                 {/* Visual Artwork Thumbnail Banner */}
-                <div className={`relative h-44 sm:h-48 lg:h-52 w-full rounded-2xl bg-gradient-to-br ${item.gradient} overflow-hidden mb-3.5 shadow-xs group-hover:shadow-lg group-hover:shadow-black/10 group-hover:-translate-y-0.5 transition-all duration-300`}>
+                <div className={`relative h-44 sm:h-48 lg:h-48 xl:h-50 w-full rounded-2xl bg-gradient-to-br ${item.gradient} overflow-hidden mb-3.5 shadow-xs group-hover:shadow-lg group-hover:shadow-black/10 group-hover:-translate-y-0.5 transition-all duration-300`}>
                   {item.artwork}
                   
                   {/* Subtle Gradient Shine */}
@@ -224,7 +228,7 @@ const LatestInsights = () => {
                 </div>
 
                 {/* Article Title */}
-                <h3 className="text-base sm:text-lg font-bold text-slate-950 group-hover:text-[#004658] transition-colors leading-snug tracking-tight mb-1.5">
+                <h3 className="text-base sm:text-[17px] font-bold text-slate-950 group-hover:text-[#004658] transition-colors leading-snug tracking-tight mb-1.5">
                   {item.title}
                 </h3>
 
