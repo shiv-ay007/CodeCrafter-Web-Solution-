@@ -160,11 +160,11 @@ const LatestInsights = () => {
           
           {/* Main Headline */}
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2.5 shadow-2xs">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-xs font-semibold uppercase tracking-wider mb-2.5 shadow-2xs">
               <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
               <span>ENGINEERING PLAYBOOK</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-950 leading-tight">
               Our latest insights<span className="text-[#EA580C]">.</span>
             </h2>
           </div>
@@ -173,7 +173,7 @@ const LatestInsights = () => {
           <div className="shrink-0 pb-0.5 text-left md:text-right flex items-center gap-4">
             <Link
               to="/about"
-              className="text-xs sm:text-sm font-bold text-slate-950 hover:text-[#004658] border-b border-slate-950 hover:border-[#004658] pb-0.5 transition-colors inline-flex items-center gap-1"
+              className="text-xs sm:text-sm font-semibold text-slate-950 hover:text-[#004658] border-b border-slate-950 hover:border-[#004658] pb-0.5 transition-colors inline-flex items-center gap-1"
             >
               <span>Over 1,100 articles on technology and talent</span>
               <span>→</span>
@@ -228,13 +228,13 @@ const LatestInsights = () => {
                 </div>
 
                 {/* Article Title */}
-                <h3 className="text-base sm:text-[17px] font-bold text-slate-950 group-hover:text-[#004658] transition-colors leading-snug tracking-tight mb-1.5">
+                <h3 className="text-base sm:text-lg lg:text-[18px] font-semibold text-slate-950 group-hover:text-[#004658] transition-colors leading-snug tracking-tight mb-1.5">
                   {item.title}
                 </h3>
 
                 {/* Metadata */}
-                <div className="flex items-center gap-2 text-[11px] font-semibold text-slate-500">
-                  <span className="text-[#004658] font-bold">{item.category}</span>
+                <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
+                  <span className="text-[#004658] font-semibold">{item.category}</span>
                   <span>•</span>
                   <span>{item.readTime}</span>
                 </div>

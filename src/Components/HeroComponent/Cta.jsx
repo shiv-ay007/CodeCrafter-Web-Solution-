@@ -117,18 +117,18 @@ const Cta = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2.5 shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-xs font-semibold uppercase tracking-wider mb-2.5 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
             <span>START SCALING TODAY</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-slate-950 tracking-[-0.03em] leading-tight mb-2.5">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold text-slate-950 tracking-[-0.03em] leading-tight mb-2.5">
             Ready to accelerate your next <br className="hidden sm:inline" />
-            <span className="text-[#004658]">digital engineering milestone<span className="text-[#EA580C]">?</span></span>
+            <span className="text-[#004658]">digital engineering milestone?</span>
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-600 font-normal max-w-xl mx-auto leading-relaxed">
-            Get a tailored architecture blueprint, dedicated squad matching, and transparent project estimation within 24 hours.
+          <p className="text-sm sm:text-base text-slate-600 font-normal max-w-lg mx-auto leading-relaxed">
+            Get a custom architecture plan, dedicated squad matching, and project estimation within 24 hours.
           </p>
         </motion.div>
       </div>
@@ -169,25 +169,25 @@ const Cta = () => {
           </div>
 
           {/* Dynamic Active CTA Action Title */}
-          <h3 className="text-xs sm:text-sm lg:text-[15px] font-bold text-slate-950 tracking-tight leading-tight mb-0.5">
+          <h3 className="text-xs sm:text-sm lg:text-[15px] font-semibold text-slate-950 tracking-tight leading-tight mb-0.5">
             {activeCenterText.title}
           </h3>
 
           {/* Dynamic Offer Badge */}
-          <span className="text-[9.5px] sm:text-[10.5px] font-bold text-[#004658] uppercase tracking-wider mb-2.5 block">
+          <span className="text-[9.5px] sm:text-[10.5px] font-medium text-[#004658] uppercase tracking-wider mb-2.5 block">
             ✦ {activeCenterText.badge}
           </span>
 
           {/* High-Converting Primary Action Button */}
           <Link
             to="/contact"
-            className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#004658] text-white text-[11px] sm:text-xs font-bold shadow-md shadow-[#004658]/25 hover:bg-[#003442] hover:scale-105 hover:shadow-lg transition-all duration-200"
+            className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#004658] text-white text-xs sm:text-sm font-semibold shadow-md shadow-[#004658]/25 hover:bg-[#003442] hover:scale-105 hover:shadow-lg transition-all duration-200"
           >
             <span>Book Discovery Call</span>
-            <span className="text-cyan-300">→</span>
+            <span className="text-cyan-300 font-semibold">→</span>
           </Link>
 
-          <span className="text-[9px] text-slate-500 font-medium mt-1">
+          <span className="text-[9px] text-slate-500 font-normal mt-1">
             No commitment • NDA signed
           </span>
         </motion.div>
@@ -214,10 +214,10 @@ const Cta = () => {
                 {badge.icon}
               </div>
               <div className="text-left">
-                <h4 className="text-[11px] sm:text-xs font-bold text-slate-950 leading-tight">
+                <h4 className="text-xs sm:text-[13px] font-semibold text-slate-950 leading-tight">
                   {badge.title}
                 </h4>
-                <p className="text-[9.5px] sm:text-[10px] text-slate-500 font-medium">
+                <p className="text-[10px] text-slate-500 font-normal">
                   {badge.subtitle}
                 </p>
               </div>

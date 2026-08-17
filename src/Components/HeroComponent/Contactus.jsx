@@ -6,8 +6,9 @@ const Contactus = () => {
     fullName: '',
     email: '',
     phone: '',
-    businessType: '',
-    projectDetails: ''
+    natureOfBusiness: '',
+    serviceRequired: 'Custom Web & SaaS Development',
+    message: ''
   })
 
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -36,8 +37,9 @@ const Contactus = () => {
         fullName: '',
         email: '',
         phone: '',
-        businessType: '',
-        projectDetails: ''
+        natureOfBusiness: '',
+        serviceRequired: 'Custom Web & SaaS Development',
+        message: ''
       })
     }, 4000)
   }
@@ -62,18 +64,18 @@ const Contactus = () => {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center text-center mb-8 sm:mb-9"
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2.5">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-xs font-semibold uppercase tracking-wider mb-2.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" />
             <span>GET IN TOUCH</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-tight max-w-2xl mb-2.5">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-950 leading-tight max-w-2xl mb-2.5">
             Let's build something <br className="hidden sm:block" />
             extraordinary <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#0086a8]">together</span>
           </h2>
 
-          <p className="text-xs sm:text-sm text-slate-600 max-w-xl font-normal leading-relaxed">
-            Have a project in mind or want to discuss custom software solutions? Fill out the form and our engineering team will get back to you within 24 hours.
+          <p className="text-sm sm:text-base text-slate-600 max-w-lg font-normal leading-relaxed">
+            Have a project in mind? Share your goals and our engineering team will get back to you within 24 hours.
           </p>
         </motion.div>
 
@@ -89,7 +91,7 @@ const Contactus = () => {
             className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-7 lg:p-8 border border-slate-200/90 shadow-xl shadow-slate-300/30 flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-xl sm:text-2xl font-bold text-slate-950 mb-1">
+              <h3 className="text-xl sm:text-2xl font-semibold text-slate-950 mb-1">
                 Start A Conversation
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mb-5 sm:mb-6 font-normal">
@@ -110,7 +112,7 @@ const Contactus = () => {
                 {/* Full Name & Email Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Full Name *
                     </label>
                     <input
@@ -125,7 +127,7 @@ const Contactus = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Email Address *
                     </label>
                     <input
@@ -143,7 +145,7 @@ const Contactus = () => {
                 {/* Phone & Nature of Business Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Phone Number *
                     </label>
                     <input
@@ -158,49 +160,64 @@ const Contactus = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                      Nature of Business
+                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                      Business Type *
                     </label>
-                    <select
-                      name="businessType"
-                      value={formData.businessType}
+                    <input
+                      type="text"
+                      name="natureOfBusiness"
+                      value={formData.natureOfBusiness}
                       onChange={handleChange}
+                      required
+                      placeholder="e.g. Fintech, SaaS, Healthcare"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
-                    >
-                      <option value="">Select industry vertical</option>
-                      <option value="startup">Tech Startup / Scaleup</option>
-                      <option value="enterprise">Enterprise / Corporate</option>
-                      <option value="ecommerce">E-Commerce &amp; Retail</option>
-                      <option value="healthcare">Healthcare &amp; MedTech</option>
-                      <option value="fintech">Fintech &amp; Banking</option>
-                      <option value="other">Other Domain</option>
-                    </select>
+                    />
                   </div>
                 </div>
 
-                {/* Project Details */}
+                {/* Service of Interest */}
                 <div>
-                  <label className="block text-[11px] font-semibold text-slate-700 uppercase tracking-wider mb-1.5">
-                    Project Details / Requirements *
+                  <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                    Service Required *
+                  </label>
+                  <select
+                    name="serviceRequired"
+                    value={formData.serviceRequired}
+                    onChange={handleChange}
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
+                  >
+                    <option>Custom Web &amp; SaaS Development</option>
+                    <option>UI/UX &amp; Product Design</option>
+                    <option>Dedicated Squad / Staff Augmentation</option>
+                    <option>Mobile App Development (iOS &amp; Android)</option>
+                    <option>Enterprise ERP &amp; Cloud Migration</option>
+                    <option>Digital Marketing &amp; SEO Growth</option>
+                  </select>
+                </div>
+
+                {/* Message */}
+                <div>
+                  <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                    Project Overview *
                   </label>
                   <textarea
-                    name="projectDetails"
                     rows="3"
-                    value={formData.projectDetails}
+                    name="message"
+                    value={formData.message}
                     onChange={handleChange}
                     required
-                    placeholder="Briefly describe your goals, required technologies, or timeline..."
+                    placeholder="Briefly describe your project requirements..."
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all resize-none"
                   ></textarea>
                 </div>
 
-                {/* Submit CTA Button */}
+                {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 rounded-xl bg-[#004658] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 active:scale-98 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3 px-6 rounded-xl bg-[#004658] text-white font-semibold text-xs sm:text-sm shadow-md shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 active:scale-98 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
                 >
                   <span>Submit Inquiry</span>
-                  <span className="text-cyan-300 font-bold">→</span>
+                  <span className="text-cyan-300 font-semibold">→</span>
                 </button>
               </form>
             </div>
@@ -224,10 +241,10 @@ const Contactus = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#004658] via-[#004658]/40 to-transparent" />
               
               <div className="absolute bottom-3 left-4 right-4">
-                <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] font-semibold uppercase tracking-wider">
+                <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] font-medium uppercase tracking-wider">
                   HQ & Digital Studio
                 </span>
-                <h4 className="text-base sm:text-lg font-bold text-white mt-0.5">Codecrafter Web Solutions</h4>
+                <h4 className="text-base sm:text-lg font-semibold text-white mt-0.5">Codecrafter Web Solutions</h4>
               </div>
             </div>
 

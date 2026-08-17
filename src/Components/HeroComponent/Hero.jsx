@@ -279,14 +279,14 @@ const Hero = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/90 text-[#004658] text-[11px] sm:text-xs font-semibold tracking-wide mb-4 sm:mb-5 shadow-xs"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/90 text-[#004658] text-xs sm:text-[13px] font-medium tracking-wide mb-4 sm:mb-5 shadow-xs"
             >
-              <span className="text-cyan-600 font-bold text-xs sm:text-sm">✦</span>
+              <span className="text-cyan-600 font-semibold text-sm">✦</span>
               <span className="uppercase tracking-wider">Advanced Web & Software Engineering Studio</span>
             </motion.div>
 
             {/* Scaled Hero Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-[54px] xl:text-[62px] font-bold tracking-[-0.03em] text-slate-950 leading-[1.08] mb-4 sm:mb-5">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[58px] xl:text-[66px] font-semibold tracking-[-0.03em] text-slate-950 leading-[1.06] mb-4 sm:mb-5">
               We craft digital <br className="hidden sm:block" />
               solutions that <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#0086a8]">
@@ -295,29 +295,29 @@ const Hero = () => {
             </h1>
 
             {/* Subtitle Description */}
-            <p className="text-sm sm:text-base lg:text-[16.5px] text-slate-600 max-w-xl leading-relaxed mb-6 sm:mb-7 font-normal">
-              High-performance web applications, modern UI/UX design, and bespoke software solutions crafted with clarity, speed, and precision.
+            <p className="text-base sm:text-lg lg:text-[18px] text-slate-600 max-w-xl leading-relaxed mb-6 sm:mb-7 font-normal">
+              High-performance web apps, modern UI/UX design, and bespoke software engineered for ambitious brands.
             </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mb-7 sm:mb-8">
               <Link
                 to="/software/crm"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#004658] text-white font-bold text-sm sm:text-[15px] shadow-lg shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#004658] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Explore Our Work</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M7 17L17 7M17 7H7M17 7V17" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M7 17L17 7M17 7H7M17 7V17" />
                 </svg>
               </Link>
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-white text-[#004658] font-bold text-sm sm:text-[15px] border border-slate-200 shadow-xs hover:border-[#004658]/40 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-white text-[#004658] font-semibold text-sm sm:text-base border border-slate-200 shadow-xs hover:border-[#004658]/40 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Schedule a Call</span>
                 <svg className="w-4 h-4 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
               </Link>
             </div>
@@ -330,14 +330,14 @@ const Hero = () => {
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 2" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 3" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 4" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <div className="w-9 h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[11px] font-bold flex items-center justify-center shadow-xs">
+                <div className="w-9 h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[11px] font-semibold flex items-center justify-center shadow-xs">
                   50+
                 </div>
               </div>
 
               {/* Text & Rating Stars */}
               <div className="text-left">
-                <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
+                <p className="text-xs sm:text-sm font-semibold text-slate-900 leading-tight">
                   Trusted by 50+ clients worldwide
                 </p>
                 <div className="flex items-center gap-0.5 mt-0.5 text-amber-400 text-xs tracking-wider">
@@ -398,12 +398,12 @@ const Hero = () => {
                     </div>
 
                     {/* Center Category Title */}
-                    <span className="text-[11px] sm:text-xs md:text-sm font-bold text-slate-950 tracking-tight uppercase">
+                    <span className="text-xs sm:text-[13px] md:text-sm font-semibold text-slate-950 tracking-tight uppercase">
                       {activeItem.centerTitle}
                     </span>
 
                     {/* Center Interactive Spec Tag */}
-                    <span className="text-[9px] sm:text-[10px] font-bold text-[#004658] tracking-widest uppercase mt-0.5">
+                    <span className="text-[9px] sm:text-[10px] font-medium text-[#004658] tracking-widest uppercase mt-0.5">
                       {activeItem.spec}
                     </span>
                   </motion.div>
@@ -439,10 +439,10 @@ const Hero = () => {
 
                       {/* Card Text */}
                       <div className="text-left">
-                        <div className="text-[11px] sm:text-xs font-bold text-slate-950 leading-tight">
+                        <div className="text-xs sm:text-[13px] font-semibold text-slate-950 leading-tight">
                           {item.title}
                         </div>
-                        <div className="text-[9.5px] sm:text-[10.5px] font-semibold text-slate-500 leading-tight">
+                        <div className="text-[10px] sm:text-[11px] font-normal text-slate-500 leading-tight">
                           {item.subtitle}
                         </div>
                       </div>
@@ -520,14 +520,14 @@ const Hero = () => {
                     {stat.icon}
                   </div>
                   <div>
-                    <div className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-950 tracking-tight flex items-baseline leading-none">
+                    <div className="text-2xl sm:text-3xl lg:text-[34px] font-semibold text-slate-950 tracking-tight flex items-baseline leading-none">
                       <NumberShuffleCounter 
                         value={stat.num} 
                         suffix={stat.suffix} 
                         triggerKey={`${metricSlide}-${idx}`}
                       />
                     </div>
-                    <div className="text-[11px] sm:text-xs font-bold text-slate-600 mt-1">
+                    <div className="text-[11px] sm:text-xs font-medium text-slate-600 mt-1">
                       {stat.label}
                     </div>
                   </div>

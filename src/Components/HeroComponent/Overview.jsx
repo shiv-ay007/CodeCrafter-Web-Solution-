@@ -151,19 +151,19 @@ const Overview = () => {
         <div className="flex flex-col items-center text-center w-full max-w-3xl mx-auto">
           
           {/* Eyebrow Pill Tag */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2.5 shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-xs font-semibold uppercase tracking-wider mb-2.5 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
             <span>ABOUT CODECRAFTER</span>
           </div>
 
           {/* Main Wide Headline */}
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-slate-950 tracking-[-0.03em] leading-[1.1] mb-2.5">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-semibold text-slate-950 tracking-[-0.03em] leading-[1.12] mb-2.5">
             Transforming visionary ideas into <br className="hidden sm:inline" />
             <span className="text-[#004658]">market-leading digital realities<span className="text-[#EA580C]">.</span></span>
           </h2>
 
-          <p className="text-xs sm:text-sm md:text-[15px] text-slate-600 font-normal leading-relaxed max-w-xl">
-            A next-generation software studio and dedicated engineering partner for high-growth companies.
+          <p className="text-sm sm:text-base md:text-[17px] text-slate-600 font-normal leading-relaxed max-w-lg">
+            A next-generation software studio and dedicated engineering partner for ambitious companies.
           </p>
         </div>
 
@@ -175,13 +175,13 @@ const Overview = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 cursor-pointer ${
+                className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-medium text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 cursor-pointer ${
                   isActive
                     ? "bg-[#004658] text-white shadow-md shadow-[#004658]/25 scale-102 ring-2 ring-[#004658]/20"
                     : "bg-white text-slate-700 hover:text-slate-950 border border-slate-200/90 shadow-2xs hover:shadow-xs"
                 }`}
               >
-                <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
+                <span className={`text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded ${
                   isActive ? "bg-white/20 text-cyan-200" : "bg-slate-100 text-[#004658]"
                 }`}>
                   {tab.tabNumber}
@@ -209,18 +209,18 @@ const Overview = () => {
                 
                 <div className="space-y-4">
                   {/* Badge */}
-                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-50 border border-cyan-200 text-[#004658] text-[10.5px] font-mono font-bold tracking-wider">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-50 border border-cyan-200 text-[#004658] text-[10.5px] font-mono font-semibold tracking-wider">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" />
                     <span>{activeTab.badge}</span>
                   </div>
 
                   {/* Headline */}
-                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-bold text-slate-950 tracking-tight leading-snug">
+                  <h3 className="text-2xl sm:text-3xl lg:text-[28px] font-semibold text-slate-950 tracking-tight leading-snug">
                     {activeTab.headline}
                   </h3>
 
                   {/* Short Crisp Description */}
-                  <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
+                  <p className="text-sm sm:text-[15px] text-slate-600 font-normal leading-relaxed">
                     {activeTab.description}
                   </p>
 
@@ -229,8 +229,8 @@ const Overview = () => {
                     {activeTab.points.map((pt, idx) => (
                       <div key={idx} className="bg-slate-50/90 p-3 sm:p-3.5 rounded-xl border border-slate-200/90 space-y-1 hover:bg-white hover:border-[#004658]/30 transition-all duration-200 shadow-2xs">
                         <div className="text-lg mb-0.5">{pt.icon}</div>
-                        <h4 className="text-xs sm:text-[13.5px] font-bold text-slate-950 leading-snug">{pt.title}</h4>
-                        <p className="text-[11px] text-slate-500 font-normal leading-relaxed">{pt.desc}</p>
+                        <h4 className="text-xs sm:text-sm font-semibold text-slate-950 leading-snug">{pt.title}</h4>
+                        <p className="text-xs text-slate-500 font-normal leading-relaxed">{pt.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -243,8 +243,8 @@ const Overview = () => {
                   <div className="grid grid-cols-3 gap-4 sm:gap-6">
                     {activeTab.metrics.map((m, idx) => (
                       <div key={idx} className="text-left">
-                        <div className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#004658] tracking-tight">{m.value}</div>
-                        <div className="text-[11px] sm:text-xs text-slate-500 font-semibold mt-0.5">{m.label}</div>
+                        <div className="text-2xl sm:text-3xl lg:text-[34px] font-semibold text-[#004658] tracking-tight">{m.value}</div>
+                        <div className="text-xs text-slate-500 font-medium mt-0.5">{m.label}</div>
                       </div>
                     ))}
                   </div>
@@ -252,7 +252,7 @@ const Overview = () => {
                   {/* Action Link Button */}
                   <Link
                     to={activeTab.ctaLink}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#004658] text-white font-bold text-xs sm:text-[13.5px] shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg transition-all duration-200 shrink-0 self-start sm:self-auto"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#004658] text-white font-semibold text-xs sm:text-sm shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg transition-all duration-200 shrink-0 self-start sm:self-auto"
                   >
                     <span>{activeTab.ctaText}</span>
                     <span>→</span>
@@ -271,7 +271,7 @@ const Overview = () => {
                 <div className="relative z-10 space-y-4">
                   {/* Top Bar with Status Pulse */}
                   <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#00d8ff] uppercase">
+                    <span className="text-[10px] font-mono font-semibold tracking-widest text-[#00d8ff] uppercase">
                       {activeTab.visual.tag}
                     </span>
                     <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400">
@@ -281,7 +281,7 @@ const Overview = () => {
                   </div>
 
                   {/* Visual Header */}
-                  <h4 className="text-base sm:text-lg font-bold text-white leading-snug">
+                  <h4 className="text-base sm:text-lg font-semibold text-white leading-snug">
                     {activeTab.visual.title}
                   </h4>
                 </div>
@@ -290,10 +290,10 @@ const Overview = () => {
                 <div className="relative z-10 space-y-2.5 my-4">
                   {activeTab.visual.items.map((item, vIdx) => (
                     <div key={vIdx} className="bg-white/10 backdrop-blur-md p-2.5 sm:p-3 rounded-xl border border-white/10 flex flex-col gap-0.5">
-                      <span className="text-[10px] font-mono text-cyan-200/80 uppercase tracking-wider font-semibold">
+                      <span className="text-[10px] font-mono text-cyan-200/80 uppercase tracking-wider font-medium">
                         {item.label}
                       </span>
-                      <span className="text-xs sm:text-[13px] font-bold text-white leading-snug">
+                      <span className="text-xs sm:text-[13px] font-semibold text-white leading-snug">
                         {item.val}
                       </span>
                     </div>
@@ -301,7 +301,7 @@ const Overview = () => {
                 </div>
 
                 {/* Bottom Trust Stamp */}
-                <div className="relative z-10 pt-3 border-t border-white/15 flex items-center justify-between text-[11px] font-semibold text-white/80">
+                <div className="relative z-10 pt-3 border-t border-white/15 flex items-center justify-between text-[11px] font-medium text-white/80">
                   <span className="text-cyan-200">ISO 27001 &amp; GDPR Compliant</span>
                   <span>100% NDA Protected</span>
                 </div>

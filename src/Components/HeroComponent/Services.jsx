@@ -100,7 +100,7 @@ const Services = () => {
         >
           {/* Main 2-Line Headline */}
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-950 leading-[1.12]">
               Get full-stack coverage. <br />
               Unblock execution across the SDLC<span className="text-[#004658]">.</span>
             </h2>
@@ -110,7 +110,7 @@ const Services = () => {
           <div className="shrink-0 pb-0.5 text-left md:text-right">
             <Link
               to="/web-development"
-              className="text-xs sm:text-sm font-bold text-slate-950 hover:text-[#004658] border-b border-slate-950 hover:border-[#004658] pb-0.5 transition-colors inline-flex items-center gap-1"
+              className="text-xs sm:text-sm font-semibold text-slate-950 hover:text-[#004658] border-b border-slate-950 hover:border-[#004658] pb-0.5 transition-colors inline-flex items-center gap-1"
             >
               <span>Everything we do</span>
               <span>→</span>
@@ -140,12 +140,12 @@ const Services = () => {
                   </div>
 
                   {/* Card Title */}
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-950 tracking-tight mb-2 leading-snug group-hover:text-[#004658] transition-colors">
+                  <h3 className="text-xl sm:text-[22px] font-semibold text-slate-950 tracking-tight mb-2 leading-snug group-hover:text-[#004658] transition-colors">
                     {item.title}
                   </h3>
 
                   {/* Card Description */}
-                  <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed mb-5">
+                  <p className="text-sm sm:text-[14.5px] text-slate-600 font-normal leading-relaxed mb-5">
                     {item.description}
                   </p>
                 </div>
@@ -155,7 +155,7 @@ const Services = () => {
                   {item.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="inline-flex items-center px-2.5 py-1 rounded-full border border-slate-200 bg-slate-50 text-slate-700 font-semibold text-[11px] sm:text-xs shadow-2xs group-hover:border-sky-400 group-hover:bg-white group-hover:text-[#004658] transition-colors"
+                      className="inline-flex items-center px-2.5 py-1 rounded-full border border-slate-200 bg-slate-50 text-slate-700 font-medium text-xs shadow-2xs group-hover:border-sky-400 group-hover:bg-white group-hover:text-[#004658] transition-colors"
                     >
                       {tag}
                     </span>

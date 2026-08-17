@@ -6,17 +6,17 @@ const GoogleReviews = () => {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Heading */}
         <div className="text-center mb-6 sm:mb-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-2.5 shadow-2xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-xs font-semibold uppercase tracking-wider mb-2.5 shadow-2xs">
             <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
             <span>TESTIMONIALS</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-950 leading-tight">
             What Our Clients Say<span className="text-[#004658]">.</span>
           </h2>
 
-          <p className="mt-2 text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-            See what global founders and engineering leaders have to say about partnering with CodeCrafter.
+          <p className="mt-2 text-sm sm:text-base text-slate-600 max-w-lg mx-auto leading-relaxed font-normal">
+            See what global founders and engineering leaders say about partnering with CodeCrafter.
           </p>
         </div>
 

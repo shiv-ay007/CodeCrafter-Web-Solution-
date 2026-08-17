@@ -50,19 +50,19 @@ const Footer = () => {
               )}
             </Link>
 
-            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-medium max-w-sm">
+            <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed font-normal max-w-sm">
               We engineer mission-critical digital products, dedicated squads, and high-performance cloud architectures.
             </p>
 
             {/* Global Regional Presence Badges */}
             <div className="flex flex-wrap items-center gap-1.5 pt-0.5">
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/80 border border-slate-300 text-slate-700 text-[11px] font-bold shadow-2xs">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/80 border border-slate-300 text-slate-700 text-[11px] font-medium shadow-2xs">
                 <span>🇮🇳</span> India Hub
               </span>
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/80 border border-slate-300 text-slate-700 text-[11px] font-bold shadow-2xs">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/80 border border-slate-300 text-slate-700 text-[11px] font-medium shadow-2xs">
                 <span>🇺🇸</span> USA
               </span>
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/80 border border-slate-300 text-slate-700 text-[11px] font-bold shadow-2xs">
+              <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-white/80 border border-slate-300 text-slate-700 text-[11px] font-medium shadow-2xs">
                 <span>🇬🇧</span> UK
               </span>
             </div>
@@ -78,7 +78,7 @@ const Footer = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <span className="text-xs font-bold text-[#004658] flex items-center gap-1">
+                <span className="text-xs font-semibold text-[#004658] flex items-center gap-1">
                   <span>Schedule a Free Call</span>
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </span>
@@ -88,17 +88,17 @@ const Footer = () => {
 
           {/* Column 2: Navigation & Company (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3 text-left">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               COMPANY
             </h4>
-            <ul className="space-y-2 text-xs sm:text-[13px] font-semibold text-slate-700">
+            <ul className="space-y-2 text-xs sm:text-[13px] font-medium text-slate-700">
               <li><Link to="/" className="hover:text-[#004658] transition-colors">Home Overview</Link></li>
               <li><Link to="/about" className="hover:text-[#004658] transition-colors">About Agency</Link></li>
               <li><Link to="/team" className="hover:text-[#004658] transition-colors">Leadership &amp; Squads</Link></li>
               <li>
                 <Link to="/careers" className="hover:text-[#004658] transition-colors inline-flex items-center gap-1.5">
                   <span>Careers</span>
-                  <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[9px] font-extrabold uppercase">Hiring</span>
+                  <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[9px] font-semibold uppercase">Hiring</span>
                 </Link>
               </li>
               <li><Link to="/about" className="hover:text-[#004658] transition-colors">Case Studies</Link></li>
@@ -109,10 +109,10 @@ const Footer = () => {
 
           {/* Column 3: Solutions & Services with Chevrons (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-3 text-left">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               SOLUTIONS &amp; SERVICES
             </h4>
-            <ul className="space-y-2 text-xs sm:text-[13px] font-semibold text-slate-700">
+            <ul className="space-y-2 text-xs sm:text-[13px] font-medium text-slate-700">
               <li>
                 <Link to="/web-development" className="flex items-center justify-between group hover:text-[#004658] transition-colors">
                   <span>Web App Development</span>
@@ -160,10 +160,10 @@ const Footer = () => {
 
           {/* Column 4: Core Tech Stack (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3 text-left">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               TECH STACK
             </h4>
-            <ul className="space-y-1.5 text-xs sm:text-[12.5px] font-semibold text-slate-600">
+            <ul className="space-y-1.5 text-xs sm:text-[12.5px] font-medium text-slate-600">
               <li className="hover:text-[#004658] transition-colors flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" /> React &amp; Next.js
               </li>
@@ -187,7 +187,7 @@ const Footer = () => {
 
           {/* Column 5: Newsletter & Social Connect (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3 text-left">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               STAY CONNECTED
             </h4>
             <p className="text-xs text-slate-600 leading-relaxed font-normal">

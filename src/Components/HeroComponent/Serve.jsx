@@ -63,13 +63,13 @@ const Serve = () => {
           className="text-left mb-8 sm:mb-9"
         >
           {/* Eyebrow Pill */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] sm:text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-xs font-semibold uppercase tracking-wider mb-3">
             <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
             <span>HOW WE WORK</span>
           </div>
 
           {/* Wide Headline */}
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-[1.1] max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-950 leading-[1.12] max-w-3xl">
             Our process. Simple, seamless, <br className="hidden sm:inline" />
             streamlined<span className="text-[#004658]">.</span>
           </h2>
@@ -99,13 +99,13 @@ const Serve = () => {
 
                 {/* Step Text Information */}
                 <div className="pt-0.5 space-y-1">
-                  <div className="text-[10.5px] sm:text-xs font-mono font-bold text-[#004658] uppercase tracking-wider">
+                  <div className="text-[10.5px] sm:text-xs font-mono font-semibold text-[#004658] uppercase tracking-wider">
                     {step.stepNumber}
                   </div>
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold text-slate-950 tracking-tight leading-snug">
+                  <h3 className="text-lg sm:text-xl lg:text-[22px] font-semibold text-slate-950 tracking-tight leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed max-w-2xl">
+                  <p className="text-sm sm:text-base text-slate-600 font-normal leading-relaxed max-w-2xl">
                     {step.description}
                   </p>
                 </div>
