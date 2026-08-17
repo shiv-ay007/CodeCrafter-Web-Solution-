@@ -316,12 +316,13 @@ const Navbar = () => {
           )}
         </Link>
 
-        <ul className="hidden lg:flex items-center gap-2 xl:gap-4 font-medium text-slate-800 text-[16.5px] xl:text-[17.5px] flex-1 justify-end mr-3 xl:mr-5 tracking-tight">
+        {/* Desktop Menu Items - Left-Aligned & Compact Gap */}
+        <ul className="hidden lg:flex items-center gap-1 xl:gap-2.5 font-medium text-slate-800 text-[16px] xl:text-[17px] ml-6 xl:ml-10 tracking-tight">
           {menuItems.map((menu) => {
             const isMenuHovered = hoveredMenuKey === menu.key;
             return (
               <li key={menu.key} className="relative py-2" onMouseEnter={() => setHoveredMenuKey(menu.key)}>
-                <button className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all duration-200 cursor-pointer font-medium whitespace-nowrap ${isMenuHovered ? "text-[#004658] bg-[#004658]/8" : "text-slate-800 hover:text-[#004658]"}`}>
+                <button className={`flex items-center gap-1 px-2.5 xl:px-3 py-1.5 rounded-lg transition-all duration-200 cursor-pointer font-medium whitespace-nowrap ${isMenuHovered ? "text-[#004658] bg-[#004658]/8" : "text-slate-800 hover:text-[#004658]"}`}>
                   <span>{menu.title}</span>
                   <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${isMenuHovered ? "text-[#004658] rotate-180" : "text-slate-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
                 </button>
@@ -330,8 +331,9 @@ const Navbar = () => {
           })}
         </ul>
 
-        <div className="hidden lg:flex items-center shrink-0">
-          <Link to="/contact" className="inline-flex items-center justify-center font-medium text-white bg-[#004658] rounded-xl shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-6 py-2.5 text-[15px] whitespace-nowrap">
+        {/* Schedule a Call CTA Button */}
+        <div className="hidden lg:flex items-center shrink-0 ml-auto">
+          <Link to="/contact" className="inline-flex items-center justify-center font-medium text-white bg-[#004658] rounded-xl shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-5 xl:px-6 py-2.5 text-[15px] whitespace-nowrap">
             Schedule a Call
           </Link>
         </div>
