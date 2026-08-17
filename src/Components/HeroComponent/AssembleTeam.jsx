@@ -88,21 +88,21 @@ const AssembleTeam = () => {
         transition={{ duration: 0.4, delay: 0.15 }}
         className="max-w-2xl mx-auto"
       >
-        <h3 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-slate-950 tracking-tight mb-5 leading-tight">
+        <h3 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-slate-950 tracking-tight mb-5 leading-tight">
           Let’s assemble your team<span className="text-[#004658]">.</span>
         </h3>
 
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#004658] text-white font-extrabold text-xs sm:text-sm shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#004658] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
           >
             <span>Talk to Us</span>
             <span>→</span>
           </Link>
           <Link
             to="/team"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 text-slate-800 font-extrabold text-xs sm:text-sm hover:bg-slate-200 transition-all duration-200"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-slate-100 text-slate-800 font-bold text-xs sm:text-sm hover:bg-slate-200 transition-all duration-200"
           >
             <span>Learn More About Squads</span>
           </Link>

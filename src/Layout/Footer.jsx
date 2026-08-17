@@ -88,7 +88,7 @@ const Footer = () => {
 
           {/* Column 2: Navigation & Company (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3 text-left">
-            <h4 className="text-xs font-black uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               COMPANY
             </h4>
             <ul className="space-y-2 text-xs sm:text-[13px] font-semibold text-slate-700">
@@ -109,7 +109,7 @@ const Footer = () => {
 
           {/* Column 3: Solutions & Services with Chevrons (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-3 text-left">
-            <h4 className="text-xs font-black uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               SOLUTIONS &amp; SERVICES
             </h4>
             <ul className="space-y-2 text-xs sm:text-[13px] font-semibold text-slate-700">
@@ -160,7 +160,7 @@ const Footer = () => {
 
           {/* Column 4: Core Tech Stack (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3 text-left">
-            <h4 className="text-xs font-black uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               TECH STACK
             </h4>
             <ul className="space-y-1.5 text-xs sm:text-[12.5px] font-semibold text-slate-600">
@@ -187,7 +187,7 @@ const Footer = () => {
 
           {/* Column 5: Newsletter & Social Connect (lg:col-span-2) */}
           <div className="lg:col-span-2 space-y-3 text-left">
-            <h4 className="text-xs font-black uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
+            <h4 className="text-xs font-bold uppercase tracking-wider text-[#004658] border-b border-[#004658]/20 pb-1">
               STAY CONNECTED
             </h4>
             <p className="text-xs text-slate-600 leading-relaxed font-normal">

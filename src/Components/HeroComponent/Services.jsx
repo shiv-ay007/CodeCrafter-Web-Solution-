@@ -100,7 +100,7 @@ const Services = () => {
         >
           {/* Main 2-Line Headline */}
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black tracking-[-0.03em] text-slate-950 leading-[1.1]">
+            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-[1.1]">
               Get full-stack coverage. <br />
               Unblock execution across the SDLC<span className="text-[#004658]">.</span>
             </h2>

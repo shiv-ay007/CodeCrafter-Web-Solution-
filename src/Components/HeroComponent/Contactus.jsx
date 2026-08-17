@@ -67,7 +67,7 @@ const Contactus = () => {
             <span>GET IN TOUCH</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black tracking-[-0.03em] text-slate-950 leading-tight max-w-2xl mb-2.5">
+          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-tight max-w-2xl mb-2.5">
             Let's build something <br className="hidden sm:block" />
             extraordinary <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#0086a8]">together</span>
           </h2>
@@ -89,7 +89,7 @@ const Contactus = () => {
             className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-7 lg:p-8 border border-slate-200/90 shadow-xl shadow-slate-300/30 flex flex-col justify-between"
           >
             <div>
-              <h3 className="text-xl sm:text-2xl font-black text-slate-950 mb-1">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-950 mb-1">
                 Start A Conversation
               </h3>
               <p className="text-xs sm:text-sm text-slate-500 mb-5 sm:mb-6 font-normal">

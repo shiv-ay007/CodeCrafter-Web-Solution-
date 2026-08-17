@@ -50,7 +50,7 @@ const menuItems = [
       { name: "24/7 SLA Technical Support", path: "/website-maintenance" },
       { name: "Disaster Recovery & Backup", path: "/website-maintenance" }
     ],
-    allLinkText: "All About CodeCrafter →",
+    allLinkText: "All About CodeCrafter",
     allLinkPath: "/about"
   },
   {
@@ -99,7 +99,7 @@ const menuItems = [
       { name: "Digital Transformation", path: "/digital-booster/seo" },
       { name: "ERP Development", path: "/software/erp" }
     ],
-    allLinkText: "All Services →",
+    allLinkText: "All Services",
     allLinkPath: "/web-development"
   },
   {
@@ -148,7 +148,7 @@ const menuItems = [
       { name: "Cloud Sync Database", path: "/hosting/cloud" },
       { name: "24/7 Mobile SLA Support", path: "/website-maintenance" }
     ],
-    allLinkText: "All Mobile Services →",
+    allLinkText: "All Mobile Services",
     allLinkPath: "/app-studio/flutter"
   },
   {
@@ -197,7 +197,7 @@ const menuItems = [
       { name: "Monthly Performance Reports", path: "/contact" },
       { name: "Dedicated Growth Manager", path: "/contact" }
     ],
-    allLinkText: "All Growth Solutions →",
+    allLinkText: "All Growth Solutions",
     allLinkPath: "/digital-booster/seo"
   },
   {
@@ -246,7 +246,7 @@ const menuItems = [
       { name: "Multi-Branch Data Sync", path: "/software/erp" },
       { name: "Enterprise 24/7 SLA Support", path: "/website-maintenance" }
     ],
-    allLinkText: "All Software Solutions →",
+    allLinkText: "All Software Solutions",
     allLinkPath: "/software/crm"
   }
 ];
@@ -319,7 +319,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Menu Items - Crisp & Balanced */}
-        <ul className="hidden lg:flex items-center gap-2 xl:gap-5 font-bold text-slate-950 text-[14px] xl:text-[14.5px] flex-1 justify-end mr-3 xl:mr-5 tracking-tight">
+        <ul className="hidden lg:flex items-center gap-1.5 xl:gap-3 font-semibold text-slate-800 text-[14.5px] xl:text-[15px] flex-1 justify-end mr-3 xl:mr-5 tracking-tight">
           {menuItems.map((menu) => {
             const isMenuHovered = hoveredMenuKey === menu.key;
             return (
@@ -328,8 +328,8 @@ const Navbar = () => {
                 className="relative py-2"
                 onMouseEnter={() => setHoveredMenuKey(menu.key)}
               >
-                <button className={`flex items-center gap-1 px-2.5 py-1.5 rounded-lg transition-all duration-200 cursor-pointer font-bold whitespace-nowrap ${
-                  isMenuHovered ? "text-[#004658] bg-[#004658]/8" : "text-slate-950 hover:text-[#004658]"
+                <button className={`flex items-center gap-1 px-3 py-1.5 rounded-lg transition-all duration-200 cursor-pointer font-semibold whitespace-nowrap ${
+                  isMenuHovered ? "text-[#004658] bg-[#004658]/8" : "text-slate-800 hover:text-[#004658]"
                 }`}>
                   <span>{menu.title}</span>
                   <svg
@@ -340,7 +340,7 @@ const Navbar = () => {
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
               </li>
@@ -352,7 +352,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center shrink-0">
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center font-extrabold text-white bg-[#004658] rounded-xl shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-6 py-2.5 text-[13.5px] xl:text-[14px] whitespace-nowrap"
+            className="inline-flex items-center justify-center font-bold text-white bg-[#004658] rounded-xl shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-6 py-2.5 text-[14px] whitespace-nowrap"
           >
             Schedule a Call
           </Link>
@@ -388,11 +388,11 @@ const Navbar = () => {
             {/* Left Sidebar Box */}
             <div className="w-[260px] shrink-0 pr-6 border-r border-slate-200/80 flex flex-col justify-between text-left">
               <div>
-                <h3 className="text-2xl sm:text-[26px] font-black text-slate-950 tracking-[-0.03em] mb-1.5 leading-tight font-['Outfit',sans-serif]">
+                <h3 className="text-2xl sm:text-[25px] font-bold text-slate-950 tracking-[-0.02em] mb-1.5 leading-tight font-['Outfit',sans-serif]">
                   {activeMegaMenu.sidebarTitle}
                   <span className="text-[#EA580C]">.</span>
                 </h3>
-                <p className="text-[13px] text-slate-600 font-medium leading-relaxed mb-4">
+                <p className="text-[13px] text-slate-500 font-normal leading-relaxed mb-4">
                   {activeMegaMenu.sidebarDesc}
                 </p>
 
@@ -405,11 +405,11 @@ const Navbar = () => {
                         to={sLink.path}
                         className={`group/slink flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${
                           isActive 
-                            ? "bg-[#004658]/8 text-[#004658] font-black" 
-                            : "text-slate-950 font-black hover:bg-[#004658]/6 hover:text-[#004658]"
+                            ? "bg-[#004658]/8 text-[#004658] font-semibold" 
+                            : "text-slate-800 font-semibold hover:bg-[#004658]/6 hover:text-[#004658]"
                         }`}
                       >
-                        <span className="text-[14.5px] sm:text-[15px] font-black tracking-[-0.015em] group-hover/slink:translate-x-1 transition-transform">
+                        <span className="text-[16px] sm:text-[17px] font-semibold tracking-[-0.01em] group-hover/slink:translate-x-1 transition-transform">
                           {sLink.name}
                         </span>
                         <svg
@@ -422,7 +422,7 @@ const Navbar = () => {
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                         </svg>
                       </Link>
                     );
@@ -432,7 +432,7 @@ const Navbar = () => {
 
               {/* Bottom Proof Section */}
               <div className="pt-3.5 mt-3.5 border-t border-slate-200/80">
-                <div className="text-[11.5px] font-extrabold uppercase tracking-wider text-[#004658] mb-1 flex items-center gap-1.5">
+                <div className="text-[11.5px] font-bold uppercase tracking-wider text-[#004658] mb-1 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" />
                   <span>{activeMegaMenu.proofTitle}</span>
                 </div>
@@ -441,7 +441,7 @@ const Navbar = () => {
                 </p>
                 <Link
                   to={activeMegaMenu.proofLink}
-                  className="group/proof inline-flex items-center text-[12px] font-bold text-[#004658] hover:underline"
+                  className="group/proof inline-flex items-center text-[12px] font-semibold text-[#004658] hover:underline"
                 >
                   <span>Learn more</span>
                   <span className="ml-1 group-hover/proof:translate-x-0.5 transition-transform">→</span>
@@ -457,7 +457,7 @@ const Navbar = () => {
                 <div>
                   <div className="flex items-center gap-2 pb-2 mb-2 border-b border-slate-200">
                     <span className="w-2 h-2 rounded-xs bg-[#EA580C]" />
-                    <h4 className="text-[11.5px] font-extrabold tracking-[0.14em] text-slate-500 uppercase">
+                    <h4 className="text-[11.5px] font-bold tracking-[0.14em] text-slate-500 uppercase">
                       {activeMegaMenu.topHeading}
                     </h4>
                   </div>
@@ -470,13 +470,13 @@ const Navbar = () => {
                           to={item.path}
                           className={`group/link flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${
                             isActive
-                              ? "bg-[#004658]/8 text-[#004658] font-bold"
-                              : "text-slate-900 font-bold hover:bg-[#004658]/6 hover:text-[#004658]"
+                              ? "bg-[#004658]/8 text-[#004658] font-semibold"
+                              : "text-slate-800 font-medium hover:bg-[#004658]/6 hover:text-[#004658]"
                           }`}
                         >
                           <div className="flex items-center gap-2 min-w-0">
                             <svg
-                              className={`w-3.5 h-3.5 text-[#004658] transition-all duration-200 shrink-0 ${
+                              className={`w-4 h-4 text-[#004658] transition-all duration-200 shrink-0 ${
                                 isActive
                                   ? "opacity-100 translate-x-0"
                                   : "opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0"
@@ -485,9 +485,9 @@ const Navbar = () => {
                               stroke="currentColor"
                               viewBox="0 0 24 24"
                             >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                             </svg>
-                            <span className="text-[14px] sm:text-[14.5px] font-bold tracking-[-0.015em] truncate group-hover/link:translate-x-0.5 transition-transform">
+                            <span className="text-[16px] sm:text-[16.5px] font-medium tracking-[-0.01em] truncate group-hover/link:translate-x-0.5 transition-transform text-slate-800 group-hover/link:text-[#004658]">
                               {item.name}
                             </span>
                           </div>
@@ -501,7 +501,7 @@ const Navbar = () => {
                 <div>
                   <div className="flex items-center gap-2 pb-2 mb-2 border-b border-slate-200 opacity-0 pointer-events-none">
                     <span className="w-2 h-2 rounded-xs bg-[#EA580C]" />
-                    <h4 className="text-[11.5px] font-extrabold tracking-[0.14em] text-slate-500 uppercase">
+                    <h4 className="text-[11.5px] font-bold tracking-[0.14em] text-slate-500 uppercase">
                       {activeMegaMenu.topHeading}
                     </h4>
                   </div>
@@ -514,13 +514,13 @@ const Navbar = () => {
                           to={item.path}
                           className={`group/link flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${
                             isActive
-                              ? "bg-[#004658]/8 text-[#004658] font-bold"
-                              : "text-slate-900 font-bold hover:bg-[#004658]/6 hover:text-[#004658]"
+                              ? "bg-[#004658]/8 text-[#004658] font-semibold"
+                              : "text-slate-800 font-medium hover:bg-[#004658]/6 hover:text-[#004658]"
                           }`}
                         >
                           <div className="flex items-center gap-2 min-w-0">
                             <svg
-                              className={`w-3.5 h-3.5 text-[#004658] transition-all duration-200 shrink-0 ${
+                              className={`w-4 h-4 text-[#004658] transition-all duration-200 shrink-0 ${
                                 isActive
                                   ? "opacity-100 translate-x-0"
                                   : "opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0"
@@ -529,14 +529,14 @@ const Navbar = () => {
                               stroke="currentColor"
                               viewBox="0 0 24 24"
                             >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                             </svg>
-                            <span className="text-[14px] sm:text-[14.5px] font-bold tracking-[-0.015em] truncate group-hover/link:translate-x-0.5 transition-transform">
+                            <span className="text-[16px] sm:text-[16.5px] font-medium tracking-[-0.01em] truncate group-hover/link:translate-x-0.5 transition-transform text-slate-800 group-hover/link:text-[#004658]">
                               {item.name}
                             </span>
                           </div>
                           {item.badge && (
-                            <span className="text-[9.5px] font-extrabold tracking-wide uppercase px-2 py-0.5 rounded-full bg-[#004658]/10 text-[#004658] shrink-0 ml-1.5">
+                            <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full bg-[#004658]/10 text-[#004658] shrink-0 ml-1.5">
                               {item.badge}
                             </span>
                           )}
@@ -550,7 +550,7 @@ const Navbar = () => {
                 <div>
                   <div className="flex items-center gap-2 pb-2 mb-2 border-b border-slate-200">
                     <span className="w-2 h-2 rounded-xs bg-[#EA580C]" />
-                    <h4 className="text-[11.5px] font-extrabold tracking-[0.14em] text-slate-500 uppercase">
+                    <h4 className="text-[11.5px] font-bold tracking-[0.14em] text-slate-500 uppercase">
                       {activeMegaMenu.enterpriseHeading}
                     </h4>
                   </div>
@@ -563,13 +563,13 @@ const Navbar = () => {
                           to={item.path}
                           className={`group/link flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${
                             isActive
-                              ? "bg-[#004658]/8 text-[#004658] font-bold"
-                              : "text-slate-900 font-bold hover:bg-[#004658]/6 hover:text-[#004658]"
+                              ? "bg-[#004658]/8 text-[#004658] font-semibold"
+                              : "text-slate-800 font-medium hover:bg-[#004658]/6 hover:text-[#004658]"
                           }`}
                         >
                           <div className="flex items-center gap-2 min-w-0">
                             <svg
-                              className={`w-3.5 h-3.5 text-[#004658] transition-all duration-200 shrink-0 ${
+                              className={`w-4 h-4 text-[#004658] transition-all duration-200 shrink-0 ${
                                 isActive
                                   ? "opacity-100 translate-x-0"
                                   : "opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0"
@@ -578,9 +578,9 @@ const Navbar = () => {
                               stroke="currentColor"
                               viewBox="0 0 24 24"
                             >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                             </svg>
-                            <span className="text-[14px] sm:text-[14.5px] font-bold tracking-[-0.015em] truncate group-hover/link:translate-x-0.5 transition-transform">
+                            <span className="text-[16px] sm:text-[16.5px] font-medium tracking-[-0.01em] truncate group-hover/link:translate-x-0.5 transition-transform text-slate-800 group-hover/link:text-[#004658]">
                               {item.name}
                             </span>
                           </div>
@@ -596,7 +596,7 @@ const Navbar = () => {
               <div className="pt-3.5 mt-3 border-t border-slate-100">
                 <Link
                   to={activeMegaMenu.allLinkPath}
-                  className="group/all inline-flex items-center gap-2 text-[14.5px] sm:text-[15px] font-black text-slate-950 hover:text-[#004658] transition-colors"
+                  className="group/all inline-flex items-center gap-2 text-[15px] sm:text-[16px] font-bold text-slate-900 hover:text-[#004658] transition-colors"
                 >
                   <span>{activeMegaMenu.allLinkText}</span>
                   <span className="group-hover/all:translate-x-1.5 transition-transform font-bold">→</span>
@@ -636,7 +636,7 @@ const Navbar = () => {
                 {activeMobileSubmenu === menu.key && (
                   <div className="pl-3 pr-2 py-2 space-y-2.5 bg-[#004658]/5 rounded-xl my-1 border border-[#004658]/10">
                     <div className="space-y-1">
-                      <span className="text-xs font-black uppercase text-[#EA580C] tracking-wider block px-2.5 py-1">
+                      <span className="text-xs font-bold uppercase text-[#EA580C] tracking-wider block px-2.5 py-1">
                         {menu.topHeading}
                       </span>
                       {[...menu.topCol1, ...menu.topCol2, ...menu.enterpriseCol].slice(0, 10).map((sub, idx) => (

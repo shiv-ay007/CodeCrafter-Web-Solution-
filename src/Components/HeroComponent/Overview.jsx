@@ -157,7 +157,7 @@ const Overview = () => {
           </div>
 
           {/* Main Wide Headline */}
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-slate-950 tracking-[-0.03em] leading-[1.1] mb-2.5">
+          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-slate-950 tracking-[-0.03em] leading-[1.1] mb-2.5">
             Transforming visionary ideas into <br className="hidden sm:inline" />
             <span className="text-[#004658]">market-leading digital realities<span className="text-[#EA580C]">.</span></span>
           </h2>
@@ -175,13 +175,13 @@ const Overview = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab)}
-                className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 cursor-pointer ${
+                className={`px-4 py-2 sm:px-5 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm transition-all duration-300 flex items-center gap-2 cursor-pointer ${
                   isActive
                     ? "bg-[#004658] text-white shadow-md shadow-[#004658]/25 scale-102 ring-2 ring-[#004658]/20"
                     : "bg-white text-slate-700 hover:text-slate-950 border border-slate-200/90 shadow-2xs hover:shadow-xs"
                 }`}
               >
-                <span className={`text-[10px] font-mono font-black px-1.5 py-0.5 rounded ${
+                <span className={`text-[10px] font-mono font-bold px-1.5 py-0.5 rounded ${
                   isActive ? "bg-white/20 text-cyan-200" : "bg-slate-100 text-[#004658]"
                 }`}>
                   {tab.tabNumber}
@@ -215,7 +215,7 @@ const Overview = () => {
                   </div>
 
                   {/* Headline */}
-                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-black text-slate-950 tracking-tight leading-snug">
+                  <h3 className="text-xl sm:text-2xl lg:text-[26px] font-bold text-slate-950 tracking-tight leading-snug">
                     {activeTab.headline}
                   </h3>
 
@@ -239,48 +239,49 @@ const Overview = () => {
                 {/* Bottom Row: Large Live Counters & CTA Button */}
                 <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   
-                  {/* 3 Metrics */}
-                  <div className="flex items-center gap-5 sm:gap-7">
-                    {activeTab.metrics.map((m, mIdx) => (
-                      <div key={mIdx}>
-                        <div className="text-2xl sm:text-3xl lg:text-[32px] font-black text-[#004658] tracking-tight">{m.value}</div>
-                        <div className="text-[10.5px] sm:text-xs font-bold text-slate-500 mt-0.5">{m.label}</div>
+                  {/* 3 Large Value Counters */}
+                  <div className="grid grid-cols-3 gap-4 sm:gap-6">
+                    {activeTab.metrics.map((m, idx) => (
+                      <div key={idx} className="text-left">
+                        <div className="text-2xl sm:text-3xl lg:text-[32px] font-bold text-[#004658] tracking-tight">{m.value}</div>
+                        <div className="text-[11px] sm:text-xs text-slate-500 font-semibold mt-0.5">{m.label}</div>
                       </div>
                     ))}
                   </div>
 
-                  {/* CTA Button */}
+                  {/* Action Link Button */}
                   <Link
                     to={activeTab.ctaLink}
-                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#004658] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:scale-105 transition-all duration-200 shrink-0"
+                    className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#004658] text-white font-bold text-xs sm:text-[13.5px] shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg transition-all duration-200 shrink-0 self-start sm:self-auto"
                   >
                     <span>{activeTab.ctaText}</span>
-                    <span className="text-cyan-300 font-bold">→</span>
+                    <span>→</span>
                   </Link>
 
                 </div>
 
               </div>
 
-              {/* RIGHT SIDE: Interactive Visual Studio Preview Card (lg:col-span-5) */}
-              <div className="lg:col-span-5 bg-gradient-to-br from-[#004658] via-[#003c4b] to-[#002630] text-white rounded-2xl p-5 sm:p-6 flex flex-col justify-between relative overflow-hidden shadow-xl shadow-[#004658]/20 border border-teal-800/40">
+              {/* RIGHT SIDE: Interactive Minimalist Live Architecture Preview Card (lg:col-span-5) */}
+              <div className="lg:col-span-5 bg-gradient-to-br from-[#003442] to-[#001e26] rounded-xl p-5 sm:p-6 text-white flex flex-col justify-between shadow-lg relative overflow-hidden border border-cyan-500/20">
                 
-                {/* Top Subtle Ambient Glow */}
-                <div className="absolute top-0 right-0 w-36 h-36 bg-cyan-400/10 rounded-full blur-xl pointer-events-none" />
+                {/* Background Pattern */}
+                <div className="absolute top-0 right-0 w-44 h-44 bg-[#00d8ff]/10 rounded-full blur-2xl pointer-events-none" />
 
-                {/* Visual Header */}
-                <div className="relative z-10 space-y-2">
-                  <div className="flex items-center justify-between">
-                    <span className="px-2.5 py-0.5 rounded-full bg-white/10 backdrop-blur-md text-cyan-300 text-[10px] font-mono font-bold uppercase tracking-wider border border-white/10">
+                <div className="relative z-10 space-y-4">
+                  {/* Top Bar with Status Pulse */}
+                  <div className="flex items-center justify-between pb-3 border-b border-white/10">
+                    <span className="text-[10px] font-mono font-bold tracking-widest text-[#00d8ff] uppercase">
                       {activeTab.visual.tag}
                     </span>
-                    <span className="flex items-center gap-1 text-[11px] text-emerald-400 font-bold">
+                    <div className="flex items-center gap-1.5 text-[10px] font-mono text-emerald-400">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                      Live Verified
-                    </span>
+                      <span>LIVE METRICS</span>
+                    </div>
                   </div>
 
-                  <h4 className="text-base sm:text-lg font-black text-white leading-snug">
+                  {/* Visual Header */}
+                  <h4 className="text-base sm:text-lg font-bold text-white leading-snug">
                     {activeTab.visual.title}
                   </h4>
                 </div>

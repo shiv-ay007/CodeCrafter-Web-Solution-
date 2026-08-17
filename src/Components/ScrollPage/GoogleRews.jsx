@@ -11,7 +11,7 @@ const GoogleReviews = () => {
             <span>TESTIMONIALS</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black tracking-[-0.03em] text-slate-950 leading-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-tight">
             What Our Clients Say<span className="text-[#004658]">.</span>
           </h2>
 

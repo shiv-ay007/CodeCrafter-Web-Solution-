@@ -160,7 +160,7 @@ const LatestInsights = () => {
           
           {/* Main Headline */}
           <div>
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black tracking-[-0.03em] text-slate-950 leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-tight">
               Our latest insights<span className="text-[#EA580C]">.</span>
             </h2>
           </div>

@@ -143,7 +143,7 @@ const TechMarquee = () => {
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-slate-950 tracking-[-0.03em] leading-[1.1]">
+            <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-slate-950 tracking-[-0.03em] leading-[1.1]">
               Seamless integration with your entire tech stack<span className="text-[#EA580C]">.</span>
             </h2>
 
@@ -159,7 +159,7 @@ const TechMarquee = () => {
                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#004658] text-white text-xs sm:text-sm font-bold shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:scale-105 transition-all duration-200"
               >
                 <span>Explore Full Repertoire</span>
-                <span className="text-cyan-300 font-extrabold">→</span>
+                <span className="text-cyan-300 font-bold">→</span>
               </Link>
 
               <div className="text-[11px] sm:text-xs font-semibold text-slate-500 flex items-center gap-1.5">
@@ -186,10 +186,10 @@ const TechMarquee = () => {
                 whileHover={{ scale: 1.05 }}
                 className="relative z-20 w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-[#004658] via-[#003d4c] to-[#002732] flex flex-col items-center justify-center p-2.5 text-center shadow-xl shadow-[#004658]/30 border-2 border-white/80 cursor-pointer"
               >
-                <div className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center mb-0.5 text-cyan-300 font-black text-xs">
+                <div className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center mb-0.5 text-cyan-300 font-bold text-xs">
                   CC
                 </div>
-                <span className="text-white text-[11px] sm:text-xs font-black tracking-tight leading-tight">
+                <span className="text-white text-[11px] sm:text-xs font-bold tracking-tight leading-tight">
                   {hoveredTech ? hoveredTech.name : "CodeCrafter"}
                 </span>
                 <span className="text-[9px] sm:text-[10px] text-cyan-200 font-medium mt-0.5">

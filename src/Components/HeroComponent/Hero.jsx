@@ -279,14 +279,14 @@ const Hero = () => {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/90 text-[#004658] text-[11px] sm:text-xs font-black tracking-wide mb-4 sm:mb-5 shadow-xs"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/90 text-[#004658] text-[11px] sm:text-xs font-semibold tracking-wide mb-4 sm:mb-5 shadow-xs"
             >
-              <span className="text-cyan-600 font-black text-xs sm:text-sm">✦</span>
+              <span className="text-cyan-600 font-bold text-xs sm:text-sm">✦</span>
               <span className="uppercase tracking-wider">Advanced Web & Software Engineering Studio</span>
             </motion.div>
 
             {/* Scaled Hero Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-[54px] xl:text-[62px] tracking-[-0.035em] text-slate-950 leading-[1.08] mb-4 sm:mb-5">
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-[54px] xl:text-[62px] font-bold tracking-[-0.03em] text-slate-950 leading-[1.08] mb-4 sm:mb-5">
               We craft digital <br className="hidden sm:block" />
               solutions that <br className="hidden sm:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#0086a8]">
@@ -303,7 +303,7 @@ const Hero = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mb-7 sm:mb-8">
               <Link
                 to="/software/crm"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#004658] text-white font-extrabold text-sm sm:text-[15px] shadow-lg shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#004658] text-white font-bold text-sm sm:text-[15px] shadow-lg shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Explore Our Work</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -313,7 +313,7 @@ const Hero = () => {
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-white text-[#004658] font-extrabold text-sm sm:text-[15px] border border-slate-200 shadow-xs hover:border-[#004658]/40 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-white text-[#004658] font-bold text-sm sm:text-[15px] border border-slate-200 shadow-xs hover:border-[#004658]/40 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Schedule a Call</span>
                 <svg className="w-4 h-4 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -330,14 +330,14 @@ const Hero = () => {
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 2" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 3" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 4" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <div className="w-9 h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[11px] font-black flex items-center justify-center shadow-xs">
+                <div className="w-9 h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[11px] font-bold flex items-center justify-center shadow-xs">
                   50+
                 </div>
               </div>
 
               {/* Text & Rating Stars */}
               <div className="text-left">
-                <p className="text-xs sm:text-sm font-black text-slate-900 leading-tight">
+                <p className="text-xs sm:text-sm font-bold text-slate-900 leading-tight">
                   Trusted by 50+ clients worldwide
                 </p>
                 <div className="flex items-center gap-0.5 mt-0.5 text-amber-400 text-xs tracking-wider">
@@ -393,17 +393,17 @@ const Hero = () => {
                     className="flex flex-col items-center"
                   >
                     {/* Center Icon Badge */}
-                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#004658] text-white flex items-center justify-center text-lg sm:text-xl font-black shadow-md shadow-[#004658]/30 mb-1.5">
+                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#004658] text-white flex items-center justify-center text-lg sm:text-xl font-bold shadow-md shadow-[#004658]/30 mb-1.5">
                       <HeroServiceIcon type={activeItem.iconType} />
                     </div>
 
                     {/* Center Category Title */}
-                    <span className="text-[11px] sm:text-xs md:text-sm font-black text-slate-950 tracking-tight uppercase">
+                    <span className="text-[11px] sm:text-xs md:text-sm font-bold text-slate-950 tracking-tight uppercase">
                       {activeItem.centerTitle}
                     </span>
 
                     {/* Center Interactive Spec Tag */}
-                    <span className="text-[9px] sm:text-[10px] font-black text-[#004658] tracking-widest uppercase mt-0.5">
+                    <span className="text-[9px] sm:text-[10px] font-bold text-[#004658] tracking-widest uppercase mt-0.5">
                       {activeItem.spec}
                     </span>
                   </motion.div>
@@ -439,10 +439,10 @@ const Hero = () => {
 
                       {/* Card Text */}
                       <div className="text-left">
-                        <div className="text-[11px] sm:text-xs font-black text-slate-950 leading-tight">
+                        <div className="text-[11px] sm:text-xs font-bold text-slate-950 leading-tight">
                           {item.title}
                         </div>
-                        <div className="text-[9.5px] sm:text-[10.5px] font-bold text-slate-500 leading-tight">
+                        <div className="text-[9.5px] sm:text-[10.5px] font-semibold text-slate-500 leading-tight">
                           {item.subtitle}
                         </div>
                       </div>
@@ -520,7 +520,7 @@ const Hero = () => {
                     {stat.icon}
                   </div>
                   <div>
-                    <div className="text-2xl sm:text-3xl lg:text-[34px] font-black text-slate-950 tracking-tight flex items-baseline leading-none">
+                    <div className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-950 tracking-tight flex items-baseline leading-none">
                       <NumberShuffleCounter 
                         value={stat.num} 
                         suffix={stat.suffix} 

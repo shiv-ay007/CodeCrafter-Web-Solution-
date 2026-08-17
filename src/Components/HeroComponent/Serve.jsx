@@ -69,7 +69,7 @@ const Serve = () => {
           </div>
 
           {/* Wide Headline */}
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black tracking-[-0.03em] text-slate-950 leading-[1.1] max-w-3xl">
+          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold tracking-[-0.03em] text-slate-950 leading-[1.1] max-w-3xl">
             Our process. Simple, seamless, <br className="hidden sm:inline" />
             streamlined<span className="text-[#004658]">.</span>
           </h2>

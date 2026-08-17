@@ -122,7 +122,7 @@ const Cta = () => {
             <span>START SCALING TODAY</span>
           </div>
 
-          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-black text-slate-950 tracking-[-0.03em] leading-tight mb-2.5">
+          <h2 className="text-2xl sm:text-3xl lg:text-[38px] font-bold text-slate-950 tracking-[-0.03em] leading-tight mb-2.5">
             Ready to accelerate your next <br className="hidden sm:inline" />
             <span className="text-[#004658]">digital engineering milestone<span className="text-[#EA580C]">?</span></span>
           </h2>
@@ -169,7 +169,7 @@ const Cta = () => {
           </div>
 
           {/* Dynamic Active CTA Action Title */}
-          <h3 className="text-xs sm:text-sm lg:text-[15px] font-black text-slate-950 tracking-tight leading-tight mb-0.5">
+          <h3 className="text-xs sm:text-sm lg:text-[15px] font-bold text-slate-950 tracking-tight leading-tight mb-0.5">
             {activeCenterText.title}
           </h3>
 
@@ -214,7 +214,7 @@ const Cta = () => {
                 {badge.icon}
               </div>
               <div className="text-left">
-                <h4 className="text-[11px] sm:text-xs font-black text-slate-950 leading-tight">
+                <h4 className="text-[11px] sm:text-xs font-bold text-slate-950 leading-tight">
                   {badge.title}
                 </h4>
                 <p className="text-[9.5px] sm:text-[10px] text-slate-500 font-medium">
