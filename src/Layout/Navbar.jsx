@@ -281,9 +281,12 @@ const Navbar = () => {
 
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 w-full bg-white border-b border-slate-200 shadow-sm transition-all duration-300"
+      className="fixed top-0 left-0 right-0 z-50 w-full bg-[#edf6f9]/95 backdrop-blur-xl border-b border-[#004658]/15 shadow-[0_4px_25px_rgba(0,70,88,0.06)] transition-all duration-300"
       onMouseLeave={() => setHoveredMenuKey(null)}
     >
+      {/* Top Subtle Brand Gradient Highlight Line */}
+      <div className="w-full h-[2.5px] bg-gradient-to-r from-[#004658] via-[#00a8cc] to-[#4EF0C5]" />
+
       <nav className="w-full max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 flex items-center justify-between gap-4">
         {/* Prominent Logo */}
         <Link
@@ -322,7 +325,7 @@ const Navbar = () => {
             const isMenuHovered = hoveredMenuKey === menu.key;
             return (
               <li key={menu.key} className="relative py-2" onMouseEnter={() => setHoveredMenuKey(menu.key)}>
-                <button className={`flex items-center gap-1 px-2.5 xl:px-3 py-1.5 rounded-lg transition-all duration-200 cursor-pointer font-medium whitespace-nowrap ${isMenuHovered ? "text-[#004658] bg-[#004658]/8" : "text-slate-800 hover:text-[#004658]"}`}>
+                <button className={`flex items-center gap-1 px-2.5 xl:px-3 py-1.5 rounded-lg transition-all duration-200 cursor-pointer font-medium whitespace-nowrap ${isMenuHovered ? "text-[#004658] bg-[#004658]/10 font-semibold" : "text-slate-800 hover:text-[#004658] hover:bg-[#004658]/5"}`}>
                   <span>{menu.title}</span>
                   <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${isMenuHovered ? "text-[#004658] rotate-180" : "text-slate-500"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
                 </button>
@@ -333,7 +336,7 @@ const Navbar = () => {
 
         {/* Schedule a Call CTA Button */}
         <div className="hidden lg:flex items-center shrink-0 ml-auto">
-          <Link to="/contact" className="inline-flex items-center justify-center font-medium text-white bg-[#004658] rounded-xl shadow-md shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-5 xl:px-6 py-2.5 text-[15px] whitespace-nowrap">
+          <Link to="/contact" className="inline-flex items-center justify-center font-medium text-white bg-[#022B32] rounded-xl shadow-md shadow-[#022B32]/20 hover:bg-[#011c21] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 px-5 xl:px-6 py-2.5 text-[15px] whitespace-nowrap">
             Schedule a Call
           </Link>
         </div>
@@ -349,7 +352,7 @@ const Navbar = () => {
 
       {activeMegaMenu && (
         <div 
-          className="hidden lg:block absolute top-full left-0 right-0 w-full bg-white border-t border-b border-slate-200 shadow-[0_25px_60px_rgba(0,0,0,0.12)] z-50 animate-in fade-in slide-in-from-top-1 duration-150 font-['Plus_Jakarta_Sans',sans-serif]"
+          className="hidden lg:block absolute top-full left-0 right-0 w-full bg-[#f8fcfe]/98 backdrop-blur-2xl border-t border-b border-[#004658]/15 shadow-[0_25px_60px_rgba(0,70,88,0.14)] z-50 animate-in fade-in slide-in-from-top-1 duration-150 font-['Plus_Jakarta_Sans',sans-serif]"
           onMouseEnter={() => setHoveredMenuKey(activeMegaMenu.key)}
           onMouseLeave={() => setHoveredMenuKey(null)}
         >
@@ -552,7 +555,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-slate-200 max-h-[80vh] overflow-y-auto px-5 py-4 space-y-3">
+        <div className="lg:hidden bg-[#f8fcfe] border-b border-[#004658]/15 max-h-[80vh] overflow-y-auto px-5 py-4 space-y-3">
           <ul className="space-y-1.5">
             {menuItems.map((menu) => (
               <li key={menu.key} className="border-b border-slate-100 last:border-none pb-1.5">
@@ -601,7 +604,7 @@ const Navbar = () => {
             <Link
               to="/contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full block text-center py-3.5 font-bold text-white bg-[#004658] rounded-xl text-base shadow-lg hover:bg-[#003442]"
+              className="w-full block text-center py-3.5 font-bold text-white bg-[#022B32] rounded-xl text-base shadow-lg hover:bg-[#011c21]"
             >
               Schedule a Call
             </Link>

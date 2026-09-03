@@ -164,8 +164,8 @@ const LatestInsights = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
               <span>ENGINEERING PLAYBOOK</span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-950 leading-tight">
-              Our latest insights<span className="text-[#EA580C]">.</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-[-0.035em] text-slate-950 leading-[1.14]">
+              Our latest <span className="text-[#004658]">engineering insights<span className="text-[#EA580C]">.</span></span>
             </h2>
           </div>
 

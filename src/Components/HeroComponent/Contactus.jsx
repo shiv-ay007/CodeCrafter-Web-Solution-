@@ -69,9 +69,9 @@ const Contactus = () => {
             <span>GET IN TOUCH</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-semibold tracking-[-0.03em] text-slate-950 leading-tight max-w-2xl mb-2.5">
+          <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-[-0.035em] text-slate-950 leading-[1.14] max-w-2xl mb-2.5">
             Let's build something <br className="hidden sm:block" />
-            extraordinary <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#0086a8]">together</span>
+            <span className="text-[#004658]">extraordinary together<span className="text-[#EA580C]">.</span></span>
           </h2>
 
           <p className="text-sm sm:text-base text-slate-600 max-w-lg font-normal leading-relaxed">

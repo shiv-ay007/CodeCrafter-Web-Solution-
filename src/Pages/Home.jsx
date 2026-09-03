@@ -19,9 +19,9 @@ const Home = () => {
       <Serve />
       <AssembleTeam />
       <TechMarquee />
-      <LatestInsights />
       <GoogleReviews />
       <Contactus />
+      <LatestInsights />
       <Cta />
     </>
   )

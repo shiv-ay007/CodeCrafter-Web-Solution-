@@ -286,24 +286,24 @@ const Hero = () => {
             </motion.div>
 
             {/* Scaled Hero Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[58px] xl:text-[66px] font-semibold tracking-[-0.03em] text-slate-950 leading-[1.06] mb-4 sm:mb-5">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[58px] xl:text-[66px] font-bold tracking-[-0.035em] text-slate-950 leading-[1.08] sm:leading-[1.06] mb-4 sm:mb-5">
               We craft digital <br className="hidden sm:block" />
               solutions that <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#0086a8]">
-                elevate your brand
+              <span className="text-[#004658]">
+                elevate your brand<span className="text-[#EA580C]">.</span>
               </span>
             </h1>
 
             {/* Subtitle Description */}
-            <p className="text-base sm:text-lg lg:text-[18px] text-slate-600 max-w-xl leading-relaxed mb-6 sm:mb-7 font-normal">
+            <p className="text-sm sm:text-lg lg:text-[18px] text-slate-600 max-w-xl leading-relaxed mb-6 sm:mb-7 font-normal">
               High-performance web apps, modern UI/UX design, and bespoke software engineered for ambitious brands.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 mb-7 sm:mb-8">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-3.5 mb-7 sm:mb-8 w-full sm:w-auto">
               <Link
                 to="/software/crm"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#004658] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#004658] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Explore Our Work</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -313,7 +313,7 @@ const Hero = () => {
 
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-white text-[#004658] font-semibold text-sm sm:text-base border border-slate-200 shadow-xs hover:border-[#004658]/40 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-white text-[#004658] font-semibold text-sm sm:text-base border border-slate-200 shadow-xs hover:border-[#004658]/40 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
               >
                 <span>Schedule a Call</span>
                 <svg className="w-4 h-4 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -326,11 +326,11 @@ const Hero = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-0.5">
               {/* Overlapping Avatars */}
               <div className="flex items-center -space-x-2">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 1" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 2" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 3" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 4" className="w-9 h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <div className="w-9 h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[11px] font-semibold flex items-center justify-center shadow-xs">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 1" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 2" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 3" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 4" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <div className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[10.5px] sm:text-[11px] font-semibold flex items-center justify-center shadow-xs">
                   50+
                 </div>
               </div>
@@ -350,7 +350,7 @@ const Hero = () => {
 
           {/* RIGHT COLUMN: 3D Vortex Swirl with Circular Core & Orbiting Cards */}
           <motion.div 
-            className="lg:col-span-5 flex flex-col items-center justify-center relative select-none"
+            className="lg:col-span-5 flex flex-col items-center justify-center relative select-none w-full"
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             initial={{ opacity: 0, scale: 0.92 }}
@@ -358,10 +358,10 @@ const Hero = () => {
             transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.1, 0.25, 1.0] }}
           >
             {/* Circular Visual Canvas (Scaled Proportions) */}
-            <div className="relative w-[300px] h-[300px] xs:w-[340px] xs:h-[340px] sm:w-[400px] sm:h-[400px] lg:w-[440px] lg:h-[440px] xl:w-[460px] xl:h-[460px] flex items-center justify-center">
+            <div className="relative w-[280px] h-[280px] xs:w-[320px] xs:h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[440px] lg:h-[440px] xl:w-[460px] xl:h-[460px] flex items-center justify-center max-w-full">
               
               {/* 3D Ethereal Vortex Fluid Wave Image */}
-              <div className="absolute inset-3 sm:inset-4 rounded-full overflow-hidden shadow-[0_20px_50px_rgba(0,70,88,0.12)]">
+              <div className="absolute inset-2 sm:inset-4 rounded-full overflow-hidden shadow-[0_20px_50px_rgba(0,70,88,0.12)]">
                 <motion.img
                   src={vortexSwirlImg}
                   alt="3D Fluid Vortex Wave"
@@ -376,11 +376,11 @@ const Hero = () => {
               <div className="absolute inset-1 sm:inset-2 rounded-full border border-dashed border-[#004658]/20 animate-spin [animation-duration:80s]" />
               
               {/* Secondary Soft Glow Ring */}
-              <div className="absolute inset-8 sm:inset-10 rounded-full border border-white/60 bg-white/10 backdrop-blur-[1px]" />
+              <div className="absolute inset-6 sm:inset-10 rounded-full border border-white/60 bg-white/10 backdrop-blur-[1px]" />
 
               {/* CENTER CORE DISC */}
               <motion.div 
-                className="z-20 w-32 h-32 xs:w-36 xs:h-36 sm:w-44 sm:h-44 rounded-full bg-white ring-4 sm:ring-6 ring-white/70 shadow-[0_15px_40px_rgba(0,70,88,0.15)] flex flex-col items-center justify-center p-2.5 text-center transition-transform duration-300"
+                className="z-20 w-28 h-28 xs:w-32 xs:h-32 sm:w-42 sm:h-42 rounded-full bg-white ring-3 sm:ring-6 ring-white/70 shadow-[0_15px_40px_rgba(0,70,88,0.15)] flex flex-col items-center justify-center p-2 sm:p-2.5 text-center transition-transform duration-300"
                 whileHover={{ scale: 1.04 }}
               >
                 <AnimatePresence mode="wait">
@@ -393,17 +393,17 @@ const Hero = () => {
                     className="flex flex-col items-center"
                   >
                     {/* Center Icon Badge */}
-                    <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-[#004658] text-white flex items-center justify-center text-lg sm:text-xl font-bold shadow-md shadow-[#004658]/30 mb-1.5">
+                    <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-[#004658] text-white flex items-center justify-center text-base sm:text-xl font-bold shadow-md shadow-[#004658]/30 mb-1 sm:mb-1.5">
                       <HeroServiceIcon type={activeItem.iconType} />
                     </div>
 
                     {/* Center Category Title */}
-                    <span className="text-xs sm:text-[13px] md:text-sm font-semibold text-slate-950 tracking-tight uppercase">
+                    <span className="text-[11px] sm:text-[13px] md:text-sm font-semibold text-slate-950 tracking-tight uppercase">
                       {activeItem.centerTitle}
                     </span>
 
                     {/* Center Interactive Spec Tag */}
-                    <span className="text-[9px] sm:text-[10px] font-medium text-[#004658] tracking-widest uppercase mt-0.5">
+                    <span className="text-[8.5px] sm:text-[10px] font-medium text-[#004658] tracking-widest uppercase mt-0.5">
                       {activeItem.spec}
                     </span>
                   </motion.div>
@@ -426,23 +426,23 @@ const Hero = () => {
                       to={item.path}
                       onClick={() => setActiveServiceIndex(index)}
                       onMouseEnter={() => setActiveServiceIndex(index)}
-                      className={`flex items-center gap-2 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl cursor-pointer transition-all duration-300 backdrop-blur-xl ${
+                      className={`flex items-center gap-1.5 sm:gap-2 px-2 py-1 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl cursor-pointer transition-all duration-300 backdrop-blur-xl ${
                         isActive
                           ? "bg-white text-slate-900 shadow-[0_10px_25px_rgba(0,70,88,0.2)] border-2 border-[#004658] scale-105 ring-2 ring-[#004658]/10"
                           : "bg-white/95 text-slate-900 border border-slate-100/90 shadow-sm hover:bg-white hover:border-[#004658]/30 hover:shadow-md"
                       }`}
                     >
                       {/* Left Icon Pill */}
-                      <div className={`w-6.5 h-6.5 sm:w-7.5 sm:h-7.5 rounded-lg ${item.iconBg} flex items-center justify-center text-xs sm:text-sm shrink-0 shadow-2xs`}>
+                      <div className={`w-5.5 h-5.5 sm:w-7.5 sm:h-7.5 rounded-md sm:rounded-lg ${item.iconBg} flex items-center justify-center text-xs sm:text-sm shrink-0 shadow-2xs`}>
                         <HeroServiceIcon type={item.iconType} />
                       </div>
 
                       {/* Card Text */}
                       <div className="text-left">
-                        <div className="text-xs sm:text-[13px] font-semibold text-slate-950 leading-tight">
+                        <div className="text-[11px] sm:text-[13px] font-semibold text-slate-950 leading-tight">
                           {item.title}
                         </div>
-                        <div className="text-[10px] sm:text-[11px] font-normal text-slate-500 leading-tight">
+                        <div className="text-[9px] sm:text-[11px] font-normal text-slate-500 leading-tight hidden xs:block">
                           {item.subtitle}
                         </div>
                       </div>

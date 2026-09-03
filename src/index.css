@@ -100,3 +100,67 @@ h1, h2, h3, h4, h5, h6 {
 .animate-marquee-right:hover {
   animation-play-state: paused;
 }
+
+/* Enterprise Micro-interaction Animations */
+@keyframes light-sweep {
+  0% {
+    transform: translateX(-150%);
+  }
+  50%, 100% {
+    transform: translateX(250%);
+  }
+}
+
+.animate-light-sweep {
+  animation: light-sweep 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes ambient-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(20px, -15px) scale(1.04);
+  }
+}
+
+.animate-ambient-drift {
+  animation: ambient-drift 12s ease-in-out infinite alternate;
+}
+
+@keyframes data-flow {
+  0% {
+    stroke-dashoffset: 1200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-data-flow {
+  animation: data-flow 16s linear infinite;
+}
+
+.animate-data-flow-fast {
+  animation: data-flow 8s linear infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
