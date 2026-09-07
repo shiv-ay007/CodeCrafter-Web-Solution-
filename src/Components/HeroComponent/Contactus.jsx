@@ -244,7 +244,9 @@ const Contactus = () => {
                 <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] font-medium uppercase tracking-wider">
                   HQ & Digital Studio
                 </span>
-                <h4 className="text-base sm:text-lg font-semibold text-white mt-0.5">Codecrafter Web Solutions</h4>
+                <h4 className="text-base sm:text-lg font-semibold !text-white text-white mt-0.5" style={{ color: '#ffffff' }}>
+                  Code Crafter Web Solutions
+                </h4>
               </div>
             </div>
 
