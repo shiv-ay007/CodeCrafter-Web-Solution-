@@ -5,7 +5,7 @@ const reviewsData = [
   {
     id: 1,
     name: "Access Authority",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80",
+    avatar: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=200&h=200&q=80",
     date: "1 month ago",
     rating: 5,
     role: "Verified Google Client",
@@ -15,17 +15,17 @@ const reviewsData = [
   {
     id: 2,
     name: "Shanya Scans",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&h=120&q=80",
+    avatar: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=200&h=200&q=80",
     date: "4 months ago",
     rating: 5,
-    role: "Healthcare Platform",
+    role: "Healthcare & Diagnostics",
     review:
       "We are extremely satisfied with the services provided by Code Crafter. They developed our app and website with great professionalism, creativity, and timely delivery. The team understood our requirements perfectly and delivered beyond expectations. Highly recommended for anyone looking for quality digital solutions."
   },
   {
     id: 3,
     name: "Diksha Sibu",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&h=120&q=80",
+    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&h=200&q=80",
     date: "1 year ago",
     rating: 5,
     role: "Product Founder",
@@ -35,17 +35,17 @@ const reviewsData = [
   {
     id: 4,
     name: "Monika Pandey",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=120&h=120&q=80",
+    avatar: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?auto=format&fit=crop&w=200&h=200&q=80",
     date: "1 year ago",
     rating: 5,
-    role: "Enterprise Client",
+    role: "Business Client",
     review:
       "Highly skilled and professional team. They took time to understand my needs and accordingly designed my website. Have ample patience to design and redesign and alter the content according to the clients requirements... thank you Code Crafter Team."
   },
   {
     id: 5,
     name: "Ariz Niyaz",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&h=120&q=80",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200&q=80",
     date: "1 year ago",
     rating: 5,
     role: "Fintech & Algorithmic Trading",
@@ -55,7 +55,7 @@ const reviewsData = [
   {
     id: 6,
     name: "Eqra Nasir",
-    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&h=200&q=80",
     date: "1 year ago",
     rating: 5,
     role: "E-Commerce Founder",
@@ -65,7 +65,7 @@ const reviewsData = [
   {
     id: 7,
     name: "Aman Maurya",
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=120&h=120&q=80",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&h=200&q=80",
     date: "1 year ago",
     rating: 5,
     role: "Tech Entrepreneur",

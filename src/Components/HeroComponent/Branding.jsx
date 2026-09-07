@@ -177,46 +177,70 @@ const Branding = () => {
       <div className="relative z-10 mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
 
         {/* ─────────────────────────────────────────────────────────────
-            HERO / INTRO AREA (AWWWARDS-STYLE EDITORIAL HEADLINE)
+            HERO / INTRO AREA
         ─────────────────────────────────────────────────────────────── */}
-        <div className="flex flex-col items-center text-center mb-14 sm:mb-18 lg:mb-20">
-          {/* Centered Category Label / Eyebrow */}
+        <div className="grid items-end gap-8 lg:grid-cols-[1.25fr_0.75fr] mb-16 sm:mb-20">
+          {/* Main Title & Eyebrow */}
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
+            initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="mb-4 sm:mb-5"
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <span className="text-xs sm:text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
-              Creative Studio & Growth
-            </span>
+            {/* Sleek Eyebrow Pill */}
+            <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-slate-200/90 bg-white/85 px-4 py-1.5 shadow-2xs backdrop-blur-md">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EA580C] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#EA580C]" />
+              </span>
+              <span className="text-[11.5px] font-bold uppercase tracking-[0.22em] text-[#004658]">
+                Branding & Marketing
+              </span>
+            </div>
+
+            {/* Main Headline */}
+            <h2 className="text-4xl sm:text-5xl lg:text-[62px] font-extrabold tracking-[-0.035em] text-slate-950 leading-[1.08]">
+              Make your brand <br />
+              <span className="text-[#004658] relative inline-block">
+                impossible to ignore
+                <span className="text-[#EA580C]">.</span>
+                <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#004658] via-[#EA580C]/70 to-transparent rounded-full opacity-35" />
+              </span>
+            </h2>
           </motion.div>
 
-          {/* Huge Full-Width 2-Line Headline */}
-          <motion.h2
-            initial={{ opacity: 0, y: 25 }}
+          {/* Right Description & Action CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.55, ease: "easeOut" }}
-            className="w-full text-5xl sm:text-7xl md:text-8xl lg:text-[105px] xl:text-[124px] 2xl:text-[136px] font-black uppercase tracking-[-0.04em] text-slate-950 leading-[0.92] select-none"
-          >
-            <span className="block">BRANDING &</span>
-            <span className="block text-[#004658]">
-              MARKETING<span className="text-[#EA580C]">.</span>
-            </span>
-          </motion.h2>
-
-          {/* Centered Editorial Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
+            viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: 0.1, ease: "easeOut" }}
-            className="mt-6 sm:mt-8 max-w-xl sm:max-w-2xl text-[15px] sm:text-[17px] text-slate-600 font-normal leading-relaxed"
+            className="lg:pb-1 flex flex-col justify-end"
           >
-            Make your brand impossible to ignore. Bespoke visual identity, high-craft design systems, and full-funnel performance marketing.
-          </motion.p>
+            <p className="max-w-md text-[15px] sm:text-[16px] leading-relaxed text-slate-600 font-normal">
+              We combine deep brand strategy, bespoke visual design, and high-impact digital campaigns to create brands that connect emotionally and scale exponentially.
+            </p>
+
+            <div className="mt-6 flex flex-wrap items-center gap-4">
+              <Link
+                to="/digital-booster/branding"
+                className="group relative inline-flex items-center gap-2.5 rounded-full bg-[#004658] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_16px_rgba(0,70,88,0.25)] hover:bg-[#022B32] hover:shadow-[0_8px_25px_rgba(0,70,88,0.35)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              >
+                <span>Explore Creative Services</span>
+                <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
+                  <ArrowUpRight size={14} className="text-white" />
+                </div>
+              </Link>
+
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-5 py-3 text-xs font-bold text-slate-800 hover:border-[#004658] hover:bg-slate-50 transition-all duration-200"
+              >
+                <Sparkles size={13} className="text-[#EA580C]" />
+                <span>Book Discovery Call</span>
+              </Link>
+            </div>
+          </motion.div>
         </div>
 
         {/* ─────────────────────────────────────────────────────────────
