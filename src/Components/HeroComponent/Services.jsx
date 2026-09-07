@@ -151,8 +151,8 @@ const Services = () => {
     };
   }, []);
 
-  // Gap matches Tailwind's gap-3.5 (14px on mobile) and sm:gap-4 (16px on >=640px)
-  const gap = visibleCount === 1 ? 14 : 16;
+  // Gap matches Tailwind's gap-3 (12px on mobile) and sm:gap-3.5 (14px on >=640px)
+  const gap = visibleCount === 1 ? 12 : 14;
 
   // Exact card width and step distance (card width + gap)
   const cardWidth = containerWidth > 0 
@@ -254,7 +254,7 @@ const Services = () => {
         {/* Horizontal Slider Viewport */}
         <div ref={containerRef} className="relative overflow-hidden py-3">
           <motion.div
-            className="flex gap-3.5 sm:gap-4"
+            className="flex gap-3 sm:gap-3.5"
             animate={{ x: translateX }}
             transition={
               isJumping
@@ -275,7 +275,7 @@ const Services = () => {
               >
                 <Link
                   to={item.link}
-                  className="group relative flex flex-col justify-between h-full min-h-[390px] sm:min-h-[420px] bg-white rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(2,43,50,0.05),0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-12px_rgba(2,43,50,0.13),0_2px_6px_rgba(0,0,0,0.03)] hover:-translate-y-1.5 hover:border-[#022B32]/35 transition-all duration-300 overflow-hidden text-left"
+                  className="group relative flex flex-col justify-between h-full min-h-[410px] sm:min-h-[435px] bg-white rounded-[24px] sm:rounded-[28px] p-6 sm:p-8 border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(2,43,50,0.05),0_1px_2px_rgba(0,0,0,0.03)] hover:shadow-[0_22px_45px_-12px_rgba(2,43,50,0.13),0_2px_6px_rgba(0,0,0,0.03)] hover:-translate-y-1.5 hover:border-[#022B32]/35 transition-all duration-300 overflow-hidden text-left"
                 >
                   {/* Elegant Top Ambient Highlight Line */}
                   <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#022B32] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -298,29 +298,29 @@ const Services = () => {
                     </div>
 
                     {/* Bold Service Title */}
-                    <h3 className="text-xl sm:text-[22px] font-bold text-slate-950 tracking-tight mb-2.5 leading-snug group-hover:text-[#022B32] transition-colors">
+                    <h3 className="text-[21px] sm:text-[23px] font-bold text-slate-950 tracking-tight mb-3 leading-snug group-hover:text-[#022B32] transition-colors">
                       {item.title}
                     </h3>
 
                     {/* Refined Description */}
-                    <p className="text-[13.5px] sm:text-[14px] text-slate-600 font-normal leading-relaxed">
+                    <p className="text-[14.5px] sm:text-[15.5px] text-slate-600 font-normal leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
                   {/* Bottom Tag Pills Section with Ambient Glow */}
-                  <div className="relative pt-6 mt-4 border-t border-slate-100/90">
+                  <div className="relative pt-6 mt-5 border-t border-slate-100/90">
                     {/* Soft Deep Teal (#022B32) Radial Glow Behind Tag Pills */}
                     <div 
                       className="absolute -inset-x-2 -bottom-2 h-20 bg-[radial-gradient(ellipse_at_bottom,rgba(2,43,50,0.11)_0%,rgba(2,43,50,0.02)_55%,transparent_75%)] pointer-events-none rounded-full blur-md opacity-60 group-hover:opacity-100 transition-opacity duration-300"
                     />
 
                     {/* Upgraded Premium Tag Pills */}
-                    <div className="flex flex-wrap gap-1.5 sm:gap-2 relative z-10">
+                    <div className="flex flex-wrap gap-2 relative z-10">
                       {item.tags.map((tag, tIdx) => (
                         <span
                           key={tIdx}
-                          className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-slate-200/90 bg-slate-50/80 text-[#022B32] font-semibold text-[11.5px] sm:text-xs tracking-tight shadow-2xs group-hover:border-[#022B32]/35 group-hover:bg-white hover:!bg-[#022B32] hover:!text-white hover:!border-[#022B32] hover:scale-105 transition-all duration-200"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-slate-200/90 bg-slate-50/80 text-[#022B32] font-semibold text-[12px] sm:text-[12.5px] tracking-tight shadow-2xs group-hover:border-[#022B32]/35 group-hover:bg-white hover:!bg-[#022B32] hover:!text-white hover:!border-[#022B32] hover:scale-105 transition-all duration-200"
                         >
                           <span className="w-1.5 h-1.5 rounded-full bg-[#022B32]/35 group-hover:bg-[#022B32] transition-colors" />
                           <span>{tag}</span>
