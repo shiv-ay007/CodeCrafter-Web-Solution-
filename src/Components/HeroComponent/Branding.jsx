@@ -749,50 +749,109 @@ const Branding = () => {
                 </div>
               </div>
 
-              {/* Right Campaign Dashboard Mockup */}
-              <div className="lg:col-span-5 bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-2xl p-5 sm:p-6 border border-slate-800 shadow-xl relative overflow-hidden">
-                <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-xs font-bold uppercase tracking-wider text-slate-300">Live Campaign Engine</span>
-                  </div>
-                  <span className="text-[11px] font-mono text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded border border-cyan-800/60">
-                    4.8x Avg ROAS
-                  </span>
-                </div>
+              {/* Right Campaign Dashboard Mockup - Minimal, Elegant & Unique Glass Console */}
+              <div className="lg:col-span-5 relative">
+                {/* Subtle Ambient Glow Behind Card */}
+                <div 
+                  className="absolute -inset-1 rounded-3xl opacity-30 blur-xl pointer-events-none -z-10"
+                  style={{
+                    background: "radial-gradient(circle, rgba(0,70,88,0.2) 0%, rgba(234,88,12,0.12) 60%, transparent 80%)"
+                  }}
+                />
 
-                {/* Dashboard Metrics Grid */}
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  <div className="bg-white/5 p-3 rounded-xl border border-white/10">
-                    <span className="text-[11px] text-slate-400 font-medium">Conversion Rate</span>
-                    <div className="text-lg font-bold text-white tracking-tight mt-0.5">12.4% <span className="text-[10px] text-emerald-400">↑ 34%</span></div>
-                  </div>
-                  <div className="bg-white/5 p-3 rounded-xl border border-white/10">
-                    <span className="text-[11px] text-slate-400 font-medium">Cost Per Lead</span>
-                    <div className="text-lg font-bold text-white tracking-tight mt-0.5">$4.20 <span className="text-[10px] text-emerald-400">↓ 42%</span></div>
-                  </div>
-                </div>
+                <div className="relative overflow-hidden rounded-[24px] border border-[#004658]/15 bg-gradient-to-b from-[#FAFDFE] via-white to-[#F4F9FB] p-5 sm:p-6 shadow-[0_12px_36px_-8px_rgba(0,70,88,0.12)]">
+                  
+                  {/* Top Header: Live Status & Benchmark */}
+                  <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-4.5">
+                    <div className="flex items-center gap-2">
+                      <span className="relative flex h-2 w-2">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                      </span>
+                      <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-800">
+                        Live Performance Engine
+                      </span>
+                    </div>
 
-                {/* Mini Visual Pipeline */}
-                <div className="space-y-1.5 text-xs font-mono text-slate-300">
-                  <div className="flex justify-between text-[11px] text-slate-400">
-                    <span>Funnel Efficiency</span>
-                    <span className="text-cyan-300">94.2% Optimal</span>
+                    <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/18 text-[#004658] text-[11px] font-bold">
+                      <TrendingUp size={12} className="text-[#004658]" />
+                      <span>4.8x Avg ROAS</span>
+                    </div>
                   </div>
-                  <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden">
-                    <div className="bg-gradient-to-r from-[#004658] via-cyan-400 to-[#EA580C] h-full w-[92%] rounded-full" />
-                  </div>
-                </div>
 
-                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
-                  <span className="text-xs text-slate-400">Auto-Bidding Machine</span>
-                  <Link
-                    to="/digital-booster/google-ads"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-cyan-300 hover:text-white transition-colors"
-                  >
-                    <span>Launch Campaign</span>
-                    <ArrowUpRight size={13} />
-                  </Link>
+                  {/* Minimal High-Impact Metric Cards */}
+                  <div className="grid grid-cols-2 gap-3 mb-4.5">
+                    <div className="rounded-xl border border-slate-200/80 bg-white/95 p-3.5 shadow-2xs transition-all hover:border-[#004658]/30 hover:shadow-sm">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-[11px] font-medium text-slate-500">Conversion Rate</span>
+                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-200/60">
+                          +34.8%
+                        </span>
+                      </div>
+                      <div className="text-xl font-extrabold text-slate-900 tracking-tight">
+                        12.4%
+                      </div>
+                    </div>
+
+                    <div className="rounded-xl border border-slate-200/80 bg-white/95 p-3.5 shadow-2xs transition-all hover:border-[#004658]/30 hover:shadow-sm">
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="text-[11px] font-medium text-slate-500">Cost Per Lead</span>
+                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-200/60">
+                          -42.0%
+                        </span>
+                      </div>
+                      <div className="text-xl font-extrabold text-slate-900 tracking-tight">
+                        $4.20
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Multi-Channel Allocation & Efficiency Bar */}
+                  <div className="rounded-xl border border-slate-200/70 bg-slate-50/80 p-3.5 space-y-2.5 mb-4">
+                    <div className="flex items-center justify-between text-[11px]">
+                      <span className="font-semibold text-slate-700 flex items-center gap-1.5">
+                        <Activity size={12} className="text-[#004658]" />
+                        <span>Algorithmic Funnel Efficiency</span>
+                      </span>
+                      <span className="font-mono font-bold text-[#004658]">94.2% Optimal</span>
+                    </div>
+
+                    {/* Segmented Stacked Progress Bar */}
+                    <div className="h-2 w-full bg-slate-200/80 rounded-full overflow-hidden flex gap-0.5">
+                      <div className="bg-[#004658] h-full rounded-l-full" style={{ width: "46%" }} title="Google Search & Shopping (46%)" />
+                      <div className="bg-[#0284C7] h-full" style={{ width: "32%" }} title="Meta Performance 5 (32%)" />
+                      <div className="bg-[#EA580C] h-full rounded-r-full" style={{ width: "22%" }} title="LinkedIn B2B & DSP (22%)" />
+                    </div>
+
+                    <div className="flex items-center justify-between text-[10px] font-medium text-slate-500 pt-0.5">
+                      <span className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" /> Google 46%
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#0284C7]" /> Meta 32%
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#EA580C]" /> Other 22%
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Bottom Minimal Footer CTA */}
+                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-600">
+                      <Zap size={13} className="text-[#EA580C]" />
+                      <span>Smart Auto-Bidding</span>
+                    </div>
+
+                    <Link
+                      to="/digital-booster/google-ads"
+                      className="group/btn inline-flex items-center gap-1.5 rounded-full bg-[#004658] px-3.5 py-1.5 text-[11.5px] font-bold text-white shadow-2xs hover:bg-[#022B32] hover:shadow-xs transition-all duration-200"
+                    >
+                      <span>Launch Campaign</span>
+                      <ArrowUpRight size={12} className="transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                    </Link>
+                  </div>
+
                 </div>
               </div>
             </div>
