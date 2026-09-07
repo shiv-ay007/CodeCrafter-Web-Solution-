@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Share2,
   Search,
@@ -13,7 +13,16 @@ import {
   Layers,
   Flame,
   CheckCircle2,
-  Heart
+  Heart,
+  TrendingUp,
+  BarChart3,
+  Target,
+  Zap,
+  MousePointerClick,
+  MessageCircle,
+  Activity,
+  Sliders,
+  Check
 } from "lucide-react";
 
 /**
@@ -26,7 +35,7 @@ const orbitNodes = [
     fullName: "Search Optimization",
     icon: Search,
     color: "#2563EB",
-    glowColor: "rgba(37, 99, 235, 0.45)",
+    glowColor: "rgba(37, 99, 235, 0.35)",
     angle: 0, // 12 o'clock (Top)
     path: "/digital-booster/seo",
     desc: "+380% Organic Visibility"
@@ -37,7 +46,7 @@ const orbitNodes = [
     fullName: "Brand Identity",
     icon: Palette,
     color: "#004658",
-    glowColor: "rgba(0, 70, 88, 0.55)",
+    glowColor: "rgba(0, 70, 88, 0.45)",
     angle: 60, // 2 o'clock (Top-Right)
     path: "/digital-booster/branding",
     desc: "Iconic Visual Systems"
@@ -48,7 +57,7 @@ const orbitNodes = [
     fullName: "Digital Campaigns",
     icon: Megaphone,
     color: "#EA580C",
-    glowColor: "rgba(234, 88, 12, 0.55)",
+    glowColor: "rgba(234, 88, 12, 0.45)",
     angle: 120, // 4 o'clock (Bottom-Right)
     path: "/digital-booster/google-ads",
     desc: "4.8x High-ROI Paid Acquisition"
@@ -59,7 +68,7 @@ const orbitNodes = [
     fullName: "Graphic & 3D Design",
     icon: PenTool,
     color: "#F59E0B",
-    glowColor: "rgba(245, 158, 11, 0.55)",
+    glowColor: "rgba(245, 158, 11, 0.45)",
     angle: 180, // 6 o'clock (Bottom)
     path: "/web-design",
     desc: "High-Craft Art Direction"
@@ -70,7 +79,7 @@ const orbitNodes = [
     fullName: "Content Strategy",
     icon: FileText,
     color: "#8B5CF6",
-    glowColor: "rgba(139, 92, 246, 0.55)",
+    glowColor: "rgba(139, 92, 246, 0.45)",
     angle: 240, // 8 o'clock (Bottom-Left)
     path: "/digital-booster/content-marketing",
     desc: "High-Converting Narratives"
@@ -81,7 +90,7 @@ const orbitNodes = [
     fullName: "Social Amplification",
     icon: Share2,
     color: "#EC4899",
-    glowColor: "rgba(236, 72, 153, 0.55)",
+    glowColor: "rgba(236, 72, 153, 0.45)",
     angle: 300, // 10 o'clock (Top-Left)
     path: "/digital-booster/social-media",
     desc: "Viral Community Growth"
@@ -97,16 +106,6 @@ const marqueeItems = [
   "PERFORMANCE DIGITAL CAMPAIGNS",
   "CONVERSION RATE OPTIMIZATION",
   "OMNICHANNEL MEDIA BUYING"
-];
-
-// Floating cosmic background particles
-const floatingParticles = [
-  { top: "12%", left: "10%", size: "w-2 h-2", color: "bg-[#004658]", duration: 6, delay: 0 },
-  { top: "24%", right: "14%", size: "w-2.5 h-2.5", color: "bg-[#EA580C]", duration: 8, delay: 1 },
-  { top: "48%", left: "6%", size: "w-3 h-3", color: "bg-purple-500", duration: 7, delay: 2 },
-  { top: "62%", right: "8%", size: "w-2 h-2", color: "bg-blue-500", duration: 9, delay: 0.5 },
-  { top: "78%", left: "15%", size: "w-2.5 h-2.5", color: "bg-emerald-500", duration: 8.5, delay: 1.5 },
-  { top: "88%", right: "20%", size: "w-3 h-3", color: "bg-pink-500", duration: 6.5, delay: 2.5 }
 ];
 
 const Branding = () => {
@@ -134,109 +133,43 @@ const Branding = () => {
       id="branding-marketing"
     >
       {/* ─────────────────────────────────────────────────────────────
-          DYNAMIC ANIMATED AURORA & CYBER-GRID BACKGROUND CANVAS
+          AMBIENT BACKGROUND LIGHTING & SUBTLE DECORATIVE ELEMENTS
       ─────────────────────────────────────────────────────────────── */}
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-        
-        {/* Animated Aurora Morphing Orb 1 (Deep Teal & Cyan) */}
-        <motion.div
-          animate={{
-            x: [0, 60, -40, 0],
-            y: [0, -50, 40, 0],
-            scale: [1, 1.25, 0.9, 1],
-            rotate: [0, 90, 180, 360]
-          }}
-          transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-32 left-1/4 w-[650px] h-[500px] rounded-full blur-[90px] opacity-35"
+        {/* Soft Multi-color Ambient Radial Blobs */}
+        <div 
+          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[520px] rounded-full blur-3xl opacity-25"
           style={{
-            background: "radial-gradient(circle, rgba(0, 70, 88, 0.6) 0%, rgba(6, 182, 212, 0.35) 50%, transparent 75%)"
+            background: "radial-gradient(ellipse at center, rgba(0, 70, 88, 0.45) 0%, rgba(234, 88, 12, 0.18) 45%, transparent 70%)"
+          }}
+        />
+        <div 
+          className="absolute top-1/3 -left-32 w-[520px] h-[520px] rounded-full blur-3xl opacity-15"
+          style={{
+            background: "radial-gradient(circle, rgba(139, 92, 246, 0.45) 0%, transparent 65%)"
+          }}
+        />
+        <div 
+          className="absolute bottom-1/4 -right-32 w-[580px] h-[580px] rounded-full blur-3xl opacity-15"
+          style={{
+            background: "radial-gradient(circle, rgba(14, 165, 233, 0.45) 0%, transparent 65%)"
           }}
         />
 
-        {/* Animated Aurora Morphing Orb 2 (Radiant Warm Amber & Orange) */}
-        <motion.div
-          animate={{
-            x: [0, -70, 50, 0],
-            y: [0, 60, -30, 0],
-            scale: [1, 1.3, 0.95, 1],
-            rotate: [360, 270, 180, 0]
-          }}
-          transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/4 -right-20 w-[600px] h-[550px] rounded-full blur-[100px] opacity-30"
+        {/* Subtle Architectural Dot Matrix Grid */}
+        <div 
+          className="absolute inset-0 opacity-[0.035]"
           style={{
-            background: "radial-gradient(circle, rgba(234, 88, 12, 0.55) 0%, rgba(245, 158, 11, 0.3) 50%, transparent 75%)"
+            backgroundImage: "radial-gradient(rgba(15, 23, 42, 0.85) 1px, transparent 1px)",
+            backgroundSize: "28px 28px"
           }}
         />
-
-        {/* Animated Aurora Morphing Orb 3 (Cyber Violet & Rose) */}
-        <motion.div
-          animate={{
-            x: [0, 40, -50, 0],
-            y: [0, -40, 50, 0],
-            scale: [0.9, 1.2, 1, 0.9]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-10 left-1/6 w-[550px] h-[500px] rounded-full blur-[95px] opacity-25"
-          style={{
-            background: "radial-gradient(circle, rgba(139, 92, 246, 0.5) 0%, rgba(236, 72, 153, 0.3) 50%, transparent 75%)"
-          }}
-        />
-
-        {/* Animated Cyber Wave Mesh Background SVG */}
-        <svg
-          className="absolute inset-0 w-full h-full opacity-[0.06] pointer-events-none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <pattern id="branding-cyber-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-              <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#004658" strokeWidth="1" strokeDasharray="2 4" />
-              <circle cx="48" cy="0" r="1.5" fill="#EA580C" />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#branding-cyber-grid)" />
-        </svg>
-
-        {/* Floating Glowing Sparkle Diamonds & Dots */}
-        {floatingParticles.map((p, i) => (
-          <motion.div
-            key={i}
-            style={{ top: p.top, left: p.left, right: p.right }}
-            animate={{
-              y: [-12, 12, -12],
-              opacity: [0.35, 0.85, 0.35],
-              scale: [0.9, 1.3, 0.9]
-            }}
-            transition={{
-              duration: p.duration,
-              delay: p.delay,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className={`absolute ${p.size} ${p.color} rounded-full blur-[1px] shadow-[0_0_12px_currentColor]`}
-          />
-        ))}
-
-        {/* Floating Decorative Plus / Cross Accents */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-          className="absolute top-20 right-28 text-slate-300/40 text-lg font-mono font-bold"
-        >
-          ✦
-        </motion.div>
-        <motion.div
-          animate={{ rotate: -360 }}
-          transition={{ duration: 35, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-32 left-24 text-slate-300/40 text-xl font-mono font-bold"
-        >
-          ✦
-        </motion.div>
 
         {/* Subtle Floating Code / Spec Watermarks */}
-        <div className="absolute top-12 left-8 font-mono text-[12px] text-slate-900/[0.04] select-none">
+        <div className="absolute top-12 left-8 font-mono text-[12px] text-slate-900/[0.035] select-none">
           {`// CCWS.Brand.Engine.v4.2\nconst identity = createBrandSystem({\n  resonance: "infinite",\n  growthFactor: 4.8\n});`}
         </div>
-        <div className="absolute bottom-16 right-10 font-mono text-[12px] text-slate-900/[0.04] select-none">
+        <div className="absolute bottom-16 right-10 font-mono text-[12px] text-slate-900/[0.035] select-none">
           {`return <BrandResonance impact="maximum" reach="global" />;`}
         </div>
       </div>
@@ -255,13 +188,13 @@ const Branding = () => {
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
             {/* Sleek Eyebrow Pill */}
-            <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-slate-200/90 bg-white/90 px-4 py-1.5 shadow-sm backdrop-blur-md">
+            <div className="mb-4 inline-flex items-center gap-2.5 rounded-full border border-slate-200/90 bg-white/85 px-4 py-1.5 shadow-2xs backdrop-blur-md">
               <span className="flex h-2 w-2 relative">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#EA580C] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#EA580C]" />
               </span>
               <span className="text-[11.5px] font-bold uppercase tracking-[0.22em] text-[#004658]">
-                Branding & Creative Studio
+                Branding & Marketing
               </span>
             </div>
 
@@ -271,7 +204,7 @@ const Branding = () => {
               <span className="text-[#004658] relative inline-block">
                 impossible to ignore
                 <span className="text-[#EA580C]">.</span>
-                <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#004658] via-[#EA580C]/70 to-transparent rounded-full opacity-45" />
+                <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gradient-to-r from-[#004658] via-[#EA580C]/70 to-transparent rounded-full opacity-35" />
               </span>
             </h2>
           </motion.div>
@@ -291,7 +224,7 @@ const Branding = () => {
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link
                 to="/digital-booster/branding"
-                className="group relative inline-flex items-center gap-2.5 rounded-full bg-[#004658] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_18px_rgba(0,70,88,0.28)] hover:bg-[#022B32] hover:shadow-[0_8px_28px_rgba(0,70,88,0.38)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+                className="group relative inline-flex items-center gap-2.5 rounded-full bg-[#004658] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_16px_rgba(0,70,88,0.25)] hover:bg-[#022B32] hover:shadow-[0_8px_25px_rgba(0,70,88,0.35)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
               >
                 <span>Explore Creative Services</span>
                 <div className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">
@@ -301,7 +234,7 @@ const Branding = () => {
 
               <Link
                 to="/contact"
-                className="group inline-flex items-center gap-2 rounded-full border border-slate-300/90 bg-white/90 px-5 py-3 text-xs font-bold text-slate-800 hover:border-[#004658] hover:bg-white shadow-2xs hover:shadow-sm transition-all duration-200"
+                className="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-5 py-3 text-xs font-bold text-slate-800 hover:border-[#004658] hover:bg-slate-50 transition-all duration-200"
               >
                 <Sparkles size={13} className="text-[#EA580C]" />
                 <span>Book Discovery Call</span>
@@ -311,100 +244,64 @@ const Branding = () => {
         </div>
 
         {/* ─────────────────────────────────────────────────────────────
-            BRAND ORBIT VISUAL (6 ORBITS AROUND CCWS CENTER WITH ANIMATED STAGE)
+            BRAND ORBIT VISUAL (6 ORBITS AROUND CCWS CENTER)
         ─────────────────────────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative mx-auto my-12 sm:my-16 lg:my-20 flex h-[360px] sm:h-[410px] max-w-4xl items-center justify-center"
+          className="relative mx-auto my-12 sm:my-16 lg:my-20 flex h-[350px] sm:h-[400px] max-w-4xl items-center justify-center"
           onMouseEnter={() => setAutoRotate(false)}
           onMouseLeave={() => setAutoRotate(true)}
         >
-          {/* Animated Center Dynamic Color Glow Halo */}
-          <motion.div 
-            animate={{
-              scale: [1, 1.25, 1],
-              opacity: [0.45, 0.7, 0.45]
-            }}
-            transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute h-[340px] w-[340px] sm:h-[390px] sm:w-[390px] rounded-full blur-3xl pointer-events-none transition-all duration-700"
-            style={{
-              background: `radial-gradient(circle, ${activeNodeData.glowColor} 0%, rgba(0, 70, 88, 0.2) 50%, transparent 75%)`
-            }}
+          {/* Subtle Outer Atmospheric Glow */}
+          <div 
+            className="absolute h-80 w-80 rounded-full blur-2xl transition-all duration-700 pointer-events-none opacity-40"
+            style={{ background: activeNodeData.glowColor }}
           />
 
-          {/* Concentric Expanding Sonar / Radar Waves behind Orbit Hub */}
-          <motion.div
-            animate={{ scale: [0.8, 1.4, 2.1], opacity: [0.6, 0.25, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeOut" }}
-            className="absolute h-48 w-48 sm:h-56 sm:w-56 rounded-full border-2 border-[#004658]/30 pointer-events-none"
-          />
-          <motion.div
-            animate={{ scale: [0.8, 1.4, 2.1], opacity: [0.6, 0.25, 0] }}
-            transition={{ duration: 5, delay: 2.5, repeat: Infinity, ease: "easeOut" }}
-            className="absolute h-48 w-48 sm:h-56 sm:w-56 rounded-full border-2 border-[#EA580C]/30 pointer-events-none"
-          />
-
-          {/* Outer Rotating Dashed Orbit Ring */}
+          {/* Outer Dashed Orbit Ring (Slow continuous rotation) */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
-            className="absolute h-[320px] w-[320px] sm:h-[370px] sm:w-[370px] rounded-full border-2 border-dashed border-[#004658]/25 pointer-events-none"
+            className="absolute h-[320px] w-[320px] sm:h-[370px] sm:w-[370px] rounded-full border border-dashed border-slate-300/85 pointer-events-none"
           />
 
-          {/* Inner Counter-Rotating Orbit Ring */}
-          <motion.div
-            animate={{ rotate: -360 }}
-            transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
-            className="absolute h-[230px] w-[230px] sm:h-[260px] sm:w-[260px] rounded-full border border-dashed border-slate-300/80 pointer-events-none"
-          />
+          {/* Inner Solid Orbit Ring */}
+          <div className="absolute h-[220px] w-[220px] sm:h-[250px] sm:w-[250px] rounded-full border border-slate-200/90 pointer-events-none" />
 
-          {/* Orbit Shimmer Gradient Ring Backdrop */}
-          <div className="absolute h-[290px] w-[290px] sm:h-[330px] sm:w-[330px] rounded-full border border-slate-200/60 bg-gradient-to-tr from-white/40 via-slate-100/30 to-white/60 backdrop-blur-[2px] pointer-events-none shadow-inner" />
+          {/* Orbit Dynamic Radial Gradient Ring */}
+          <div className="absolute h-[280px] w-[280px] sm:h-[320px] sm:w-[320px] rounded-full border border-slate-200/40 bg-gradient-to-tr from-transparent via-slate-100/40 to-transparent pointer-events-none" />
 
-          {/* Moving Orbit Satellite Laser Spheres */}
+          {/* Moving Satellite Particles on Orbit */}
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
             className="absolute h-[320px] w-[320px] sm:h-[370px] sm:w-[370px] pointer-events-none"
           >
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-[#EA580C] shadow-[0_0_14px_#EA580C]" />
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#004658] shadow-[0_0_12px_#004658]" />
-            <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_10px_#22D3EE]" />
+            <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#EA580C] shadow-[0_0_12px_#EA580C]" />
+            <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#004658] shadow-[0_0_10px_#004658]" />
           </motion.div>
 
           {/* Center CCWS Core Node */}
           <div className="relative z-20 flex flex-col items-center justify-center">
-            {/* Pulsing Core Ring */}
+            {/* Pulsing Back Ring */}
             <motion.div 
-              animate={{ scale: [1, 1.18, 1], opacity: [0.4, 0.75, 0.4] }}
-              transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute h-28 w-28 sm:h-32 sm:w-32 rounded-full border-2 border-[#004658]/40 bg-[#004658]/10 pointer-events-none"
+              animate={{ scale: [1, 1.15, 1], opacity: [0.35, 0.65, 0.35] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute h-28 w-28 sm:h-32 sm:w-32 rounded-full border border-[#004658]/30 bg-[#004658]/5 pointer-events-none"
             />
 
             {/* CCWS Hub Badge */}
             <Link
               to="/about"
-              className="relative flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full bg-gradient-to-b from-[#004658] to-[#022B32] text-white shadow-[0_14px_38px_rgba(0,70,88,0.4)] border-2 border-white/25 backdrop-blur-md hover:scale-105 transition-all duration-300 cursor-pointer group"
+              className="relative flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full bg-gradient-to-b from-[#004658] to-[#022B32] text-white shadow-[0_12px_35px_rgba(0,70,88,0.35)] border-2 border-white/20 backdrop-blur-md hover:scale-105 transition-all duration-300 cursor-pointer group"
               title="Learn about CCWS Studio Core"
             >
-              <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-cyan-300/90 mb-0.5">STUDIO</span>
               <span className="text-base sm:text-lg font-black tracking-wider text-white">CCWS</span>
               <span className="text-[8px] font-semibold uppercase tracking-widest text-slate-300">CORE</span>
             </Link>
-
-            {/* Active Micro Tagline Below Center */}
-            <motion.div 
-              key={activeNodeData.id}
-              initial={{ opacity: 0, y: 4 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="absolute -bottom-9 whitespace-nowrap rounded-full bg-white/95 px-3.5 py-1 text-[11px] font-bold text-[#004658] shadow-md border border-slate-200/90 backdrop-blur-md flex items-center gap-1.5"
-            >
-              <span className="w-1.5 h-1.5 rounded-full animate-ping" style={{ backgroundColor: activeNodeData.color }} />
-              <span>{activeNodeData.desc}</span>
-            </motion.div>
           </div>
 
           {/* 6 Orbit Floating Nodes */}
@@ -430,8 +327,8 @@ const Branding = () => {
                   onMouseEnter={() => setActiveOrbit(node.id)}
                   className={`group flex items-center gap-2 rounded-full border px-3.5 py-2 sm:px-4 sm:py-2.5 transition-all duration-300 cursor-pointer shadow-sm ${
                     isActive
-                      ? "bg-white border-slate-900/40 shadow-[0_12px_28px_rgba(0,0,0,0.14)] scale-110 -translate-y-1"
-                      : "bg-white/95 hover:bg-white border-slate-200/90 hover:border-slate-400 hover:scale-105"
+                      ? "bg-white border-slate-900/40 shadow-[0_10px_25px_rgba(0,0,0,0.12)] scale-110 -translate-y-1"
+                      : "bg-white/90 hover:bg-white border-slate-200/90 hover:border-slate-400 hover:scale-105"
                   }`}
                   aria-label={`Navigate to ${node.fullName}`}
                 >
@@ -476,7 +373,7 @@ const Branding = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-7 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white/95 p-7 sm:p-9 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(236,72,153,0.15)] hover:border-pink-500/35 hover:-translate-y-1.5 transition-all duration-400 backdrop-blur-sm"
+            className="lg:col-span-7 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white p-7 sm:p-9 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(236,72,153,0.15)] hover:border-pink-500/35 hover:-translate-y-1.5 transition-all duration-400"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-pink-500/8 via-purple-500/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-pink-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -555,7 +452,7 @@ const Branding = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-5 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white/95 p-7 sm:p-9 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(37,99,235,0.15)] hover:border-blue-500/35 hover:-translate-y-1.5 transition-all duration-400 backdrop-blur-sm"
+            className="lg:col-span-5 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white p-7 sm:p-9 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(37,99,235,0.15)] hover:border-blue-500/35 hover:-translate-y-1.5 transition-all duration-400"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/8 via-cyan-500/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -632,7 +529,7 @@ const Branding = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="lg:col-span-4 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white/95 p-7 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(0,70,88,0.18)] hover:border-[#004658]/40 hover:-translate-y-1.5 transition-all duration-400 backdrop-blur-sm"
+            className="lg:col-span-4 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white p-7 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(0,70,88,0.18)] hover:border-[#004658]/40 hover:-translate-y-1.5 transition-all duration-400"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#004658]/8 via-teal-500/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#004658] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -693,7 +590,7 @@ const Branding = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-4 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white/95 p-7 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(234,88,12,0.18)] hover:border-[#EA580C]/40 hover:-translate-y-1.5 transition-all duration-400 backdrop-blur-sm"
+            className="lg:col-span-4 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white p-7 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(234,88,12,0.18)] hover:border-[#EA580C]/40 hover:-translate-y-1.5 transition-all duration-400"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#EA580C]/8 via-amber-500/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#EA580C] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -752,7 +649,7 @@ const Branding = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.25 }}
-            className="lg:col-span-4 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white/95 p-7 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(139,92,246,0.18)] hover:border-purple-500/40 hover:-translate-y-1.5 transition-all duration-400 backdrop-blur-sm"
+            className="lg:col-span-4 group relative flex flex-col justify-between overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white p-7 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_24px_50px_-12px_rgba(139,92,246,0.18)] hover:border-purple-500/40 hover:-translate-y-1.5 transition-all duration-400"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-violet-500/8 via-purple-500/5 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-violet-500 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
@@ -811,7 +708,7 @@ const Branding = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="lg:col-span-12 group relative overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white/95 p-7 sm:p-10 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_26px_60px_-15px_rgba(0,70,88,0.2)] hover:border-[#004658]/40 hover:-translate-y-1.5 transition-all duration-400 backdrop-blur-sm"
+            className="lg:col-span-12 group relative overflow-hidden rounded-[28px] sm:rounded-[32px] border border-slate-200/90 bg-white p-7 sm:p-10 shadow-[0_4px_20px_-4px_rgba(0,70,88,0.06)] hover:shadow-[0_26px_60px_-15px_rgba(0,70,88,0.2)] hover:border-[#004658]/40 hover:-translate-y-1.5 transition-all duration-400"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-[#004658]/8 via-purple-500/5 to-[#EA580C]/8 opacity-80 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none" />
             <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#004658] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
