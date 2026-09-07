@@ -151,8 +151,8 @@ const Services = () => {
     };
   }, []);
 
-  // Gap matches Tailwind's gap-5 (20px on mobile) and sm:gap-6 (24px on >=640px)
-  const gap = visibleCount === 1 ? 20 : 24;
+  // Gap matches Tailwind's gap-3.5 (14px on mobile) and sm:gap-4 (16px on >=640px)
+  const gap = visibleCount === 1 ? 14 : 16;
 
   // Exact card width and step distance (card width + gap)
   const cardWidth = containerWidth > 0 
@@ -163,7 +163,7 @@ const Services = () => {
   // Compute translateX in pixels (or 0 during initial measurement)
   const translateX = containerWidth > 0 ? -currentIndex * stepWidth : 0;
 
-  // Active original item index (0 to 5) for pagination dots and progress bar
+  // Active original item index (0 to 5) for progress bar
   const activeCardIndex = ((currentIndex % totalCards) + totalCards) % totalCards;
 
   // Previous button: slides left infinitely
@@ -254,7 +254,7 @@ const Services = () => {
         {/* Horizontal Slider Viewport */}
         <div ref={containerRef} className="relative overflow-hidden py-3">
           <motion.div
-            className="flex gap-5 sm:gap-6"
+            className="flex gap-3.5 sm:gap-4"
             animate={{ x: translateX }}
             transition={
               isJumping
@@ -374,25 +374,6 @@ const Services = () => {
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
             </svg>
           </button>
-        </div>
-
-        {/* Minimalist Pagination Dots */}
-        <div className="flex justify-center items-center gap-2 mt-3.5">
-          {servicesData.map((_, dotIdx) => (
-            <button
-              key={dotIdx}
-              onClick={() => {
-                if (isJumping) return;
-                setCurrentIndex(totalCards + dotIdx);
-              }}
-              className={`transition-all duration-300 rounded-full cursor-pointer ${
-                activeCardIndex === dotIdx
-                  ? "w-4 h-2 bg-[#022B32] rounded-full"
-                  : "w-2 h-2 bg-slate-300 hover:bg-slate-400"
-              }`}
-              aria-label={`Go to slide ${dotIdx + 1}`}
-            />
-          ))}
         </div>
 
       </div>
