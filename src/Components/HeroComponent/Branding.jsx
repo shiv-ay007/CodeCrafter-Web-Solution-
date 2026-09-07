@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   Share2,
   Search,
@@ -13,11 +13,20 @@ import {
   Layers,
   Flame,
   CheckCircle2,
-  Heart
+  Heart,
+  TrendingUp,
+  BarChart3,
+  Target,
+  Zap,
+  MousePointerClick,
+  MessageCircle,
+  Activity,
+  Sliders,
+  Check
 } from "lucide-react";
 
 /**
- * Interactive Orbit Nodes Configuration
+ * 6 Interactive Orbit Nodes Configuration mapped directly to verified CCWS Routes
  */
 const orbitNodes = [
   {
@@ -27,7 +36,8 @@ const orbitNodes = [
     icon: Search,
     color: "#2563EB",
     glowColor: "rgba(37, 99, 235, 0.35)",
-    angle: 0, // Top
+    angle: 0, // 12 o'clock (Top)
+    path: "/digital-booster/seo",
     desc: "+380% Organic Visibility"
   },
   {
@@ -36,38 +46,53 @@ const orbitNodes = [
     fullName: "Brand Identity",
     icon: Palette,
     color: "#004658",
-    glowColor: "rgba(0, 70, 88, 0.4)",
-    angle: 72, // Top-Right
+    glowColor: "rgba(0, 70, 88, 0.45)",
+    angle: 60, // 2 o'clock (Top-Right)
+    path: "/digital-booster/branding",
     desc: "Iconic Visual Systems"
   },
   {
-    id: "design",
-    label: "Design",
-    fullName: "Graphic & Motion",
-    icon: PenTool,
+    id: "campaigns",
+    label: "Campaigns",
+    fullName: "Digital Campaigns",
+    icon: Megaphone,
     color: "#EA580C",
-    glowColor: "rgba(234, 88, 12, 0.4)",
-    angle: 144, // Bottom-Right
+    glowColor: "rgba(234, 88, 12, 0.45)",
+    angle: 120, // 4 o'clock (Bottom-Right)
+    path: "/digital-booster/google-ads",
+    desc: "4.8x High-ROI Paid Acquisition"
+  },
+  {
+    id: "design",
+    label: "Graphic Design",
+    fullName: "Graphic & 3D Design",
+    icon: PenTool,
+    color: "#F59E0B",
+    glowColor: "rgba(245, 158, 11, 0.45)",
+    angle: 180, // 6 o'clock (Bottom)
+    path: "/web-design",
     desc: "High-Craft Art Direction"
   },
   {
     id: "content",
-    label: "Content",
+    label: "Content Strategy",
     fullName: "Content Strategy",
     icon: FileText,
     color: "#8B5CF6",
-    glowColor: "rgba(139, 92, 246, 0.4)",
-    angle: 216, // Bottom-Left
+    glowColor: "rgba(139, 92, 246, 0.45)",
+    angle: 240, // 8 o'clock (Bottom-Left)
+    path: "/digital-booster/content-marketing",
     desc: "High-Converting Narratives"
   },
   {
     id: "social",
-    label: "Social",
+    label: "Social Media",
     fullName: "Social Amplification",
     icon: Share2,
     color: "#EC4899",
-    glowColor: "rgba(236, 72, 153, 0.4)",
-    angle: 288, // Top-Left
+    glowColor: "rgba(236, 72, 153, 0.45)",
+    angle: 300, // 10 o'clock (Top-Left)
+    path: "/digital-booster/social-media",
     desc: "Viral Community Growth"
   }
 ];
@@ -113,21 +138,21 @@ const Branding = () => {
       <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
         {/* Soft Multi-color Ambient Radial Blobs */}
         <div 
-          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[700px] h-[500px] rounded-full blur-3xl opacity-20"
+          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[520px] rounded-full blur-3xl opacity-25"
           style={{
-            background: "radial-gradient(ellipse at center, rgba(0, 70, 88, 0.45) 0%, rgba(234, 88, 12, 0.15) 45%, transparent 70%)"
+            background: "radial-gradient(ellipse at center, rgba(0, 70, 88, 0.45) 0%, rgba(234, 88, 12, 0.18) 45%, transparent 70%)"
           }}
         />
         <div 
-          className="absolute top-1/3 -left-32 w-[500px] h-[500px] rounded-full blur-3xl opacity-15"
+          className="absolute top-1/3 -left-32 w-[520px] h-[520px] rounded-full blur-3xl opacity-15"
           style={{
-            background: "radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 65%)"
+            background: "radial-gradient(circle, rgba(139, 92, 246, 0.45) 0%, transparent 65%)"
           }}
         />
         <div 
-          className="absolute bottom-1/4 -right-32 w-[550px] h-[550px] rounded-full blur-3xl opacity-15"
+          className="absolute bottom-1/4 -right-32 w-[580px] h-[580px] rounded-full blur-3xl opacity-15"
           style={{
-            background: "radial-gradient(circle, rgba(14, 165, 233, 0.4) 0%, transparent 65%)"
+            background: "radial-gradient(circle, rgba(14, 165, 233, 0.45) 0%, transparent 65%)"
           }}
         />
 
@@ -140,11 +165,11 @@ const Branding = () => {
           }}
         />
 
-        {/* Subtle Floating Spec Watermarks */}
-        <div className="absolute top-12 left-8 font-mono text-[12px] text-slate-900/[0.03] select-none">
+        {/* Subtle Floating Code / Spec Watermarks */}
+        <div className="absolute top-12 left-8 font-mono text-[12px] text-slate-900/[0.035] select-none">
           {`// CCWS.Brand.Engine.v4.2\nconst identity = createBrandSystem({\n  resonance: "infinite",\n  growthFactor: 4.8\n});`}
         </div>
-        <div className="absolute bottom-16 right-10 font-mono text-[12px] text-slate-900/[0.03] select-none">
+        <div className="absolute bottom-16 right-10 font-mono text-[12px] text-slate-900/[0.035] select-none">
           {`return <BrandResonance impact="maximum" reach="global" />;`}
         </div>
       </div>
@@ -198,7 +223,7 @@ const Branding = () => {
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <Link
-                to="/digital-growth/branding"
+                to="/digital-booster/branding"
                 className="group relative inline-flex items-center gap-2.5 rounded-full bg-[#004658] px-6 py-3.5 text-sm font-bold text-white shadow-[0_4px_16px_rgba(0,70,88,0.25)] hover:bg-[#022B32] hover:shadow-[0_8px_25px_rgba(0,70,88,0.35)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
               >
                 <span>Explore Creative Services</span>
@@ -207,23 +232,26 @@ const Branding = () => {
                 </div>
               </Link>
 
-              <span className="text-xs font-semibold text-slate-400 flex items-center gap-1.5">
-                <Sparkles size={14} className="text-[#EA580C]" />
-                Full-Funnel Growth
-              </span>
+              <Link
+                to="/contact"
+                className="group inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white/80 px-5 py-3 text-xs font-bold text-slate-800 hover:border-[#004658] hover:bg-slate-50 transition-all duration-200"
+              >
+                <Sparkles size={13} className="text-[#EA580C]" />
+                <span>Book Discovery Call</span>
+              </Link>
             </div>
           </motion.div>
         </div>
 
         {/* ─────────────────────────────────────────────────────────────
-            BRAND ORBIT VISUAL (INTERACTIVE CCWS HUB)
+            BRAND ORBIT VISUAL (6 ORBITS AROUND CCWS CENTER)
         ─────────────────────────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-40px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative mx-auto my-12 sm:my-16 lg:my-20 flex h-[340px] sm:h-[380px] max-w-4xl items-center justify-center"
+          className="relative mx-auto my-12 sm:my-16 lg:my-20 flex h-[350px] sm:h-[400px] max-w-4xl items-center justify-center"
           onMouseEnter={() => setAutoRotate(false)}
           onMouseLeave={() => setAutoRotate(true)}
         >
@@ -237,20 +265,20 @@ const Branding = () => {
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
-            className="absolute h-[310px] w-[310px] sm:h-[350px] sm:w-[350px] rounded-full border border-dashed border-slate-300/80 pointer-events-none"
+            className="absolute h-[320px] w-[320px] sm:h-[370px] sm:w-[370px] rounded-full border border-dashed border-slate-300/85 pointer-events-none"
           />
 
           {/* Inner Solid Orbit Ring */}
-          <div className="absolute h-[210px] w-[210px] sm:h-[240px] sm:w-[240px] rounded-full border border-slate-200/90 pointer-events-none" />
+          <div className="absolute h-[220px] w-[220px] sm:h-[250px] sm:w-[250px] rounded-full border border-slate-200/90 pointer-events-none" />
 
           {/* Orbit Dynamic Radial Gradient Ring */}
-          <div className="absolute h-[270px] w-[270px] sm:h-[300px] sm:w-[300px] rounded-full border border-slate-200/40 bg-gradient-to-tr from-transparent via-slate-100/40 to-transparent pointer-events-none" />
+          <div className="absolute h-[280px] w-[280px] sm:h-[320px] sm:w-[320px] rounded-full border border-slate-200/40 bg-gradient-to-tr from-transparent via-slate-100/40 to-transparent pointer-events-none" />
 
           {/* Moving Satellite Particles on Orbit */}
           <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
-            className="absolute h-[310px] w-[310px] sm:h-[350px] sm:w-[350px] pointer-events-none"
+            className="absolute h-[320px] w-[320px] sm:h-[370px] sm:w-[370px] pointer-events-none"
           >
             <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#EA580C] shadow-[0_0_12px_#EA580C]" />
             <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#004658] shadow-[0_0_10px_#004658]" />
@@ -266,29 +294,34 @@ const Branding = () => {
             />
 
             {/* CCWS Hub Badge */}
-            <div className="relative flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full bg-gradient-to-b from-[#004658] to-[#022B32] text-white shadow-[0_12px_35px_rgba(0,70,88,0.35)] border-2 border-white/20 backdrop-blur-md transition-all duration-300">
+            <Link
+              to="/about"
+              className="relative flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full bg-gradient-to-b from-[#004658] to-[#022B32] text-white shadow-[0_12px_35px_rgba(0,70,88,0.35)] border-2 border-white/20 backdrop-blur-md hover:scale-105 transition-all duration-300 cursor-pointer group"
+              title="Learn about CCWS Studio Core"
+            >
               <span className="text-[9px] font-bold uppercase tracking-[0.25em] text-cyan-300/80 mb-0.5">STUDIO</span>
               <span className="text-base sm:text-lg font-black tracking-wider text-white">CCWS</span>
               <span className="text-[8px] font-semibold uppercase tracking-widest text-slate-300">CORE</span>
-            </div>
+            </Link>
 
             {/* Active Micro Tagline Below Center */}
             <motion.div 
               key={activeNodeData.id}
               initial={{ opacity: 0, y: 4 }}
               animate={{ opacity: 1, y: 0 }}
-              className="absolute -bottom-9 whitespace-nowrap rounded-full bg-white/95 px-3 py-1 text-[11px] font-bold text-[#004658] shadow-sm border border-slate-200/90 backdrop-blur-md"
+              className="absolute -bottom-9 whitespace-nowrap rounded-full bg-white/95 px-3.5 py-1 text-[11px] font-bold text-[#004658] shadow-sm border border-slate-200/90 backdrop-blur-md flex items-center gap-1.5"
             >
-              {activeNodeData.desc}
+              <span className="w-1.5 h-1.5 rounded-full animate-ping" style={{ backgroundColor: activeNodeData.color }} />
+              <span>{activeNodeData.desc}</span>
             </motion.div>
           </div>
 
-          {/* 5 Orbit Floating Nodes */}
+          {/* 6 Orbit Floating Nodes */}
           {orbitNodes.map((node) => {
             const Icon = node.icon;
             const isActive = activeOrbit === node.id;
             const angleRad = (node.angle - 90) * (Math.PI / 180);
-            const radius = typeof window !== "undefined" && window.innerWidth < 640 ? 120 : 155;
+            const radius = typeof window !== "undefined" && window.innerWidth < 640 ? 125 : 160;
             const x = Math.cos(angleRad) * radius;
             const y = Math.sin(angleRad) * radius;
 
@@ -300,7 +333,8 @@ const Branding = () => {
                 }}
                 className="absolute z-30 transition-transform duration-300"
               >
-                <button
+                <Link
+                  to={node.path}
                   onClick={() => setActiveOrbit(node.id)}
                   onMouseEnter={() => setActiveOrbit(node.id)}
                   className={`group flex items-center gap-2 rounded-full border px-3.5 py-2 sm:px-4 sm:py-2.5 transition-all duration-300 cursor-pointer shadow-sm ${
@@ -308,7 +342,7 @@ const Branding = () => {
                       ? "bg-white border-slate-900/40 shadow-[0_10px_25px_rgba(0,0,0,0.12)] scale-110 -translate-y-1"
                       : "bg-white/90 hover:bg-white border-slate-200/90 hover:border-slate-400 hover:scale-105"
                   }`}
-                  aria-label={`Select ${node.fullName}`}
+                  aria-label={`Navigate to ${node.fullName}`}
                 >
                   {/* Icon Indicator with Accent Background */}
                   <div
@@ -332,7 +366,7 @@ const Branding = () => {
                       style={{ backgroundColor: node.color }}
                     />
                   )}
-                </button>
+                </Link>
               </div>
             );
           })}
@@ -370,7 +404,7 @@ const Branding = () => {
                 </div>
 
                 <Link
-                  to="/digital-growth/social-media"
+                  to="/digital-booster/social-media"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-500 group-hover:bg-pink-600 group-hover:text-white transition-all duration-300 group-hover:rotate-45 shadow-2xs"
                   aria-label="View Social Media Services"
                 >
@@ -449,7 +483,7 @@ const Branding = () => {
                 </div>
 
                 <Link
-                  to="/digital-growth/seo"
+                  to="/digital-booster/seo"
                   className="flex h-9 w-9 items-center justify-center rounded-full bg-slate-100 text-slate-500 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300 group-hover:rotate-45 shadow-2xs"
                   aria-label="View SEO Services"
                 >
@@ -518,7 +552,7 @@ const Branding = () => {
                   <Palette size={20} strokeWidth={2.2} />
                 </div>
                 <Link
-                  to="/digital-growth/branding"
+                  to="/digital-booster/branding"
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#004658] group-hover:text-white transition-all duration-300 group-hover:rotate-45"
                   aria-label="View Brand Identity Services"
                 >
@@ -579,7 +613,7 @@ const Branding = () => {
                   <PenTool size={20} strokeWidth={2.2} />
                 </div>
                 <Link
-                  to="/digital-growth/branding"
+                  to="/web-design"
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-500 group-hover:bg-[#EA580C] group-hover:text-white transition-all duration-300 group-hover:rotate-45"
                   aria-label="View Graphic Design Services"
                 >
@@ -638,7 +672,7 @@ const Branding = () => {
                   <FileText size={20} strokeWidth={2.2} />
                 </div>
                 <Link
-                  to="/digital-growth/content-marketing"
+                  to="/digital-booster/content-marketing"
                   className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-slate-500 group-hover:bg-violet-600 group-hover:text-white transition-all duration-300 group-hover:rotate-45"
                   aria-label="View Content Strategy Services"
                 >
@@ -765,7 +799,7 @@ const Branding = () => {
                 <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between">
                   <span className="text-xs text-slate-400">Auto-Bidding Machine</span>
                   <Link
-                    to="/digital-growth/seo"
+                    to="/digital-booster/google-ads"
                     className="inline-flex items-center gap-1 text-xs font-bold text-cyan-300 hover:text-white transition-colors"
                   >
                     <span>Launch Campaign</span>
