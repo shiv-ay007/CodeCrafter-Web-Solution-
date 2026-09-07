@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const servicesData = [
   {
@@ -91,10 +91,26 @@ const servicesData = [
 ];
 
 const Services = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCount, setVisibleCount] = useState(3);
+  const totalCards = servicesData.length; // 6 cards in total
 
-  // Responsive items per view detection
+  // Infinite carousel uses 3 sets: [Set 0: Pre-clones] [Set 1: Original items] [Set 2: Post-clones]
+  // This allows seamless, infinite bidirectional scrolling without blank space or visual jump.
+  const extendedCards = useMemo(() => [
+    ...servicesData,
+    ...servicesData,
+    ...servicesData
+  ], []);
+
+  // Start at the first item of the middle set (index 6)
+  const [currentIndex, setCurrentIndex] = useState(totalCards);
+  const [visibleCount, setVisibleCount] = useState(3);
+  const [containerWidth, setContainerWidth] = useState(0);
+  // Flag to temporarily disable transition during instant silent reset
+  const [isJumping, setIsJumping] = useState(false);
+
+  const containerRef = useRef(null);
+
+  // Responsive items per view detection (1 for mobile, 2 for tablet, 3 for desktop)
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
@@ -110,18 +126,77 @@ const Services = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalCards = servicesData.length;
-  const maxIndex = Math.max(0, totalCards - visibleCount);
+  // Measure container width accurately using ResizeObserver & window resize for pixel-perfect card widths
+  useEffect(() => {
+    const updateWidth = () => {
+      if (containerRef.current) {
+        setContainerWidth(containerRef.current.offsetWidth);
+      }
+    };
 
+    updateWidth();
+
+    let resizeObserver;
+    if (typeof ResizeObserver !== "undefined" && containerRef.current) {
+      resizeObserver = new ResizeObserver(() => {
+        updateWidth();
+      });
+      resizeObserver.observe(containerRef.current);
+    }
+
+    window.addEventListener("resize", updateWidth);
+    return () => {
+      window.removeEventListener("resize", updateWidth);
+      if (resizeObserver) resizeObserver.disconnect();
+    };
+  }, []);
+
+  // Gap matches Tailwind's gap-5 (20px on mobile) and sm:gap-6 (24px on >=640px)
+  const gap = visibleCount === 1 ? 20 : 24;
+
+  // Exact card width and step distance (card width + gap)
+  const cardWidth = containerWidth > 0 
+    ? (containerWidth - (visibleCount - 1) * gap) / visibleCount 
+    : 0;
+  const stepWidth = cardWidth + gap;
+
+  // Compute translateX in pixels (or 0 during initial measurement)
+  const translateX = containerWidth > 0 ? -currentIndex * stepWidth : 0;
+
+  // Active original item index (0 to 5) for pagination dots and progress bar
+  const activeCardIndex = ((currentIndex % totalCards) + totalCards) % totalCards;
+
+  // Previous button: slides left infinitely
   const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(0, prev - 1));
+    if (isJumping) return;
+    setCurrentIndex((prev) => prev - 1);
   };
 
+  // Next button: slides right infinitely
   const handleNext = () => {
-    setCurrentIndex((prev) => Math.min(maxIndex, prev + 1));
+    if (isJumping) return;
+    setCurrentIndex((prev) => prev + 1);
   };
 
-  const progressPercentage = maxIndex === 0 ? 100 : (currentIndex / maxIndex) * 100;
+  // When animation finishes: if we crossed into clones (Set 0 or Set 2), seamlessly snap to middle Set 1
+  const handleAnimationComplete = () => {
+    if (isJumping) return;
+    if (currentIndex >= totalCards * 2 || currentIndex < totalCards) {
+      setIsJumping(true);
+      // Normalized to the exact corresponding index in middle set (index 6 to 11)
+      setCurrentIndex((prev) => (((prev % totalCards) + totalCards) % totalCards) + totalCards);
+    }
+  };
+
+  // After the instant 0ms snap position is rendered, restore smooth spring transitions on next frame
+  useEffect(() => {
+    if (isJumping) {
+      const raf = requestAnimationFrame(() => {
+        setIsJumping(false);
+      });
+      return () => cancelAnimationFrame(raf);
+    }
+  }, [isJumping]);
 
   return (
     <section 
@@ -177,19 +252,25 @@ const Services = () => {
         </motion.div>
 
         {/* Horizontal Slider Viewport */}
-        <div className="relative overflow-hidden py-3">
+        <div ref={containerRef} className="relative overflow-hidden py-3">
           <motion.div
             className="flex gap-5 sm:gap-6"
-            animate={{
-              x: `-${currentIndex * (100 / visibleCount + (visibleCount > 1 ? (currentIndex > 0 ? 0.8 : 0) : 0))}%`
-            }}
-            transition={{ type: "spring", stiffness: 280, damping: 30 }}
-            style={{ width: `${(totalCards / visibleCount) * 100}%` }}
+            animate={{ x: translateX }}
+            transition={
+              isJumping
+                ? { duration: 0 }
+                : { type: "spring", stiffness: 280, damping: 30 }
+            }
+            onAnimationComplete={handleAnimationComplete}
+            style={{ width: "max-content" }}
           >
-            {servicesData.map((item) => (
+            {extendedCards.map((item, index) => (
               <div
-                key={item.id}
-                style={{ width: `${100 / totalCards}%` }}
+                key={`${item.id}-${index}`}
+                style={{ 
+                  width: containerWidth > 0 ? `${cardWidth}px` : "100%",
+                  flexShrink: 0 
+                }}
                 className="px-0.5 shrink-0"
               >
                 <Link
@@ -255,11 +336,10 @@ const Services = () => {
 
         {/* Enhanced Bottom Horizontal Slider Track & Navigation Controls */}
         <div className="mt-8 sm:mt-10 max-w-[840px] mx-auto flex items-center gap-4 sm:gap-6 px-2">
-          {/* Left Arrow Button */}
+          {/* Left Arrow Button (Infinitely wrapping) */}
           <button
             onClick={handlePrev}
-            disabled={currentIndex === 0}
-            className="w-10 h-10 rounded-xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center text-[#022B32] hover:bg-slate-50 hover:border-[#022B32]/40 active:scale-95 transition-all cursor-pointer disabled:opacity-25 disabled:pointer-events-none shrink-0"
+            className="w-10 h-10 rounded-xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center text-[#022B32] hover:bg-slate-50 hover:border-[#022B32]/40 active:scale-95 transition-all cursor-pointer shrink-0"
             aria-label="Slide Left"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -271,20 +351,23 @@ const Services = () => {
           <div className="flex-1 bg-slate-200/70 h-1.5 sm:h-2 rounded-full overflow-hidden relative">
             <motion.div
               className="h-full bg-[#022B32]/70 rounded-full"
-              initial={{ width: "33%" }}
+              initial={{ width: `${100 / totalCards}%` }}
               animate={{
-                width: `${100 / (maxIndex + 1)}%`,
-                x: `${progressPercentage * (maxIndex / (maxIndex + 1))}%`
+                width: `${100 / totalCards}%`,
+                x: `${activeCardIndex * 100}%`
               }}
-              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              transition={
+                isJumping
+                  ? { duration: 0 }
+                  : { type: "spring", stiffness: 300, damping: 30 }
+              }
             />
           </div>
 
-          {/* Right Arrow Button */}
+          {/* Right Arrow Button (Infinitely wrapping) */}
           <button
             onClick={handleNext}
-            disabled={currentIndex >= maxIndex}
-            className="w-10 h-10 rounded-xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center text-[#022B32] hover:bg-slate-50 hover:border-[#022B32]/40 active:scale-95 transition-all cursor-pointer disabled:opacity-25 disabled:pointer-events-none shrink-0"
+            className="w-10 h-10 rounded-xl bg-white border border-slate-200/90 shadow-sm flex items-center justify-center text-[#022B32] hover:bg-slate-50 hover:border-[#022B32]/40 active:scale-95 transition-all cursor-pointer shrink-0"
             aria-label="Slide Right"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -295,12 +378,15 @@ const Services = () => {
 
         {/* Minimalist Pagination Dots */}
         <div className="flex justify-center items-center gap-2 mt-3.5">
-          {Array.from({ length: maxIndex + 1 }).map((_, dotIdx) => (
+          {servicesData.map((_, dotIdx) => (
             <button
               key={dotIdx}
-              onClick={() => setCurrentIndex(dotIdx)}
+              onClick={() => {
+                if (isJumping) return;
+                setCurrentIndex(totalCards + dotIdx);
+              }}
               className={`transition-all duration-300 rounded-full cursor-pointer ${
-                currentIndex === dotIdx
+                activeCardIndex === dotIdx
                   ? "w-4 h-2 bg-[#022B32] rounded-full"
                   : "w-2 h-2 bg-slate-300 hover:bg-slate-400"
               }`}
@@ -314,4 +400,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Services;
