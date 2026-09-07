@@ -9,6 +9,7 @@ import LatestInsights from '../Components/HeroComponent/LatestInsights'
 import GoogleReviews from '../Components/ScrollPage/GoogleRews'
 import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
+import Branding from '../Components/HeroComponent/Branding'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <Hero />
       <Overview />
       <Services />
+      <Branding/>
       <Serve />
       <AssembleTeam />
       <TechMarquee />
