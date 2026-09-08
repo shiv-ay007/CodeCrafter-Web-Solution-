@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const capabilities = [
   {
@@ -26,7 +27,13 @@ const capabilities = [
 const AndroidCapabilities = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto" id="capabilities">
-      <div className="text-center max-w-3xl mx-auto mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-50px' }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+        className="text-center max-w-3xl mx-auto mb-16"
+      >
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/10 text-[#004658] text-xs font-bold uppercase tracking-wider mb-4">
           Android Engineering Core
         </div>
@@ -36,12 +43,17 @@ const AndroidCapabilities = () => {
         <p className="text-base text-slate-600">
           Crafted to run flawlessly across flagship phones, budget smartphones, tablets, and foldable devices.
         </p>
-      </div>
+      </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {capabilities.map((c, idx) => (
-          <div
+          <motion.div
             key={idx}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.5, delay: idx * 0.1, ease: 'easeOut' }}
+            whileHover={{ y: -6, transition: { duration: 0.25 } }}
             className="p-7 rounded-3xl bg-white border border-slate-200/90 hover:border-[#004658]/50 hover:shadow-xl hover:shadow-[#004658]/10 transition-all duration-300 group flex flex-col justify-between"
           >
             <div>
@@ -55,7 +67,7 @@ const AndroidCapabilities = () => {
                 {c.desc}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

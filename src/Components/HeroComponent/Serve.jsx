@@ -50,7 +50,7 @@ const processNodes = [
 const Serve = () => {
   return (
     <section
-      className="relative w-full py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#F7F7F7] overflow-hidden"
+      className="relative w-full pt-6 sm:pt-8 lg:pt-10 pb-12 sm:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8 bg-[#F7F7F7] overflow-hidden"
       id="process"
       aria-label="CodeCrafter Workflow and Engineering Process Roadmap"
     >

@@ -596,7 +596,7 @@ spec:
 
 const categories = ['All', 'Frontend', 'Backend & Enterprise', 'Database & Cache', 'Tools & Cloud']
 
-// Modern Minimalist Spotlight Card with Full-Card Ambient Technology Artwork & Clean Typography
+// Ultra-Aesthetic Premium Spotlight Card with Subtle Glassmorphism, Squircle Icons & Dynamic Glow
 const SpotlightTechCard = ({ tech, isSelected, onClick, onSelect }) => {
   const cardRef = useRef(null)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
@@ -621,80 +621,94 @@ const SpotlightTechCard = ({ tech, isSelected, onClick, onSelect }) => {
         onClick(tech)
         onSelect(tech.id)
       }}
-      className={`group relative rounded-2xl overflow-hidden bg-white/95 backdrop-blur-md border transition-all duration-300 ease-out cursor-pointer select-none flex flex-col justify-between p-4 sm:p-4.5 min-h-[170px] sm:min-h-[180px] ${
+      className={`group relative rounded-[22px] overflow-hidden bg-white/90 backdrop-blur-xl border transition-all duration-400 ease-out cursor-pointer select-none flex flex-col justify-between p-4.5 sm:p-5 min-h-[185px] ${
         isSelected
-          ? 'border-[#004658] ring-2 ring-[#004658]/30 shadow-xl shadow-[#004658]/15 -translate-y-1'
-          : 'border-slate-200/90 shadow-xs hover:border-[#004658]/50 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-1'
+          ? 'border-[#004658] ring-2 ring-[#004658]/20 shadow-[0_18px_38px_-8px_rgba(0,70,88,0.2)] -translate-y-1.5'
+          : 'border-slate-200/85 shadow-[0_4px_16px_rgba(0,0,0,0.03)] hover:border-slate-300 hover:shadow-[0_18px_40px_-10px_rgba(0,70,88,0.14)] hover:-translate-y-1.5'
       }`}
     >
-      {/* 1. FULL CARD AMBIENT TECHNOLOGY BACKGROUND (Watermark & Subtle Radial Glow) */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-2xl">
-        {/* Ambient Top Glow Wash */}
+      {/* 1. Top Radiant Accent Border on Hover */}
+      <div 
+        className="absolute top-0 left-0 right-0 h-[2.5px] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-20"
+        style={{
+          background: `linear-gradient(90deg, transparent 5%, ${tech.color} 50%, transparent 95%)`
+        }}
+      />
+
+      {/* 2. Ambient Background Glow & Tech Watermark */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden rounded-[22px]">
+        {/* Soft Colored Radial Ambient Glow in Corner */}
         <div
-          className="absolute -top-8 -right-8 w-32 h-32 rounded-full blur-2xl opacity-15 group-hover:opacity-30 transition-opacity duration-500"
+          className="absolute -top-10 -right-10 w-36 h-36 rounded-full blur-2xl opacity-15 group-hover:opacity-35 transition-all duration-500"
           style={{ backgroundColor: tech.color }}
         />
-        {/* Full-Card Ambient Tech Watermark SVG */}
-        <div className="absolute -bottom-3 -right-3 w-24 h-24 sm:w-28 sm:h-28 opacity-[0.06] group-hover:opacity-[0.15] group-hover:scale-110 group-hover:-rotate-3 transition-all duration-500">
+        {/* Subtle Watermark Icon Art */}
+        <div 
+          className="absolute -bottom-2.5 -right-2.5 w-24 h-24 sm:w-26 sm:h-26 opacity-[0.05] group-hover:opacity-[0.14] group-hover:scale-110 group-hover:-rotate-6 transition-all duration-500 pointer-events-none"
+          style={{ color: tech.color }}
+        >
           {tech.icon}
         </div>
       </div>
 
-      {/* 2. Dynamic Cursor Spotlight Radial Glow */}
+      {/* 3. Interactive Cursor Spotlight Radial Glow */}
       {isHovered && (
         <div
-          className="absolute pointer-events-none -inset-px transition-opacity duration-300 opacity-100 rounded-2xl z-10"
+          className="absolute pointer-events-none -inset-px transition-opacity duration-300 opacity-100 rounded-[22px] z-10"
           style={{
-            background: `radial-gradient(220px circle at ${mousePos.x}px ${mousePos.y}px, ${tech.color}18, transparent 75%)`
+            background: `radial-gradient(240px circle at ${mousePos.x}px ${mousePos.y}px, ${tech.color}15, transparent 70%)`
           }}
         />
       )}
 
-      {/* 3. CARD HEADER (Tech Icon + Badge) */}
-      <div className="relative z-10 flex items-center justify-between gap-2 mb-2">
-        <div className="flex items-center gap-2.5">
+      {/* 4. CARD HEADER (Squircle Icon Badge + Title + Minimal Status Pill) */}
+      <div className="relative z-10 flex items-start justify-between gap-2 mb-2.5">
+        <div className="flex items-center gap-3">
+          {/* Squircle Brand Icon Box */}
           <div
-            className="w-8 h-8 rounded-xl bg-slate-50 border border-slate-200/80 p-1.5 flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform"
+            className="w-10 h-10 rounded-[14px] bg-slate-50/90 border border-slate-200/80 p-2 flex items-center justify-center shadow-2xs group-hover:scale-110 group-hover:shadow-sm group-hover:border-slate-300 transition-all duration-300 shrink-0"
             style={{ color: tech.color }}
           >
             {tech.icon}
           </div>
+
           <div>
-            <h3 className="text-sm sm:text-base font-black text-slate-900 group-hover:text-[#004658] transition-colors leading-tight tracking-tight">
+            <h3 className="text-[14.5px] sm:text-[15.5px] font-extrabold text-slate-900 group-hover:text-[#004658] transition-colors leading-tight tracking-tight">
               {tech.name}
             </h3>
-            <span className="text-[10px] font-mono font-bold text-[#004658]">
+            <span className="text-[10px] font-mono font-semibold text-[#004658] block mt-0.5 tracking-wide">
               {tech.type}
             </span>
           </div>
         </div>
 
-        {/* Minimal Category Status Dot Badge */}
-        <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-slate-100/90 text-slate-700 text-[10px] font-mono font-medium border border-slate-200/70 shadow-2xs">
+        {/* Status Pill Badge */}
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-slate-50/90 text-slate-700 text-[9.5px] font-mono font-semibold border border-slate-200/70 shadow-2xs shrink-0 backdrop-blur-sm">
           <span
-            className="w-1.5 h-1.5 rounded-full animate-pulse"
+            className="w-1.5 h-1.5 rounded-full"
             style={{ backgroundColor: tech.color }}
           />
           {tech.badge}
         </span>
       </div>
 
-      {/* 4. CARD BODY (Minimalist Punchy Tagline) */}
-      <div className="relative z-10 my-1">
-        <p className="text-[11px] sm:text-xs text-slate-600 font-normal leading-relaxed line-clamp-2">
+      {/* 5. CARD BODY (Tagline) */}
+      <div className="relative z-10 my-1.5">
+        <p className="text-[11.5px] sm:text-[12px] text-slate-600 font-normal leading-relaxed line-clamp-2">
           {tech.tagline}
         </p>
       </div>
 
-      {/* 5. CARD FOOTER (Telemetry Metric & Inspect Action) */}
-      <div className="relative z-10 pt-2.5 mt-1 border-t border-slate-100 flex items-center justify-between text-xs">
-        <span className="text-[10px] font-mono font-bold text-slate-700 bg-slate-50 border border-slate-200/60 px-2 py-0.5 rounded-md flex items-center gap-1">
-          ⚡ {tech.metric}
+      {/* 6. CARD FOOTER (Telemetry Metric Tag & Inspect Action) */}
+      <div className="relative z-10 pt-3 mt-1.5 border-t border-slate-100/90 flex items-center justify-between text-xs">
+        <span className="text-[10px] font-mono font-bold text-slate-700 bg-slate-100/80 border border-slate-200/60 px-2.5 py-1 rounded-lg flex items-center gap-1 shadow-2xs group-hover:bg-slate-100 transition-colors">
+          <span className="text-amber-500">⚡</span>
+          <span>{tech.metric}</span>
         </span>
 
-        <span className="flex items-center gap-1 text-[10px] font-mono font-bold text-[#004658] group-hover:translate-x-0.5 transition-transform">
+        <span className="inline-flex items-center gap-1.5 text-[10.5px] font-mono font-bold text-[#004658] group-hover:text-[#003442] transition-colors">
           <span>Inspect</span>
-          <span>→</span>
+          <span className="transition-transform duration-200 group-hover:translate-x-1">→</span>
         </span>
       </div>
     </div>

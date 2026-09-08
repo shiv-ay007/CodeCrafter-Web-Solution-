@@ -1,5 +1,89 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
+import heroVortexSwirl from '../../assets/hero_vortex_swirl.jpg'
+
+const orbitServices = [
+  {
+    id: "web-dev",
+    title: "Web Development",
+    subtitle: "React & Next.js",
+    iconBg: "bg-cyan-50 text-cyan-600 border-cyan-200/80",
+    path: "/web-development",
+    position: "top-0 sm:top-2 left-1/2 -translate-x-1/2",
+    icon: (
+      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+      </svg>
+    )
+  },
+  {
+    id: "ai-solutions",
+    title: "AI & ML Systems",
+    subtitle: "LLMs & Vectors",
+    iconBg: "bg-purple-50 text-purple-600 border-purple-200/80",
+    path: "/software/crm",
+    position: "top-8 sm:top-12 right-0 sm:right-4 lg:right-2",
+    icon: (
+      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z" />
+      </svg>
+    )
+  },
+  {
+    id: "dedicated-squads",
+    title: "Dedicated Squads",
+    subtitle: "Top 1% Engineers",
+    iconBg: "bg-emerald-50 text-emerald-600 border-emerald-200/80",
+    path: "/team",
+    position: "top-1/2 -translate-y-1/2 right-0 sm:-right-2 lg:-right-4",
+    icon: (
+      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    )
+  },
+  {
+    id: "custom-software",
+    title: "Custom Software",
+    subtitle: "Enterprise SaaS",
+    iconBg: "bg-amber-50 text-amber-600 border-amber-200/80",
+    path: "/software/erp",
+    position: "bottom-8 sm:bottom-12 right-0 sm:right-4 lg:right-2",
+    icon: (
+      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      </svg>
+    )
+  },
+  {
+    id: "mobile-apps",
+    title: "Mobile App Studio",
+    subtitle: "iOS & Android",
+    iconBg: "bg-indigo-50 text-indigo-600 border-indigo-200/80",
+    path: "/app-studio/flutter",
+    position: "bottom-0 sm:bottom-2 left-1/3 -translate-x-1/2",
+    icon: (
+      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <rect x="5" y="2" width="14" height="20" rx="3" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01" />
+      </svg>
+    )
+  },
+  {
+    id: "uiux-design",
+    title: "UI/UX Studio",
+    subtitle: "Design Systems",
+    iconBg: "bg-teal-50 text-teal-600 border-teal-200/80",
+    path: "/web-design",
+    position: "top-1/2 -translate-y-1/2 left-0 sm:-left-2 lg:-left-4",
+    icon: (
+      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4c0-1.48.8-2.75 2-3.45V5a2 2 0 012-2h10a2 2 0 012 2v8.55c1.2.7 2 1.97 2 3.45a4 4 0 01-4 4H7z" />
+      </svg>
+    )
+  }
+];
 
 const Contactus = () => {
   const [formData, setFormData] = useState({
@@ -223,82 +307,120 @@ const Contactus = () => {
             </div>
           </motion.div>
 
-          {/* Right Side: High-End Visual Card & Contact Info */}
+          {/* Right Side: Combined Circular Diagram (Directly placed without background card) */}
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="lg:col-span-5 bg-gradient-to-br from-[#004658] via-[#003c4c] to-[#002732] text-white rounded-2xl overflow-hidden shadow-xl shadow-[#004658]/20 flex flex-col justify-between relative border border-teal-800/40"
+            className="lg:col-span-5 flex items-center justify-center relative select-none w-full min-h-[380px] sm:min-h-[440px] lg:min-h-[480px] py-4 lg:py-0"
           >
-            {/* Image Banner Container */}
-            <div className="relative h-40 sm:h-48 overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" 
-                alt="Codecrafter Office & Studio"
-                className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#004658] via-[#004658]/40 to-transparent" />
+            {/* Soft Ambient Radial Glow */}
+            <div 
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[400px] sm:h-[400px] rounded-full blur-2xl pointer-events-none opacity-40"
+              style={{
+                background: 'radial-gradient(circle, rgba(0, 70, 88, 0.22) 0%, rgba(234, 88, 12, 0.1) 45%, transparent 70%)'
+              }}
+            />
+
+            {/* Circular Orbit Canvas */}
+            <div className="relative w-[300px] h-[300px] xs:w-[340px] xs:h-[340px] sm:w-[400px] sm:h-[400px] lg:w-[440px] lg:h-[440px] flex items-center justify-center max-w-full">
               
-              <div className="absolute bottom-3 left-4 right-4">
-                <span className="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-white text-[10px] font-medium uppercase tracking-wider">
-                  HQ & Digital Studio
+              {/* Outer Dashed Orbit Guideline Ring */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-2 sm:inset-4 rounded-full border border-dashed border-[#004658]/20 pointer-events-none"
+              />
+
+              {/* Inner Subtle Orbit Ring */}
+              <div className="absolute inset-10 sm:inset-14 rounded-full border border-slate-300/60 pointer-events-none" />
+
+              {/* Moving Satellite Particles on Orbit */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-2 sm:inset-4 pointer-events-none"
+              >
+                <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#EA580C] shadow-[0_0_10px_#EA580C]" />
+                <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#004658] shadow-[0_0_8px_#004658]" />
+              </motion.div>
+
+              {/* 3D Vortex Swirl Image Layer (From 2nd Image) */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
+                className="absolute w-[190px] h-[190px] xs:w-[220px] xs:h-[220px] sm:w-[270px] sm:h-[270px] rounded-full overflow-hidden shadow-lg shadow-cyan-900/10 pointer-events-none"
+              >
+                <img
+                  src={heroVortexSwirl}
+                  alt="3D Interactive Swirl"
+                  className="w-full h-full object-cover filter brightness-[1.05] contrast-[1.08]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent pointer-events-none" />
+              </motion.div>
+
+              {/* CENTER CONVERSION DISC: SCALE TECH SQUADS */}
+              <div
+                className="relative z-20 w-36 h-36 xs:w-40 xs:h-40 sm:w-46 sm:h-46 rounded-full bg-white/95 backdrop-blur-xl border-2 sm:border-3 border-white shadow-[0_15px_40px_rgba(0,70,88,0.15)] flex flex-col items-center justify-center p-2.5 sm:p-3 text-center"
+              >
+                {/* Center Icon */}
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-[#004658] text-white flex items-center justify-center shadow-md shadow-[#004658]/30 mb-1">
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z" />
+                  </svg>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-[10px] xs:text-[11px] sm:text-[12.5px] font-bold text-slate-950 tracking-tight leading-tight uppercase mb-0.5">
+                  SCALE TECH SQUADS
+                </h3>
+
+                {/* Subtitle */}
+                <span className="text-[7.5px] xs:text-[8px] sm:text-[9px] font-semibold text-[#004658] uppercase tracking-wider mb-1.5 block">
+                  ✦ DEDICATED SENIOR LEADS
                 </span>
-                <h4 className="text-base sm:text-lg font-semibold !text-white text-white mt-0.5" style={{ color: '#ffffff' }}>
-                  Code Crafter Web Solutions
-                </h4>
-              </div>
-            </div>
 
-            {/* Contact Details Content */}
-            <div className="p-4 sm:p-5 space-y-4 flex-1 flex flex-col justify-center">
-              {/* Email */}
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center shrink-0 text-sm">
-                  ✉️
-                </div>
-                <div>
-                  <span className="text-[10px] text-white/60 font-medium uppercase tracking-wider block">Official Email</span>
-                  <a href="mailto:contact@codecrafter.web" className="text-xs sm:text-sm font-semibold text-white hover:text-cyan-200 transition-colors">
-                    contact@codecrafter.web
-                  </a>
-                </div>
+                {/* Action Button */}
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#004658] text-white text-[9px] xs:text-[10px] sm:text-xs font-semibold shadow-md shadow-[#004658]/25 hover:bg-[#003442] hover:scale-105 transition-all duration-200 cursor-pointer"
+                >
+                  <span>Book Discovery Call</span>
+                  <span className="text-cyan-300 font-bold">→</span>
+                </Link>
               </div>
 
-              {/* Phone */}
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center shrink-0 text-sm">
-                  📞
-                </div>
-                <div>
-                  <span className="text-[10px] text-white/60 font-medium uppercase tracking-wider block">Direct Line</span>
-                  <a href="tel:+919876543210" className="text-xs sm:text-sm font-semibold text-white hover:text-cyan-200 transition-colors">
-                    +91 98765 43210 / +91 87654 32109
-                  </a>
-                </div>
-              </div>
+              {/* 6 Orbit Floating Service Badges (From 2nd Image) */}
+              {orbitServices.map((badge) => (
+                <motion.div
+                  key={badge.id}
+                  initial={{ opacity: 0, scale: 0.85 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4 }}
+                  whileHover={{ scale: 1.06, y: -2 }}
+                  className={`absolute ${badge.position} z-30 scale-85 xs:scale-90 sm:scale-100 origin-center`}
+                >
+                  <Link
+                    to={badge.path}
+                    className="flex items-center gap-1.5 sm:gap-2 px-2.5 py-1.5 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 backdrop-blur-xl border border-slate-200/90 shadow-sm hover:border-[#004658] hover:shadow-md transition-all duration-300 cursor-pointer group"
+                  >
+                    <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-lg ${badge.iconBg} border flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-110 transition-transform`}>
+                      {badge.icon}
+                    </div>
+                    <div className="text-left">
+                      <h4 className="text-[11px] sm:text-[13px] font-semibold text-slate-950 leading-tight group-hover:text-[#004658] transition-colors">
+                        {badge.title}
+                      </h4>
+                      <p className="text-[9px] sm:text-[10px] text-slate-500 font-normal hidden xs:block">
+                        {badge.subtitle}
+                      </p>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
 
-              {/* Location */}
-              <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center shrink-0 text-sm">
-                  📍
-                </div>
-                <div>
-                  <span className="text-[10px] text-white/60 font-medium uppercase tracking-wider block">Development Hub</span>
-                  <p className="text-xs sm:text-sm font-medium text-white/90 leading-snug">
-                    Gomti Nagar Lucknow, India
-                  </p>
-                </div>
-              </div>
-
-              {/* Response SLA */}
-              <div className="pt-3 border-t border-white/15 flex items-center justify-between text-[11px] text-white/70">
-                <span className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping" />
-                  Average Response: &lt; 2 Hours
-                </span>
-                <span>24/7 Support</span>
-              </div>
             </div>
           </motion.div>
 

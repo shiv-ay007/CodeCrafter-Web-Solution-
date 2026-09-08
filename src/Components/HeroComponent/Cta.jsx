@@ -1,103 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroVortexSwirl from "../../assets/hero_vortex_swirl.jpg";
-
-const orbitingServices = [
-  {
-    id: "web-dev",
-    title: "Web Development",
-    subtitle: "React & Next.js",
-    iconBg: "bg-cyan-50 text-cyan-600 border-cyan-200/80",
-    position: "top-0 sm:top-2 left-1/2 -translate-x-1/2",
-    centerTitle: "HIRE WEB DEVELOPERS",
-    centerBadge: "48-HR SQUAD ONBOARDING",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    )
-  },
-  {
-    id: "ai-solutions",
-    title: "AI & ML Systems",
-    subtitle: "LLMs & Vectors",
-    iconBg: "bg-purple-50 text-purple-600 border-purple-200/80",
-    position: "top-10 sm:top-14 right-2 sm:right-6 lg:right-10",
-    centerTitle: "DEPLOY AI SOLUTIONS",
-    centerBadge: "CUSTOM LLMS & WORKFLOWS",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8L12 2z" />
-      </svg>
-    )
-  },
-  {
-    id: "dedicated-squads",
-    title: "Dedicated Squads",
-    subtitle: "Top 1% Engineers",
-    iconBg: "bg-emerald-50 text-emerald-600 border-emerald-200/80",
-    position: "top-1/2 -translate-y-1/2 right-0 sm:-right-4 lg:-right-6",
-    centerTitle: "SCALE TECH SQUADS",
-    centerBadge: "DEDICATED SENIOR LEADS",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    )
-  },
-  {
-    id: "custom-software",
-    title: "Custom Software",
-    subtitle: "Enterprise SaaS",
-    iconBg: "bg-amber-50 text-amber-600 border-amber-200/80",
-    position: "bottom-10 sm:bottom-12 right-2 sm:right-8 lg:right-12",
-    highlight: true,
-    centerTitle: "BUILD CUSTOM SAAS",
-    centerBadge: "HIGH-THROUGHPUT ARCHITECTURE",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    )
-  },
-  {
-    id: "mobile-apps",
-    title: "Mobile App Studio",
-    subtitle: "iOS & Android",
-    iconBg: "bg-indigo-50 text-indigo-600 border-indigo-200/80",
-    position: "bottom-0 sm:bottom-2 left-1/3 -translate-x-1/2",
-    centerTitle: "NATIVE MOBILE APPS",
-    centerBadge: "60 FPS FLUID PERFORMANCE",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <rect x="5" y="2" width="14" height="20" rx="3" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01" />
-      </svg>
-    )
-  },
-  {
-    id: "uiux-design",
-    title: "UI/UX Studio",
-    subtitle: "Design Systems",
-    iconBg: "bg-teal-50 text-teal-600 border-teal-200/80",
-    position: "top-1/2 -translate-y-1/2 left-0 sm:-left-4 lg:-left-6",
-    centerTitle: "PRODUCT UI/UX DESIGN",
-    centerBadge: "INTERACTIVE FIGMA SYSTEMS",
-    icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4c0-1.48.8-2.75 2-3.45V5a2 2 0 012-2h10a2 2 0 012 2v8.55c1.2.7 2 1.97 2 3.45a4 4 0 01-4 4H7z" />
-      </svg>
-    )
-  }
-];
 
 const Cta = () => {
-  const [activeCenterText, setActiveCenterText] = useState({
-    title: "START YOUR PROJECT",
-    badge: "FREE 45-MIN CONSULTATION"
-  });
-
   return (
     <section className="relative py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden" id="cta">
       
@@ -127,104 +32,28 @@ const Cta = () => {
             <span className="text-[#004658]">digital engineering milestone<span className="text-[#EA580C]">?</span></span>
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 font-normal max-w-lg mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 font-normal max-w-lg mx-auto leading-relaxed mb-6">
             Get a custom architecture plan, dedicated squad matching, and project estimation within 24 hours.
           </p>
-        </motion.div>
-      </div>
 
-      {/* 3D VORTEX SWIRL CTA ORBIT CONTAINER */}
-      <div className="relative max-w-[620px] mx-auto h-[320px] xs:h-[360px] sm:h-[440px] lg:h-[480px] flex items-center justify-center overflow-hidden sm:overflow-visible">
-        
-        {/* Outer Fine Orbit Guideline Ring */}
-        <div className="absolute inset-2 sm:inset-6 border border-dashed border-slate-300/80 rounded-full pointer-events-none animate-[spin_60s_linear_infinite]" />
+          {/* Clean Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3.5 mb-7">
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-[#004658] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#004658]/25 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <span>Book Discovery Call</span>
+              <span className="text-cyan-300 font-semibold">→</span>
+            </Link>
 
-        {/* 3D Vortex Swirl Image Layer */}
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 45, repeat: Infinity, ease: "linear" }}
-          className="relative w-[220px] h-[220px] xs:w-[260px] xs:h-[260px] sm:w-[340px] sm:h-[340px] lg:w-[380px] lg:h-[380px] rounded-full overflow-hidden shadow-xl shadow-cyan-900/15"
-        >
-          <img
-            src={heroVortexSwirl}
-            alt="3D Interactive Swirl"
-            className="w-full h-full object-cover filter brightness-[1.05] contrast-[1.08]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent pointer-events-none" />
-        </motion.div>
-
-        {/* CENTER CONVERSION DISC & CTA BUTTON */}
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-          className="absolute z-20 w-36 h-36 xs:w-44 xs:h-44 sm:w-52 sm:h-52 lg:w-56 lg:h-56 rounded-full bg-white/95 backdrop-blur-xl border-2 sm:border-3 border-white shadow-[0_20px_50px_rgba(0,70,88,0.15)] flex flex-col items-center justify-center p-2.5 sm:p-4 text-center"
-        >
-          {/* Rocket / Bolt Icon */}
-          <div className="w-7 h-7 sm:w-10 sm:h-10 rounded-full bg-[#004658] text-white flex items-center justify-center shadow-md shadow-[#004658]/30 mb-1 sm:mb-1.5">
-            <svg className="w-3.5 h-3.5 sm:w-4.5 sm:h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl bg-white text-[#004658] font-semibold text-sm sm:text-base border border-slate-200 shadow-xs hover:border-[#004658]/40 hover:bg-slate-50 hover:-translate-y-0.5 transition-all duration-200"
+            >
+              <span>Schedule a Call</span>
+            </Link>
           </div>
-
-          {/* Dynamic Active CTA Action Title */}
-          <h3 className="text-[10.5px] xs:text-xs sm:text-sm lg:text-[15px] font-semibold text-slate-950 tracking-tight leading-tight mb-0.5">
-            {activeCenterText.title}
-          </h3>
-
-          {/* Dynamic Offer Badge */}
-          <span className="text-[8px] xs:text-[9.5px] sm:text-[10.5px] font-medium text-[#004658] uppercase tracking-wider mb-1.5 sm:mb-2.5 block">
-            ✦ {activeCenterText.badge}
-          </span>
-
-          {/* High-Converting Primary Action Button */}
-          <Link
-            to="/contact"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 sm:px-5 sm:py-2 rounded-full bg-[#004658] text-white text-[10.5px] sm:text-sm font-semibold shadow-md shadow-[#004658]/25 hover:bg-[#003442] hover:scale-105 hover:shadow-lg transition-all duration-200"
-          >
-            <span>Book Discovery Call</span>
-            <span className="text-cyan-300 font-semibold">→</span>
-          </Link>
-
-          <span className="text-[8px] sm:text-[9px] text-slate-500 font-normal mt-0.5 sm:mt-1 hidden xs:inline">
-            No commitment • NDA signed
-          </span>
         </motion.div>
-
-        {/* 6 ORBITING SERVICE OFFERING BADGES */}
-        {orbitingServices.map((badge) => (
-          <motion.div
-            key={badge.id}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4 }}
-            whileHover={{ scale: 1.06, y: -3 }}
-            onMouseEnter={() => {
-              setActiveCenterText({
-                title: badge.centerTitle,
-                badge: badge.centerBadge
-              });
-            }}
-            className={`absolute ${badge.position} z-30 scale-75 xs:scale-90 sm:scale-100 origin-center`}
-          >
-            <div className={`px-2.5 py-1 sm:px-3.5 sm:py-2 rounded-xl bg-white/95 backdrop-blur-xl border ${badge.highlight ? "border-[#004658] ring-1 ring-[#004658]/20 shadow-md" : "border-slate-200/90 shadow-sm"} flex items-center gap-1.5 sm:gap-2 cursor-pointer hover:border-[#004658] transition-all duration-300`}>
-              <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-lg ${badge.iconBg} border flex items-center justify-center shrink-0 shadow-2xs`}>
-                {badge.icon}
-              </div>
-              <div className="text-left">
-                <h4 className="text-[11px] sm:text-[13px] font-semibold text-slate-950 leading-tight">
-                  {badge.title}
-                </h4>
-                <p className="text-[9px] sm:text-[10px] text-slate-500 font-normal hidden sm:block">
-                  {badge.subtitle}
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        ))}
-
       </div>
 
       {/* Bottom Trust Highlights */}

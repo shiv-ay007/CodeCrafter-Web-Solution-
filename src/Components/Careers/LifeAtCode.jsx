@@ -136,37 +136,37 @@ const LifeAtCode = () => {
                 className="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out pointer-events-none"
               />
 
-              {/* Cinematic Vignette Wash */}
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-black/20 group-hover:from-slate-950/95 group-hover:via-slate-950/40 transition-all duration-500 pointer-events-none" />
+              {/* Cinematic Vignette Wash with Dark Gradient Base */}
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-black/30 group-hover:from-slate-950 group-hover:via-slate-950/70 transition-all duration-500 pointer-events-none" />
 
               {/* Top Floating Badges */}
               <div className="relative top-4 left-4 right-4 flex items-center justify-between z-10 px-0">
-                <span className="px-3 py-1 rounded-full bg-black/40 backdrop-blur-md text-white text-[11px] font-mono font-bold border border-white/20 shadow-md flex items-center gap-1.5">
+                <span className="px-3 py-1 rounded-full bg-black/50 backdrop-blur-md text-white text-[11px] font-mono font-bold border border-white/25 shadow-md flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-                  <span>{item.badge}</span>
+                  <span className="text-white !text-white">{item.badge}</span>
                 </span>
 
-                <span className="px-2.5 py-1 rounded-md bg-emerald-950/80 backdrop-blur-md text-emerald-300 text-[10px] font-mono font-bold border border-emerald-500/30 shadow-md">
+                <span className="px-2.5 py-1 rounded-md bg-emerald-950/90 backdrop-blur-md text-emerald-300 text-[10px] font-mono font-bold border border-emerald-500/40 shadow-md">
                   {item.kpi}
                 </span>
               </div>
 
               {/* Bottom Caption & Detail Reveal */}
               <div className="relative bottom-0 left-0 right-0 p-5 sm:p-6 z-10 text-left">
-                <span className="text-[10px] font-mono font-bold text-cyan-300 uppercase tracking-widest block mb-1">
+                <span className="text-[10.5px] font-mono font-bold text-cyan-300 uppercase tracking-widest block mb-1">
                   {item.category}
                 </span>
 
-                <h3 className="text-lg sm:text-xl font-black text-white leading-tight mb-1 group-hover:text-cyan-200 transition-colors">
+                <h3 className="text-lg sm:text-xl font-black !text-white text-white leading-tight mb-1.5 group-hover:!text-cyan-200 transition-colors" style={{ color: '#ffffff' }}>
                   {item.title}
                 </h3>
 
-                <p className="text-xs sm:text-[12.5px] text-slate-300 font-normal leading-relaxed line-clamp-1">
+                <p className="text-xs sm:text-[13px] text-slate-200 font-normal leading-relaxed line-clamp-1" style={{ color: '#e2e8f0' }}>
                   {item.subtitle}
                 </p>
 
                 {/* Interactive Link */}
-                <div className="mt-2.5 pt-2 border-t border-white/15 flex items-center justify-between text-[11px] font-bold text-slate-300 group-hover:text-cyan-300 transition-colors">
+                <div className="mt-3 pt-2.5 border-t border-white/20 flex items-center justify-between text-[11px] font-bold text-slate-200 group-hover:text-cyan-300 transition-colors">
                   <span>Explore Life at Crafter</span>
                   <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />

@@ -25,78 +25,6 @@ import {
   Check
 } from "lucide-react";
 
-/**
- * 6 Interactive Orbit Nodes Configuration mapped directly to verified CCWS Routes
- */
-const orbitNodes = [
-  {
-    id: "seo",
-    label: "SEO",
-    fullName: "Search Optimization",
-    icon: Search,
-    color: "#2563EB",
-    glowColor: "rgba(37, 99, 235, 0.35)",
-    angle: 0, // 12 o'clock (Top)
-    path: "/digital-booster/seo",
-    desc: "+380% Organic Visibility"
-  },
-  {
-    id: "branding",
-    label: "Branding",
-    fullName: "Brand Identity",
-    icon: Palette,
-    color: "#004658",
-    glowColor: "rgba(0, 70, 88, 0.45)",
-    angle: 60, // 2 o'clock (Top-Right)
-    path: "/digital-booster/branding",
-    desc: "Iconic Visual Systems"
-  },
-  {
-    id: "campaigns",
-    label: "Campaigns",
-    fullName: "Digital Campaigns",
-    icon: Megaphone,
-    color: "#EA580C",
-    glowColor: "rgba(234, 88, 12, 0.45)",
-    angle: 120, // 4 o'clock (Bottom-Right)
-    path: "/digital-booster/google-ads",
-    desc: "4.8x High-ROI Paid Acquisition"
-  },
-  {
-    id: "design",
-    label: "Graphic Design",
-    fullName: "Graphic & 3D Design",
-    icon: PenTool,
-    color: "#F59E0B",
-    glowColor: "rgba(245, 158, 11, 0.45)",
-    angle: 180, // 6 o'clock (Bottom)
-    path: "/web-design",
-    desc: "High-Craft Art Direction"
-  },
-  {
-    id: "content",
-    label: "Content Strategy",
-    fullName: "Content Strategy",
-    icon: FileText,
-    color: "#8B5CF6",
-    glowColor: "rgba(139, 92, 246, 0.45)",
-    angle: 240, // 8 o'clock (Bottom-Left)
-    path: "/digital-booster/content-marketing",
-    desc: "High-Converting Narratives"
-  },
-  {
-    id: "social",
-    label: "Social Media",
-    fullName: "Social Amplification",
-    icon: Share2,
-    color: "#EC4899",
-    glowColor: "rgba(236, 72, 153, 0.45)",
-    angle: 300, // 10 o'clock (Top-Left)
-    path: "/digital-booster/social-media",
-    desc: "Viral Community Growth"
-  }
-];
-
 const marqueeItems = [
   "SOCIAL MEDIA AMPLIFICATION",
   "SEO & ORGANIC VISIBILITY",
@@ -109,27 +37,10 @@ const marqueeItems = [
 ];
 
 const Branding = () => {
-  const [activeOrbit, setActiveOrbit] = useState("branding");
-  const [autoRotate, setAutoRotate] = useState(true);
-
-  // Auto-cycle active orbit node when user is not actively hovering
-  useEffect(() => {
-    if (!autoRotate) return;
-    const interval = setInterval(() => {
-      setActiveOrbit((prev) => {
-        const currentIndex = orbitNodes.findIndex((n) => n.id === prev);
-        const nextIndex = (currentIndex + 1) % orbitNodes.length;
-        return orbitNodes[nextIndex].id;
-      });
-    }, 3800);
-    return () => clearInterval(interval);
-  }, [autoRotate]);
-
-  const activeNodeData = orbitNodes.find((n) => n.id === activeOrbit) || orbitNodes[1];
 
   return (
     <section 
-      className="relative overflow-hidden bg-[#FAFAF8] py-20 sm:py-24 lg:py-32 select-none"
+      className="relative overflow-hidden bg-[#FAFAF8] pt-16 sm:pt-20 lg:pt-24 pb-0 select-none"
       id="branding-marketing"
     >
       {/* ─────────────────────────────────────────────────────────────
@@ -164,14 +75,6 @@ const Branding = () => {
             backgroundSize: "28px 28px"
           }}
         />
-
-        {/* Subtle Floating Code / Spec Watermarks */}
-        <div className="absolute top-12 left-8 font-mono text-[12px] text-slate-900/[0.035] select-none">
-          {`// CCWS.Brand.Engine.v4.2\nconst identity = createBrandSystem({\n  resonance: "infinite",\n  growthFactor: 4.8\n});`}
-        </div>
-        <div className="absolute bottom-16 right-10 font-mono text-[12px] text-slate-900/[0.035] select-none">
-          {`return <BrandResonance impact="maximum" reach="global" />;`}
-        </div>
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
@@ -242,123 +145,6 @@ const Branding = () => {
             </div>
           </motion.div>
         </div>
-
-        {/* ─────────────────────────────────────────────────────────────
-            BRAND ORBIT VISUAL (6 ORBITS AROUND CCWS CENTER)
-        ─────────────────────────────────────────────────────────────── */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="relative mx-auto my-12 sm:my-16 lg:my-20 flex h-[350px] sm:h-[400px] max-w-4xl items-center justify-center"
-          onMouseEnter={() => setAutoRotate(false)}
-          onMouseLeave={() => setAutoRotate(true)}
-        >
-          {/* Subtle Outer Atmospheric Glow */}
-          <div 
-            className="absolute h-80 w-80 rounded-full blur-2xl transition-all duration-700 pointer-events-none opacity-40"
-            style={{ background: activeNodeData.glowColor }}
-          />
-
-          {/* Outer Dashed Orbit Ring (Slow continuous rotation) */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 55, repeat: Infinity, ease: "linear" }}
-            className="absolute h-[320px] w-[320px] sm:h-[370px] sm:w-[370px] rounded-full border border-dashed border-slate-300/85 pointer-events-none"
-          />
-
-          {/* Inner Solid Orbit Ring */}
-          <div className="absolute h-[220px] w-[220px] sm:h-[250px] sm:w-[250px] rounded-full border border-slate-200/90 pointer-events-none" />
-
-          {/* Orbit Dynamic Radial Gradient Ring */}
-          <div className="absolute h-[280px] w-[280px] sm:h-[320px] sm:w-[320px] rounded-full border border-slate-200/40 bg-gradient-to-tr from-transparent via-slate-100/40 to-transparent pointer-events-none" />
-
-          {/* Moving Satellite Particles on Orbit */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
-            className="absolute h-[320px] w-[320px] sm:h-[370px] sm:w-[370px] pointer-events-none"
-          >
-            <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#EA580C] shadow-[0_0_12px_#EA580C]" />
-            <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-[#004658] shadow-[0_0_10px_#004658]" />
-          </motion.div>
-
-          {/* Center CCWS Core Node */}
-          <div className="relative z-20 flex flex-col items-center justify-center">
-            {/* Pulsing Back Ring */}
-            <motion.div 
-              animate={{ scale: [1, 1.15, 1], opacity: [0.35, 0.65, 0.35] }}
-              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute h-28 w-28 sm:h-32 sm:w-32 rounded-full border border-[#004658]/30 bg-[#004658]/5 pointer-events-none"
-            />
-
-            {/* CCWS Hub Badge */}
-            <Link
-              to="/about"
-              className="relative flex h-20 w-20 sm:h-24 sm:w-24 flex-col items-center justify-center rounded-full bg-gradient-to-b from-[#004658] to-[#022B32] text-white shadow-[0_12px_35px_rgba(0,70,88,0.35)] border-2 border-white/20 backdrop-blur-md hover:scale-105 transition-all duration-300 cursor-pointer group"
-              title="Learn about CCWS Studio Core"
-            >
-              <span className="text-base sm:text-lg font-black tracking-wider text-white">CCWS</span>
-              <span className="text-[8px] font-semibold uppercase tracking-widest text-slate-300">CORE</span>
-            </Link>
-          </div>
-
-          {/* 6 Orbit Floating Nodes */}
-          {orbitNodes.map((node) => {
-            const Icon = node.icon;
-            const isActive = activeOrbit === node.id;
-            const angleRad = (node.angle - 90) * (Math.PI / 180);
-            const radius = typeof window !== "undefined" && window.innerWidth < 640 ? 125 : 160;
-            const x = Math.cos(angleRad) * radius;
-            const y = Math.sin(angleRad) * radius;
-
-            return (
-              <div
-                key={node.id}
-                style={{
-                  transform: `translate(${x}px, ${y}px)`
-                }}
-                className="absolute z-30 transition-transform duration-300"
-              >
-                <Link
-                  to={node.path}
-                  onClick={() => setActiveOrbit(node.id)}
-                  onMouseEnter={() => setActiveOrbit(node.id)}
-                  className={`group flex items-center gap-2 rounded-full border px-3.5 py-2 sm:px-4 sm:py-2.5 transition-all duration-300 cursor-pointer shadow-sm ${
-                    isActive
-                      ? "bg-white border-slate-900/40 shadow-[0_10px_25px_rgba(0,0,0,0.12)] scale-110 -translate-y-1"
-                      : "bg-white/90 hover:bg-white border-slate-200/90 hover:border-slate-400 hover:scale-105"
-                  }`}
-                  aria-label={`Navigate to ${node.fullName}`}
-                >
-                  {/* Icon Indicator with Accent Background */}
-                  <div
-                    className="flex h-6 w-6 sm:h-7 sm:w-7 items-center justify-center rounded-full text-white transition-transform duration-300 group-hover:scale-110 shrink-0"
-                    style={{ backgroundColor: node.color }}
-                  >
-                    <Icon size={13} strokeWidth={2.3} />
-                  </div>
-
-                  {/* Label */}
-                  <span className={`text-xs sm:text-[13px] font-bold tracking-tight transition-colors ${
-                    isActive ? "text-slate-950" : "text-slate-700 group-hover:text-slate-950"
-                  }`}>
-                    {node.label}
-                  </span>
-
-                  {/* Active Indicator Dot */}
-                  {isActive && (
-                    <span 
-                      className="w-1.5 h-1.5 rounded-full animate-pulse"
-                      style={{ backgroundColor: node.color }}
-                    />
-                  )}
-                </Link>
-              </div>
-            );
-          })}
-        </motion.div>
 
         {/* ─────────────────────────────────────────────────────────────
             BENTO-STYLE SERVICE CARDS GRID
@@ -749,106 +535,68 @@ const Branding = () => {
                 </div>
               </div>
 
-              {/* Right Campaign Dashboard Mockup - Minimal, Elegant & Unique Glass Console */}
-              <div className="lg:col-span-5 relative">
-                {/* Subtle Ambient Glow Behind Card */}
+              {/* Right Side: High-End Marketing Growth Visual Showcase */}
+              <div className="lg:col-span-5 relative flex items-center justify-center">
+                {/* Ambient Soft Glow Behind Image */}
                 <div 
-                  className="absolute -inset-1 rounded-3xl opacity-30 blur-xl pointer-events-none -z-10"
+                  className="absolute -inset-2 rounded-3xl opacity-40 blur-2xl pointer-events-none -z-10"
                   style={{
-                    background: "radial-gradient(circle, rgba(0,70,88,0.2) 0%, rgba(234,88,12,0.12) 60%, transparent 80%)"
+                    background: "radial-gradient(circle, rgba(0,70,88,0.25) 0%, rgba(234,88,12,0.15) 50%, transparent 75%)"
                   }}
                 />
 
-                <div className="relative overflow-hidden rounded-[24px] border border-[#004658]/15 bg-gradient-to-b from-[#FAFDFE] via-white to-[#F4F9FB] p-5 sm:p-6 shadow-[0_12px_36px_-8px_rgba(0,70,88,0.12)]">
+                {/* Main Image Showcase Card */}
+                <div className="relative w-full h-[300px] sm:h-[340px] rounded-[24px] overflow-hidden border border-[#004658]/15 shadow-[0_16px_40px_-10px_rgba(0,70,88,0.18)] group/img">
                   
-                  {/* Top Header: Live Status & Benchmark */}
-                  <div className="flex items-center justify-between pb-4 border-b border-slate-100 mb-4.5">
-                    <div className="flex items-center gap-2">
+                  {/* High-Resolution Professional Marketing & Analytics Image */}
+                  <img 
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
+                    alt="Digital Growth & Campaign Performance"
+                    className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700 ease-out"
+                  />
+
+                  {/* Cinematic Gradient Overlays for Readability & Depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#002732]/85 via-[#004658]/25 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#004658]/40 via-transparent to-white/10" />
+
+                  {/* TOP FLOATING BADGE: Live Performance */}
+                  <div className="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-white/60 shadow-md">
                       <span className="relative flex h-2 w-2">
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
                       </span>
-                      <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-slate-800">
-                        Live Performance Engine
+                      <span className="text-[11px] font-bold tracking-wide text-slate-900 uppercase">
+                        Live Campaign Engine
                       </span>
                     </div>
 
-                    <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/18 text-[#004658] text-[11px] font-bold">
-                      <TrendingUp size={12} className="text-[#004658]" />
-                      <span>4.8x Avg ROAS</span>
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#004658]/90 text-white backdrop-blur-md border border-white/20 shadow-md text-xs font-bold">
+                      <TrendingUp size={13} className="text-cyan-300" />
+                      <span>4.8x ROAS</span>
                     </div>
                   </div>
 
-                  {/* Minimal High-Impact Metric Cards */}
-                  <div className="grid grid-cols-2 gap-3 mb-4.5">
-                    <div className="rounded-xl border border-slate-200/80 bg-white/95 p-3.5 shadow-2xs transition-all hover:border-[#004658]/30 hover:shadow-sm">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[11px] font-medium text-slate-500">Conversion Rate</span>
-                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-200/60">
-                          +34.8%
+                  {/* BOTTOM GLASSMORPHIC OVERLAY: Key Highlights */}
+                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/90 backdrop-blur-xl border border-white/80 shadow-lg flex items-center justify-between">
+                    <div>
+                      <div className="text-[10.5px] font-semibold uppercase tracking-wider text-slate-500">
+                        Conversion Velocity
+                      </div>
+                      <div className="text-lg sm:text-xl font-black text-slate-950 tracking-tight flex items-center gap-2">
+                        <span>+380% Growth</span>
+                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-100/80 px-2 py-0.5 rounded-full">
+                          Optimal
                         </span>
                       </div>
-                      <div className="text-xl font-extrabold text-slate-900 tracking-tight">
-                        12.4%
-                      </div>
-                    </div>
-
-                    <div className="rounded-xl border border-slate-200/80 bg-white/95 p-3.5 shadow-2xs transition-all hover:border-[#004658]/30 hover:shadow-sm">
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="text-[11px] font-medium text-slate-500">Cost Per Lead</span>
-                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-200/60">
-                          -42.0%
-                        </span>
-                      </div>
-                      <div className="text-xl font-extrabold text-slate-900 tracking-tight">
-                        $4.20
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Multi-Channel Allocation & Efficiency Bar */}
-                  <div className="rounded-xl border border-slate-200/70 bg-slate-50/80 p-3.5 space-y-2.5 mb-4">
-                    <div className="flex items-center justify-between text-[11px]">
-                      <span className="font-semibold text-slate-700 flex items-center gap-1.5">
-                        <Activity size={12} className="text-[#004658]" />
-                        <span>Algorithmic Funnel Efficiency</span>
-                      </span>
-                      <span className="font-mono font-bold text-[#004658]">94.2% Optimal</span>
-                    </div>
-
-                    {/* Segmented Stacked Progress Bar */}
-                    <div className="h-2 w-full bg-slate-200/80 rounded-full overflow-hidden flex gap-0.5">
-                      <div className="bg-[#004658] h-full rounded-l-full" style={{ width: "46%" }} title="Google Search & Shopping (46%)" />
-                      <div className="bg-[#0284C7] h-full" style={{ width: "32%" }} title="Meta Performance 5 (32%)" />
-                      <div className="bg-[#EA580C] h-full rounded-r-full" style={{ width: "22%" }} title="LinkedIn B2B & DSP (22%)" />
-                    </div>
-
-                    <div className="flex items-center justify-between text-[10px] font-medium text-slate-500 pt-0.5">
-                      <span className="flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" /> Google 46%
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#0284C7]" /> Meta 32%
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#EA580C]" /> Other 22%
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Bottom Minimal Footer CTA */}
-                  <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                    <div className="flex items-center gap-1.5 text-[11px] font-semibold text-slate-600">
-                      <Zap size={13} className="text-[#EA580C]" />
-                      <span>Smart Auto-Bidding</span>
                     </div>
 
                     <Link
                       to="/digital-booster/google-ads"
-                      className="group/btn inline-flex items-center gap-1.5 rounded-full bg-[#004658] px-3.5 py-1.5 text-[11.5px] font-bold text-white shadow-2xs hover:bg-[#022B32] hover:shadow-xs transition-all duration-200"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#004658] text-white text-xs font-bold shadow-md hover:bg-[#003442] hover:scale-105 transition-all duration-200"
                     >
-                      <span>Launch Campaign</span>
-                      <ArrowUpRight size={12} className="transition-transform duration-200 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                      <span>Explore</span>
+                      <ArrowUpRight size={13} className="text-cyan-300" />
                     </Link>
                   </div>
 
@@ -860,20 +608,23 @@ const Branding = () => {
         </div>
 
         {/* ─────────────────────────────────────────────────────────────
-            SEAMLESS INFINITE BOTTOM MARQUEE
+            SEAMLESS INFINITE BOTTOM MARQUEE & TRANSITION ACCENTS
         ─────────────────────────────────────────────────────────────── */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-30px" }}
           transition={{ duration: 0.5 }}
-          className="mt-16 sm:mt-20 lg:mt-24 overflow-hidden border-y border-slate-200/90 py-5 bg-white/60 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-2xs group"
+          className="mt-12 sm:mt-16 overflow-hidden relative rounded-2xl sm:rounded-3xl border border-[#004658]/15 bg-gradient-to-r from-white via-[#f0f9fa]/60 to-white py-5 shadow-[0_8px_30px_rgba(0,70,88,0.06)] backdrop-blur-xl group"
         >
+          {/* Subtle Ambient Shimmer Track */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00D8FF]/8 to-transparent pointer-events-none" />
+
           <div className="animate-marquee-left items-center gap-8 whitespace-nowrap">
             {/* Double the marquee items list to ensure seamless zero-gap infinite looping */}
             {[...marqueeItems, ...marqueeItems].map((item, index) => (
               <React.Fragment key={index}>
-                <span className="text-xs sm:text-[13px] font-bold tracking-[0.2em] text-slate-600 hover:text-[#004658] transition-colors cursor-default">
+                <span className="text-xs sm:text-[13px] font-bold tracking-[0.2em] text-slate-700 hover:text-[#004658] transition-colors cursor-default">
                   {item}
                 </span>
                 <span className="text-xs text-[#EA580C] font-bold">✦</span>
@@ -883,6 +634,14 @@ const Branding = () => {
         </motion.div>
 
       </div>
+
+      {/* Bottom Smooth Curved Wave Transition to Process */}
+      <div className="w-full overflow-hidden leading-none mt-10 sm:mt-12 pointer-events-none -mb-1">
+        <svg className="relative block w-full h-8 sm:h-12 text-[#F7F7F7] fill-current" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C150,80 350,-30 500,50 C650,130 900,10 1200,30 L1200,120 L0,120 Z"></path>
+        </svg>
+      </div>
+
     </section>
   );
 };

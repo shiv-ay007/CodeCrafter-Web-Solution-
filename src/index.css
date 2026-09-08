@@ -25,11 +25,12 @@ body {
 }
 
 /* Heading Display Typography - Clean and Modern Outfit */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Outfit", sans-serif;
-  letter-spacing: -0.025em;
-  font-weight: 600;
-  color: #020617;
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Outfit", sans-serif;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+  }
 }
 
 /* Smooth Premium Scrollbar */
