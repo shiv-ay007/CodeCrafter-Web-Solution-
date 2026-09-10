@@ -326,10 +326,10 @@ const Hero = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-0.5">
               {/* Overlapping Avatars */}
               <div className="flex items-center -space-x-2">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 1" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 2" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 3" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Client 4" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Enterprise Web Portal Project" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Dedicated Engineering Squad" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Custom Software Architecture" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Mobile App Development" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
                 <div className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[10.5px] sm:text-[11px] font-semibold flex items-center justify-center shadow-xs">
                   50+
                 </div>
@@ -340,7 +340,7 @@ const Hero = () => {
                 <p className="text-xs sm:text-sm font-semibold text-slate-900 leading-tight">
                   Trusted by 50+ clients worldwide
                 </p>
-                <div className="flex items-center gap-0.5 mt-0.5 text-amber-400 text-xs tracking-wider">
+                <div className="flex items-center gap-0.5 mt-0.5 text-amber-400 text-xs tracking-wider" aria-label="5 star rating">
                   {"★★★★★"}
                 </div>
               </div>
@@ -364,7 +364,10 @@ const Hero = () => {
               <div className="absolute inset-2 sm:inset-4 rounded-full overflow-hidden shadow-[0_20px_50px_rgba(0,70,88,0.12)]">
                 <motion.img
                   src={vortexSwirlImg}
-                  alt="3D Fluid Vortex Wave"
+                  alt="3D Fluid Vortex Wave - CodeCrafter Engineering Solutions"
+                  width="460"
+                  height="460"
+                  decoding="async"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
                   className="w-full h-full object-cover scale-110 opacity-90"

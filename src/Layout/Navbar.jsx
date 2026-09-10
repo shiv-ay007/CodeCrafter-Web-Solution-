@@ -296,7 +296,10 @@ const Navbar = () => {
           {logo ? (
             <img
               src={logo}
-              alt="CodeCrafter Logo"
+              alt="CodeCrafter - Website Design and Software Development Studio Logo"
+              width="180"
+              height="48"
+              decoding="async"
               className={`w-auto object-contain transition-all duration-300 origin-left group-hover:scale-105 ${
                 scrolled 
                   ? "h-9 sm:h-10 md:h-11" 

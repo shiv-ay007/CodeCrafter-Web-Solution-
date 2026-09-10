@@ -225,6 +225,8 @@ const TechMarquee = () => {
             {marqueeList.map((tech, index) => (
               <div
                 key={`${tech.id}-${index}`}
+                title={`${tech.id.toUpperCase()} Integration`}
+                aria-label={`${tech.id} technology integration`}
                 className="flex items-center justify-center cursor-pointer transition-all duration-300 hover:scale-125 filter drop-shadow-sm hover:drop-shadow-md shrink-0"
               >
                 {tech.icon}

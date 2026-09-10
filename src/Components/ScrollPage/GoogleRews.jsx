@@ -216,7 +216,11 @@ const GoogleReviews = () => {
                       <div className="relative mb-3">
                         <img
                           src={item.avatar}
-                          alt={item.name}
+                          alt={`${item.name} - Verified Client Review on Google for CodeCrafter`}
+                          loading="lazy"
+                          decoding="async"
+                          width="64"
+                          height="64"
                           onError={(e) => {
                             e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(item.name)}&background=004658&color=ffffff&size=128&bold=true`;
                           }}

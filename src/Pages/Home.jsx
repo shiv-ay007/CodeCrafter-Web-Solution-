@@ -13,7 +13,7 @@ import Branding from '../Components/HeroComponent/Branding'
 
 const Home = () => {
   return (
-    <>
+    <main id="main-content">
       <Hero />
       <Overview />
       <Services />
@@ -25,7 +25,7 @@ const Home = () => {
       <Contactus />
       <LatestInsights />
       <Cta />
-    </>
+    </main>
   )
 }
 

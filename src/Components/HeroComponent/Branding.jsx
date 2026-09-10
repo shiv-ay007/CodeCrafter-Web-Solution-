@@ -551,7 +551,11 @@ const Branding = () => {
                   {/* High-Resolution Professional Marketing & Analytics Image */}
                   <img 
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" 
-                    alt="Digital Growth & Campaign Performance"
+                    alt="Digital Growth, SEO and Performance Marketing Campaign Analytics Dashboard - CodeCrafter"
+                    loading="lazy"
+                    decoding="async"
+                    width="800"
+                    height="340"
                     className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-700 ease-out"
                   />
 

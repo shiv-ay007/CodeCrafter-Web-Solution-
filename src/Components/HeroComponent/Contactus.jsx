@@ -192,34 +192,40 @@ const Contactus = () => {
                 </div>
               )}
 
-              <form onSubmit={handleSubmit} className="space-y-3.5">
+              <form onSubmit={handleSubmit} className="space-y-3.5" aria-label="Contact and project inquiry form">
                 {/* Full Name & Email Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-fullName" className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Full Name *
                     </label>
                     <input
+                      id="contact-fullName"
                       type="text"
                       name="fullName"
                       value={formData.fullName}
                       onChange={handleChange}
                       required
+                      aria-required="true"
+                      autoComplete="name"
                       placeholder="e.g. Rahul Sharma"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-email" className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Email Address *
                     </label>
                     <input
+                      id="contact-email"
                       type="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      aria-required="true"
+                      autoComplete="email"
                       placeholder="rahul@company.com"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
                     />
@@ -229,30 +235,36 @@ const Contactus = () => {
                 {/* Phone & Nature of Business Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                   <div>
-                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-phone" className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Phone Number *
                     </label>
                     <input
+                      id="contact-phone"
                       type="tel"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
                       required
+                      aria-required="true"
+                      autoComplete="tel"
                       placeholder="+91 98765 43210"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                    <label htmlFor="contact-business" className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                       Business Type *
                     </label>
                     <input
+                      id="contact-business"
                       type="text"
                       name="natureOfBusiness"
                       value={formData.natureOfBusiness}
                       onChange={handleChange}
                       required
+                      aria-required="true"
+                      autoComplete="organization"
                       placeholder="e.g. Fintech, SaaS, Healthcare"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
                     />
@@ -261,13 +273,15 @@ const Contactus = () => {
 
                 {/* Service of Interest */}
                 <div>
-                  <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="contact-service" className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                     Service Required *
                   </label>
                   <select
+                    id="contact-service"
                     name="serviceRequired"
                     value={formData.serviceRequired}
                     onChange={handleChange}
+                    aria-required="true"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
                   >
                     <option>Custom Web &amp; SaaS Development</option>
@@ -281,15 +295,17 @@ const Contactus = () => {
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
+                  <label htmlFor="contact-message" className="block text-xs font-medium text-slate-700 uppercase tracking-wider mb-1.5">
                     Project Overview *
                   </label>
                   <textarea
+                    id="contact-message"
                     rows="3"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     required
+                    aria-required="true"
                     placeholder="Briefly describe your project requirements..."
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/70 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all resize-none"
                   ></textarea>
@@ -354,7 +370,11 @@ const Contactus = () => {
               >
                 <img
                   src={heroVortexSwirl}
-                  alt="3D Interactive Swirl"
+                  alt="3D Interactive Tech Squad Orbit - CodeCrafter Web Solution"
+                  loading="lazy"
+                  decoding="async"
+                  width="270"
+                  height="270"
                   className="w-full h-full object-cover filter brightness-[1.05] contrast-[1.08]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white/10 via-transparent to-transparent pointer-events-none" />

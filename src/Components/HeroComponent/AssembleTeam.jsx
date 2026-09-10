@@ -63,7 +63,11 @@ const AssembleTeam = () => {
                 <div className="relative w-full max-w-[170px] sm:max-w-[220px] lg:max-w-[240px] h-44 xs:h-50 sm:h-56 md:h-64 lg:h-72 overflow-hidden mb-3 flex items-end justify-center rounded-2xl shadow-xs group-hover:shadow-lg group-hover:shadow-[#004658]/10 transition-all duration-300">
                   <img
                     src={member.image}
-                    alt={`${member.line1} ${member.line2}`}
+                    alt={`${member.line1} ${member.line2} - CodeCrafter Dedicated Engineering Squad`}
+                    loading="lazy"
+                    decoding="async"
+                    width="240"
+                    height="288"
                     className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-[1.02] group-hover:scale-105 transition-transform duration-400 rounded-2xl"
                   />
                   <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none rounded-b-2xl" />

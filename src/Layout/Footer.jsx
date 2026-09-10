@@ -33,11 +33,15 @@ const Footer = () => {
           
           {/* Column 1: Logo, Brand Text, Presence & Badges (lg:col-span-3) */}
           <div className="lg:col-span-3 space-y-3.5 text-left">
-            <Link to="/" className="inline-block group">
+            <Link to="/" className="inline-block group" aria-label="CodeCrafter Homepage">
               {logo ? (
                 <img 
                   src={logo} 
-                  alt="CodeCrafter Logo" 
+                  alt="CodeCrafter - Website Design and Software Development Studio Logo" 
+                  loading="lazy"
+                  decoding="async"
+                  width="160"
+                  height="48"
                   className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform group-hover:scale-105" 
                 />
               ) : (
@@ -195,19 +199,23 @@ const Footer = () => {
             </p>
 
             {/* Newsletter Input Form */}
-            <form onSubmit={handleSubscribe} className="space-y-1.5">
+            <form onSubmit={handleSubscribe} className="space-y-1.5" aria-label="Newsletter email subscription">
               <div className="relative">
                 <input
+                  id="footer-newsletter-email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
+                  autoComplete="email"
+                  aria-label="Enter your email address"
                   required
                   className="w-full px-3 py-2 pr-9 rounded-xl bg-white border border-slate-300 text-slate-800 text-xs focus:outline-none focus:border-[#004658] focus:ring-1 focus:ring-[#004658] shadow-2xs"
                 />
                 <button
                   type="submit"
-                  title="Subscribe"
+                  title="Subscribe to newsletter"
+                  aria-label="Subscribe to newsletter"
                   className="absolute right-1 top-1/2 -translate-y-1/2 w-6 h-6 rounded-lg bg-[#004658] text-white flex items-center justify-center text-xs hover:bg-[#003442] transition-colors cursor-pointer"
                 >
                   →

@@ -1,0 +1,6 @@
+﻿# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap declaration
+Sitemap: https://codecrafter.in/sitemap.xml
