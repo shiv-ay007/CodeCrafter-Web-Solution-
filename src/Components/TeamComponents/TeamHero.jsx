@@ -33,7 +33,7 @@ const teamMembers = [
 
 const TeamHero = () => {
   return (
-    <section className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden" id="team-hero">
+    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden" id="team-hero">
       
       {/* Background Soft Glows (Teal Ambient Lighting) */}
       <div 
