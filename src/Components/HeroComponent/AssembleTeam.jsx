@@ -1,83 +1,194 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const teamRoles = [
+// Import all local team member images from assets/images
+import abhayImg from "../../assets/images/Abhay Vishwakarma.png";
+import amanImg from "../../assets/images/Aman kumar.png";
+import ankurImg from "../../assets/images/Ankur Patel.png";
+import ayushiImg from "../../assets/images/Ayushi Srivastava.jpeg";
+import irshadImg from "../../assets/images/Irshad Ali.jpeg";
+import nirbhayImg from "../../assets/images/Nirbhay.png";
+import priyankaImg from "../../assets/images/Priyanka Gupta.png";
+import shivamImg from "../../assets/images/Shivam Yadav.png";
+import shwetaImg from "../../assets/images/Shweta.png";
+import sureshImg from "../../assets/images/Suresh Kumar.jpeg";
+import swatiImg from "../../assets/images/Swati Kaushal.png";
+
+const teamMembers = [
   {
-    line1: "Software",
-    line2: "developers",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&h=800&q=80",
+    name: "Diksha Tiwari",
+    role: "Business Operations Lead",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=800&q=80",
     path: "/team"
   },
   {
-    line1: "QA",
-    line2: "engineers",
+    name: "Suresh Kumar",
+    role: "Senior Software Developer",
+    image: sureshImg,
+    path: "/team"
+  },
+  {
+    name: "Irshad Ali",
+    role: "Software Developer",
+    image: irshadImg,
+    path: "/team"
+  },
+  {
+    name: "Abhay Vishwakarma",
+    role: "Software Developer",
+    image: abhayImg,
+    path: "/team"
+  },
+  {
+    name: "Shivam Yadav",
+    role: "Associate Software Developer",
+    image: shivamImg,
+    path: "/team"
+  },
+  {
+    name: "Ankur Patel",
+    role: "Associate Software Developer",
+    image: ankurImg,
+    path: "/team"
+  },
+  {
+    name: "Ayushi Srivastava",
+    role: "Associate Software Developer",
+    image: ayushiImg,
+    path: "/team"
+  },
+  {
+    name: "Aman Kumar",
+    role: "Mobile App Developer",
+    image: amanImg,
+    path: "/team"
+  },
+  {
+    name: "Shweta Sharma",
+    role: "Social Media Executive",
+    image: shwetaImg,
+    path: "/team"
+  },
+  {
+    name: "Swati Kaushal",
+    role: "Multimedia Designer",
+    image: swatiImg,
+    path: "/team"
+  },
+  {
+    name: "Nirbhay",
+    role: "Software Developer Intern",
+    image: nirbhayImg,
+    path: "/team"
+  },
+  {
+    name: "MD Arzaan",
+    role: "Software Developer Intern",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=800&q=80",
     path: "/team"
   },
   {
-    line1: "UX",
-    line2: "designers",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&h=800&q=80",
-    path: "/web-design"
-  },
-  {
-    line1: "Data",
-    line2: "scientists",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&h=800&q=80",
-    path: "/software/crm"
-  },
-  {
-    line1: "Project",
-    line2: "managers",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&h=800&q=80",
-    path: "/contact"
+    name: "Priyanka Gupta",
+    role: "Software Developer Intern",
+    image: priyankaImg,
+    path: "/team"
   }
 ];
 
 const AssembleTeam = () => {
-  return (
-    <section className="w-full relative py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white text-center" id="team">
-      
-      {/* 5 Squad Members Visual Lineup */}
-      <div className="relative max-w-[1360px] mx-auto mb-8 sm:mb-9">
-        
-        {/* Subtle Horizontal Ribbon */}
-        <div className="absolute top-14 sm:top-20 lg:top-24 left-0 right-0 h-24 sm:h-32 lg:h-40 bg-gradient-to-r from-slate-100 via-slate-200/80 to-slate-100 rounded-2xl -z-0 border border-slate-200/70" />
+  const scrollRef = useRef(null);
 
-        {/* 5 Team Personas Grid (Swipeable on Mobile, Grid on Tablet/Desktop) */}
-        <div className="flex overflow-x-auto sm:grid sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 lg:gap-5 relative z-10 items-end pb-2 sm:pb-0 no-scrollbar snap-x">
-          {teamRoles.map((member, index) => (
+  const handleScroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = direction === "left" ? -320 : 320;
+      scrollRef.current.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  };
+
+  return (
+    <section className="w-full relative py-12 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white text-center select-none" id="team">
+      
+      {/* Top Header & Scroll Controls */}
+      <div className="max-w-[1360px] mx-auto mb-6 sm:mb-8 flex items-center justify-between px-2 sm:px-4">
+        <div className="text-left">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/15 text-[#004658] text-[11px] font-bold uppercase tracking-wider mb-1">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
+            <span>Dedicated Squads</span>
+          </div>
+          <p className="text-xs sm:text-sm text-slate-500 font-medium">
+            Meet the innovators driving your project forward.
+          </p>
+        </div>
+
+        {/* Scroll Navigation Arrows */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => handleScroll("left")}
+            aria-label="Scroll team left"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-[#004658] flex items-center justify-center shadow-xs hover:shadow-md transition-all duration-200 active:scale-95 cursor-pointer"
+          >
+            <ChevronLeft size={18} strokeWidth={2.2} />
+          </button>
+          <button
+            onClick={() => handleScroll("right")}
+            aria-label="Scroll team right"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 hover:text-[#004658] flex items-center justify-center shadow-xs hover:shadow-md transition-all duration-200 active:scale-95 cursor-pointer"
+          >
+            <ChevronRight size={18} strokeWidth={2.2} />
+          </button>
+        </div>
+      </div>
+
+      {/* Team Members Horizontal Slider */}
+      <div className="relative max-w-[1360px] mx-auto mb-10 sm:mb-12">
+        
+        {/* Subtle Horizontal Ribbon Background */}
+        <div className="absolute top-16 sm:top-20 lg:top-24 left-0 right-0 h-28 sm:h-36 lg:h-44 bg-gradient-to-r from-slate-100 via-slate-200/80 to-slate-100 rounded-3xl -z-0 border border-slate-200/70" />
+
+        {/* Horizontal Scroll Track */}
+        <div 
+          ref={scrollRef}
+          className="flex overflow-x-auto gap-4 sm:gap-5 relative z-10 items-end pb-4 pt-2 px-2 no-scrollbar snap-x scroll-smooth"
+          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        >
+          {teamMembers.map((member, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.4, delay: index * 0.08 }}
+              transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.4) }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="w-[150px] xs:w-[170px] sm:w-auto shrink-0 sm:shrink flex flex-col items-center group cursor-pointer snap-start"
+              className="w-[170px] xs:w-[190px] sm:w-[210px] md:w-[230px] lg:w-[240px] shrink-0 flex flex-col items-center group cursor-pointer snap-start text-center"
             >
               <Link to={member.path} className="flex flex-col items-center w-full">
                 
                 {/* Portrait Frame */}
-                <div className="relative w-full max-w-[170px] sm:max-w-[220px] lg:max-w-[240px] h-44 xs:h-50 sm:h-56 md:h-64 lg:h-72 overflow-hidden mb-3 flex items-end justify-center rounded-2xl shadow-xs group-hover:shadow-lg group-hover:shadow-[#004658]/10 transition-all duration-300">
+                <div className="relative w-full h-48 xs:h-54 sm:h-60 md:h-68 lg:h-74 overflow-hidden mb-3 flex items-end justify-center rounded-2xl shadow-xs group-hover:shadow-xl group-hover:shadow-[#004658]/15 transition-all duration-300 bg-slate-100 border border-slate-200/80">
                   <img
                     src={member.image}
-                    alt={`${member.line1} ${member.line2} - CodeCrafter Dedicated Engineering Squad`}
+                    alt={`${member.name} - ${member.role} at CodeCrafter`}
                     loading="lazy"
                     decoding="async"
                     width="240"
-                    height="288"
-                    className="w-full h-full object-cover object-top filter contrast-[1.05] brightness-[1.02] group-hover:scale-105 transition-transform duration-400 rounded-2xl"
+                    height="296"
+                    className="w-full h-full object-cover object-top filter contrast-[1.03] brightness-[1.02] group-hover:scale-105 transition-transform duration-500 rounded-2xl"
                   />
-                  <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none rounded-b-2xl" />
+                  <div className="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none rounded-b-2xl" />
                 </div>
 
-                {/* 2-Line Role Title */}
-                <h4 className="text-xs sm:text-[15px] font-semibold text-slate-800 group-hover:text-[#004658] transition-colors leading-[1.2] tracking-tight">
-                  <span className="block">{member.line1}</span>
-                  <span className="block">{member.line2}</span>
+                {/* Team Member Name & Role */}
+                <h4 className="text-xs sm:text-[14.5px] font-bold text-slate-900 group-hover:text-[#004658] transition-colors leading-tight tracking-tight">
+                  {member.name}
                 </h4>
+                <p className="text-[11px] sm:text-[12px] text-slate-500 font-medium mt-0.5 leading-snug">
+                  {member.role}
+                </p>
               </Link>
             </motion.div>
           ))}
