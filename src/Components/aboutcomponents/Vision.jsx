@@ -1,14 +1,15 @@
 import React from 'react'
+import { Compass, Radio, Terminal } from 'lucide-react'
 
 const Vision = () => {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden" id="vision">
       
-      {/* Background Soft Glow (Apple Ambient Lighting) */}
+      {/* Background Soft Ambient Lighting */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] pointer-events-none rounded-full opacity-20 blur-3xl -z-10"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] pointer-events-none rounded-full opacity-15 blur-3xl -z-10"
         style={{
-          background: 'radial-gradient(circle, rgba(0, 70, 88, 0.28) 0%, rgba(255, 255, 255, 0) 70%)'
+          background: 'radial-gradient(circle, rgba(0, 216, 255, 0.25) 0%, rgba(0, 70, 88, 0.15) 50%, rgba(255, 255, 255, 0) 70%)'
         }}
       />
 
@@ -27,92 +28,125 @@ const Vision = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl">
-            Driven by clarity, engineered with precision, and built for lasting impact.
+            The purpose and principle that guide everything we build.
           </p>
         </div>
 
-        {/* 3-Column Minimalist Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+        {/* Ultra-Premium Dark Navy Dashboard Card */}
+        <div className="relative rounded-3xl bg-gradient-to-br from-[#011219] via-[#021824] to-[#010c13] border border-cyan-500/20 p-8 sm:p-12 text-white shadow-[0_20px_60px_rgba(0,0,0,0.4),0_0_40px_rgba(0,70,88,0.2)] backdrop-blur-2xl overflow-hidden group hover:border-cyan-400/35 transition-all duration-500">
           
-          {/* Card 1: Our Vision */}
-          <div className="group relative p-8 rounded-3xl bg-white/80 border border-[#004658]/15 shadow-sm hover:shadow-2xl hover:border-[#004658]/35 hover:-translate-y-1 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#004658]/10 text-[#004658] flex items-center justify-center text-2xl font-bold group-hover:bg-[#004658] group-hover:text-white transition-colors duration-300 shadow-sm">
-                  👁️
-                </div>
-                <span className="px-3 py-1 rounded-full bg-[#004658]/8 text-[#004658] text-[11px] font-semibold uppercase tracking-wider">
-                  Our Vision
-                </span>
+          {/* Subtle Corner Radial Glows */}
+          <div className="absolute -top-32 -left-32 w-80 h-80 rounded-full bg-cyan-500/10 blur-3xl pointer-events-none" />
+          <div className="absolute -bottom-32 -right-32 w-80 h-80 rounded-full bg-[#004658]/30 blur-3xl pointer-events-none" />
+
+          {/* Minimalist Dashboard Header Status Bar */}
+          <div className="flex items-center justify-between pb-6 mb-8 sm:mb-10 border-b border-white/10 relative z-10">
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-lg bg-cyan-500/10 border border-cyan-500/30 text-cyan-400">
+                <Terminal className="w-4 h-4" />
               </div>
-
-              <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
-                Shaping Digital Future
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                To be a global technology studio recognized for building ultra-fast, human-centered digital products that transform businesses.
-              </p>
+              <div>
+                <div className="text-xs font-mono font-semibold tracking-widest text-white uppercase">
+                  STRATEGIC DIRECTIVES
+                </div>
+                <div className="text-[10px] font-mono text-cyan-300/70">
+                  SYS://VISION-MISSION-CORE
+                </div>
+              </div>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658]">
-              <span>Future Oriented</span>
-              <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+            <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950/60 border border-cyan-500/30 text-[10px] font-mono text-cyan-300 tracking-wider">
+              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+              <span>CORE PURPOSE</span>
             </div>
           </div>
 
-          {/* Card 2: Our Mission */}
-          <div className="group relative p-8 rounded-3xl bg-white/80 border border-[#004658]/15 shadow-sm hover:shadow-2xl hover:border-[#004658]/35 hover:-translate-y-1 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#004658]/10 text-[#004658] flex items-center justify-center text-2xl font-bold group-hover:bg-[#004658] group-hover:text-white transition-colors duration-300 shadow-sm">
-                  🎯
+          {/* Grid Layout: Left Side Vision & Mission Text | Right Side Minimal Animated Circular Graphic */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+            
+            {/* Left Side: Vision & Mission Text */}
+            <div className="lg:col-span-7 space-y-8 text-left">
+              
+              {/* Our Vision */}
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="px-3 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 text-[11px] font-mono font-semibold tracking-widest uppercase">
+                    OUR VISION
+                  </span>
+                  <span className="text-slate-400 text-xs font-mono">Future Oriented</span>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-[#004658]/8 text-[#004658] text-[11px] font-semibold uppercase tracking-wider">
-                  Our Mission
-                </span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight leading-snug">
+                  Shaping Digital Future
+                </h3>
+                <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed font-normal max-w-xl">
+                  To become the go-to engineering partner for ambitious brands building the next generation of digital products — where speed, quality, and craftsmanship are never a trade-off.
+                </p>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
-                Empowering Growth
-              </h3>
+              {/* Sleek Gradient Divider */}
+              <div className="h-[1px] w-full bg-gradient-to-r from-cyan-500/30 via-slate-700/50 to-transparent my-6" />
 
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                To craft modern web platforms, mobile apps, and custom software with sub-second speed, clean architecture, and precision.
-              </p>
-            </div>
-
-            <div className="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658]">
-              <span>Action Driven</span>
-              <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-            </div>
-          </div>
-
-          {/* Card 3: Our Values */}
-          <div className="group relative p-8 rounded-3xl bg-white/80 border border-[#004658]/15 shadow-sm hover:shadow-2xl hover:border-[#004658]/35 hover:-translate-y-1 transition-all duration-300 backdrop-blur-xl flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-6">
-                <div className="w-12 h-12 rounded-2xl bg-[#004658]/10 text-[#004658] flex items-center justify-center text-2xl font-bold group-hover:bg-[#004658] group-hover:text-white transition-colors duration-300 shadow-sm">
-                  💎
+              {/* Our Mission */}
+              <div className="relative">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 text-[11px] font-mono font-semibold tracking-widest uppercase">
+                    OUR MISSION
+                  </span>
+                  <span className="text-slate-400 text-xs font-mono">Action Driven</span>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-[#004658]/8 text-[#004658] text-[11px] font-semibold uppercase tracking-wider">
-                  Our Values
-                </span>
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-white mb-3 tracking-tight leading-snug">
+                  Empowering Growth
+                </h3>
+                <p className="text-slate-300/90 text-sm sm:text-base leading-relaxed font-normal max-w-xl">
+                  We help founders and enterprises ship production-grade software faster, by pairing elite engineering squads with predictable sprint cycles and full transparency — from architecture to deployment.
+                </p>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-900 mb-3 tracking-tight">
-                Uncompromising Quality
-              </h3>
-
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                Rooted in technical excellence, client transparency, and human-centered design principles that put your success first.
-              </p>
             </div>
 
-            <div className="mt-8 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658]">
-              <span>Excellence First</span>
-              <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+            {/* Right Side: Sleek Minimal Animated Circular Compass/Radar Graphic (NO TEXT) */}
+            <div className="lg:col-span-5 flex items-center justify-center pt-6 lg:pt-0">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 flex items-center justify-center">
+                
+                {/* Ambient Radial Soft Aura */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-[#004658]/30 to-transparent rounded-full blur-3xl opacity-60 animate-pulse" />
+
+                {/* Outer Delicate Rotating Ring */}
+                <div className="absolute inset-0 rounded-full border border-cyan-400/20 animate-[spin_35s_linear_infinite]" />
+
+                {/* Orbiting Cyan Glow Satellite Dot */}
+                <div className="absolute inset-0 animate-[spin_18s_linear_infinite]">
+                  <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 shadow-[0_0_12px_#00D8FF] -top-1.2 left-1/2 -translate-x-1/2 absolute" />
+                </div>
+
+                {/* Middle Rotating Dashed Ring */}
+                <div className="absolute inset-6 rounded-full border border-dashed border-cyan-500/25 animate-[spin_24s_linear_infinite_reverse]" />
+
+                {/* Radar Pulse Wave Animation */}
+                <div className="absolute inset-14 rounded-full border border-cyan-400/35 animate-ping [animation-duration:3.5s]" />
+
+                {/* Inner Concentric Circle with Thin Grid Lines */}
+                <div className="absolute inset-10 rounded-full border border-cyan-500/25 bg-[#011925]/60 backdrop-blur-md flex items-center justify-center">
+                  <div className="absolute w-full h-[1px] bg-cyan-500/15" />
+                  <div className="absolute h-full w-[1px] bg-cyan-500/15" />
+                </div>
+
+                {/* Center Minimal Glass Core with Pulsing Compass Icon (NO TEXT) */}
+                <div className="relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-[#022836] via-[#011824] to-[#001017] border border-cyan-400/40 shadow-[0_0_30px_rgba(0,216,255,0.25)] flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                  
+                  {/* Subtle Glow Ring around Compass */}
+                  <div className="absolute inset-2 rounded-full border border-cyan-400/20 animate-pulse" />
+
+                  {/* Pulsing Compass Icon */}
+                  <div className="relative flex items-center justify-center">
+                    <Compass className="w-12 h-12 sm:w-14 sm:h-14 text-cyan-300 animate-pulse drop-shadow-[0_0_15px_rgba(0,216,255,0.6)]" />
+                  </div>
+
+                </div>
+
+              </div>
             </div>
+
           </div>
 
         </div>

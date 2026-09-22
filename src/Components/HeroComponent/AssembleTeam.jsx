@@ -9,12 +9,12 @@ import amanImg from "../../assets/images/Aman kumar.png";
 import ankurImg from "../../assets/images/Ankur Patel.png";
 import ayushiImg from "../../assets/images/Ayushi Srivastava.jpeg";
 import irshadImg from "../../assets/images/Irshad Ali.jpeg";
+import arzaanImg from "../../assets/images/MD Arzaan.png";
 import nirbhayImg from "../../assets/images/Nirbhay.png";
 import priyankaImg from "../../assets/images/Priyanka Gupta.png";
 import shivamImg from "../../assets/images/Shivam Yadav.png";
 import shwetaImg from "../../assets/images/Shweta.png";
 import sureshImg from "../../assets/images/Suresh Kumar.jpeg";
-import swatiImg from "../../assets/images/Swati Kaushal.png";
 
 const teamMembers = [
   {
@@ -72,12 +72,6 @@ const teamMembers = [
     path: "/team"
   },
   {
-    name: "Swati Kaushal",
-    role: "Multimedia Designer",
-    image: swatiImg,
-    path: "/team"
-  },
-  {
     name: "Nirbhay",
     role: "Software Developer Intern",
     image: nirbhayImg,
@@ -86,7 +80,7 @@ const teamMembers = [
   {
     name: "MD Arzaan",
     role: "Software Developer Intern",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&h=800&q=80",
+    image: arzaanImg,
     path: "/team"
   },
   {
