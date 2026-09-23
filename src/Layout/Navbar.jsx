@@ -11,7 +11,6 @@ const menuItems = [
     sidebarDesc: "We engineer high-performance web applications, enterprise software, and scalable digital solutions built around your exact goals.",
     sidebarLinks: [
       { name: "Staff Augmentation", path: "/about" },
-      { name: "Dedicated Tech Teams", path: "/team" },
       { name: "Software Outsourcing", path: "/about" },
       { name: "Digital Engineering Studio", path: "/team" }
     ],
@@ -23,32 +22,15 @@ const menuItems = [
       { name: "About CodeCrafter", path: "/about" },
       { name: "Our Engineering Team", path: "/team" },
       { name: "Careers & Openings", path: "/careers", badge: "Hiring" },
-      { name: "Client Testimonials", path: "/testimonials" },
-      { name: "Culture & Values", path: "/about" },
-      { name: "Brand & Media Assets", path: "/about" },
-      { name: "Security & IP Protection", path: "/about" },
-      { name: "Schedule a Consultation", path: "/contact" }
+      { name: "Client Testimonials", path: "/testimonials" }
     ],
-    topCol2: [
-      { name: "Agile Sprint Cycles", path: "/about" },
-      { name: "Global Delivery Process", path: "/about" },
-      { name: "Code Review Standards", path: "/web-development" },
-      { name: "Automated CI/CD Pipelines", path: "/hosting/cloud" },
-      { name: "Architecture Roadmaps", path: "/web-development" },
-      { name: "SOC-2 & GDPR Compliance", path: "/website-maintenance" },
-      { name: "Dedicated Tech Leads", path: "/team" },
-      { name: "Engineering Blog", path: "/testimonials" }
-    ],
-    enterpriseHeading: "ENGINEERING STANDARDS",
+    topCol2: [],
+    enterpriseHeading: "WHY CHOOSE US",
     enterpriseCol: [
-      { name: "Sub-50ms TTFB Speed", path: "/web-development" },
-      { name: "Zero-Downtime Releases", path: "/hosting/cloud" },
-      { name: "Microservices Architecture", path: "/software/erp" },
-      { name: "Clean Code & Refactoring", path: "/website-redesign" },
-      { name: "End-to-End QA Testing", path: "/software/crm" },
-      { name: "Cloud Infrastructure", path: "/hosting/cloud" },
-      { name: "24/7 SLA Technical Support", path: "/website-maintenance" },
-      { name: "Disaster Recovery & Backup", path: "/website-maintenance" }
+      { name: "Engineering Standards", path: "/about" },
+      { name: "Security & IP Protection", path: "/about" },
+      { name: "Case Studies", path: "/testimonials" },
+      { name: "Schedule a Consultation", path: "/contact" }
     ],
     allLinkText: "All About CodeCrafter",
     allLinkPath: "/about"
@@ -67,37 +49,29 @@ const menuItems = [
     proofTitle: "Enterprise Engineering",
     proofDesc: "We build ultra-fast responsive web portals and automated cloud backends. Read case studies.",
     proofLink: "/web-development",
-    topHeading: "TOP SERVICES",
+    topHeading: "WEB DEVELOPMENT",
     topCol1: [
-      { name: "AI Development", path: "/software/crm" },
-      { name: "Back-end Development", path: "/software/erp" },
-      { name: "CMS Development", path: "/web-development" },
-      { name: "API & Microservices", path: "/software/erp" },
+      { name: "Web App Development", path: "/web-development" },
       { name: "Front-end Development", path: "/web-development" },
-      { name: "Machine Learning Solutions", path: "/software/crm" },
-      { name: "QA Testing & Automation", path: "/web-development" },
-      { name: "UX/UI Design", path: "/web-design" }
+      { name: "Back-end Development", path: "/software/erp" },
+      { name: "CMS Development (WordPress, Custom CMS)", path: "/web-development" },
+      { name: "API & Microservices Integration", path: "/software/erp" }
     ],
+    col2Heading: "UX/UI & DESIGN",
     topCol2: [
-      { name: "Android App Development", path: "/app-studio/android" },
-      { name: "Business Intelligence", path: "/software/erp" },
-      { name: "Data Engineering", path: "/software/crm" },
-      { name: "eCommerce Development", path: "/e-commerce" },
-      { name: "iOS App Development", path: "/app-studio/ios" },
-      { name: "Mobile App Development", path: "/app-studio/flutter" },
-      { name: "SaaS Development", path: "/software/erp" },
-      { name: "Web Development", path: "/web-development" }
+      { name: "UI/UX Design", path: "/web-design" },
+      { name: "Wireframing & Prototyping", path: "/web-design" },
+      { name: "Design Systems", path: "/web-design" },
+      { name: "Website Redesign", path: "/website-redesign" },
+      { name: "Landing Page Design", path: "/web-design" }
     ],
-    enterpriseHeading: "ENTERPRISE FOCUSED",
+    enterpriseHeading: "WEB-SPECIFIC ENTERPRISE",
     enterpriseCol: [
-      { name: "Backup Solutions", path: "/website-maintenance" },
-      { name: "Big Data Pipelines", path: "/software/crm" },
-      { name: "Cloud Applications", path: "/hosting/cloud" },
-      { name: "CRM Systems", path: "/software/crm" },
-      { name: "Cybersecurity & SSL", path: "/website-maintenance" },
-      { name: "DevOps & CI/CD", path: "/hosting/cloud" },
-      { name: "Digital Transformation", path: "/digital-booster/seo" },
-      { name: "ERP Development", path: "/software/erp" }
+      { name: "eCommerce Development", path: "/e-commerce" },
+      { name: "SaaS Web Platforms", path: "/software/erp" },
+      { name: "Web Performance Optimization", path: "/web-development" },
+      { name: "QA Testing & Automation", path: "/web-development" },
+      { name: "Website Maintenance & Support", path: "/website-maintenance" }
     ],
     allLinkText: "All Services",
     allLinkPath: "/web-development"
@@ -116,36 +90,28 @@ const menuItems = [
     proofTitle: "Multi-Platform Power",
     proofDesc: "Building unified iOS & Android codebases with Flutter & React Native. Read case studies.",
     proofLink: "/app-studio/flutter",
-    topHeading: "MOBILE PLATFORMS",
+    topHeading: "APP DEVELOPMENT",
     topCol1: [
       { name: "Android App Development", path: "/app-studio/android" },
       { name: "iOS App Development", path: "/app-studio/ios" },
       { name: "Flutter Multi-Platform", path: "/app-studio/flutter", badge: "Popular" },
       { name: "React Native Hybrid Apps", path: "/app-studio/hybrid" },
-      { name: "Tablet & iPad Optimizations", path: "/app-studio/ios" },
-      { name: "PWA Progressive Web Apps", path: "/web-development" },
-      { name: "Wearable & Smart Device Apps", path: "/app-studio/android" },
-      { name: "Mobile UI Design Systems", path: "/web-design" }
+      { name: "Progressive Web Apps (PWA)", path: "/web-development" }
     ],
+    col2Heading: "DESIGN & EXPERIENCE",
     topCol2: [
-      { name: "Offline-First Sync Engine", path: "/app-studio/android" },
-      { name: "Push Notifications Hub", path: "/app-studio/flutter" },
-      { name: "In-App Purchases & Stripe", path: "/e-commerce" },
-      { name: "Biometric Auth (Face/Touch)", path: "/app-studio/ios" },
-      { name: "Real-Time Chat & Sockets", path: "/software/crm" },
-      { name: "Mapbox & Geo-Tracking", path: "/app-studio/flutter" },
-      { name: "Camera & Sensor Integration", path: "/app-studio/android" },
-      { name: "Automated Mobile QA Testing", path: "/app-studio/ios" }
+      { name: "Mobile UI Design Systems", path: "/web-design" },
+      { name: "Offline-First Architecture", path: "/app-studio/android" },
+      { name: "Real-Time Features (Chat, Notifications)", path: "/app-studio/flutter" },
+      { name: "Payments & In-App Purchases", path: "/e-commerce" },
+      { name: "App Performance Optimization", path: "/app-studio/flutter" }
     ],
-    enterpriseHeading: "STORE & OPERATIONS",
+    enterpriseHeading: "LAUNCH & SUPPORT",
     enterpriseCol: [
-      { name: "Google Play Store Launch", path: "/app-studio/android" },
-      { name: "Apple App Store Review", path: "/app-studio/ios" },
-      { name: "App Performance Profiling", path: "/app-studio/flutter" },
+      { name: "App Store Launch & QA", path: "/app-studio/ios" },
+      { name: "Google Play & Apple Store Submission", path: "/app-studio/android" },
       { name: "Crashlytics & Bug Monitoring", path: "/website-maintenance" },
       { name: "App Version Upgrades", path: "/website-maintenance" },
-      { name: "Backend API Connectors", path: "/software/erp" },
-      { name: "Cloud Sync Database", path: "/hosting/cloud" },
       { name: "24/7 Mobile SLA Support", path: "/website-maintenance" }
     ],
     allLinkText: "All Mobile Services",
@@ -165,43 +131,35 @@ const menuItems = [
     proofTitle: "Proven Growth Funnels",
     proofDesc: "Generated 300%+ organic traffic and lead conversions for clients. Read case studies.",
     proofLink: "/digital-booster/seo",
-    topHeading: "GROWTH SERVICES",
+    topHeading: "SEO & CONTENT",
     topCol1: [
-      { name: "SEO Optimization", path: "/digital-booster/seo" },
-      { name: "Google Ads (PPC Campaigns)", path: "/digital-booster/google-ads" },
-      { name: "Social Media Strategy", path: "/digital-booster/social-media" },
-      { name: "Technical Content Marketing", path: "/digital-booster/content-marketing" },
-      { name: "Brand Identity & Guidelines", path: "/digital-booster/branding" },
+      { name: "SEO Optimization & Technical Audits", path: "/digital-booster/seo" },
       { name: "Local SEO & Google Maps", path: "/digital-booster/seo" },
-      { name: "Conversion Rate Optimization", path: "/web-design" },
-      { name: "Technical Website SEO Audit", path: "/digital-booster/seo" }
+      { name: "Technical Content Marketing", path: "/digital-booster/content-marketing" },
+      { name: "Competitor Market Analysis", path: "/digital-booster/seo" },
+      { name: "Search Intent Mapping", path: "/digital-booster/seo" }
     ],
+    col2Heading: "PAID & SOCIAL MARKETING",
     topCol2: [
+      { name: "Google Ads (PPC Campaigns)", path: "/digital-booster/google-ads" },
       { name: "Meta & Instagram Ads", path: "/digital-booster/social-media" },
       { name: "LinkedIn B2B Lead Gen", path: "/digital-booster/social-media" },
       { name: "YouTube Video Marketing", path: "/digital-booster/content-marketing" },
-      { name: "Email Marketing Sequences", path: "/digital-booster/social-media" },
-      { name: "Influencer Marketing Ops", path: "/digital-booster/social-media" },
-      { name: "High-Converting Landing Pages", path: "/web-design" },
-      { name: "Competitor Market Analysis", path: "/digital-booster/seo" },
-      { name: "Google Analytics 4 & Tag Mgr", path: "/digital-booster/google-ads" }
+      { name: "Influencer Marketing Ops", path: "/digital-booster/social-media" }
     ],
-    enterpriseHeading: "STRATEGY & AUDITS",
+    enterpriseHeading: "BRAND & CONVERSION",
     enterpriseCol: [
-      { name: "Growth Strategy Roadmap", path: "/digital-booster/seo" },
-      { name: "Search Intent Mapping", path: "/digital-booster/seo" },
-      { name: "Ad Spend ROI Optimization", path: "/digital-booster/google-ads" },
-      { name: "PR & Media Outreach", path: "/digital-booster/branding" },
-      { name: "Reputation Management", path: "/digital-booster/branding" },
-      { name: "Retargeting Funnels", path: "/digital-booster/google-ads" },
-      { name: "Monthly Performance Reports", path: "/contact" },
-      { name: "Dedicated Growth Manager", path: "/contact" }
+      { name: "Brand Identity & Guidelines", path: "/digital-booster/branding" },
+      { name: "High-Converting Landing Pages", path: "/web-design" },
+      { name: "Conversion Rate Optimization", path: "/digital-booster/seo" },
+      { name: "Email Marketing Sequences", path: "/digital-booster/social-media" },
+      { name: "Retargeting Funnels", path: "/digital-booster/google-ads" }
     ],
     allLinkText: "All Growth Solutions",
     allLinkPath: "/digital-booster/seo"
   },
   {
-    title: "Our Work",
+    title: "Enterprise Software",
     key: "our-work",
     sidebarTitle: "Software",
     sidebarDesc: "Custom CRM, ERP, and enterprise software platforms engineered with high availability and automated workflows.",
@@ -214,36 +172,28 @@ const menuItems = [
     proofTitle: "Enterprise Proven",
     proofDesc: "Managing payroll, inventory, and sales pipelines across 10,000+ daily active users. Read case studies.",
     proofLink: "/software/erp",
-    topHeading: "ENTERPRISE SOFTWARE",
+    topHeading: "BUSINESS SYSTEMS",
     topCol1: [
       { name: "CRM Software Systems", path: "/software/crm" },
       { name: "ERP Enterprise Platforms", path: "/software/erp" },
       { name: "HRMS & Payroll Portals", path: "/software/hrms" },
-      { name: "Custom SaaS Development", path: "/software/erp" },
-      { name: "Lead Pipeline Automation", path: "/software/crm" },
-      { name: "Inventory & Warehouse POS", path: "/software/billing" },
-      { name: "Multi-Tenant Cloud Apps", path: "/software/erp" },
-      { name: "Workflow Automation Engines", path: "/software/crm" }
-    ],
-    topCol2: [
       { name: "Billing & Invoicing Software", path: "/software/billing" },
-      { name: "GST Tax Invoicing Engines", path: "/software/billing" },
+      { name: "Custom SaaS Development", path: "/software/erp" }
+    ],
+    col2Heading: "INDUSTRY SOLUTIONS",
+    topCol2: [
+      { name: "Hospital Management ERP", path: "/software/hospital-management" },
       { name: "School Management System", path: "/software/school-management" },
       { name: "Student & LMS Portals", path: "/software/school-management" },
-      { name: "Hospital Management ERP", path: "/software/hospital-management" },
-      { name: "OPD/IPD Queue Management", path: "/software/hospital-management" },
-      { name: "Pharmacy & Stock Tracking", path: "/software/hospital-management" },
+      { name: "Multi-Tenant Cloud Apps", path: "/software/erp" },
       { name: "Custom B2B Client Portals", path: "/software/erp" }
     ],
-    enterpriseHeading: "CUSTOM SOLUTIONS",
+    enterpriseHeading: "INFRASTRUCTURE & SECURITY",
     enterpriseCol: [
       { name: "Payment Gateway APIs", path: "/software/billing" },
-      { name: "SMS & WhatsApp Notifiers", path: "/software/crm" },
       { name: "Role-Based Access Control", path: "/software/erp" },
       { name: "Real-Time Analytics Dashboards", path: "/software/crm" },
-      { name: "High-Security Cloud Backups", path: "/hosting/cloud" },
       { name: "Custom Database Migration", path: "/software/erp" },
-      { name: "Multi-Branch Data Sync", path: "/software/erp" },
       { name: "Enterprise 24/7 SLA Support", path: "/website-maintenance" }
     ],
     allLinkText: "All Software Solutions",
@@ -397,9 +347,9 @@ const Navbar = () => {
               </div>
             </div>
 
-            {/* Right Multi-Column Content Area (3 Columns) */}
+            {/* Right Multi-Column Content Area */}
             <div className="flex-1 flex flex-col justify-between text-left">
-              <div className="grid grid-cols-3 gap-6 sm:gap-8">
+              <div className={`grid ${activeMegaMenu.topCol2?.length > 0 ? "grid-cols-3" : "grid-cols-2"} gap-6 sm:gap-8`}>
                 
                 {/* Column 1: Top Services Left */}
                 <div>
@@ -439,50 +389,6 @@ const Navbar = () => {
                               {item.name}
                             </span>
                           </div>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Column 2: Top Services Right */}
-                <div>
-                  <div className="flex items-center gap-2 pb-2 mb-2 border-b border-slate-200 opacity-0 pointer-events-none">
-                    <span className="w-2 h-2 rounded-xs bg-[#EA580C]" />
-                    <h4 className="text-xs font-semibold tracking-[0.14em] text-slate-500 uppercase">
-                      {activeMegaMenu.topHeading}
-                    </h4>
-                  </div>
-                  <div className="space-y-0.5">
-                    {activeMegaMenu.topCol2.map((item, idx) => {
-                      const isActive = location.pathname === item.path;
-                      return (
-                        <Link
-                          key={idx}
-                          to={item.path}
-                          className={`group/link flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${
-                            isActive
-                              ? "bg-[#004658]/8 text-[#004658] font-semibold"
-                              : "text-slate-800 font-medium hover:bg-[#004658]/6 hover:text-[#004658]"
-                          }`}
-                        >
-                          <div className="flex items-center gap-2 min-w-0">
-                            <svg
-                              className={`w-4 h-4 text-[#004658] transition-all duration-200 shrink-0 ${
-                                isActive
-                                  ? "opacity-100 translate-x-0"
-                                  : "opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0"
-                              }`}
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                            >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                            <span className="text-[16px] sm:text-[16.5px] font-medium tracking-[-0.01em] truncate group-hover/link:translate-x-0.5 transition-transform text-slate-800 group-hover/link:text-[#004658]">
-                              {item.name}
-                            </span>
-                          </div>
                           {item.badge && (
                             <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full bg-[#004658]/10 text-[#004658] shrink-0 ml-1.5">
                               {item.badge}
@@ -493,6 +399,57 @@ const Navbar = () => {
                     })}
                   </div>
                 </div>
+
+                {/* Column 2: Top Services Right (Render only if items exist) */}
+                {activeMegaMenu.topCol2?.length > 0 && (
+                  <div>
+                    <div className={`flex items-center gap-2 pb-2 mb-2 border-b border-slate-200 ${!activeMegaMenu.col2Heading ? "opacity-0 pointer-events-none" : ""}`}>
+                      <span className="w-2 h-2 rounded-xs bg-[#EA580C]" />
+                      <h4 className="text-xs font-semibold tracking-[0.14em] text-slate-500 uppercase">
+                        {activeMegaMenu.col2Heading || activeMegaMenu.topHeading}
+                      </h4>
+                    </div>
+                    <div className="space-y-0.5">
+                      {activeMegaMenu.topCol2.map((item, idx) => {
+                        const isActive = location.pathname === item.path;
+                        return (
+                          <Link
+                            key={idx}
+                            to={item.path}
+                            className={`group/link flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${
+                              isActive
+                                ? "bg-[#004658]/8 text-[#004658] font-semibold"
+                                : "text-slate-800 font-medium hover:bg-[#004658]/6 hover:text-[#004658]"
+                            }`}
+                          >
+                            <div className="flex items-center gap-2 min-w-0">
+                              <svg
+                                className={`w-4 h-4 text-[#004658] transition-all duration-200 shrink-0 ${
+                                  isActive
+                                    ? "opacity-100 translate-x-0"
+                                    : "opacity-0 -translate-x-1 group-hover/link:opacity-100 group-hover/link:translate-x-0"
+                                }`}
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                              </svg>
+                              <span className="text-[16px] sm:text-[16.5px] font-medium tracking-[-0.01em] truncate group-hover/link:translate-x-0.5 transition-transform text-slate-800 group-hover/link:text-[#004658]">
+                                {item.name}
+                              </span>
+                            </div>
+                            {item.badge && (
+                              <span className="text-[10px] font-semibold tracking-wide uppercase px-2 py-0.5 rounded-full bg-[#004658]/10 text-[#004658] shrink-0 ml-1.5">
+                                {item.badge}
+                              </span>
+                            )}
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
 
                 {/* Column 3: Enterprise Focused */}
                 <div>

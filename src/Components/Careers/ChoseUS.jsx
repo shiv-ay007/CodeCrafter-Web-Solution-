@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const valuePillars = [
   {
@@ -92,7 +93,7 @@ const ChoseUS = () => {
         </div>
 
         {/* 4 Unique Value Pillars Grid (Enterprise Architectural Matrix) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-7 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-7 mb-10">
           {valuePillars.map((pillar, index) => (
             <div
               key={pillar.id}
@@ -151,15 +152,19 @@ const ChoseUS = () => {
                   ))}
                 </div>
               </div>
-
-              {/* Bottom Subtle Enterprise Indicator */}
-              <div className="mt-7 pt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#004658]">
-                <span className="group-hover:underline underline-offset-4">Explore Our Engineering Standards</span>
-                <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
-              </div>
-
             </div>
           ))}
+        </div>
+
+        {/* Centered Engineering Standards CTA Button */}
+        <div className="flex justify-center mb-12">
+          <Link
+            to="/about"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-[#004658] text-white font-bold text-sm sm:text-[15px] shadow-lg shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer"
+          >
+            <span>Explore Our Engineering Standards</span>
+            <span className="group-hover:translate-x-1 transition-transform duration-300 font-bold">→</span>
+          </Link>
         </div>
 
         {/* Enterprise Bottom Trust & Career Strip (HCL/TCS Style Corporate Bar) */}

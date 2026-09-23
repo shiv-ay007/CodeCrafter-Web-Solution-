@@ -1,4 +1,6 @@
 import React from 'react'
+import sureshImg from '../../assets/images/Suresh Kumar.jpeg'
+import priyankaImg from '../../assets/images/Priyanka Gupta.png'
 
 const TestHero = () => {
   return (
@@ -109,9 +111,9 @@ const TestHero = () => {
               
               {/* Background Authentic Client Portrait (Subtle Dark Wash) */}
               <img
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80"
-                alt="David Sterling, CTO"
-                className="absolute inset-0 w-full h-full object-cover object-center opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-700 ease-out pointer-events-none"
+                src={sureshImg}
+                alt="Vikram Sharma, CTO"
+                className="absolute inset-0 w-full h-full object-cover object-top opacity-35 group-hover:opacity-45 group-hover:scale-105 transition-all duration-700 ease-out pointer-events-none"
               />
 
               {/* Ambient Dark Gradient Wash for Maximum Text Readability */}
@@ -145,14 +147,14 @@ const TestHero = () => {
                 <div className="flex items-center gap-3">
                   <div className="w-11 h-11 rounded-full overflow-hidden border-2 border-cyan-400/60 shadow-md shrink-0">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80"
-                      alt="David Sterling"
+                      src={sureshImg}
+                      alt="Vikram Sharma"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
                     <h4 className="text-sm font-extrabold text-white leading-tight">
-                      David Sterling
+                      Vikram Sharma
                     </h4>
                     <p className="text-[11px] text-cyan-200 font-medium">
                       CTO & Co-Founder, NovaPulse FinTech
@@ -171,14 +173,14 @@ const TestHero = () => {
             <div className="absolute -bottom-5 right-4 z-20 animate-float-card hidden sm:flex items-center gap-3 p-3 rounded-2xl bg-white/90 backdrop-blur-md border border-slate-200 shadow-xl text-slate-900">
               <div className="w-9 h-9 rounded-full overflow-hidden border border-[#004658]/30 shrink-0">
                 <img
-                  src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80"
-                  alt="Sarah Chen"
+                  src={priyankaImg}
+                  alt="Priyanka Gupta"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="text-left pr-2">
                 <div className="text-[11px] font-extrabold text-[#004658] leading-tight">
-                  Sarah Chen • VP Product
+                  Priyanka Gupta • VP Product
                 </div>
                 <div className="text-[10px] text-slate-500 font-medium">
                   “+142% Checkout Conversion Rate”

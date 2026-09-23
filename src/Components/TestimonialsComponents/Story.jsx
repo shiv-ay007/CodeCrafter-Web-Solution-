@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
+import sureshImg from '../../assets/images/Suresh Kumar.jpeg'
+import priyankaImg from '../../assets/images/Priyanka Gupta.png'
+import amanImg from '../../assets/images/Aman kumar.png'
+import ayushiImg from '../../assets/images/Ayushi Srivastava.jpeg'
 
 const projectStories = [
   {
     id: 'novapulse',
     client: 'NovaPulse FinTech',
     industry: 'High-Concurrency SaaS',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
-    reviewer: 'David Sterling',
+    avatar: sureshImg,
+    reviewer: 'Vikram Sharma',
     role: 'Chief Technology Officer',
     quote: '“CodeCrafter didn’t just write code; they completely re-engineered our telemetry pipeline so we could handle 50k+ concurrent traders without breaking a sweat.”',
     kpi: '<45ms Global Latency',
@@ -29,8 +33,8 @@ const projectStories = [
     id: 'aurapay',
     client: 'Aura Mobile Wallet',
     industry: 'Consumer Fintech',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
-    reviewer: 'Sarah Chen',
+    avatar: priyankaImg,
+    reviewer: 'Priyanka Gupta',
     role: 'VP of Product Engineering',
     quote: '“We needed an app that felt like Apple and Stripe had a baby. CodeCrafter delivered a fluid 60 FPS mobile experience with instant biometric payments.”',
     kpi: '4.9★ App Rating',
@@ -53,8 +57,8 @@ const projectStories = [
     id: 'apexcloud',
     client: 'Apex Distributed Core',
     industry: 'Enterprise Cloud Logistics',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
-    reviewer: 'Marcus Vance',
+    avatar: amanImg,
+    reviewer: 'Rajesh Verma',
     role: 'Principal Cloud Architect',
     quote: '“Their distributed systems expertise is world-class. They built a fault-tolerant backend that effortlessly manages 10,000+ real-time vehicle dispatch nodes.”',
     kpi: '99.999% Fault Tolerance',
@@ -77,8 +81,8 @@ const projectStories = [
     id: 'luxestore',
     client: 'LuxeStore Global Commerce',
     industry: 'Headless E-Commerce',
-    avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80',
-    reviewer: 'Elena Rostova',
+    avatar: ayushiImg,
+    reviewer: 'Ayushi Srivastava',
     role: 'Head of Digital Experience',
     quote: '“Our checkout conversion spiked immediately after CodeCrafter deployed our headless storefront. It is blisteringly fast, elegant, and perfectly customized.”',
     kpi: '+142% Checkout Conversion',
