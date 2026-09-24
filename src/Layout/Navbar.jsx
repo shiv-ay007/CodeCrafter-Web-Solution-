@@ -9,11 +9,7 @@ const menuItems = [
     key: "about",
     sidebarTitle: "About Us",
     sidebarDesc: "We engineer high-performance web applications, enterprise software, and scalable digital solutions built around your exact goals.",
-    sidebarLinks: [
-      { name: "Staff Augmentation", path: "/about" },
-      { name: "Software Outsourcing", path: "/about" },
-      { name: "Digital Engineering Studio", path: "/team" }
-    ],
+    sidebarLinks: [],
     proofTitle: "Trusted by 50+ Global Brands",
     proofDesc: "Delivered 100+ production software projects with 99.9% uptime. Read case studies.",
     proofLink: "/about",
@@ -27,10 +23,10 @@ const menuItems = [
     topCol2: [],
     enterpriseHeading: "WHY CHOOSE US",
     enterpriseCol: [
-      { name: "Engineering Standards", path: "/about" },
-      { name: "Security & IP Protection", path: "/about" },
-      { name: "Case Studies", path: "/testimonials" },
-      { name: "Schedule a Consultation", path: "/contact" }
+      { name: "Engineering Standards", path: "/engineering-standards" },
+      { name: "Security & IP Protection", path: "/security-ip-protection" },
+      { name: "Case Studies", path: "/case-studies" },
+      { name: "Schedule a Consultation", path: "/schedule-consultation" }
     ],
     allLinkText: "All About CodeCrafter",
     allLinkPath: "/about"
@@ -41,36 +37,36 @@ const menuItems = [
     sidebarTitle: "Services",
     sidebarDesc: "Get custom software development services, built around your exact business needs:",
     sidebarLinks: [
-      { name: "Staff Augmentation", path: "/contact" },
-      { name: "Dedicated Teams", path: "/team" },
-      { name: "Software Outsourcing", path: "/web-development" },
-      { name: "AI Transformation", path: "/web-design" }
+      { name: "Staff Augmentation", path: "/services/staff-augmentation" },
+      { name: "Dedicated Teams", path: "/services/dedicated-teams" },
+      { name: "Software Outsourcing", path: "/services/software-outsourcing" },
+      { name: "AI Transformation", path: "/services/ai-transformation" }
     ],
     proofTitle: "Enterprise Engineering",
     proofDesc: "We build ultra-fast responsive web portals and automated cloud backends. Read case studies.",
-    proofLink: "/web-development",
+    proofLink: "/case-studies",
     topHeading: "WEB DEVELOPMENT",
     topCol1: [
       { name: "Web App Development", path: "/web-development" },
-      { name: "Front-end Development", path: "/web-development" },
-      { name: "Back-end Development", path: "/software/erp" },
-      { name: "CMS Development (WordPress, Custom CMS)", path: "/web-development" },
-      { name: "API & Microservices Integration", path: "/software/erp" }
+      { name: "Front-end Development", path: "/services/frontend-development" },
+      { name: "Back-end Development", path: "/services/backend-development" },
+      { name: "CMS Development (WordPress, Custom CMS)", path: "/services/cms-development" },
+      { name: "API & Microservices Integration", path: "/services/api-integration" }
     ],
     col2Heading: "UX/UI & DESIGN",
     topCol2: [
       { name: "UI/UX Design", path: "/web-design" },
-      { name: "Wireframing & Prototyping", path: "/web-design" },
-      { name: "Design Systems", path: "/web-design" },
+      { name: "Wireframing & Prototyping", path: "/services/wireframing-prototyping" },
+      { name: "Design Systems", path: "/services/design-systems" },
       { name: "Website Redesign", path: "/website-redesign" },
-      { name: "Landing Page Design", path: "/web-design" }
+      { name: "Landing Page Design", path: "/services/landing-page-design" }
     ],
     enterpriseHeading: "WEB-SPECIFIC ENTERPRISE",
     enterpriseCol: [
       { name: "eCommerce Development", path: "/e-commerce" },
-      { name: "SaaS Web Platforms", path: "/software/erp" },
-      { name: "Web Performance Optimization", path: "/web-development" },
-      { name: "QA Testing & Automation", path: "/web-development" },
+      { name: "SaaS Web Platforms", path: "/services/saas-web-platforms" },
+      { name: "Web Performance Optimization", path: "/services/web-performance-optimization" },
+      { name: "QA Testing & Automation", path: "/services/qa-testing-automation" },
       { name: "Website Maintenance & Support", path: "/website-maintenance" }
     ],
     allLinkText: "All Services",
@@ -84,35 +80,35 @@ const menuItems = [
     sidebarLinks: [
       { name: "Native Mobile Engineering", path: "/app-studio/android" },
       { name: "Cross-Platform Frameworks", path: "/app-studio/flutter" },
-      { name: "App Store Launch & QA", path: "/app-studio/ios" },
-      { name: "Mobile Architecture Consulting", path: "/contact" }
+      { name: "App Store Launch & QA", path: "/app-studio/app-store-launch-qa" },
+      { name: "Mobile Architecture Consulting", path: "/schedule-consultation" }
     ],
     proofTitle: "Multi-Platform Power",
     proofDesc: "Building unified iOS & Android codebases with Flutter & React Native. Read case studies.",
-    proofLink: "/app-studio/flutter",
+    proofLink: "/case-studies",
     topHeading: "APP DEVELOPMENT",
     topCol1: [
       { name: "Android App Development", path: "/app-studio/android" },
       { name: "iOS App Development", path: "/app-studio/ios" },
       { name: "Flutter Multi-Platform", path: "/app-studio/flutter", badge: "Popular" },
       { name: "React Native Hybrid Apps", path: "/app-studio/hybrid" },
-      { name: "Progressive Web Apps (PWA)", path: "/web-development" }
+      { name: "Progressive Web Apps (PWA)", path: "/app-studio/pwa" }
     ],
     col2Heading: "DESIGN & EXPERIENCE",
     topCol2: [
-      { name: "Mobile UI Design Systems", path: "/web-design" },
-      { name: "Offline-First Architecture", path: "/app-studio/android" },
-      { name: "Real-Time Features (Chat, Notifications)", path: "/app-studio/flutter" },
-      { name: "Payments & In-App Purchases", path: "/e-commerce" },
-      { name: "App Performance Optimization", path: "/app-studio/flutter" }
+      { name: "Mobile UI Design Systems", path: "/app-studio/mobile-ui-design-systems" },
+      { name: "Offline-First Architecture", path: "/app-studio/offline-first-architecture" },
+      { name: "Real-Time Features (Chat, Notifications)", path: "/app-studio/realtime-features" },
+      { name: "Payments & In-App Purchases", path: "/app-studio/payments-in-app-purchases" },
+      { name: "App Performance Optimization", path: "/app-studio/app-performance-optimization" }
     ],
     enterpriseHeading: "LAUNCH & SUPPORT",
     enterpriseCol: [
-      { name: "App Store Launch & QA", path: "/app-studio/ios" },
-      { name: "Google Play & Apple Store Submission", path: "/app-studio/android" },
-      { name: "Crashlytics & Bug Monitoring", path: "/website-maintenance" },
-      { name: "App Version Upgrades", path: "/website-maintenance" },
-      { name: "24/7 Mobile SLA Support", path: "/website-maintenance" }
+      { name: "App Store Launch & QA", path: "/app-studio/app-store-launch-qa" },
+      { name: "Google Play & Apple Store Submission", path: "/app-studio/store-submission" },
+      { name: "Crashlytics & Bug Monitoring", path: "/app-studio/crashlytics-bug-monitoring" },
+      { name: "App Version Upgrades", path: "/app-studio/app-version-upgrades" },
+      { name: "24/7 Mobile SLA Support", path: "/app-studio/mobile-sla-support" }
     ],
     allLinkText: "All Mobile Services",
     allLinkPath: "/app-studio/flutter"
@@ -317,19 +313,21 @@ const Navbar = () => {
                   <span className="text-[#EA580C]">.</span>
                 </h3>
                 <p className="text-[13px] text-slate-500 font-normal leading-relaxed mb-4">{activeMegaMenu.sidebarDesc}</p>
-                <div className="space-y-1 pt-0.5">
-                  {activeMegaMenu.sidebarLinks.map((sLink, sIdx) => {
-                    const isActive = location.pathname === sLink.path;
-                    return (
-                      <Link key={sIdx} to={sLink.path} className={`group/slink flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${isActive ? "bg-[#004658]/8 text-[#004658] font-semibold" : "text-slate-800 font-medium hover:bg-[#004658]/6 hover:text-[#004658]"}`}>
-                        <span className="text-[16px] sm:text-[17px] font-medium tracking-[-0.01em] group-hover/slink:translate-x-1 transition-transform">{sLink.name}</span>
-                        <svg className={`w-4 h-4 text-[#004658] transition-all duration-200 ${isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1 group-hover/slink:opacity-100 group-hover/slink:translate-x-0"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
-                      </Link>
-                    );
-                  })}
-                </div>
+                {activeMegaMenu.sidebarLinks?.length > 0 && (
+                  <div className="space-y-1 pt-0.5">
+                    {activeMegaMenu.sidebarLinks.map((sLink, sIdx) => {
+                      const isActive = location.pathname === sLink.path;
+                      return (
+                        <Link key={sIdx} to={sLink.path} className={`group/slink flex items-center justify-between px-3 py-1.5 rounded-xl transition-all ${isActive ? "bg-[#004658]/8 text-[#004658] font-semibold" : "text-slate-800 font-medium hover:bg-[#004658]/6 hover:text-[#004658]"}`}>
+                          <span className="text-[16px] sm:text-[17px] font-medium tracking-[-0.01em] group-hover/slink:translate-x-1 transition-transform">{sLink.name}</span>
+                          <svg className={`w-4 h-4 text-[#004658] transition-all duration-200 ${isActive ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-1 group-hover/slink:opacity-100 group-hover/slink:translate-x-0"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" /></svg>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
-              <div className="pt-3.5 mt-3.5 border-t border-slate-200/80">
+              <div className={`pt-3.5 ${activeMegaMenu.sidebarLinks?.length > 0 ? "mt-3.5" : "mt-1"} border-t border-slate-200/80`}>
                 <div className="text-[11.5px] font-bold uppercase tracking-wider text-[#004658] mb-1 flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" />
                   <span>{activeMegaMenu.proofTitle}</span>

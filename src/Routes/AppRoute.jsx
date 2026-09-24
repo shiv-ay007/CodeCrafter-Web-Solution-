@@ -46,6 +46,41 @@ import BillingSoftware from '../Pages/BillingSoftware'
 import SchoolManagement from '../Pages/SchoolManagement'
 import HospitalManagement from '../Pages/HospitalManagement'
 
+// Why Choose Us Pages
+import EngineeringStandards from '../Pages/EngineeringStandards'
+import SecurityIpProtection from '../Pages/SecurityIpProtection'
+import CaseStudies from '../Pages/CaseStudies'
+import ScheduleConsultation from '../Pages/ScheduleConsultation'
+
+// UX & Web Services Dedicated Submenu Pages
+import StaffAugmentation from '../Pages/StaffAugmentation'
+import DedicatedTeams from '../Pages/DedicatedTeams'
+import SoftwareOutsourcing from '../Pages/SoftwareOutsourcing'
+import AiTransformation from '../Pages/AiTransformation'
+import FrontendDevelopment from '../Pages/FrontendDevelopment'
+import BackendDevelopment from '../Pages/BackendDevelopment'
+import CmsDevelopment from '../Pages/CmsDevelopment'
+import ApiIntegration from '../Pages/ApiIntegration'
+import WireframingPrototyping from '../Pages/WireframingPrototyping'
+import DesignSystems from '../Pages/DesignSystems'
+import LandingPageDesign from '../Pages/LandingPageDesign'
+import SaasWebPlatforms from '../Pages/SaasWebPlatforms'
+import WebPerformanceOptimization from '../Pages/WebPerformanceOptimization'
+import QaTestingAutomation from '../Pages/QaTestingAutomation'
+
+// App Studio Submenu Pages
+import MobileUiDesignSystems from '../Pages/MobileUiDesignSystems'
+import OfflineFirstArchitecture from '../Pages/OfflineFirstArchitecture'
+import RealtimeFeatures from '../Pages/RealtimeFeatures'
+import PaymentsInAppPurchases from '../Pages/PaymentsInAppPurchases'
+import AppPerformanceOptimization from '../Pages/AppPerformanceOptimization'
+import AppStoreLaunchQa from '../Pages/AppStoreLaunchQa'
+import StoreSubmission from '../Pages/StoreSubmission'
+import CrashlyticsBugMonitoring from '../Pages/CrashlyticsBugMonitoring'
+import AppVersionUpgrades from '../Pages/AppVersionUpgrades'
+import MobileSlaSupport from '../Pages/MobileSlaSupport'
+import PwaApp from '../Pages/PwaApp'
+
 const AppRoute = () => {
   const location = useLocation()
 
@@ -60,12 +95,34 @@ const AppRoute = () => {
         <Route path="/testimonials" element={<PageWrapper><Testimonials /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
 
+        {/* Why Choose Us Routes */}
+        <Route path="/engineering-standards" element={<PageWrapper><EngineeringStandards /></PageWrapper>} />
+        <Route path="/security-ip-protection" element={<PageWrapper><SecurityIpProtection /></PageWrapper>} />
+        <Route path="/case-studies" element={<PageWrapper><CaseStudies /></PageWrapper>} />
+        <Route path="/schedule-consultation" element={<PageWrapper><ScheduleConsultation /></PageWrapper>} />
+
         {/* Web Solutions Routes */}
         <Route path="/web-design" element={<PageWrapper><WebDesign /></PageWrapper>} />
         <Route path="/web-development" element={<PageWrapper><WebDevelopment /></PageWrapper>} />
         <Route path="/website-redesign" element={<PageWrapper><WebsiteRedesign /></PageWrapper>} />
         <Route path="/e-commerce" element={<PageWrapper><Ecommerce /></PageWrapper>} />
         <Route path="/website-maintenance" element={<PageWrapper><WebsiteMaintenance /></PageWrapper>} />
+
+        {/* Dedicated UX & Web Services Submenu Routes */}
+        <Route path="/services/staff-augmentation" element={<PageWrapper><StaffAugmentation /></PageWrapper>} />
+        <Route path="/services/dedicated-teams" element={<PageWrapper><DedicatedTeams /></PageWrapper>} />
+        <Route path="/services/software-outsourcing" element={<PageWrapper><SoftwareOutsourcing /></PageWrapper>} />
+        <Route path="/services/ai-transformation" element={<PageWrapper><AiTransformation /></PageWrapper>} />
+        <Route path="/services/frontend-development" element={<PageWrapper><FrontendDevelopment /></PageWrapper>} />
+        <Route path="/services/backend-development" element={<PageWrapper><BackendDevelopment /></PageWrapper>} />
+        <Route path="/services/cms-development" element={<PageWrapper><CmsDevelopment /></PageWrapper>} />
+        <Route path="/services/api-integration" element={<PageWrapper><ApiIntegration /></PageWrapper>} />
+        <Route path="/services/wireframing-prototyping" element={<PageWrapper><WireframingPrototyping /></PageWrapper>} />
+        <Route path="/services/design-systems" element={<PageWrapper><DesignSystems /></PageWrapper>} />
+        <Route path="/services/landing-page-design" element={<PageWrapper><LandingPageDesign /></PageWrapper>} />
+        <Route path="/services/saas-web-platforms" element={<PageWrapper><SaasWebPlatforms /></PageWrapper>} />
+        <Route path="/services/web-performance-optimization" element={<PageWrapper><WebPerformanceOptimization /></PageWrapper>} />
+        <Route path="/services/qa-testing-automation" element={<PageWrapper><QaTestingAutomation /></PageWrapper>} />
 
         {/* Hosting & Infrastructure Routes */}
         <Route path="/hosting/shared" element={<PageWrapper><SharedHosting /></PageWrapper>} />
@@ -78,6 +135,19 @@ const AppRoute = () => {
         <Route path="/app-studio/ios" element={<PageWrapper><IosApp /></PageWrapper>} />
         <Route path="/app-studio/hybrid" element={<PageWrapper><HybridApp /></PageWrapper>} />
         <Route path="/app-studio/flutter" element={<PageWrapper><FlutterApp /></PageWrapper>} />
+        <Route path="/app-studio/pwa" element={<PageWrapper><PwaApp /></PageWrapper>} />
+
+        {/* Dedicated App Studio Submenu Routes */}
+        <Route path="/app-studio/mobile-ui-design-systems" element={<PageWrapper><MobileUiDesignSystems /></PageWrapper>} />
+        <Route path="/app-studio/offline-first-architecture" element={<PageWrapper><OfflineFirstArchitecture /></PageWrapper>} />
+        <Route path="/app-studio/realtime-features" element={<PageWrapper><RealtimeFeatures /></PageWrapper>} />
+        <Route path="/app-studio/payments-in-app-purchases" element={<PageWrapper><PaymentsInAppPurchases /></PageWrapper>} />
+        <Route path="/app-studio/app-performance-optimization" element={<PageWrapper><AppPerformanceOptimization /></PageWrapper>} />
+        <Route path="/app-studio/app-store-launch-qa" element={<PageWrapper><AppStoreLaunchQa /></PageWrapper>} />
+        <Route path="/app-studio/store-submission" element={<PageWrapper><StoreSubmission /></PageWrapper>} />
+        <Route path="/app-studio/crashlytics-bug-monitoring" element={<PageWrapper><CrashlyticsBugMonitoring /></PageWrapper>} />
+        <Route path="/app-studio/app-version-upgrades" element={<PageWrapper><AppVersionUpgrades /></PageWrapper>} />
+        <Route path="/app-studio/mobile-sla-support" element={<PageWrapper><MobileSlaSupport /></PageWrapper>} />
 
         {/* Digital Growth Routes */}
         <Route path="/digital-booster/seo" element={<PageWrapper><SeoOptimization /></PageWrapper>} />

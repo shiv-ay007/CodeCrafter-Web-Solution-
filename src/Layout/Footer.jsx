@@ -105,7 +105,7 @@ const Footer = () => {
                   <span className="px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 text-[9px] font-semibold uppercase">Hiring</span>
                 </Link>
               </li>
-              <li><Link to="/about" className="hover:text-[#004658] transition-colors">Case Studies</Link></li>
+              <li><Link to="/case-studies" className="hover:text-[#004658] transition-colors">Case Studies</Link></li>
               <li><Link to="/about" className="hover:text-[#004658] transition-colors">Client Reviews</Link></li>
               <li><Link to="/contact" className="hover:text-[#004658] transition-colors">Contact Support</Link></li>
             </ul>
