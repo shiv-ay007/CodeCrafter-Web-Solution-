@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Layers, ShieldCheck, Zap, Code2 } from "lucide-react";
 
 const EngineeringStandards = () => {
   const [activeTab, setActiveTab] = useState("architecture");
@@ -8,44 +9,28 @@ const EngineeringStandards = () => {
     {
       id: "architecture",
       title: "Clean Architecture & SOLID Principles",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-        </svg>
-      ),
+      icon: <Layers className="w-6 h-6 text-[#004658]" />,
       description: "We enforce strict separation of concerns, domain-driven design, and modular codebases that ensure new features can be added without introducing regressions or code bloat.",
       highlights: ["Domain-Driven Design (DDD)", "Decoupled Business Logic", "Zero Spaghetti Dependencies", "Strict SOLID Enforcement"]
     },
     {
       id: "testing",
       title: "Automated Testing & CI/CD Pipelines",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      ),
+      icon: <ShieldCheck className="w-6 h-6 text-[#004658]" />,
       description: "Every pull request passes through automated unit tests, integration suites, and static analysis gates before reaching production.",
       highlights: ["90%+ Code Coverage Target", "Automated Cypress & Playwright E2E", "GitHub Actions & GitLab CI", "Zero-Downtime Blue-Green Deployments"]
     },
     {
       id: "performance",
       title: "High Performance & Low Latency",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
+      icon: <Zap className="w-6 h-6 text-[#004658]" />,
       description: "From sub-millisecond database queries to optimized JS bundles and CDN caching, we optimize every layer of the application for ultra-fast response times.",
       highlights: ["Sub-50ms P99 API Latency", "Redis & Edge Caching", "Database Index & Query Tuning", "Lighthouse 95+ Core Web Vitals"]
     },
     {
       id: "security",
       title: "Static Code Analysis & Peer Reviews",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-        </svg>
-      ),
+      icon: <Code2 className="w-6 h-6 text-[#004658]" />,
       description: "No code enters main without a mandatory double-peer review by Senior Engineers and automated SonarQube static analysis scans.",
       highlights: ["Double-Peer Code Signoff", "SonarQube & Snyk Vulnerability Scans", "Strict ESLint & Prettier Formatting", "Dependency Audit Checks"]
     }
@@ -183,7 +168,7 @@ const EngineeringStandards = () => {
       {/* Code Standards Comparison Matrix */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-br from-[#003442] to-[#001D25] rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
-          <div className="max-w-3xl mb-10">
+          <div className="max-w-3xl mb-8 sm:mb-10">
             <span className="text-[#4EF0C5] text-xs font-bold uppercase tracking-widest block mb-2">Architectural Comparison</span>
             <h2 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif] leading-tight">
               CodeCrafter Standards vs Industry Standard
@@ -191,24 +176,34 @@ const EngineeringStandards = () => {
             <p className="text-slate-300 text-sm sm:text-base mt-2">See how our software engineering standards elevate your product above typical development agencies.</p>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[600px]">
+          {/* Mobile Horizontal Scroll Indicator */}
+          <div className="sm:hidden flex items-center justify-between text-xs text-slate-300 mb-3 px-1 font-medium bg-white/5 py-2 px-3 rounded-lg border border-white/10">
+            <span>Scroll table to see full comparison</span>
+            <span className="flex items-center gap-1 text-[#4EF0C5] font-semibold">Swipe →</span>
+          </div>
+
+          <div className="overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
+            <table className="w-full text-left border-collapse min-w-[640px]">
               <thead>
-                <tr className="border-b border-white/10 text-xs sm:text-sm text-slate-300 uppercase tracking-wider">
-                  <th className="py-4 px-4 font-semibold w-1/3">Engineering Area</th>
-                  <th className="py-4 px-4 font-semibold text-[#4EF0C5] w-1/3">CodeCrafter Standard</th>
-                  <th className="py-4 px-4 font-semibold text-slate-400 w-1/3">Typical Dev Vendor</th>
+                <tr className="border-b border-white/15 text-xs sm:text-sm text-slate-300 uppercase tracking-wider">
+                  <th className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-semibold w-[28%]">Engineering Area</th>
+                  <th className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-semibold text-[#4EF0C5] w-[36%]">CodeCrafter Standard</th>
+                  <th className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-semibold text-slate-400 w-[36%]">Typical Dev Vendor</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-white/10 text-sm sm:text-base">
+              <tbody className="divide-y divide-white/10 text-xs sm:text-sm md:text-base">
                 {comparisonData.map((row, index) => (
-                  <tr key={index} className="hover:bg-white/5 transition-colors">
-                    <td className="py-4 px-4 font-semibold text-white">{row.feature}</td>
-                    <td className="py-4 px-4 text-[#4EF0C5] font-medium flex items-center gap-2">
-                      <svg className="w-5 h-5 shrink-0 text-[#4EF0C5]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
-                      <span>{row.crafter}</span>
+                  <tr key={index} className="hover:bg-white/5 transition-colors align-top">
+                    <td className="py-3.5 px-3.5 sm:py-4 sm:px-4 font-semibold text-white align-top">{row.feature}</td>
+                    <td className="py-3.5 px-3.5 sm:py-4 sm:px-4 text-[#4EF0C5] font-medium align-top">
+                      <div className="flex items-start gap-2">
+                        <svg className="w-4 h-4 sm:w-5 sm:h-5 shrink-0 text-[#4EF0C5] mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="leading-snug">{row.crafter}</span>
+                      </div>
                     </td>
-                    <td className="py-4 px-4 text-slate-400">{row.typical}</td>
+                    <td className="py-3.5 px-3.5 sm:py-4 sm:px-4 text-slate-300 leading-snug align-top">{row.typical}</td>
                   </tr>
                 ))}
               </tbody>

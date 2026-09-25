@@ -1,45 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FileCheck, Handshake, Vault, Globe } from "lucide-react";
 
 const SecurityIpProtection = () => {
   const securityPillars = [
     {
       title: "100% Source Code & IP Transfer",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
+      icon: <FileCheck className="w-6 h-6 text-[#004658]" />,
       desc: "Upon final milestone delivery, 100% of the intellectual property, copyright, patent rights, and source code repository ownership is legally transferred to your organization.",
       details: ["Full Master Repo Transfer", "Zero Vendor Lock-in or Royalty Fees", "Custom Patent & Code Rights Assignment", "Complete Asset Handover Documents"]
     },
     {
       title: "Comprehensive Bilateral NDA",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-        </svg>
-      ),
+      icon: <Handshake className="w-6 h-6 text-[#004658]" />,
       desc: "Before any project discussions, code reviews, or document exchanges take place, we sign an enforceable Non-Disclosure Agreement protecting your business ideas and trade secrets.",
       details: ["Pre-Discovery Execution", "Enforceable Non-Compete Clauses", "Confidential Trade Secret Protection", "Strict Employee & Partner Backing"]
     },
     {
       title: "Isolated Dedicated Workspaces",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-        </svg>
-      ),
+      icon: <Vault className="w-6 h-6 text-[#004658]" />,
       desc: "Each client project runs in a strictly isolated environment with role-based access control (RBAC), branch protection, and encrypted developer workstations.",
       details: ["MFA Enforceable Access", "Granular Branch Permission Gates", "Encrypted Developer Workstations", "Audit Logs & Activity Tracking"]
     },
     {
       title: "GDPR & Data Privacy Compliance",
-      icon: (
-        <svg className="w-6 h-6 text-[#004658]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
-        </svg>
-      ),
+      icon: <Globe className="w-6 h-6 text-[#004658]" />,
       desc: "We adhere strictly to international privacy frameworks including GDPR, HIPAA, and CCPA, implementing privacy-by-design architecture across all data pipelines.",
       details: ["AES-256 Data Encryption at Rest", "TLS 1.3 Encrypted Transit", "Zero Unauthorized Telemetry", "Data Anonymization Protocols"]
     }
@@ -123,7 +108,7 @@ const SecurityIpProtection = () => {
           {securityPillars.map((pillar, idx) => (
             <div 
               key={idx} 
-              className="p-6 sm:p-8 rounded-3xl bg-white border border-[#004658]/15 shadow-lg shadow-[#004658]/5 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+              className="p-6 sm:p-8 rounded-3xl bg-white border border-[#004658]/15 shadow-lg shadow-[#004658]/5 hover:shadow-xl hover:border-[#004658]/30 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 <div className="w-12 h-12 rounded-2xl bg-[#004658]/10 flex items-center justify-center mb-6">
@@ -138,7 +123,7 @@ const SecurityIpProtection = () => {
                 <div className="grid grid-cols-2 gap-2">
                   {pillar.details.map((item, i) => (
                     <div key={i} className="flex items-center gap-2 text-xs sm:text-sm text-slate-700 font-medium">
-                      <svg className="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#004658]" />
                       <span>{item}</span>
                     </div>
                   ))}

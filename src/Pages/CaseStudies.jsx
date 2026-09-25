@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Zap, ShieldCheck, TrendingUp, Activity } from "lucide-react";
 
 const CaseStudies = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -18,6 +19,7 @@ const CaseStudies = () => {
       category: "fintech",
       client: "NovaPay Financial",
       badge: "Fintech Platform",
+      cta: "Build Your Fintech Platform",
       title: "Engineered high-concurrency payment gateway processing $12M daily with 99.999% uptime.",
       summary: "NovaPay required a fault-tolerant microservices gateway capable of handling 5,000+ transactions per second without database bottlenecks.",
       impact: ["+300% TPS Scalability", "99.999% System Availability", "Sub-45ms Transaction Latency"],
@@ -28,6 +30,7 @@ const CaseStudies = () => {
       category: "enterprise",
       client: "HealthPulse Global",
       badge: "Healthcare & Telehealth",
+      cta: "Build Your Healthcare Solution",
       title: "Built HIPAA-compliant telehealth & electronic medical record system for 50+ clinics.",
       summary: "Streamlined online patient onboarding, encrypted video consultations, and automated doctor scheduling across multi-location healthcare networks.",
       impact: ["500k+ Active Patients", "75% Faster Onboarding", "100% HIPAA & GDPR Compliant"],
@@ -38,6 +41,7 @@ const CaseStudies = () => {
       category: "ecommerce",
       client: "LuxeCraft Apparel",
       badge: "E-Commerce Portal",
+      cta: "Build Your E-Commerce Store",
       title: "Headless e-commerce rebuild yielding 45% increase in checkout conversions & 0.4s load speed.",
       summary: "Migrated a legacy e-commerce store to a ultra-fast headless React setup with edge caching and instant page transitions.",
       impact: ["0.4s Core Web Vitals", "+45% Checkout Conversions", "2M+ Monthly Visitors"],
@@ -48,6 +52,7 @@ const CaseStudies = () => {
       category: "enterprise",
       client: "OmniLogistics ERP",
       badge: "Supply Chain & Logistics",
+      cta: "Build Your Logistics Platform",
       title: "Real-time fleet tracking and automated warehouse management portal for 10,000+ daily assets.",
       summary: "Developed an enterprise ERP dashboard aggregating real-time GPS telemetry, inventory dispatch, and automated driver payout workflows.",
       impact: ["38% Operational Cost Reduction", "10x Scalability under Load", "Real-Time Telemetry Tracking"],
@@ -58,6 +63,7 @@ const CaseStudies = () => {
       category: "mobile",
       client: "Aura AI Assistant",
       badge: "Mobile & AI Studio",
+      cta: "Build Your AI-Powered App",
       title: "Cross-platform mobile AI app delivering 60 FPS smooth interactions and real-time voice synthesis.",
       summary: "Built a native iOS and Android AI companion app utilizing Flutter and custom C++ audio processing engines.",
       impact: ["4.9★ App Store Rating", "100k+ Downloads in Month 1", "Sub-100ms Voice Response"],
@@ -68,10 +74,42 @@ const CaseStudies = () => {
       category: "fintech",
       client: "CrediFlow SaaS",
       badge: "B2B Credit & Invoicing",
+      cta: "Build Your SaaS Platform",
       title: "Automated B2B credit scoring and recurring invoicing engine for global SaaS enterprises.",
       summary: "Automated invoice reconciliations, payment reminders, and multi-tenant ledger management for high-volume SaaS platforms.",
       impact: ["$50M+ Invoices Processed", "85% Less Manual Accounting", "SOC2 Type II Certified"],
       tech: ["React", "TypeScript", "Node.js", "Stripe API", "PostgreSQL"]
+    }
+  ];
+
+  const impactMetrics = [
+    {
+      industry: "Fintech & Payments",
+      stat: "99.999%",
+      statLabel: "Uptime Availability SLA",
+      icon: <Zap className="w-6 h-6 text-[#4EF0C5]" />,
+      points: ["Sub-45ms P99 Latency", "5,000+ TPS Capacity", "SOC2 & PCI Compliant"]
+    },
+    {
+      industry: "Healthcare & Telehealth",
+      stat: "500k+",
+      statLabel: "Active Patient Records",
+      icon: <ShieldCheck className="w-6 h-6 text-[#4EF0C5]" />,
+      points: ["100% HIPAA Compliance", "Encrypted WebRTC Video", "75% Faster Onboarding"]
+    },
+    {
+      industry: "E-Commerce & Retail",
+      stat: "+45%",
+      statLabel: "Checkout Conversion Lift",
+      icon: <TrendingUp className="w-6 h-6 text-[#4EF0C5]" />,
+      points: ["0.4s Core Web Vitals", "2M+ Monthly Visitors", "Headless React Architecture"]
+    },
+    {
+      industry: "Logistics & Enterprise",
+      stat: "10,000+",
+      statLabel: "Real-time GPS Assets",
+      icon: <Activity className="w-6 h-6 text-[#4EF0C5]" />,
+      points: ["38% Cost Reduction", "Real-time Telemetry", "10x Concurrency Peak Load"]
     }
   ];
 
@@ -196,7 +234,7 @@ const CaseStudies = () => {
                   to="/schedule-consultation"
                   className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#004658] hover:underline"
                 >
-                  <span>Build a Similar Product</span>
+                  <span>{study.cta}</span>
                   <span>→</span>
                 </Link>
               </div>
@@ -205,8 +243,62 @@ const CaseStudies = () => {
         </div>
       </div>
 
-      {/* Featured Spotlight Section */}
+      {/* Industry Performance Benchmarks Matrix */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="bg-gradient-to-br from-[#003442] via-[#002530] to-[#00171F] rounded-3xl p-8 sm:p-12 text-white shadow-2xl relative overflow-hidden border border-[#004658]/40">
+          {/* Background Ambient Radial Glow */}
+          <div 
+            className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none rounded-full opacity-30 blur-[120px]"
+            style={{
+              background: "radial-gradient(circle, rgba(78, 240, 197, 0.25) 0%, rgba(0, 168, 204, 0.05) 60%, rgba(0, 52, 66, 0) 80%)"
+            }}
+          />
+
+          <div className="max-w-3xl mb-12 relative z-10">
+            <span className="text-[#4EF0C5] text-xs font-bold uppercase tracking-widest block mb-2">✦ Performance Benchmarks</span>
+            <h2 className="text-3xl sm:text-5xl font-extrabold font-['Outfit',sans-serif] leading-tight">
+              Measurable Business Impact Across Industries
+            </h2>
+            <p className="text-slate-300 text-sm sm:text-base mt-3 leading-relaxed">
+              Every production release delivers proven quantitative results — from sub-50ms API response times to multi-million dollar conversion scaling.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            {impactMetrics.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-[#4EF0C5]/40 hover:bg-white/10 transition-all duration-300 flex flex-col justify-between group"
+              >
+                <div>
+                  <div className="w-12 h-12 rounded-2xl bg-[#4EF0C5]/10 border border-[#4EF0C5]/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    {item.icon}
+                  </div>
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-[#4EF0C5] block mb-1">
+                    {item.industry}
+                  </span>
+                  <p className="text-3xl font-extrabold text-white font-['Outfit',sans-serif] mb-1">
+                    {item.stat}
+                  </p>
+                  <p className="text-xs font-semibold text-slate-300 mb-6">{item.statLabel}</p>
+                </div>
+
+                <div className="pt-4 border-t border-white/10 space-y-2">
+                  {item.points.map((pt, pIdx) => (
+                    <div key={pIdx} className="flex items-center gap-2 text-xs text-slate-300 font-medium">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#4EF0C5] shrink-0" />
+                      <span>{pt}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Spotlight Section */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="bg-gradient-to-br from-[#003442] to-[#00171F] text-white rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-7">
@@ -254,7 +346,7 @@ const CaseStudies = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <div className="bg-[#004658] text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl relative overflow-hidden">
           <h3 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif] mb-4">
             Ready to Become Our Next Success Story?
