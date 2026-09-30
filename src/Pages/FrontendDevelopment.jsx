@@ -3,6 +3,14 @@ import { Link } from "react-router-dom";
 import { useInView, motion, AnimatePresence } from "framer-motion";
 import { Code2, Cpu, Layers, Zap, Shield, Sparkles, LayoutGrid, Palette, Database, CheckCircle2, FileCheck } from "lucide-react";
 
+import SectionEverythingUsersSee from "../Components/FrontendComponents/SectionEverythingUsersSee";
+import SectionFrontendExperience from "../Components/FrontendComponents/SectionFrontendExperience";
+import SectionEveryScreen from "../Components/FrontendComponents/SectionEveryScreen";
+import SectionDesignToBrowser from "../Components/FrontendComponents/SectionDesignToBrowser";
+import SectionFrontendCapabilities from "../Components/FrontendComponents/SectionFrontendCapabilities";
+import SectionFastFeelsBetter from "../Components/FrontendComponents/SectionFastFeelsBetter";
+
+
 const AnimatedLighthouseScore = ({ label, targetScore = 100 }) => {
   const [score, setScore] = useState(0);
   const ref = useRef(null);
@@ -194,7 +202,7 @@ const FrontendDevelopment = () => {
       />
 
       {/* Hero Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#004658]/10 border border-[#004658]/20 text-[#004658] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6">
           <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse" />
           <span>⚡ Next-Gen Front-end Engineering</span>
@@ -222,8 +230,23 @@ const FrontendDevelopment = () => {
         </div>
       </div>
 
+      {/* NEW SECTION 1: Everything users see, touch & experience */}
+      <SectionEverythingUsersSee />
+
+      {/* NEW SECTION 2: Interfaces users can see. Experiences they can feel */}
+      <SectionFrontendExperience />
+
+      {/* NEW SECTION 3: One interface. Every screen */}
+      <SectionEveryScreen />
+
+      {/* NEW SECTION 4: From design to a living interface */}
+      <SectionDesignToBrowser />
+
+      {/* NEW SECTION 5: Everything your interface needs */}
+      <SectionFrontendCapabilities />
+
       {/* Ecosystem Tabs Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="text-center mb-8">
           <h2 className="text-2xl sm:text-4xl font-bold text-slate-900 font-['Outfit',sans-serif] mb-3">
             Front-End Technology Stacks
@@ -265,7 +288,7 @@ const FrontendDevelopment = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.25 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-[1360px] mx-auto"
           >
             {ecosystems[activeTab].categories.map((cat, idx) => (
               <div
@@ -304,8 +327,11 @@ const FrontendDevelopment = () => {
         </AnimatePresence>
       </div>
 
+      {/* NEW SECTION 6: Fast feels better */}
+      <SectionFastFeelsBetter />
+
       {/* CTA */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <div className="bg-[#004658] text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl">
           <h3 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif] mb-4">Need a Ultra-Fast Front-End Architecture?</h3>
           <p className="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto mb-8">Talk to our Senior Front-End Leads to upgrade your Web UI stack.</p>

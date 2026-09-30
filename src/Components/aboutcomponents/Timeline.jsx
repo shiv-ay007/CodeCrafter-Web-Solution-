@@ -41,7 +41,7 @@ const Timeline = () => {
   ]
 
   return (
-    <section className="relative py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden" id="timeline">
+    <section className="relative py-10 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="timeline">
       
       {/* Background Soft Glow (Apple Ambient Light) */}
       <div 

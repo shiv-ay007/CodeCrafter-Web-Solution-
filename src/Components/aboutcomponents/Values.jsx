@@ -2,7 +2,7 @@ import React from 'react'
 
 const Values = () => {
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden" id="values">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="values">
       
       {/* Background Soft Glow (Apple Ambient Lighting) */}
       <div 
@@ -12,7 +12,7 @@ const Values = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-[1360px] mx-auto">
         
         {/* Centered Minimal Header (Matching Vision/Mission Header) */}
         <div className="flex flex-col items-center text-center mb-14">

@@ -19,7 +19,7 @@ const Hero = () => {
       />
 
       {/* Hero Content Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
 
         {/* Top Innovation Pill Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#004658]/20 shadow-sm text-[#004658] text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-md hover:border-[#004658]/40 transition-colors cursor-pointer group">

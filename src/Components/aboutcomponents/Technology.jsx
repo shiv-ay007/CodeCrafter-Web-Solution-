@@ -756,7 +756,7 @@ const Technology = () => {
 
   return (
     <section
-      className="relative py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden"
+      className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden"
       id="technology"
     >
       {/* Background Precision Grid & Ambient Glowing Sphere */}
@@ -802,7 +802,7 @@ const Technology = () => {
         </div>
 
         {/* WIDE CONTROL BAR (Single Clean Linear Strip for Filters, Search & View Modes) */}
-        <div className="w-full max-w-6xl mx-auto mb-10 p-2 bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl shadow-lg shadow-slate-200/30 flex flex-col md:flex-row items-center justify-between gap-3">
+        <div className="w-full max-w-[1360px] mx-auto mb-10 p-2 bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl shadow-lg shadow-slate-200/30 flex flex-col md:flex-row items-center justify-between gap-3">
           
           {/* Left: Category Filter Pills */}
           <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none">

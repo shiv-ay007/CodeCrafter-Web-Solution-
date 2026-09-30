@@ -84,7 +84,7 @@ const EngineeringStandards = () => {
       />
 
       {/* Hero Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#004658]/10 border border-[#004658]/20 text-[#004658] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6">
           <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse" />
           <span>✦ CodeCrafter Engineering Manifesto</span>
@@ -123,7 +123,7 @@ const EngineeringStandards = () => {
       </div>
 
       {/* Core Engineering Pillars Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-['Outfit',sans-serif]">
             The 4 Pillars of Our Engineering Rigor
@@ -166,7 +166,7 @@ const EngineeringStandards = () => {
       </div>
 
       {/* Code Standards Comparison Matrix */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="bg-gradient-to-br from-[#003442] to-[#001D25] rounded-3xl p-6 sm:p-10 text-white shadow-2xl relative overflow-hidden">
           <div className="max-w-3xl mb-8 sm:mb-10">
             <span className="text-[#4EF0C5] text-xs font-bold uppercase tracking-widest block mb-2">Architectural Comparison</span>
@@ -213,7 +213,7 @@ const EngineeringStandards = () => {
       </div>
 
       {/* 6-Step Delivery Lifecycle */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 font-['Outfit',sans-serif]">
             Our 6-Step Engineering Pipeline
@@ -233,7 +233,7 @@ const EngineeringStandards = () => {
       </div>
 
       {/* CTA Section */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <div className="bg-[#004658] text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl relative overflow-hidden">
           <h3 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif] mb-4">
             Want to Inspect Our Engineering Blueprint?

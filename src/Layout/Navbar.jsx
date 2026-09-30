@@ -63,7 +63,7 @@ const menuItems = [
     ],
     enterpriseHeading: "WEB-SPECIFIC ENTERPRISE",
     enterpriseCol: [
-      { name: "eCommerce Development", path: "/e-commerce" },
+      { name: "Ecommerce Development", path: "/e-commerce" },
       { name: "SaaS Web Platforms", path: "/services/saas-web-platforms" },
       { name: "Web Performance Optimization", path: "/services/web-performance-optimization" },
       { name: "QA Testing & Automation", path: "/services/qa-testing-automation" },

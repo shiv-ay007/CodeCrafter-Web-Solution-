@@ -3,7 +3,7 @@ import { Compass, Radio, Terminal } from 'lucide-react'
 
 const Vision = () => {
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden" id="vision">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="vision">
       
       {/* Background Soft Ambient Lighting */}
       <div 
@@ -13,7 +13,7 @@ const Vision = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-[1360px] mx-auto">
         
         {/* Centered Minimal Header */}
         <div className="flex flex-col items-center text-center mb-14">

@@ -133,7 +133,7 @@ const SuperPower = () => {
   const activeItem = superPowers.find((p) => p.id === activeId) || superPowers[0]
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden" id="superpowers">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="superpowers">
       
       {/* Background Soft Glow */}
       <div 

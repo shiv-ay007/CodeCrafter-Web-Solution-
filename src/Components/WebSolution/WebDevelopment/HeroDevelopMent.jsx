@@ -365,9 +365,9 @@ const HeroDevelopMent = () => {
       </div>
 
       {/* =========================================================================
-          2. CORE HERO CONTENT (Full Width Max-7XL Responsive Architecture)
+          2. CORE HERO CONTENT (Full Width Max-1360px Responsive Architecture)
          ========================================================================= */}
-      <div className="relative z-10 max-w-7xl mx-auto w-full text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-[1360px] mx-auto w-full text-center flex flex-col items-center">
         
         {/* Top Engineering Pill Badge */}
         <div
@@ -378,7 +378,7 @@ const HeroDevelopMent = () => {
           }`}
         >
           <span className="w-2 h-2 rounded-full bg-[#00D8FF] animate-ping" />
-          <span>FULL-STACK SOFTWARE & CLOUD ARCHITECTURE</span>
+          <span>FULL-STACK WEB DEVELOPMENT & CLOUD ARCHITECTURE</span>
           <span className="text-[10px] opacity-70">✦</span>
         </div>
 
@@ -388,9 +388,9 @@ const HeroDevelopMent = () => {
             isDarkMode ? 'text-white' : 'text-[#0D1B2A]'
           }`}
         >
-          Software engineering <br />
+          Web Development <br />
           <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#00738e] to-[#00a3c4]">
-            built for scale.
+            Built for Scale.
             {/* High-visibility glowing accent underline */}
             <svg className="absolute -bottom-2 sm:-bottom-3 left-0 w-full h-3 sm:h-4 text-[#00D8FF] pointer-events-none" viewBox="0 0 300 12" fill="none">
               <path d="M2 9C75 3 225 3 298 9" stroke="#00D8FF" strokeWidth="4" strokeLinecap="round" />
@@ -404,7 +404,7 @@ const HeroDevelopMent = () => {
             isDarkMode ? 'text-slate-300' : 'text-slate-700'
           }`}
         >
-          We architect resilient distributed systems, sub-second API pipelines, and cloud-native applications engineered to handle millions of requests flawlessly.
+          We engineer custom web applications, high-performance web portals, and scalable cloud solutions built with clean architecture and sub-second speed.
         </p>
 
         {/* =========================================================================

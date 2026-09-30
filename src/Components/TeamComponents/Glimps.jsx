@@ -74,7 +74,7 @@ const Glimps = () => {
     : galleryMoments.filter((m) => m.category === activeCategory)
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden" id="glimpse">
+    <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="glimpse">
       
       {/* Background Soft Glow */}
       <div 

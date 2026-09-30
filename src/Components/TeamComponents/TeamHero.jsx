@@ -33,7 +33,7 @@ const teamMembers = [
 
 const TeamHero = () => {
   return (
-    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden" id="team-hero">
+    <section className="relative pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="team-hero">
       
       {/* Background Soft Glows (Teal Ambient Lighting) */}
       <div 
@@ -49,7 +49,7 @@ const TeamHero = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-[1360px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
           {/* Left Side Content */}
