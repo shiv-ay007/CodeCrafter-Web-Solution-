@@ -96,7 +96,7 @@ const AssembleTeam = () => {
 
   const handleScroll = (direction) => {
     if (scrollRef.current) {
-      const scrollAmount = direction === "left" ? -320 : 320;
+      const scrollAmount = direction === "left" ? -scrollRef.current.clientWidth : scrollRef.current.clientWidth;
       scrollRef.current.scrollBy({
         left: scrollAmount,
         behavior: "smooth"
@@ -105,10 +105,10 @@ const AssembleTeam = () => {
   };
 
   return (
-    <section className="w-full relative py-12 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 overflow-hidden bg-white text-center select-none" id="team">
+    <section className="w-full relative py-12 sm:py-14 lg:py-16 overflow-hidden bg-white text-center select-none" id="team">
       
       {/* Top Header & Scroll Controls */}
-      <div className="max-w-[1360px] mx-auto mb-6 sm:mb-8 flex items-center justify-between px-2 sm:px-4">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 flex items-center justify-between">
         <div className="text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/15 text-[#004658] text-[11px] font-bold uppercase tracking-wider mb-1">
             <span className="w-1.5 h-1.5 rounded-full bg-[#004658] animate-pulse" />
@@ -139,15 +139,15 @@ const AssembleTeam = () => {
       </div>
 
       {/* Team Members Horizontal Slider */}
-      <div className="relative max-w-[1360px] mx-auto mb-10 sm:mb-12">
+      <div className="relative max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mb-10 sm:mb-12">
         
         {/* Subtle Horizontal Ribbon Background */}
-        <div className="absolute top-16 sm:top-20 lg:top-24 left-0 right-0 h-28 sm:h-36 lg:h-44 bg-gradient-to-r from-slate-100 via-slate-200/80 to-slate-100 rounded-3xl -z-0 border border-slate-200/70" />
+        <div className="absolute top-16 sm:top-20 lg:top-24 left-4 right-4 sm:left-6 sm:right-6 lg:left-8 lg:right-8 h-28 sm:h-36 lg:h-44 bg-gradient-to-r from-slate-100 via-slate-200/80 to-slate-100 rounded-3xl -z-0 border border-slate-200/70" />
 
         {/* Horizontal Scroll Track */}
         <div 
           ref={scrollRef}
-          className="flex overflow-x-auto gap-4 sm:gap-5 relative z-10 items-end pb-4 pt-2 px-2 no-scrollbar snap-x scroll-smooth"
+          className="flex overflow-x-auto gap-4 sm:gap-5 relative z-10 items-end pb-4 pt-2 px-1 no-scrollbar snap-x scroll-smooth"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {teamMembers.map((member, index) => (
@@ -158,7 +158,7 @@ const AssembleTeam = () => {
               viewport={{ once: true, margin: "-40px" }}
               transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.4) }}
               whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="w-[170px] xs:w-[190px] sm:w-[210px] md:w-[230px] lg:w-[240px] shrink-0 flex flex-col items-center group cursor-pointer snap-start text-center"
+              className="w-[180px] xs:w-[200px] sm:w-[calc((100%-2*1.25rem)/3)] md:w-[calc((100%-3*1.25rem)/4)] lg:w-[calc((100%-4*1.25rem)/5)] shrink-0 flex flex-col items-center group cursor-pointer snap-start text-center"
             >
               <Link to={member.path} className="flex flex-col items-center w-full">
                 

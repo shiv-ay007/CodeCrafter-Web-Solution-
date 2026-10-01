@@ -108,7 +108,7 @@ const Story = () => {
   const story = projectStories.find((s) => s.id === selectedStoryId) || projectStories[0]
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden" id="stories">
+    <section className="relative py-20 overflow-hidden" id="stories">
       
       {/* Background Soft Glows */}
       <div 
@@ -118,7 +118,7 @@ const Story = () => {
         }}
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Minimalist Centered Header */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-14">

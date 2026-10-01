@@ -365,9 +365,9 @@ const HeroDevelopMent = () => {
       </div>
 
       {/* =========================================================================
-          2. CORE HERO CONTENT (Full Width Max-1360px Responsive Architecture)
+          2. CORE HERO CONTENT (Full Width Max-1280px Responsive Architecture)
          ========================================================================= */}
-      <div className="relative z-10 max-w-[1360px] mx-auto w-full text-center flex flex-col items-center">
+      <div className="relative z-10 max-w-[1280px] mx-auto w-full text-center flex flex-col items-center">
         
         {/* Top Engineering Pill Badge */}
         <div

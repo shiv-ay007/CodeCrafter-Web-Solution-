@@ -165,7 +165,7 @@ const Overview = () => {
     <section
       ref={containerRef}
       id="overview"
-      className="relative w-full py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 bg-[#ffffff] text-slate-900 overflow-hidden border-b border-slate-100"
+      className="relative w-full py-12 sm:py-16 lg:py-20 bg-[#ffffff] text-slate-900 overflow-hidden border-b border-slate-100"
       aria-label="About CodeCrafter Enterprise Software Studio"
     >
       {/* Calm & Subtle Ambient Background Canvas */}
@@ -197,7 +197,7 @@ const Overview = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1360px] mx-auto">
+      <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* TWO-COLUMN GRID: 60% Left / 40% Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 xl:gap-20 items-center">

@@ -74,7 +74,7 @@ const LifeAtCode = () => {
     : lifeMoments.filter((m) => m.category === activeCategory)
 
   return (
-    <section className="relative py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden" id="life-at-codecrafter">
+    <section className="relative py-20 overflow-hidden" id="life-at-codecrafter">
       
       {/* Background Soft Glows */}
       <div 
@@ -84,7 +84,7 @@ const LifeAtCode = () => {
         }}
       />
 
-      <div className="relative z-10">
+      <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* HCL/TCS Style Corporate Centered Header */}
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-14">

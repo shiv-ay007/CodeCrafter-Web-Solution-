@@ -100,7 +100,7 @@ const GoogleReviews = () => {
 
   return (
     <section 
-      className="w-full py-10 sm:py-12 lg:py-14 px-4 sm:px-6 lg:px-8 bg-[#EEF7FA] relative overflow-hidden select-none" 
+      className="w-full py-10 sm:py-12 lg:py-14 bg-[#EEF7FA] relative overflow-hidden select-none" 
       id="reviews"
     >
       {/* Background Soft Glow */}
@@ -111,7 +111,7 @@ const GoogleReviews = () => {
         }}
       />
 
-      <div className="max-w-[1360px] mx-auto relative z-10">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Heading with Unified Theme */}
         <div className="text-center mb-6 sm:mb-8">

@@ -14,7 +14,7 @@ const Cta = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-[1360px] mx-auto text-center mb-6 sm:mb-8">
+      <div className="relative z-10 max-w-[1280px] mx-auto text-center mb-6 sm:mb-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -152,8 +152,8 @@ const LatestInsights = () => {
   };
 
   return (
-    <section className="relative py-8 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8 bg-[#f5f8fc] overflow-hidden" id="insights">
-      <div className="relative z-10 max-w-[1360px] mx-auto">
+    <section className="relative py-8 sm:py-10 lg:py-12 bg-[#f5f8fc] overflow-hidden" id="insights">
+      <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">

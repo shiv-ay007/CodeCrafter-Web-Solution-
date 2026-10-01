@@ -5,11 +5,13 @@ import WebDevTechStack from '../Components/WebSolution/WebDevelopment/WebDevTech
 import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 import FeaturedProjects from '../Components/WebSolution/WebDevelopment/FeaturedProjects'
+import WhatWeBuild from '../Components/WebSolution/WebDevelopment/WhatWeBuild'
 
 const WebDevelopment = () => {
   return (
     <>
       <HeroDevelopMent />
+      <WhatWeBuild/>
       <FeaturedProjects/>
       <WebDevProcess />
       <WebDevTechStack />

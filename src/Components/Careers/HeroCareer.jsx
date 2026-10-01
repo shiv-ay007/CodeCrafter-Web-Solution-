@@ -28,7 +28,7 @@ const HeroCareer = () => {
   const [activeHighlight, setActiveHighlight] = useState(0)
 
   return (
-    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden" id="careers">
+    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 overflow-hidden" id="careers">
       
       {/* Background Soft Glows */}
       <div 
@@ -81,7 +81,7 @@ const HeroCareer = () => {
         }
       `}</style>
 
-      <div className="relative z-10">
+      <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 2-Column Responsive Layout: Top Aligned */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">

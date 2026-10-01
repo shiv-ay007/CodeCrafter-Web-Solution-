@@ -4,7 +4,7 @@ import priyankaImg from '../../assets/images/Priyanka Gupta.png'
 
 const TestHero = () => {
   return (
-    <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden" id="client-stories">
+    <section className="relative pt-24 pb-16 sm:pt-28 sm:pb-20 overflow-hidden" id="client-stories">
       
       {/* Background Soft Ambient Glows */}
       <div 
@@ -46,7 +46,7 @@ const TestHero = () => {
         }
       `}</style>
 
-      <div className="relative z-10">
+      <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main 2-Column Responsive Layout: Top Aligned */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">

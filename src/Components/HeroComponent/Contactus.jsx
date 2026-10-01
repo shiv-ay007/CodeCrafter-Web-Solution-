@@ -159,7 +159,7 @@ const Contactus = () => {
         }}
       />
 
-      <div className="relative z-10 max-w-[1360px] mx-auto">
+      <div className="relative z-10 max-w-[1280px] mx-auto">
         
         {/* Section Header */}
         <motion.div 
