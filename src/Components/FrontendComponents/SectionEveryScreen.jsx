@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Monitor, Tablet, Smartphone, Sparkles, Check } from "lucide-react";
-import featuredImg3 from "../../assets/images/featured-img1.png";
-import featuredImg5 from "../../assets/images/featured-img6.png";
-import featuredImg6 from "../../assets/images/featured-img5.png";
+import featuredImg3 from "../../assets/images/featured-img1.webp";
+import featuredImg5 from "../../assets/images/featured-img6.webp";
+import featuredImg6 from "../../assets/images/featured-img5.webp";
 
 const SectionEveryScreen = () => {
   return (

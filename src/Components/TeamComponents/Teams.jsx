@@ -3,17 +3,17 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
 // Import all local team member images from assets/images
-import abhayImg from '../../assets/images/Abhay Vishwakarma.png'
-import amanImg from '../../assets/images/Aman kumar.png'
-import ankurImg from '../../assets/images/Ankur Patel.png'
-import ayushiImg from '../../assets/images/Ayushi Srivastava.jpeg'
-import irshadImg from '../../assets/images/Irshad Ali.jpeg'
-import arzaanImg from '../../assets/images/MD Arzaan.png'
-import nirbhayImg from '../../assets/images/Nirbhay.png'
-import priyankaImg from '../../assets/images/Priyanka Gupta.png'
-import shivamImg from '../../assets/images/Shivam Yadav.png'
-import shwetaImg from '../../assets/images/Shweta.png'
-import sureshImg from '../../assets/images/Suresh Kumar.jpeg'
+import abhayImg from '../../assets/images/Abhay Vishwakarma.webp'
+import amanImg from '../../assets/images/Aman kumar.webp'
+import ankurImg from '../../assets/images/Ankur Patel.webp'
+import ayushiImg from '../../assets/images/Ayushi Srivastava.webp'
+import irshadImg from '../../assets/images/Irshad Ali.webp'
+import arzaanImg from '../../assets/images/MD Arzaan.webp'
+import nirbhayImg from '../../assets/images/Nirbhay.webp'
+import priyankaImg from '../../assets/images/Priyanka Gupta.webp'
+import shivamImg from '../../assets/images/Shivam Yadav.webp'
+import shwetaImg from '../../assets/images/Shweta.webp'
+import sureshImg from '../../assets/images/Suresh Kumar.webp'
 
 const teamMembers = [
   {
@@ -211,20 +211,17 @@ const Teams = () => {
                 transition={{ duration: 0.35, ease: "easeOut" }}
                 className="group relative rounded-3xl overflow-hidden aspect-[3/4] bg-slate-950 border border-slate-200/90 shadow-sm hover:border-[#004658]/40 hover:shadow-2xl hover:shadow-[#004658]/20 hover:-translate-y-2 transition-all duration-500 ease-out cursor-pointer flex flex-col justify-between p-6 select-none text-left"
               >
-                {/* Full HD Background Portrait with Bright Hover Effect */}
+                {/* Full HD Background Portrait with Subtle Brightness & Scale Effect */}
                 <img
                   src={member.img}
                   alt={`${member.name} - ${member.role} at CodeCrafter`}
                   loading="lazy"
                   decoding="async"
-                  className="absolute inset-0 w-full h-full object-cover object-top filter brightness-[1.02] contrast-[1.03] saturate-[1.05] group-hover:brightness-[1.18] group-hover:contrast-[1.08] group-hover:saturate-[1.12] group-hover:scale-106 transition-all duration-500 ease-out pointer-events-none"
+                  className="absolute inset-0 w-full h-full object-cover object-top group-hover:scale-105 group-hover:brightness-[1.05] transition-all duration-500 ease-out pointer-events-none"
                 />
 
-                {/* Natural Gradient Overlay (Softens on Hover for Bright Crystal-Clear Illumination) */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/92 via-slate-950/20 to-transparent group-hover:from-slate-950/85 group-hover:via-transparent group-hover:to-white/10 transition-all duration-500 pointer-events-none" />
-
-                {/* Top Subtle Specular Light on Hover */}
-                <div className="absolute inset-0 bg-radial from-white/15 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                {/* Natural Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent group-hover:from-slate-950/80 transition-all duration-500 pointer-events-none" />
 
                 {/* Top Floating Glass Badge */}
                 <div className="relative z-10 flex items-center justify-between">

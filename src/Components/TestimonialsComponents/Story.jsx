@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import sureshImg from '../../assets/images/Suresh Kumar.jpeg'
-import priyankaImg from '../../assets/images/Priyanka Gupta.png'
-import amanImg from '../../assets/images/Aman kumar.png'
-import ayushiImg from '../../assets/images/Ayushi Srivastava.jpeg'
+import sureshImg from '../../assets/images/Suresh Kumar.webp'
+import priyankaImg from '../../assets/images/Priyanka Gupta.webp'
+import amanImg from '../../assets/images/Aman kumar.webp'
+import ayushiImg from '../../assets/images/Ayushi Srivastava.webp'
 
 const projectStories = [
   {

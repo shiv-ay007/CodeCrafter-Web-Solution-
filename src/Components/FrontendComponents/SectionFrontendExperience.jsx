@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import featuredImg from "../../assets/images/featured-img.png";
+import featuredImg from "../../assets/images/featured-img.webp";
 
 const floatingBadges = [
   { text: "React 19", pos: "-top-3 -left-3 sm:-left-6" },

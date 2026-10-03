@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Layout, Component, MousePointerClick, Smartphone, Eye } from "lucide-react";
-import featuredImg2 from "../../assets/images/featured-img2.png";
+import featuredImg2 from "../../assets/images/featured-img2.webp";
 
 const SectionEverythingUsersSee = () => {
   return (

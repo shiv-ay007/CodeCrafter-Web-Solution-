@@ -23,10 +23,10 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
-import dssCrm1 from "../assets/images/backend-img1.jpeg";
-import dssCrm2 from "../assets/images/project4.jpeg";
-import dssCrm3 from "../assets/images/project2.jpeg";
-import dssCrm4 from "../assets/images/project3.jpeg";
+import dssCrm1 from "../assets/images/backend-img1.webp";
+import dssCrm2 from "../assets/images/project4.webp";
+import dssCrm3 from "../assets/images/project2.webp";
+import dssCrm4 from "../assets/images/project3.webp";
 // ======================================================
 // CORE BACKEND ARCHITECTURE DATA
 // ======================================================

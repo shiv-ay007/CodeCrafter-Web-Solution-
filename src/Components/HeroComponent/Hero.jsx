@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import vortexSwirlImg from "../../assets/hero_vortex_swirl.jpg";
+import vortexSwirlImg from "../../assets/hero_vortex_swirl.webp";
 
 // Services and capabilities showcase items
 const orbitServices = [
@@ -367,6 +367,8 @@ const Hero = () => {
                   alt="3D Fluid Vortex Wave - CodeCrafter Engineering Solutions"
                   width="460"
                   height="460"
+                  loading="eager"
+                  fetchpriority="high"
                   decoding="async"
                   animate={{ rotate: 360 }}
                   transition={{ duration: 60, repeat: Infinity, ease: "linear" }}

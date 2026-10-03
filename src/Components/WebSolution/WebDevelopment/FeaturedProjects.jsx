@@ -25,10 +25,10 @@ import {
 |
 */
 
-import ridgelineImg from "../../../assets/images/image.png";
-import upemaImg from "../../../assets/images/image3.png";
-import unitedInfraImg from "../../../assets/images/image2.png";
-import dssImg from "../../../assets/images/image4.png";
+import ridgelineImg from "../../../assets/images/image.webp";
+import upemaImg from "../../../assets/images/image3.webp";
+import unitedInfraImg from "../../../assets/images/image2.webp";
+import dssImg from "../../../assets/images/image4.webp";
 
 /*
 |--------------------------------------------------------------------------

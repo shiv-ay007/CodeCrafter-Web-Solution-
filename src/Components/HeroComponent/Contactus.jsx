@@ -16,7 +16,7 @@ import {
   Layers,
   Heart
 } from 'lucide-react'
-import heroVortexSwirl from '../../assets/hero_vortex_swirl.jpg'
+import heroVortexSwirl from '../../assets/hero_vortex_swirl.webp'
 
 // 8 Rich Ecosystem Orbit Badges (Tech Stack + Branding & Marketing Combined)
 const orbitServices = [

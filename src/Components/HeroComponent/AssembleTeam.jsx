@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // Import all local team member images from assets/images
-import abhayImg from "../../assets/images/Abhay Vishwakarma.png";
-import amanImg from "../../assets/images/Aman kumar.png";
-import ankurImg from "../../assets/images/Ankur Patel.png";
-import ayushiImg from "../../assets/images/Ayushi Srivastava.jpeg";
-import irshadImg from "../../assets/images/Irshad Ali.jpeg";
-import arzaanImg from "../../assets/images/MD Arzaan.png";
-import nirbhayImg from "../../assets/images/Nirbhay.png";
-import priyankaImg from "../../assets/images/Priyanka Gupta.png";
-import shivamImg from "../../assets/images/Shivam Yadav.png";
-import shwetaImg from "../../assets/images/Shweta.png";
-import sureshImg from "../../assets/images/Suresh Kumar.jpeg";
+import abhayImg from "../../assets/images/Abhay Vishwakarma.webp";
+import amanImg from "../../assets/images/Aman kumar.webp";
+import ankurImg from "../../assets/images/Ankur Patel.webp";
+import ayushiImg from "../../assets/images/Ayushi Srivastava.webp";
+import irshadImg from "../../assets/images/Irshad Ali.webp";
+import arzaanImg from "../../assets/images/MD Arzaan.webp";
+import nirbhayImg from "../../assets/images/Nirbhay.webp";
+import priyankaImg from "../../assets/images/Priyanka Gupta.webp";
+import shivamImg from "../../assets/images/Shivam Yadav.webp";
+import shwetaImg from "../../assets/images/Shweta.webp";
+import sureshImg from "../../assets/images/Suresh Kumar.webp";
 
 const teamMembers = [
   {

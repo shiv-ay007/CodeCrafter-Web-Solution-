@@ -1,6 +1,6 @@
 import React from 'react'
-import sureshImg from '../../assets/images/Suresh Kumar.jpeg'
-import priyankaImg from '../../assets/images/Priyanka Gupta.png'
+import sureshImg from '../../assets/images/Suresh Kumar.webp'
+import priyankaImg from '../../assets/images/Priyanka Gupta.webp'
 
 const TestHero = () => {
   return (
