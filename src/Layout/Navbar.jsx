@@ -130,10 +130,10 @@ const menuItems = [
     topHeading: "SEO & CONTENT",
     topCol1: [
       { name: "SEO Optimization & Technical Audits", path: "/digital-booster/seo" },
-      { name: "Local SEO & Google Maps", path: "/digital-booster/seo" },
+      { name: "Local SEO & Google Maps", path: "/digital-booster/local-seo" },
       { name: "Technical Content Marketing", path: "/digital-booster/content-marketing" },
-      { name: "Competitor Market Analysis", path: "/digital-booster/seo" },
-      { name: "Search Intent Mapping", path: "/digital-booster/seo" }
+      { name: "Competitor Market Analysis", path: "/digital-booster/competitor-analysis" },
+      { name: "Search Intent Mapping", path: "/digital-booster/search-intent-mapping" }
     ],
     col2Heading: "PAID & SOCIAL MARKETING",
     topCol2: [

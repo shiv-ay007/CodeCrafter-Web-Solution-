@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -22,11 +23,14 @@ const Hero = () => {
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
 
         {/* Top Innovation Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#004658]/20 shadow-sm text-[#004658] text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-md hover:border-[#004658]/40 transition-colors cursor-pointer group">
+        <Link 
+          to="/web-development"
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-[#004658]/20 shadow-sm text-[#004658] text-xs font-semibold uppercase tracking-wider mb-8 backdrop-blur-md hover:border-[#004658]/40 transition-colors cursor-pointer group"
+        >
           <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse shadow-[0_0_10px_#004658]" />
           <span>Next-Gen Web & Software Studio</span>
           <span className="text-slate-400 group-hover:translate-x-0.5 transition-transform">→</span>
-        </div>
+        </Link>
 
         {/* Display Headline */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 leading-[1.12] max-w-5xl mb-6">
@@ -44,8 +48,8 @@ const Hero = () => {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 w-full sm:w-auto">
           {/* Primary CTA */}
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-[#004658] text-white font-semibold text-base shadow-xl shadow-[#004658]/25 hover:bg-[#003442] hover:-translate-y-0.5 hover:shadow-2xl hover:shadow-[#004658]/35 transition-all duration-200"
           >
             <span>Start Your Project</span>
@@ -57,11 +61,11 @@ const Hero = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </Link>
 
           {/* Secondary CTA */}
-          <a
-            href="#services"
+          <Link
+            to="/web-development"
             className="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-white/90 border border-[#004658]/20 text-[#004658] font-semibold text-base hover:bg-[#004658]/8 hover:border-[#004658]/35 hover:-translate-y-0.5 transition-all duration-200 shadow-sm backdrop-blur-md"
           >
             <span>Explore Services</span>
@@ -73,7 +77,7 @@ const Hero = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {/* Centerpiece Interactive Glass Studio Mockup */}
@@ -139,7 +143,7 @@ const Hero = () => {
           </div>
 
           {/* Floating Glass Pill Badge Left */}
-          <div className="hidden lg:flex absolute -left-6 top-1/2 -translate-y-1/2 p-4 rounded-2xl bg-white/95 border border-[#004658]/20 shadow-2xl backdrop-blur-xl items-center gap-3 animate-bounce [animation-duration:4s]">
+          <Link to="/services/web-performance-optimization" className="hidden lg:flex absolute -left-6 top-1/2 -translate-y-1/2 p-4 rounded-2xl bg-white/95 border border-[#004658]/20 shadow-2xl backdrop-blur-xl items-center gap-3 animate-bounce [animation-duration:4s] hover:border-[#004658]/40 transition-colors">
             <div className="w-9 h-9 rounded-xl bg-[#004658] text-white flex items-center justify-center font-bold text-sm shadow-md">
               ⚡
             </div>
@@ -147,10 +151,10 @@ const Hero = () => {
               <div className="text-xs font-bold text-slate-900">Ultra-Fast Loading</div>
               <div className="text-[10px] text-slate-500">60 FPS Smooth Motion</div>
             </div>
-          </div>
+          </Link>
 
           {/* Floating Glass Pill Badge Right */}
-          <div className="hidden lg:flex absolute -right-6 top-1/3 p-4 rounded-2xl bg-white/95 border border-[#004658]/20 shadow-2xl backdrop-blur-xl items-center gap-3 animate-bounce [animation-duration:5s]">
+          <Link to="/security-ip-protection" className="hidden lg:flex absolute -right-6 top-1/3 p-4 rounded-2xl bg-white/95 border border-[#004658]/20 shadow-2xl backdrop-blur-xl items-center gap-3 animate-bounce [animation-duration:5s] hover:border-[#004658]/40 transition-colors">
             <div className="w-9 h-9 rounded-xl bg-[#004658]/10 text-[#004658] flex items-center justify-center font-bold text-sm">
               🛡️
             </div>
@@ -158,7 +162,7 @@ const Hero = () => {
               <div className="text-xs font-bold text-slate-900">Enterprise Security</div>
               <div className="text-[10px] text-slate-500">24/7 Monitored Architecture</div>
             </div>
-          </div>
+          </Link>
 
         </div>
 

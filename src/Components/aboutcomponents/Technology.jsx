@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 // Comprehensive, High-Fidelity Tech Stack Data (16 Enterprise Modules)
 const techStackData = [
@@ -1247,9 +1248,9 @@ const Technology = () => {
           </div>
 
           <div className="flex items-center gap-3 sm:gap-4 flex-wrap font-mono text-[10px] text-slate-400">
-            <span>• Zero Legacy Debt</span>
-            <span>• 100% CI/CD Automated</span>
-            <span>• Global Edge CDN Ready</span>
+            <Link to="/engineering-standards" className="hover:text-[#004658] transition-colors">• Engineering Standards</Link>
+            <Link to="/security-ip-protection" className="hover:text-[#004658] transition-colors">• Security & IP Protection</Link>
+            <Link to="/schedule-consultation" className="hover:text-[#004658] transition-colors">• Schedule Consultation</Link>
           </div>
         </div>
 

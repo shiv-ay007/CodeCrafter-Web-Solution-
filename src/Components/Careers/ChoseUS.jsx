@@ -159,7 +159,7 @@ const ChoseUS = () => {
         {/* Centered Engineering Standards CTA Button */}
         <div className="flex justify-center mb-12">
           <Link
-            to="/about"
+            to="/engineering-standards"
             className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-[#004658] text-white font-bold text-sm sm:text-[15px] shadow-lg shadow-[#004658]/20 hover:bg-[#003442] hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 group cursor-pointer"
           >
             <span>Explore Our Engineering Standards</span>
@@ -182,18 +182,18 @@ const ChoseUS = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-3 shrink-0">
-            <a
-              href="#careers"
+            <Link
+              to="/contact"
               className="px-6 py-3 rounded-xl bg-white text-[#004658] font-bold text-xs sm:text-sm hover:bg-slate-100 shadow-md transition-all duration-200 cursor-pointer"
             >
               <span>View Open Roles</span>
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-xs sm:text-sm transition-all duration-200 cursor-pointer"
             >
               <span>Talk to an Architect</span>
-            </a>
+            </Link>
           </div>
         </div>
 

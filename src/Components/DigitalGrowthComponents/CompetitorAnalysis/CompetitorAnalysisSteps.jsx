@@ -1,37 +1,37 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Check, ShieldCheck, MapPin, Search, Star, Award } from 'lucide-react'
+import { ShieldCheck, Search, Target, Zap } from 'lucide-react'
 
-const localSteps = [
+const steps = [
   {
     step: '01',
-    title: 'Google Business Profile Audit & Category Alignment',
-    desc: 'Deep audit of primary & secondary GMB categories, attributes, profile completeness, geo-tagged photos, and keyword-rich business descriptions.',
-    badge: 'Step 1: Audit'
+    title: 'Competitor Landscape & Rival Identification',
+    desc: 'Identifying direct, indirect, and SERP-based organic competitors who are currently capturing your target keyword impression share.',
+    badge: 'Phase 1: Discovery'
   },
   {
     step: '02',
-    title: '150+ Authority Citation & NAP Sync',
-    desc: 'Auditing and fixing existing duplicate or inconsistent citations. Syncing exact Name, Address, and Phone number across top local directories.',
-    badge: 'Step 2: Citation Sync'
+    title: 'Deep Multi-Layer Data Extraction & Gap Audit',
+    desc: 'Extracting competitor backlink networks, top-traffic pages, high-ROI paid ad keywords, conversion triggers, and UX speed bottlenecks.',
+    badge: 'Phase 2: Data Audit'
   },
   {
     step: '03',
-    title: 'Automated 5-Star Review Generation Funnel',
-    desc: 'Integrating automated SMS & email review acquisition campaigns that continuously collect verified positive Google reviews from happy clients.',
-    badge: 'Step 3: Review Engine'
+    title: 'Strategic Counter-Positioning Blueprint',
+    desc: 'Crafting a customized blueprint that targets rival weaknesses, captures unserved keyword gaps, and builds superior content pillars.',
+    badge: 'Phase 3: Blueprint'
   },
   {
     step: '04',
-    title: 'Geo-Targeted Landing Pages & Map Grid Domination',
-    desc: 'Building localized landing pages embedded with Google Maps Schema and tracking rank movement across target city neighborhood grids.',
-    badge: 'Step 4: Map Domination'
+    title: 'Execution & Continuous Real-Time Tracking',
+    desc: 'Deploying optimized campaigns, monitoring competitor rank changes, and adjusting counter-strategies in real time for sustained domination.',
+    badge: 'Phase 4: Monitoring'
   }
 ]
 
-const LocalSeoSteps = () => {
+const CompetitorAnalysisSteps = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto select-none" id="local-blueprint">
+    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto select-none">
       
       {/* Header */}
       <motion.div 
@@ -41,23 +41,23 @@ const LocalSeoSteps = () => {
         transition={{ duration: 0.5 }}
         className="text-center max-w-3xl mx-auto mb-16"
       >
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-800 text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-emerald-500/20">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span>Local Ranking Blueprint</span>
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 text-cyan-900 text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-cyan-500/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+          <span>4-Phase Execution Framework</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight mb-4">
-          How We Put Your Business At The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] to-[#00D8FF]">Top Of Google Maps</span>
+          How We Outposition <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] to-[#00D8FF]">Your Rivals</span>
         </h2>
 
         <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-          Our proven 4-step framework guarantees that whenever anyone searches nearby for your services, your business is the very first one they call.
+          Our systematic 4-phase competitor deconstruction process ensures your brand systematically captures traffic, rankings, and market share.
         </p>
       </motion.div>
 
       {/* 4 Steps Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {localSteps.map((s, idx) => (
+        {steps.map((s, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 20 }}
@@ -86,8 +86,8 @@ const LocalSeoSteps = () => {
             </div>
 
             <div className="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#004658]">
-              <span>Execution Guaranteed</span>
-              <ShieldCheck className="w-4 h-4 text-emerald-500" />
+              <span>Data Verified</span>
+              <ShieldCheck className="w-4 h-4 text-cyan-500" />
             </div>
           </motion.div>
         ))}
@@ -97,4 +97,4 @@ const LocalSeoSteps = () => {
   )
 }
 
-export default LocalSeoSteps
+export default CompetitorAnalysisSteps

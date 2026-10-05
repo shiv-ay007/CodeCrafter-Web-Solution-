@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -613,13 +614,13 @@ const FeaturedProjects = () => {
             Let's turn your idea into a complete digital solution.
           </h3>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#063F4C] px-6 py-3.5 text-sm font-extrabold text-white shadow-[0_15px_35px_rgba(3,63,76,0.20)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#087F99]"
           >
             Start Your Project
             <ArrowUpRight size={18} />
-          </a>
+          </Link>
 
         </motion.div>
 

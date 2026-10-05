@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Values = () => {
   return (
@@ -55,10 +56,10 @@ const Values = () => {
               </p>
             </div>
 
-            <div className="mt-10 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658]">
+            <Link to="/engineering-standards" className="mt-10 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658] hover:text-[#003442] transition-colors">
               <span>Excellence First</span>
-              <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-            </div>
+              <span className="ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+            </Link>
           </div>
 
           {/* Card 2: Transparency */}
@@ -82,10 +83,10 @@ const Values = () => {
               </p>
             </div>
 
-            <div className="mt-10 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658]">
+            <Link to="/security-ip-protection" className="mt-10 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658] hover:text-[#003442] transition-colors">
               <span>Trust Driven</span>
-              <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-            </div>
+              <span className="ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+            </Link>
           </div>
 
           {/* Card 3: Innovation */}
@@ -109,10 +110,10 @@ const Values = () => {
               </p>
             </div>
 
-            <div className="mt-10 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658]">
+            <Link to="/case-studies" className="mt-10 pt-4 border-t border-slate-100 flex items-center gap-2 text-xs font-semibold text-[#004658] hover:text-[#003442] transition-colors">
               <span>Future Ready</span>
-              <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
-            </div>
+              <span className="ml-auto opacity-70 group-hover:opacity-100 group-hover:translate-x-1 transition-all">→</span>
+            </Link>
           </div>
 
         </div>

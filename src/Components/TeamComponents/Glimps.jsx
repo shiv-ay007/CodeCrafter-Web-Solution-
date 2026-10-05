@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const galleryMoments = [
   {
@@ -189,15 +190,15 @@ const Glimps = () => {
             </p>
           </div>
 
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#004658] text-white font-bold text-xs hover:bg-[#003442] shadow-md shadow-[#004658]/20 hover:scale-105 transition-all duration-200 shrink-0"
           >
             <span>Book A Studio Tour</span>
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </Link>
         </div>
 
         {/* Modal Lightbox for Instant Full Photo Inspection */}

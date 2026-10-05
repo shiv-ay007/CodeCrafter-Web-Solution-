@@ -1,37 +1,37 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Check, ShieldCheck, MapPin, Search, Star, Award } from 'lucide-react'
+import { ShieldCheck, Target, Layers, Compass } from 'lucide-react'
 
-const localSteps = [
+const steps = [
   {
     step: '01',
-    title: 'Google Business Profile Audit & Category Alignment',
-    desc: 'Deep audit of primary & secondary GMB categories, attributes, profile completeness, geo-tagged photos, and keyword-rich business descriptions.',
-    badge: 'Step 1: Audit'
+    title: 'Query Intent Extraction & Semantic Clustering',
+    desc: 'Extracting seed search terms and analyzing SERP top-10 results to classify search intent into Informational, Commercial, and Transactional buckets.',
+    badge: 'Phase 1: Extraction'
   },
   {
     step: '02',
-    title: '150+ Authority Citation & NAP Sync',
-    desc: 'Auditing and fixing existing duplicate or inconsistent citations. Syncing exact Name, Address, and Phone number across top local directories.',
-    badge: 'Step 2: Citation Sync'
+    title: 'SERP Feature Analysis & Page Layout Blueprint',
+    desc: 'Deconstructing what content formats (Tables, Video, How-Tos, Calculators) Google rewards for each query to design matching page blueprints.',
+    badge: 'Phase 2: Layout Blueprint'
   },
   {
     step: '03',
-    title: 'Automated 5-Star Review Generation Funnel',
-    desc: 'Integrating automated SMS & email review acquisition campaigns that continuously collect verified positive Google reviews from happy clients.',
-    badge: 'Step 3: Review Engine'
+    title: 'High-Converting Content & Funnel Creation',
+    desc: 'Authoring hyper-relevant, intent-matched copy and friction-free landing page CTAs that fulfill the user search query in seconds.',
+    badge: 'Phase 3: Content Creation'
   },
   {
     step: '04',
-    title: 'Geo-Targeted Landing Pages & Map Grid Domination',
-    desc: 'Building localized landing pages embedded with Google Maps Schema and tracking rank movement across target city neighborhood grids.',
-    badge: 'Step 4: Map Domination'
+    title: 'Dwell Time Testing & Conversion Rate Optimization',
+    desc: 'Continuously measuring dwell time, scroll depth, and conversion metrics to refine intent matching for maximum search engine rankings.',
+    badge: 'Phase 4: CRO & Testing'
   }
 ]
 
-const LocalSeoSteps = () => {
+const SearchIntentMappingSteps = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto select-none" id="local-blueprint">
+    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto select-none">
       
       {/* Header */}
       <motion.div 
@@ -41,23 +41,23 @@ const LocalSeoSteps = () => {
         transition={{ duration: 0.5 }}
         className="text-center max-w-3xl mx-auto mb-16"
       >
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-800 text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-emerald-500/20">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span>Local Ranking Blueprint</span>
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 text-cyan-900 text-xs font-mono font-bold uppercase tracking-wider mb-4 border border-cyan-500/20">
+          <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse" />
+          <span>4-Phase Intent Framework</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-tight mb-4">
-          How We Put Your Business At The <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] to-[#00D8FF]">Top Of Google Maps</span>
+          How We Map & Scale <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] to-[#00D8FF]">Search Intent</span>
         </h2>
 
         <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed">
-          Our proven 4-step framework guarantees that whenever anyone searches nearby for your services, your business is the very first one they call.
+          Our systematic intent mapping process turns raw search engine impressions into engaged leads and immediate purchasing decisions.
         </p>
       </motion.div>
 
       {/* 4 Steps Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {localSteps.map((s, idx) => (
+        {steps.map((s, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, y: 20 }}
@@ -86,7 +86,7 @@ const LocalSeoSteps = () => {
             </div>
 
             <div className="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-[#004658]">
-              <span>Execution Guaranteed</span>
+              <span>Intent Optimized</span>
               <ShieldCheck className="w-4 h-4 text-emerald-500" />
             </div>
           </motion.div>
@@ -97,4 +97,4 @@ const LocalSeoSteps = () => {
   )
 }
 
-export default LocalSeoSteps
+export default SearchIntentMappingSteps

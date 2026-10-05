@@ -14,13 +14,9 @@ const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
-  // Scroll to top on route change
+  // Scroll to top instantly on route change
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   // Track window scroll position and progress

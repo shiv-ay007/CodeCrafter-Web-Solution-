@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const careerHighlights = [
   {
@@ -102,20 +103,20 @@ const HeroCareer = () => {
 
               {/* Action Buttons */}
               <div className="flex flex-wrap items-center gap-4 mb-9">
-                <a
-                  href="#open-roles"
+                <Link
+                  to="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#004658] text-white font-bold text-xs sm:text-sm hover:bg-[#003442] shadow-lg shadow-[#004658]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
                 >
                   <span>View Open Positions</span>
                   <span className="text-base">→</span>
-                </a>
+                </Link>
 
-                <a
-                  href="#culture"
+                <Link
+                  to="/about"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white/90 border border-slate-300 text-slate-800 font-bold text-xs sm:text-sm hover:bg-slate-50 hover:border-[#004658]/40 hover:text-[#004658] shadow-sm transition-all duration-200"
                 >
                   <span>Our Culture</span>
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -188,9 +189,9 @@ const HeroCareer = () => {
                   <span>Interview to Offer in <strong>7 Business Days</strong></span>
                 </div>
 
-                <a href="#open-roles" className="text-[#004658] font-bold hover:underline">
+                <Link to="/engineering-standards" className="text-[#004658] font-bold hover:underline">
                   Explore Perks →
-                </a>
+                </Link>
               </div>
 
             </div>
@@ -256,9 +257,9 @@ const HeroCareer = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center gap-1.5 shrink-0 font-mono text-[10.5px] text-cyan-200 font-bold bg-[#004658]/90 px-3 py-1 rounded-lg border border-cyan-400/40 shadow-sm">
-                  <span>6+ Open Roles</span>
-                </div>
+                <Link to="/contact" className="flex items-center gap-1.5 shrink-0 font-mono text-[10.5px] text-cyan-200 font-bold bg-[#004658]/90 hover:bg-[#003442] px-3 py-1 rounded-lg border border-cyan-400/40 shadow-sm transition-colors cursor-pointer">
+                  <span>6+ Open Roles →</span>
+                </Link>
               </div>
 
             </div>

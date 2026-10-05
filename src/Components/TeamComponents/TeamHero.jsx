@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const teamMembers = [
   {
@@ -79,25 +80,25 @@ const TeamHero = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto">
-              <a
-                href="#careers"
+              <Link
+                to="/careers"
                 className="px-7 py-3.5 rounded-full bg-[#004658] text-white font-semibold text-sm hover:bg-[#003442] shadow-lg shadow-[#004658]/25 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex items-center justify-center gap-2"
               >
                 <span>Join Us</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </a>
+              </Link>
 
-              <a
-                href="#contact"
+              <Link
+                to="/contact"
                 className="px-7 py-3.5 rounded-full bg-white/90 border border-[#004658]/20 text-slate-800 font-semibold text-sm hover:text-[#004658] hover:border-[#004658]/40 hover:bg-slate-50 transition-all duration-200 backdrop-blur-md flex items-center justify-center gap-2"
               >
                 <span>Contact Team</span>
                 <svg className="w-4 h-4 text-slate-400 group-hover:text-[#004658]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             {/* Quick Team Stats Pill */}

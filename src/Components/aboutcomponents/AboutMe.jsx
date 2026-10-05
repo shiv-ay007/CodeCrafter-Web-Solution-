@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const AboutMe = () => {
   return (
@@ -69,18 +70,18 @@ const AboutMe = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
 
             {/* Floating Glass Badge Card */}
-            <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-xl border border-white/60 shadow-xl flex items-center justify-between">
+            <Link to="/team" className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-xl border border-white/60 shadow-xl flex items-center justify-between hover:bg-white transition-colors group/badge">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-[#004658] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">
                   CC
                 </div>
                 <div>
-                  <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Passionate Crafters</h4>
-                  <p className="text-[11px] text-slate-600">Designers, Developers & Strategists</p>
+                  <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider group-hover/badge:text-[#004658] transition-colors">Passionate Crafters</h4>
+                  <p className="text-[11px] text-slate-600">Designers, Developers & Strategists →</p>
                 </div>
               </div>
               <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10B981]" />
-            </div>
+            </Link>
           </div>
         </div>
 

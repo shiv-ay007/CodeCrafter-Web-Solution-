@@ -5,6 +5,7 @@ import Vision from '../Components/aboutcomponents/Vision'
 import Values from '../Components/aboutcomponents/Values'
 import Timeline from '../Components/aboutcomponents/Timeline'
 import Technology from '../Components/aboutcomponents/Technology'
+import Cta from '../Components/HeroComponent/Cta'
 
 const About = () => {
   return (
@@ -15,6 +16,7 @@ const About = () => {
    <Values/>
    <Timeline/>
    <Technology/>
+   <Cta/>
    </>
   )
 }

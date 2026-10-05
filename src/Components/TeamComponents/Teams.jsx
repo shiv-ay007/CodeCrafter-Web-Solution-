@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 
@@ -278,13 +279,13 @@ const Teams = () => {
             </p>
           </div>
 
-          <a 
-            href="#contact" 
+          <Link 
+            to="/contact" 
             className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#004658] text-white font-bold text-xs hover:bg-[#003442] shadow-md shadow-[#004658]/20 hover:scale-105 transition-all duration-200 shrink-0 cursor-pointer"
           >
             <span>Schedule A Call</span>
             <ArrowRight size={14} />
-          </a>
+          </Link>
         </div>
 
       </div>

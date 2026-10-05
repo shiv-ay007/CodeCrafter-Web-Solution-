@@ -34,6 +34,8 @@ import FlutterApp from '../Pages/FlutterApp'
 import SeoOptimization from '../Pages/SeoOptimization'
 import GoogleAds from '../Pages/GoogleAds'
 import LocalSeo from '../Pages/LocalSeo'
+import CompetitorAnalysis from '../Pages/CompetitorAnalysis'
+import SearchIntentMapping from '../Pages/SearchIntentMapping'
 import SocialMedia from '../Pages/SocialMedia'
 import ContentMarketing from '../Pages/ContentMarketing'
 import BrandIdentity from '../Pages/BrandIdentity'
@@ -153,6 +155,8 @@ const AppRoute = () => {
         <Route path="/digital-booster/seo" element={<PageWrapper><SeoOptimization /></PageWrapper>} />
         <Route path="/digital-booster/google-ads" element={<PageWrapper><GoogleAds /></PageWrapper>} />
         <Route path="/digital-booster/local-seo" element={<PageWrapper><LocalSeo /></PageWrapper>} />
+        <Route path="/digital-booster/competitor-analysis" element={<PageWrapper><CompetitorAnalysis /></PageWrapper>} />
+        <Route path="/digital-booster/search-intent-mapping" element={<PageWrapper><SearchIntentMapping /></PageWrapper>} />
         <Route path="/digital-booster/social-media" element={<PageWrapper><SocialMedia /></PageWrapper>} />
         <Route path="/digital-booster/content-marketing" element={<PageWrapper><ContentMarketing /></PageWrapper>} />
         <Route path="/digital-booster/branding" element={<PageWrapper><BrandIdentity /></PageWrapper>} />

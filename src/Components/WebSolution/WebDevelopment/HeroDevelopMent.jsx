@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 /**
  * HeroDevelopMent - High-Impact Software Engineering & Full-Stack Cloud Hero Section
@@ -422,8 +423,8 @@ const HeroDevelopMent = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-6 w-full sm:w-auto justify-center">
           
           {/* Primary Action Button */}
-          <a
-            href="#contact"
+          <Link
+            to="/contact"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full text-base font-bold text-white bg-gradient-to-r from-[#004658] to-[#00738e] hover:from-[#003442] hover:to-[#005a72] shadow-xl shadow-[#004658]/25 hover:shadow-2xl hover:shadow-[#004658]/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer"
           >
             <span>Build Your Product</span>
@@ -435,11 +436,11 @@ const HeroDevelopMent = () => {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
-          </a>
+          </Link>
 
           {/* Secondary Action Button */}
-          <a
-            href="#architecture"
+          <Link
+            to="/services/saas-web-platforms"
             className={`w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-9 py-4 rounded-full text-base font-bold border transition-all duration-300 cursor-pointer ${
               isDarkMode
                 ? 'bg-slate-900 border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white'
@@ -448,7 +449,7 @@ const HeroDevelopMent = () => {
           >
             <span>Architecture Stack</span>
             <span className="text-sm font-mono opacity-70">↗</span>
-          </a>
+          </Link>
 
         </div>
 
