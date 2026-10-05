@@ -255,7 +255,7 @@ const Contactus = () => {
                     required
                     aria-required="true"
                     autoComplete="email"
-                    placeholder="rahul@company.com"
+                    placeholder="codecrafter@company.com"
                     className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/80 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
                   />
                 </div>
@@ -275,7 +275,7 @@ const Contactus = () => {
                       required
                       aria-required="true"
                       autoComplete="tel"
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 9336969289"
                       className="w-full px-3.5 py-2.5 rounded-xl bg-slate-50/80 border border-slate-200 text-slate-900 text-xs sm:text-sm focus:outline-none focus:border-[#004658] focus:bg-white focus:ring-2 focus:ring-[#004658]/10 transition-all"
                     />
                   </div>
