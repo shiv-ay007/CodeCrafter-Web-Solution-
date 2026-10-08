@@ -195,12 +195,12 @@ const BrowserMockup = ({ image, title, link }) => {
         </div>
 
         {/* Image */}
-        <div className="relative aspect-[16/10] overflow-hidden bg-[#EEF7F8]">
+        <div className="relative overflow-hidden bg-[#EEF7F8]">
 
           <img
             src={image}
             alt={`${title} web development project`}
-            className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.04]"
+            className="w-full h-auto block object-contain transition-transform duration-700 group-hover:scale-[1.02]"
           />
 
           {/* Hover Overlay */}
