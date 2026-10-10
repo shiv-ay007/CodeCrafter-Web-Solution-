@@ -62,7 +62,7 @@ const teamMembers = [
     name: 'Shivam Yadav',
     role: 'Associate Software Developer',
     category: 'Engineering',
-    tag: 'Frontend Dev',
+    tag: 'Web Dev',
     img: shivamImg,
     tagline: 'Modern Component Systems & Intuitive User Interfaces',
     skills: ['React', 'JavaScript', 'HTML5/CSS3', 'Tailwind']
@@ -82,7 +82,7 @@ const teamMembers = [
     name: 'Ayushi Srivastava',
     role: 'Associate Software Developer',
     category: 'Engineering',
-    tag: 'Software Dev',
+    tag: 'Web Dev',
     img: ayushiImg,
     tagline: 'Clean Code, High-Speed Interfaces & Feature Delivery',
     skills: ['React', 'JavaScript', 'Web Apps', 'CSS3']
@@ -246,21 +246,9 @@ const Teams = () => {
                     {member.name}
                   </h3>
 
-                  <p className="text-xs text-slate-300 font-normal leading-relaxed mb-3 line-clamp-2">
+                  <p className="text-xs text-slate-300 font-normal leading-relaxed line-clamp-2">
                     {member.tagline}
                   </p>
-
-                  {/* Skills Pill Row */}
-                  <div className="flex flex-wrap gap-1.5 pt-2 border-t border-white/15">
-                    {member.skills.map((skill, idx) => (
-                      <span
-                        key={idx}
-                        className="px-2 py-0.5 rounded-md text-[10.5px] font-medium bg-white/15 backdrop-blur-sm text-slate-200 border border-white/20 group-hover:border-cyan-400/40 group-hover:text-white transition-colors"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
                 </div>
 
               </motion.div>
