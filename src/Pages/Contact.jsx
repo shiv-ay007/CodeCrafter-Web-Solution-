@@ -29,7 +29,7 @@ const Contact = () => {
           
           {/* CARD 1: Email Us Directly */}
           <motion.a
-            href="mailto:contact@codecrafter.io"
+            href="mailto:codecrafter73@gmail.com"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
@@ -70,7 +70,7 @@ const Contact = () => {
             {/* Bottom Contact Anchor & Action Pill */}
             <div className="pt-4 border-t border-slate-100/90 flex items-center justify-between">
               <span className="text-xs sm:text-sm font-mono font-bold text-[#004658] tracking-tight group-hover:underline">
-                contact@codecrafter.io
+                codecrafter73@gmail.com
               </span>
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-slate-100 text-slate-600 group-hover:bg-[#004658] group-hover:text-white transition-all duration-300 group-hover:translate-x-0.5">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@ const Contact = () => {
 
           {/* CARD 2: Direct WhatsApp Chat */}
           <motion.a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/919336969289"
             target="_blank"
             rel="noopener noreferrer"
             initial={{ opacity: 0, y: 30 }}
@@ -125,7 +125,7 @@ const Contact = () => {
             {/* Bottom Contact Anchor & Action Pill */}
             <div className="pt-4 border-t border-slate-100/90 flex items-center justify-between">
               <span className="text-xs sm:text-sm font-mono font-bold text-emerald-600 tracking-tight group-hover:underline">
-                +91 (987) 654-3210
+                +91 9336969289
               </span>
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 group-hover:translate-x-0.5">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@ const Contact = () => {
 
           {/* CARD 3: Emergency 24/7 SLA */}
           <motion.a
-            href="mailto:sla-emergency@codecrafter.io"
+            href="mailto:hr.codecrafter@gmail.com"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
@@ -178,7 +178,7 @@ const Contact = () => {
             {/* Bottom Contact Anchor & Action Pill */}
             <div className="pt-4 border-t border-slate-100/90 flex items-center justify-between">
               <span className="text-xs sm:text-sm font-mono font-bold text-[#EA580C] tracking-tight group-hover:underline">
-                sla-emergency@codecrafter.io
+                hr.codecrafter@gmail.com
               </span>
               <span className="flex h-7 w-7 items-center justify-center rounded-full bg-amber-50 text-[#EA580C] group-hover:bg-[#EA580C] group-hover:text-white transition-all duration-300 group-hover:translate-x-0.5">
                 <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
