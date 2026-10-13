@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeroAndroid = () => {
   return (
-    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden">
+    <section className="relative pt-28 pb-8 sm:pt-32 sm:pb-10 lg:pt-36 lg:pb-12 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden">
       <div 
         className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[400px] pointer-events-none rounded-full opacity-25 blur-3xl -z-10"
         style={{

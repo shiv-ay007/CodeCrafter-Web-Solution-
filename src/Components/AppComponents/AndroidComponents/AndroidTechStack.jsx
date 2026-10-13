@@ -79,7 +79,7 @@ const tools = [
 
 const AndroidTechStack = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 rounded-3xl border border-slate-200/80 my-10 relative overflow-hidden shadow-sm">
+    <section className="py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 rounded-3xl border border-slate-200/80 my-6 sm:my-8 relative overflow-hidden shadow-sm">
       {/* Background Subtle Ambient Glow */}
       <div className="absolute -top-32 -left-32 w-80 h-80 bg-[#004658]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-[#00D8FF]/10 rounded-full blur-3xl pointer-events-none" />
@@ -89,7 +89,7 @@ const AndroidTechStack = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="text-center max-w-2xl mx-auto mb-14 relative z-10"
+        className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 relative z-10"
       >
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4 shadow-sm">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

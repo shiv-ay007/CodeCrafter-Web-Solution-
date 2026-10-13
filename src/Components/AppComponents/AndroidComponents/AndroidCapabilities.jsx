@@ -26,13 +26,13 @@ const capabilities = [
 
 const AndroidCapabilities = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto" id="capabilities">
+    <section className="py-10 sm:py-14 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto" id="capabilities">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="text-center max-w-3xl mx-auto mb-16"
+        className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
       >
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/10 text-[#004658] text-xs font-bold uppercase tracking-wider mb-4">
           Android Engineering Core

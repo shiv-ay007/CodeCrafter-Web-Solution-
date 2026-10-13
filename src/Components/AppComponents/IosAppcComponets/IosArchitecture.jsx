@@ -54,7 +54,7 @@ const swiftStack = [
 
 const IosArchitecture = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 rounded-3xl border border-slate-200/80 my-10 relative overflow-hidden shadow-sm">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto bg-gradient-to-b from-slate-50/80 via-white to-slate-50/80 rounded-3xl border border-slate-200/80 my-10 relative overflow-hidden shadow-sm">
       <div className="absolute -top-32 -left-32 w-80 h-80 bg-[#0071E3]/5 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-[#00D8FF]/10 rounded-full blur-3xl pointer-events-none" />
 
