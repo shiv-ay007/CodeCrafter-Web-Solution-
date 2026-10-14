@@ -3,7 +3,7 @@ import React from "react";
 import { ArrowUpRight, ExternalLink, Layers3, ShoppingBag } from "lucide-react";
 
 import kaashtkartImage from "../../../assets/images/kashcart.png";
-import dssImage from "../../../assets/images/DSS.png";
+import dssImage from "../../../assets/images/crm2.png";
 
 const projects = [
   {

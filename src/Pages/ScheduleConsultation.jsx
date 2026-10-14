@@ -109,8 +109,8 @@ const ScheduleConsultation = () => {
               <p className="text-sm text-slate-200">
                 You can also email your RFP or project specs directly to our engineering team at:
               </p>
-              <a href="mailto:contact@codecrafter.io" className="inline-block text-base font-bold text-[#4EF0C5] hover:underline">
-                contact@codecrafter.io
+              <a href="mailto:codecrafter73@gmail.com" className="inline-block text-base font-bold text-[#4EF0C5] hover:underline">
+                codecrafter73@gmail.com
               </a>
             </div>
           </div>

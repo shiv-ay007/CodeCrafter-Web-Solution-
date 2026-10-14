@@ -61,7 +61,7 @@ const capabilities = [
 
 const CompetitorAnalysisGrid = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto relative select-none" id="competitor-grid">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto relative select-none" id="competitor-grid">
       
       {/* Header */}
       <motion.div 

@@ -20,7 +20,7 @@ const InstagramFeed = () => {
       {/* Background Decoration */}
       <div className="absolute -top-24 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-pink-100/40 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+      <div className="relative mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
         <div className="mx-auto mb-14 max-w-2xl text-center">

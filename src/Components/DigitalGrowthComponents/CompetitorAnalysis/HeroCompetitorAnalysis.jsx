@@ -5,7 +5,7 @@ import { Search, Eye, TrendingUp, ShieldAlert, Target, Zap, ArrowRight, CheckCir
 
 const HeroCompetitorAnalysis = () => {
   return (
-    <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden select-none">
+    <section className="relative pt-28 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden select-none">
       
       {/* Soft Radial Ambient Glow */}
       <div 

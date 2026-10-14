@@ -39,6 +39,8 @@ import SearchIntentMapping from '../Pages/SearchIntentMapping'
 import SocialMedia from '../Pages/SocialMedia'
 import ContentMarketing from '../Pages/ContentMarketing'
 import BrandIdentity from '../Pages/BrandIdentity'
+import LinkedInLeadGen from '../Pages/LinkedInLeadGen'
+import YouTubeMarketing from '../Pages/YouTubeMarketing'
 
 // Software & Industry Portals Pages
 import CrmSoftware from '../Pages/CrmSoftware'
@@ -160,6 +162,8 @@ const AppRoute = () => {
         <Route path="/digital-booster/social-media" element={<PageWrapper><SocialMedia /></PageWrapper>} />
         <Route path="/digital-booster/content-marketing" element={<PageWrapper><ContentMarketing /></PageWrapper>} />
         <Route path="/digital-booster/branding" element={<PageWrapper><BrandIdentity /></PageWrapper>} />
+        <Route path="/digital-booster/linkedin-lead-gen" element={<PageWrapper><LinkedInLeadGen /></PageWrapper>} />
+        <Route path="/digital-booster/youtube-marketing" element={<PageWrapper><YouTubeMarketing /></PageWrapper>} />
 
         {/* Enterprise Software & Industry Portals Routes */}
         <Route path="/software/crm" element={<PageWrapper><CrmSoftware /></PageWrapper>} />

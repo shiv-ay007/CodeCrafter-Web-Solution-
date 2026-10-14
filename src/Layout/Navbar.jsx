@@ -139,8 +139,8 @@ const menuItems = [
     topCol2: [
       { name: "Google Ads (PPC Campaigns)", path: "/digital-booster/google-ads" },
       { name: "Meta & Instagram Ads", path: "/digital-booster/social-media" },
-      { name: "LinkedIn B2B Lead Gen", path: "/digital-booster/social-media" },
-      { name: "YouTube Video Marketing", path: "/digital-booster/content-marketing" },
+      { name: "LinkedIn B2B Lead Gen", path: "/digital-booster/linkedin-lead-gen" },
+      { name: "YouTube Video Marketing", path: "/digital-booster/youtube-marketing" },
       { name: "Influencer Marketing Ops", path: "/digital-booster/social-media" }
     ],
     enterpriseHeading: "BRAND & CONVERSION",

@@ -33,7 +33,7 @@ const CompetitorAnalysisFaq = () => {
   }
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1200px] mx-auto select-none">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1200px] mx-auto select-none">
       
       {/* Header */}
       <div className="text-center max-w-3xl mx-auto mb-14">

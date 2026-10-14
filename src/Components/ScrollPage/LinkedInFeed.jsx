@@ -19,7 +19,7 @@ const LinkedInFeed = () => {
       {/* Background Glow */}
       <div className="absolute right-0 top-10 h-72 w-72 rounded-full bg-blue-100/40 blur-3xl" />
 
-      <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+      <div className="relative mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
 
         {/* Section Heading */}
         <div className="mx-auto mb-14 max-w-2xl text-center">
@@ -57,7 +57,7 @@ const LinkedInFeed = () => {
         <div className="mt-10 text-center">
 
           <a
-            href="https://www.linkedin.com/"
+            href="https://www.linkedin.com/company/code-crafter-web-solutions/home/"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-3 rounded-full bg-blue-600 px-7 py-3.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-xl"

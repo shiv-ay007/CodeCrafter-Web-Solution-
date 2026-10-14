@@ -61,7 +61,7 @@ const intentCapabilities = [
 
 const SearchIntentMappingGrid = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto relative select-none" id="intent-grid">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto relative select-none" id="intent-grid">
       
       {/* Header */}
       <motion.div 

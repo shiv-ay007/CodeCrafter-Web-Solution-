@@ -38,7 +38,7 @@ const comparisonData = [
 
 const LocalSeoComparison = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto select-none">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto select-none">
       
       {/* Container */}
       <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-[#004658]/40 rounded-3xl p-6 sm:p-10 lg:p-12 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
