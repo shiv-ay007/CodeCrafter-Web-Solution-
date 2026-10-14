@@ -67,12 +67,7 @@ const HeroSearchIntentMapping = () => {
               <ArrowRight className="w-4 h-4" />
             </Link>
 
-            <a
-              href="#intent-grid"
-              className="inline-flex items-center justify-center font-bold text-slate-700 bg-slate-100 hover:bg-slate-200/80 rounded-xl px-6 py-3.5 text-sm transition-all duration-300 cursor-pointer"
-            >
-              Explore Intent Quadrants ➔
-            </a>
+           
           </div>
         </motion.div>
 

@@ -50,12 +50,7 @@ const HeroContentMarketing = () => {
             >
               Order Content Strategy ➔
             </Link>
-            <a
-              href="#funnel"
-              className="inline-flex items-center justify-center font-bold text-slate-700 bg-slate-100 hover:bg-slate-200/80 rounded-xl px-6 py-3.5 text-sm transition-all duration-300"
-            >
-              Our Content Funnel
-            </a>
+            
           </div>
         </div>
 
