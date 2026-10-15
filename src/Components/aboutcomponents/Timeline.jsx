@@ -1,44 +1,46 @@
 import React from 'react'
 
 const Timeline = () => {
-  const milestones = [
-    {
-      year: "2019",
-      title: "Company Founded",
-      desc: "Started as a small team of 5 engineers with a vision to build world-class digital solutions.",
-      badge: "Inception",
-      icon: "🌱"
-    },
-    {
-      year: "2021",
-      title: "50+ Enterprise Clients",
-      desc: "Expanded into healthcare, fintech, and e-commerce, delivering robust web & mobile products.",
-      badge: "Expansion",
-      icon: "🚀"
-    },
-    {
-      year: "2023",
-      title: "SaaS & Custom Architecture",
-      desc: "Launched proprietary cloud software frameworks and sub-second web performance architectures.",
-      badge: "Innovation",
-      icon: "⚡"
-    },
-    {
-      year: "2025",
-      title: "Global Client Footprint",
-      desc: "Grown to 25+ expert crafters serving over 120+ happy clients across 15+ global industries.",
-      badge: "Scale",
-      icon: "🌍"
-    },
-    {
-      year: "2026",
-      title: "Next-Gen Tech Studio",
-      desc: "Pioneering AI-driven web apps, mobile studios, and enterprise software built for the future.",
-      badge: "Present",
-      icon: "✨",
-      highlight: true
-    }
-  ]
+ 
+const milestones = [
+  {
+    year: "2019",
+    title: "Company Planning",
+    desc: "Started planning our vision to build innovative digital solutions and create a strong foundation for a future technology company.",
+    badge: "Planning",
+    icon: "💡"
+  },
+  {
+    year: "2021",
+    title: "50+ Enterprise Clients",
+    desc: "Expanded into healthcare, fintech, and e-commerce, delivering robust web & mobile products.",
+    badge: "Expansion",
+    icon: "🚀"
+  },
+  {
+    year: "2023",
+    title: "Company Launched",
+    desc: "Officially launched the company to deliver modern web development, custom software, and digital solutions for growing businesses.",
+    badge: "Launch",
+    icon: "🎯"
+  },
+  {
+    year: "2025",
+    title: "Global Client Footprint",
+    desc: "Grown to 25+ expert crafters serving over 500+ happy clients across 15+ global industries.",
+    badge: "Scale",
+    icon: "🌍"
+  },
+  {
+    year: "2026",
+    title: "Next-Gen Tech Studio",
+    desc: "Pioneering AI-driven web apps, mobile studios, and enterprise software built for the future.",
+    badge: "Present",
+    icon: "✨",
+    highlight: true
+  }
+];
+
 
   return (
     <section className="relative py-10 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="timeline">
@@ -66,8 +68,7 @@ const Timeline = () => {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl">
-            From our founding in 2019 to an industry-leading digital studio in 2026.
-          </p>
+From our initial planning in 2019 to a next-generation digital studio in 2026.          </p>
         </div>
 
         {/* Responsive Horizontal Connected Timeline Cards Grid */}

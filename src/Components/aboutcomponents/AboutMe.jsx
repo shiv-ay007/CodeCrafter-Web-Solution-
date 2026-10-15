@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import teamWorkspace from "../../assets/images/aboutstory.jpg";
 const AboutMe = () => {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="about">
@@ -59,31 +59,15 @@ const AboutMe = () => {
         </div>
 
         {/* Right Column: Premium Rounded Image Showcase */}
-        <div className="lg:col-span-6 relative">
-          <div className="relative rounded-3xl sm:rounded-[36px] overflow-hidden border border-[#004658]/15 shadow-2xl bg-slate-900 group">
-            <img 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" 
-              alt="Codecrafter Team Workspace" 
-              className="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 opacity-95"
-            />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
-
-            {/* Floating Glass Badge Card */}
-            <Link to="/team" className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-white/90 backdrop-blur-xl border border-white/60 shadow-xl flex items-center justify-between hover:bg-white transition-colors group/badge">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[#004658] text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">
-                  CC
-                </div>
-                <div>
-                  <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider group-hover/badge:text-[#004658] transition-colors">Passionate Crafters</h4>
-                  <p className="text-[11px] text-slate-600">Designers, Developers & Strategists →</p>
-                </div>
-              </div>
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_#10B981]" />
-            </Link>
-          </div>
-        </div>
+       <div className="lg:col-span-6 relative">
+  <div className="relative rounded-3xl sm:rounded-[36px] overflow-hidden border border-[#004658]/15 shadow-2xl bg-slate-900 group">
+    <img
+      src={teamWorkspace}
+      alt="Codecrafter Team Workspace"
+      className="w-full h-[380px] sm:h-[480px] object-cover group-hover:scale-105 transition-transform duration-700 opacity-95"
+    />
+  </div>
+  </div>
 
       </div>
     </section>

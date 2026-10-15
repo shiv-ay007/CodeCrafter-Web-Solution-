@@ -1,89 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import vortexSwirlImg from "../../assets/hero_vortex_swirl.webp";
-
-// Services and capabilities showcase items
-const orbitServices = [
-  {
-    id: "uiux",
-    title: "UI/UX",
-    subtitle: "Design",
-    centerTitle: "UI/UX & DESIGN",
-    spec: "✦ TOUCH SPEC",
-    iconType: "palette",
-    badgeColor: "bg-teal-500",
-    iconBg: "bg-teal-50 text-teal-600",
-    path: "/web-design",
-    pos: "top-[4%] left-[36%] sm:left-[38%]",
-    desc: "Human-centered UI design, Figma component architecture & micro-animations."
-  },
-  {
-    id: "ai",
-    title: "AI",
-    subtitle: "Solutions",
-    centerTitle: "AI & AUTOMATION",
-    spec: "✦ SMART ENGINE",
-    iconType: "brain",
-    badgeColor: "bg-purple-600",
-    iconBg: "bg-purple-50 text-purple-600",
-    path: "/software/crm",
-    pos: "top-[14%] right-[3%] sm:right-[5%]",
-    desc: "LLM chatbots, automated workflows, and high-throughput predictive AI models."
-  },
-  {
-    id: "react",
-    title: "React",
-    subtitle: "Development",
-    centerTitle: "REACT & NEXT.JS",
-    spec: "✦ SUB-50MS SPEED",
-    iconType: "react",
-    badgeColor: "bg-blue-500",
-    iconBg: "bg-blue-50 text-blue-600",
-    path: "/web-development",
-    pos: "top-[46%] right-[-2%] sm:right-[1%]",
-    desc: "Lightning-fast SPA web portals with SSR and fluid layout transitions."
-  },
-  {
-    id: "nodejs",
-    title: "Node.js",
-    subtitle: "Backend",
-    centerTitle: "NODE.JS & APIS",
-    spec: "✦ 10K+ REQ/SEC",
-    iconType: "bolt",
-    badgeColor: "bg-amber-500",
-    iconBg: "bg-amber-50 text-amber-600",
-    path: "/software/erp",
-    pos: "bottom-[11%] right-[6%] sm:right-[10%]",
-    desc: "Robust microservices, WebSockets, REST & GraphQL API infrastructure."
-  },
-  {
-    id: "flutter",
-    title: "Flutter",
-    subtitle: "Apps",
-    centerTitle: "FLUTTER & MOBILE",
-    spec: "✦ 60 FPS NATIVE",
-    iconType: "mobile",
-    badgeColor: "bg-indigo-600",
-    iconBg: "bg-indigo-50 text-indigo-600",
-    path: "/app-studio/flutter",
-    pos: "bottom-[12%] left-[14%] sm:left-[18%]",
-    desc: "Cross-platform iOS & Android mobile applications with native speed."
-  },
-  {
-    id: "cloud",
-    title: "Cloud",
-    subtitle: "Services",
-    centerTitle: "CLOUD & DEVOPS",
-    spec: "✦ 99.99% UPTIME",
-    iconType: "cloud",
-    badgeColor: "bg-sky-500",
-    iconBg: "bg-sky-50 text-sky-600",
-    path: "/hosting/cloud",
-    pos: "top-[44%] left-[-2%] sm:left-[1%]",
-    desc: "Automated CI/CD deployment, zero-downtime server scaling & security."
-  }
-];
+import heroBg from "../../assets/images/hero1.png";
 
 // Number Shuffle & Count-up Animation Component
 const NumberShuffleCounter = ({ value, suffix = "", duration = 1200, triggerKey }) => {
@@ -226,21 +144,8 @@ const metricSlides = [
 ];
 
 const Hero = () => {
-  const [activeServiceIndex, setActiveServiceIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
   const [metricSlide, setMetricSlide] = useState(0);
   const [isMetricHovered, setIsMetricHovered] = useState(false);
-
-  const activeItem = orbitServices[activeServiceIndex];
-
-  // Auto-cycle through the orbital capabilities unless user is hovering
-  useEffect(() => {
-    if (isHovered) return;
-    const interval = setInterval(() => {
-      setActiveServiceIndex((prev) => (prev + 1) % orbitServices.length);
-    }, 3800);
-    return () => clearInterval(interval);
-  }, [isHovered]);
 
   // Auto-rotate metrics banner
   useEffect(() => {
@@ -252,19 +157,34 @@ const Hero = () => {
   }, [isMetricHovered]);
 
   return (
-    <section className="w-full relative overflow-hidden pt-20 sm:pt-24 lg:pt-26 pb-4 sm:pb-6 bg-white">
-      
-      {/* Background Soft Glow Ambience */}
+    <section 
+      className="w-full relative overflow-hidden pt-20 sm:pt-24 lg:pt-26 pb-4 sm:pb-6 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${heroBg})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      {/* Subtle Overlay for Text Readability */}
       <div 
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[700px] pointer-events-none rounded-full opacity-25 blur-3xl -z-10"
-        style={{
-          background: 'radial-gradient(circle, rgba(0, 216, 255, 0.25) 0%, rgba(0, 70, 88, 0.12) 40%, rgba(255, 255, 255, 0) 70%)'
-        }}
-      />
+className="absolute inset-0 pointer-events-none"
+  style={{
+    background: `
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.78) 0%,
+        rgba(255, 255, 255, 0.58) 28%,
+        rgba(255, 255, 255, 0.22) 48%,
+        rgba(255, 255, 255, 0.03) 72%,
+        rgba(255, 255, 255, 0.00) 100%
+      )
+    `,
+  }}      />
 
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Main 2-Column Hero Grid with Balanced Columns */}
+        {/* Main Hero Content */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* LEFT COLUMN: Clean & Scaled Headline & Typography */}
@@ -344,118 +264,6 @@ const Hero = () => {
                   {"★★★★★"}
                 </div>
               </div>
-            </div>
-
-          </motion.div>
-
-          {/* RIGHT COLUMN: 3D Vortex Swirl with Circular Core & Orbiting Cards */}
-          <motion.div 
-            className="lg:col-span-5 flex flex-col items-center justify-center relative select-none w-full"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            initial={{ opacity: 0, scale: 0.92 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.25, 0.1, 0.25, 1.0] }}
-          >
-            {/* Circular Visual Canvas (Scaled Proportions) */}
-            <div className="relative w-[280px] h-[280px] xs:w-[320px] xs:h-[320px] sm:w-[380px] sm:h-[380px] lg:w-[440px] lg:h-[440px] xl:w-[460px] xl:h-[460px] flex items-center justify-center max-w-full">
-              
-              {/* 3D Ethereal Vortex Fluid Wave Image */}
-              <div className="absolute inset-2 sm:inset-4 rounded-full overflow-hidden shadow-[0_20px_50px_rgba(0,70,88,0.12)]">
-                <motion.img
-                  src={vortexSwirlImg}
-                  alt="3D Fluid Vortex Wave - CodeCrafter Engineering Solutions"
-                  width="460"
-                  height="460"
-                  loading="eager"
-                  fetchpriority="high"
-                  decoding="async"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-                  className="w-full h-full object-cover scale-110 opacity-90"
-                />
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/30 via-transparent to-white/40" />
-              </div>
-
-              {/* Gentle Outer Dashed Orbit Track */}
-              <div className="absolute inset-1 sm:inset-2 rounded-full border border-dashed border-[#004658]/20 animate-spin [animation-duration:80s]" />
-              
-              {/* Secondary Soft Glow Ring */}
-              <div className="absolute inset-6 sm:inset-10 rounded-full border border-white/60 bg-white/10 backdrop-blur-[1px]" />
-
-              {/* CENTER CORE DISC */}
-              <motion.div 
-                className="z-20 w-28 h-28 xs:w-32 xs:h-32 sm:w-42 sm:h-42 rounded-full bg-white ring-3 sm:ring-6 ring-white/70 shadow-[0_15px_40px_rgba(0,70,88,0.15)] flex flex-col items-center justify-center p-2 sm:p-2.5 text-center transition-transform duration-300"
-                whileHover={{ scale: 1.04 }}
-              >
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeItem.id}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.25 }}
-                    className="flex flex-col items-center"
-                  >
-                    {/* Center Icon Badge */}
-                    <div className="w-8 h-8 sm:w-11 sm:h-11 rounded-full bg-[#004658] text-white flex items-center justify-center text-base sm:text-xl font-bold shadow-md shadow-[#004658]/30 mb-1 sm:mb-1.5">
-                      <HeroServiceIcon type={activeItem.iconType} />
-                    </div>
-
-                    {/* Center Category Title */}
-                    <span className="text-[11px] sm:text-[13px] md:text-sm font-semibold text-slate-950 tracking-tight uppercase">
-                      {activeItem.centerTitle}
-                    </span>
-
-                    {/* Center Interactive Spec Tag */}
-                    <span className="text-[8.5px] sm:text-[10px] font-medium text-[#004658] tracking-widest uppercase mt-0.5">
-                      {activeItem.spec}
-                    </span>
-                  </motion.div>
-                </AnimatePresence>
-              </motion.div>
-
-              {/* 6 ORBITING FLOATING CARDS */}
-              {orbitServices.map((item, index) => {
-                const isActive = index === activeServiceIndex;
-                return (
-                  <motion.div
-                    key={item.id}
-                    className={`absolute z-30 ${item.pos}`}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.08 + 0.2 }}
-                    whileHover={{ scale: 1.08 }}
-                  >
-                    <Link
-                      to={item.path}
-                      onClick={() => setActiveServiceIndex(index)}
-                      onMouseEnter={() => setActiveServiceIndex(index)}
-                      className={`flex items-center gap-1.5 sm:gap-2 px-2 py-1 sm:px-3.5 sm:py-2 rounded-lg sm:rounded-xl cursor-pointer transition-all duration-300 backdrop-blur-xl ${
-                        isActive
-                          ? "bg-white text-slate-900 shadow-[0_10px_25px_rgba(0,70,88,0.2)] border-2 border-[#004658] scale-105 ring-2 ring-[#004658]/10"
-                          : "bg-white/95 text-slate-900 border border-slate-100/90 shadow-sm hover:bg-white hover:border-[#004658]/30 hover:shadow-md"
-                      }`}
-                    >
-                      {/* Left Icon Pill */}
-                      <div className={`w-5.5 h-5.5 sm:w-7.5 sm:h-7.5 rounded-md sm:rounded-lg ${item.iconBg} flex items-center justify-center text-xs sm:text-sm shrink-0 shadow-2xs`}>
-                        <HeroServiceIcon type={item.iconType} />
-                      </div>
-
-                      {/* Card Text */}
-                      <div className="text-left">
-                        <div className="text-[11px] sm:text-[13px] font-semibold text-slate-950 leading-tight">
-                          {item.title}
-                        </div>
-                        <div className="text-[9px] sm:text-[11px] font-normal text-slate-500 leading-tight hidden xs:block">
-                          {item.subtitle}
-                        </div>
-                      </div>
-                    </Link>
-                  </motion.div>
-                );
-              })}
-
             </div>
 
           </motion.div>
@@ -553,56 +361,6 @@ const Hero = () => {
 
     </section>
   );
-};
-
-// SVG Icon Helper for Hero Services
-const HeroServiceIcon = ({ type }) => {
-  const props = { className: "w-5 h-5", fill: "none", stroke: "currentColor", strokeWidth: "2", viewBox: "0 0 24 24" };
-
-  switch (type) {
-    case "palette":
-      return (
-        <svg {...props}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M7 21a4 4 0 01-4-4c0-1.48.8-2.75 2-3.45V5a2 2 0 012-2h10a2 2 0 012 2v8.55c1.2.7 2 1.97 2 3.45a4 4 0 01-4 4H7z" />
-        </svg>
-      );
-    case "brain":
-      return (
-        <svg {...props}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      );
-    case "react":
-      return (
-        <svg {...props}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-        </svg>
-      );
-    case "bolt":
-      return (
-        <svg {...props}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      );
-    case "mobile":
-      return (
-        <svg {...props}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-      );
-    case "cloud":
-      return (
-        <svg {...props}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 00-9.78 2.096A4.001 4.001 0 003 15z" />
-        </svg>
-      );
-    default:
-      return (
-        <svg {...props}>
-          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-        </svg>
-      );
-  }
 };
 
 export default Hero;

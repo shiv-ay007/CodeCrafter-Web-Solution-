@@ -6,6 +6,9 @@ import Values from '../Components/aboutcomponents/Values'
 import Timeline from '../Components/aboutcomponents/Timeline'
 import Technology from '../Components/aboutcomponents/Technology'
 import Cta from '../Components/HeroComponent/Cta'
+import GlobalPresence from '../Components/aboutcomponents/GlobalPresence'
+import Reviews from '../Components/aboutcomponents/Reviews'
+
 
 const About = () => {
   return (
@@ -16,6 +19,8 @@ const About = () => {
    <Values/>
    <Timeline/>
    <Technology/>
+   <GlobalPresence/>
+    <Reviews/>
    <Cta/>
    </>
   )
