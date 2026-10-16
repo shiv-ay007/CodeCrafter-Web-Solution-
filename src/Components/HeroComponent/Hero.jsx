@@ -158,29 +158,39 @@ const Hero = () => {
 
   return (
     <section 
-      className="w-full relative overflow-hidden pt-20 sm:pt-24 lg:pt-26 pb-4 sm:pb-6 bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center center",
-        backgroundRepeat: "no-repeat"
-      }}
+      className="w-full relative overflow-hidden pt-20 sm:pt-22 lg:pt-24 pb-6 sm:pb-8"
     >
-      {/* Subtle Overlay for Text Readability */}
-      <div 
-className="absolute inset-0 pointer-events-none"
-  style={{
-    background: `
-      linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.78) 0%,
-        rgba(255, 255, 255, 0.58) 28%,
-        rgba(255, 255, 255, 0.22) 48%,
-        rgba(255, 255, 255, 0.03) 72%,
-        rgba(255, 255, 255, 0.00) 100%
-      )
-    `,
-  }}      />
+      {/* Background Image Layer: Perfectly Framed & Fitted */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+        <img
+          src={heroBg}
+          alt="CodeCrafter Workspace & Software Studio"
+          className="w-full h-full object-cover object-right sm:object-center"
+        />
+        {/* Soft Multi-Stop Ambient & Readability Gradient Overlay matching Image 1 */}
+        <div 
+          className="absolute inset-0"
+          style={{
+            background: `
+              linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.75) 0%,
+                rgba(255, 255, 255, 0.78) 28%,
+                rgba(255, 255, 255, 0.52) 45%,
+                rgba(255, 255, 255, 0.15) 62%,
+                rgba(255, 255, 255, 0.00) 78%
+              ),
+              linear-gradient(
+                180deg,
+                rgba(237, 246, 249, 0.45) 0%,
+                rgba(255, 255, 255, 0.00) 22%,
+                rgba(255, 255, 255, 0.00) 78%,
+                rgba(237, 246, 249, 0.35) 100%
+              )
+            `,
+          }}
+        />
+      </div>
 
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -274,7 +284,7 @@ className="absolute inset-0 pointer-events-none"
         <div 
           onMouseEnter={() => setIsMetricHovered(true)}
           onMouseLeave={() => setIsMetricHovered(false)}
-          className="mt-6 sm:mt-8 lg:mt-10 w-full bg-gradient-to-r from-slate-100/95 via-cyan-50/60 to-slate-100/95 rounded-2xl border border-[#004658]/15 shadow-[0_10px_30px_rgba(0,70,88,0.06)] p-4 sm:p-5 lg:p-6 relative overflow-hidden group"
+          className="mt-4 sm:mt-6 w-full bg-white/80 backdrop-blur-md rounded-2xl border border-white/80 shadow-[0_10px_35px_rgba(0,70,88,0.08)] p-3.5 sm:p-4 lg:p-5 relative overflow-hidden group"
         >
           {/* Top Category Tag & Slide Controls */}
           <div className="flex items-center justify-between mb-3 pb-2 border-b border-[#004658]/10 text-[11px] font-bold text-[#004658]">
@@ -350,13 +360,6 @@ className="absolute inset-0 pointer-events-none"
           </AnimatePresence>
         </div>
 
-      </div>
-
-      {/* Bottom Smooth Curved Wave Transition to Overview */}
-      <div className="w-full overflow-hidden leading-none mt-8 sm:mt-12 pointer-events-none -mb-1">
-        <svg className="relative block w-full h-8 sm:h-14 text-[#edf6f9] fill-current" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z"></path>
-        </svg>
       </div>
 
     </section>

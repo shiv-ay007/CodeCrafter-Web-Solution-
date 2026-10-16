@@ -17,88 +17,158 @@ const reviews = [
   { image: review1, name: "Ayushi Srivastava", rotate: -5 },
   { image: review2, name: "Access Authority", rotate: 4 },
   { image: review3, name: "Diksha Sibu", rotate: -3 },
-  { image: review4, name: "Monika Pandey", rotate: 5 },
+  { image: review4, name: "Monika Pandey", rotate: 4 },
   { image: review5, name: "Eqra Nasir", rotate: -4 },
   { image: review6, name: "Rahul Kumar", rotate: 3 },
-  { image: review7, name: "Ariz Niyaz", rotate: -5 },
-  { image: review8, name: "Shivam Yadav", rotate: 4 },
+  { image: review7, name: "Ariz Niyaz", rotate: -4 },
+  { image: review8, name: "Shivam Yadav", rotate: 3 },
 ];
 
 const Reviews = () => {
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f6fafb]">
-      <section className="relative mx-auto max-w-[1360px] px-5 py-20 sm:px-8 lg:px-10">
-        {/* Background decoration */}
-        <div className="pointer-events-none absolute right-0 top-10 h-80 w-80 rounded-full bg-cyan-100/60 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-10 left-0 h-80 w-80 rounded-full bg-teal-100/40 blur-3xl" />
+    <section className="relative w-full overflow-hidden bg-[#f5fafb] py-12 sm:py-14 lg:py-16" id="reviews">
+      {/* CCWS ambient background */}
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute -right-24 top-0 h-80 w-80 rounded-full bg-cyan-200/30 blur-3xl" />
+        <div className="absolute -left-24 bottom-0 h-72 w-72 rounded-full bg-teal-200/25 blur-3xl" />
+      </div>
 
+      <div className="relative isolate max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Heading */}
-        <div className="relative mb-16 text-center">
-          <span className="mb-4 inline-block rounded-full border border-cyan-200 bg-cyan-50 px-5 py-2 text-xs font-bold uppercase tracking-widest text-[#004658]">
-            Client Experiences
-          </span>
+        <header className="relative z-10 mx-auto mb-9 max-w-3xl text-center sm:mb-12">
+          <div className="mb-3 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-[#004658]">
+            <span className="h-[2px] w-6 rounded-full bg-[#004658]" />
+            Words From Our Clients
+            <span className="h-[2px] w-6 rounded-full bg-[#004658]" />
+          </div>
 
-          <h1 className="text-4xl font-extrabold tracking-tight text-slate-950 sm:text-5xl">
-            Words From Our{" "}
-            <span className="text-[#004658]">Clients</span>
+          <h1 className="text-3xl font-extrabold leading-tight tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+            Real Feedback,{" "}
+            <span className="text-[#004658]">Real Impact</span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-xl text-base text-slate-600">
+          <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-slate-600 sm:text-base">
             Explore genuine feedback shared by our clients on Google.
           </p>
-        </div>
+        </header>
 
-        {/* Overlapping Screenshot Wall */}
-        <div className="relative mx-auto max-w-[1180px]">
-          <div className="grid grid-cols-1 gap-y-8 sm:grid-cols-2 sm:gap-x-0 sm:gap-y-14 lg:grid-cols-3 lg:gap-y-16">
+        {/* Overlapping Review Wall */}
+        <div className="relative z-10 mx-auto w-full max-w-[1360px]">
+          <div className="grid grid-cols-1 items-center gap-y-5 sm:grid-cols-2 sm:gap-x-0 sm:gap-y-0 lg:grid-cols-4">
             {reviews.map((review, index) => (
               <a
-                key={index}
+                key={review.name}
                 href={GOOGLE_REVIEWS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`View ${review.name}'s review on Google`}
+                aria-label={`Open ${review.name}'s Google review`}
                 className="
-                  group relative block cursor-pointer
-                  transition-all duration-500 ease-out
-                  hover:z-50 hover:scale-[1.12]
-                  focus-visible:z-50 focus-visible:scale-105
-                  focus-visible:outline focus-visible:outline-2
-                  focus-visible:outline-[#004658]
+                  review-card group relative mx-auto block w-full
+                  max-w-[350px] cursor-pointer
+                  rounded-xl focus-visible:outline-none
+                  focus-visible:ring-2 focus-visible:ring-[#004658]
+                  focus-visible:ring-offset-4
                 "
                 style={{
-                  transform: `rotate(${review.rotate}deg)`,
+                  "--rotation": `${review.rotate}deg`,
+                  "--hover-scale": "1.10",
                   zIndex: index + 1,
                 }}
               >
                 <div
                   className="
-                    relative mx-auto w-full max-w-[370px]
-                    overflow-hidden rounded-2xl border
-                    border-[#004658]/10 bg-white
-                    shadow-[0_12px_35px_rgba(0,40,55,0.14)]
-                    transition-all duration-500
-                    group-hover:shadow-[0_25px_65px_rgba(0,70,88,0.28)]
-                    group-focus-visible:shadow-[0_25px_65px_rgba(0,70,88,0.28)]
+                    relative overflow-hidden rounded-xl
+                    border border-slate-200/90 bg-white
+                    shadow-[0_9px_24px_rgba(0,50,65,0.12)]
+                    transition-[border-color,box-shadow]
+                    duration-300
+                    group-hover:border-[#00a6bd]
+                    group-hover:shadow-[0_20px_45px_rgba(0,70,88,0.24)]
                   "
                 >
                   <img
                     src={review.image}
                     alt={`Google review screenshot by ${review.name}`}
                     loading="lazy"
+                    decoding="async"
                     className="block h-auto w-full"
                   />
+
+                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-white/60 transition-all duration-300 group-hover:ring-[#00a6bd]/50" />
                 </div>
               </a>
             ))}
           </div>
         </div>
 
-        <p className="relative mt-20 text-center text-sm text-slate-500">
-          Hover to highlight a review. Click to view our Google listing.
+        <p className="relative z-10 mt-8 text-center text-xs text-slate-500 sm:mt-10 sm:text-sm">
+          Hover over a review to highlight it · Click to view Google Reviews
         </p>
-      </section>
-    </main>
+      </div>
+
+      {/* Scoped animation styles */}
+      <style>{`
+        .review-card {
+          transform: rotate(var(--rotation)) scale(1);
+          transform-origin: center center;
+          transition:
+            transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1),
+            filter 350ms ease;
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        @media (min-width: 640px) {
+          .review-card {
+            margin-bottom: -16px;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          .review-card {
+            margin-bottom: -22px;
+          }
+
+          .review-card:nth-child(4n + 2),
+          .review-card:nth-child(4n + 4) {
+            margin-left: -8px;
+          }
+
+          .review-card:nth-child(4n + 3) {
+            margin-left: -14px;
+          }
+
+          .review-card:hover,
+          .review-card:focus-visible {
+            z-index: 100 !important;
+            transform: rotate(0deg) scale(var(--hover-scale));
+          }
+        }
+
+        @media (min-width: 640px) and (max-width: 1023px) {
+          .review-card:hover,
+          .review-card:focus-visible {
+            z-index: 100 !important;
+            transform: rotate(0deg) scale(1.06);
+          }
+        }
+
+        @media (max-width: 639px) {
+          .review-card {
+            transform: rotate(0deg);
+          }
+
+          .review-card:active {
+            transform: scale(1.02);
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .review-card {
+            transition: none;
+          }
+        }
+      `}</style>
+    </section>
   );
 };
 

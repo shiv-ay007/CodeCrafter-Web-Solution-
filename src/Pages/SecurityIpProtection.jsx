@@ -179,6 +179,159 @@ const SecurityIpProtection = () => {
         </div>
       </div>
 
+      
+      {/* IP Protection in Practice */}
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+        <div className="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 items-start">
+
+          {/* Left Content */}
+          <div className="lg:sticky lg:top-28">
+            <span className="inline-flex items-center gap-2 rounded-full border border-[#004658]/20 bg-[#004658]/5 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#004658]">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              Our Approach
+            </span>
+
+            <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-slate-950 font-['Outfit',sans-serif]">
+              How We Keep Your{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] to-[#00a8cc]">
+                IP Protected
+              </span>
+            </h2>
+
+            <p className="mt-5 text-base leading-7 text-slate-600">
+              Protecting your intellectual property takes more than a policy.
+              It requires clear responsibilities, appropriate access controls,
+              and a documented process throughout the project lifecycle.
+            </p>
+
+            <div className="mt-8 rounded-2xl border border-[#004658]/15 bg-[#eef7f8] p-5 sm:p-6">
+              <p className="text-sm font-bold text-[#004658]">
+                Our working principle
+              </p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Confidential information is handled according to agreed
+                project requirements, access permissions, and applicable
+                contractual terms.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Timeline */}
+          <div className="relative space-y-5">
+
+            {[
+              {
+                number: "01",
+                title: "Before Project Kick-off",
+                label: "CONFIDENTIALITY",
+                description:
+                  "Agree on confidentiality requirements and clarify how business information, technical documents, and credentials will be handled.",
+                points: [
+                  "NDA where agreed",
+                  "Defined information-sharing rules",
+                ],
+              },
+              {
+                number: "02",
+                title: "During Development",
+                label: "CONTROLLED ACCESS",
+                description:
+                  "Organize project repositories and permissions so team members can access the resources required for their responsibilities.",
+                points: [
+                  "Repository permissions",
+                  "Secure credential handling",
+                ],
+              },
+              {
+                number: "03",
+                title: "Before Release",
+                label: "SECURITY REVIEW",
+                description:
+                  "Review relevant code changes, dependencies, and configuration to identify issues within the agreed scope before release.",
+                points: [
+                  "Code review",
+                  "Dependency and configuration checks",
+                ],
+              },
+              {
+                number: "04",
+                title: "At Project Handover",
+                label: "OWNERSHIP & DOCUMENTATION",
+                description:
+                  "Document agreed deliverables, repository access, and intellectual property transfer requirements for a clear handover.",
+                points: [
+                  "Handover documentation",
+                  "Agreed ownership terms",
+                ],
+              },
+            ].map((item, index) => (
+              <article
+                key={item.number}
+                className="group relative rounded-2xl border border-[#004658]/15 bg-white p-5 sm:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#00a8cc]/60 hover:shadow-xl hover:shadow-[#004658]/5"
+              >
+                <div className="flex items-start gap-4 sm:gap-5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#004658]/10 text-lg font-extrabold text-[#004658] transition-colors duration-300 group-hover:bg-[#004658] group-hover:text-white font-['Outfit',sans-serif]">
+                    {item.number}
+                  </div>
+
+                  <div className="min-w-0 flex-1">
+                    <span className="text-[10px] sm:text-xs font-bold tracking-[0.14em] text-[#008ba5]">
+                      {item.label}
+                    </span>
+
+                    <h3 className="mt-1.5 text-lg sm:text-xl font-bold text-slate-900 font-['Outfit',sans-serif]">
+                      {item.title}
+                    </h3>
+
+                    <p className="mt-3 text-sm leading-6 text-slate-600">
+                      {item.description}
+                    </p>
+
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {item.points.map((point) => (
+                        <span
+                          key={point}
+                          className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium text-slate-700"
+                        >
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#008ba5]" />
+                          {point}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+
+          </div>
+        </div>
+
+        {/* Bottom Information Bar */}
+        <div className="mt-12 flex flex-col gap-5 rounded-2xl bg-[#002B34] p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-[#4EF0C5]">
+              Clear from day one
+            </p>
+            <h3 className="mt-2 text-xl sm:text-2xl font-bold text-white font-['Outfit',sans-serif]">
+              Your project. Clearly defined responsibilities.
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-slate-300">
+              Discuss confidentiality, access requirements, and ownership
+              expectations with our team before your project begins.
+            </p>
+          </div>
+
+          <Link
+            to="/contact"
+            className="inline-flex shrink-0 items-center justify-center rounded-xl bg-white px-6 py-3.5 text-sm font-bold text-[#004658] transition-all hover:bg-[#4EF0C5]"
+          >
+            Discuss Your Requirements
+            <span className="ml-2" aria-hidden="true">↗</span>
+          </Link>
+        </div>
+      </section>
+
+
       {/* CTA Section */}
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <div className="bg-[#004658] text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl relative overflow-hidden">

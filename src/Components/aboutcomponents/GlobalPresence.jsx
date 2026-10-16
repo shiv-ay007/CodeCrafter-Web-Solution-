@@ -78,29 +78,18 @@ const GlobalPresence = () => {
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-50/0 via-white to-cyan-50/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
               {/* Flag Image */}
-              <div
-                className="
-                  relative flex h-[112px] w-[112px] items-center
-                  justify-center rounded-full border border-slate-100
-                  bg-white shadow-[0_5px_20px_rgba(0,70,88,0.08)]
-                  transition-all duration-300 ease-out
-                  group-hover:scale-110
-                  group-hover:border-cyan-200
-                  group-hover:shadow-[0_8px_26px_rgba(0,70,88,0.16)]
-                "
-              >
-                <img
-                  src={location.image}
-                  alt={`${location.name} flag`}
-                  loading="lazy"
-                  decoding="async"
-                  className="
-                    h-[94px] w-[94px] rounded-full object-contain
-                    transition-transform duration-300
-                    group-hover:scale-105
-                  "
-                />
-              </div>
+            
+{/* Flag Image - Removed Outer White Circle */}
+<div className="relative flex h-[112px] w-[112px] items-center justify-center transition-transform duration-300 ease-out group-hover:scale-110">
+  <img
+    src={location.image}
+    alt={`${location.name} flag`}
+    loading="lazy"
+    decoding="async"
+    className="h-[118px] w-[118px] rounded-full object-contain transition-transform duration-300 group-hover:scale-105"
+  />
+</div>
+
 
               {/* Country Name */}
               <h3

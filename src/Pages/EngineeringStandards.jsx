@@ -1,7 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Layers, ShieldCheck, Zap, Code2 } from "lucide-react";
-
+import {
+  Layers,
+  ShieldCheck,
+  Zap,
+  Code2,
+  Activity,
+  Database,
+  GitBranch,
+  Check,
+  ArrowUpRight,
+} from "lucide-react";
 const EngineeringStandards = () => {
   const [activeTab, setActiveTab] = useState("architecture");
 
@@ -231,6 +240,139 @@ const EngineeringStandards = () => {
           ))}
         </div>
       </div>
+
+      
+      {/* Production Quality Section */}
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#003442] to-[#001D25] text-white shadow-2xl">
+          {/* Decorative accents */}
+          <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full border border-cyan-300/10" />
+          <div className="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full border border-cyan-300/10" />
+
+          <div className="relative grid gap-10 p-6 sm:p-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-14 lg:p-14">
+            {/* Left content */}
+            <div className="flex flex-col justify-between">
+              <div>
+                <span className="inline-flex items-center gap-2 rounded-full border border-cyan-300/20 bg-white/5 px-3 py-2 text-[10px] font-bold uppercase tracking-widest text-cyan-200 sm:text-xs">
+                  <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                  Beyond the code
+                </span>
+
+                <h2 className="mt-6 text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl xl:text-5xl font-['Outfit',sans-serif]">
+                  Built for
+                  <span className="block text-[#4EF0C5]">Production.</span>
+                  Ready for
+                  <span className="block text-white/60">What’s Next.</span>
+                </h2>
+
+                <p className="mt-5 max-w-lg text-sm leading-7 text-slate-300 sm:text-base">
+                  Great engineering goes beyond making features work. We
+                  consider how software performs, protects data, and evolves
+                  as your business grows.
+                </p>
+              </div>
+
+              <div className="mt-8 border-t border-white/10 pt-6 lg:mt-12">
+                <p className="text-xs font-bold uppercase tracking-widest text-[#4EF0C5]">
+                  Our engineering mindset
+                </p>
+                <p className="mt-3 text-lg font-semibold leading-7 sm:text-xl">
+                  Make thoughtful decisions early.
+                  <span className="block text-slate-400">
+                    Keep improving after launch.
+                  </span>
+                </p>
+              </div>
+            </div>
+
+            {/* Right quality checklist */}
+            <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]">
+              {[
+                {
+                  title: "Security by Design",
+                  desc: "Consider access controls, input validation, and dependency risks throughout development.",
+                  detail: "Secure foundations",
+                  icon: ShieldCheck,
+                },
+                {
+                  title: "Reliability Under Load",
+                  desc: "Evaluate performance bottlenecks and test important workflows under realistic conditions.",
+                  detail: "Performance & resilience",
+                  icon: Activity,
+                },
+                {
+                  title: "Data Integrity",
+                  desc: "Use thoughtful schema design and validation to keep business-critical data consistent.",
+                  detail: "Consistent data",
+                  icon: Database,
+                },
+                {
+                  title: "Maintainable Releases",
+                  desc: "Keep code reviewable and deployments controlled so software remains easier to evolve.",
+                  detail: "Quality through delivery",
+                  icon: GitBranch,
+                },
+              ].map((item, index, items) => {
+                const Icon = item.icon;
+
+                return (
+                  <article
+                    key={item.title}
+                    className={`group p-5 transition-colors duration-300 hover:bg-white/[0.06] sm:p-6 ${
+                      index !== items.length - 1
+                        ? "border-b border-white/10"
+                        : ""
+                    }`}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-300/15 bg-cyan-300/[0.08] text-cyan-200 transition-colors group-hover:bg-[#4EF0C5] group-hover:text-[#002f3a]">
+                        <Icon size={21} strokeWidth={1.8} />
+                      </div>
+
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-start justify-between gap-3">
+                          <h3 className="text-base font-bold text-white sm:text-lg font-['Outfit',sans-serif]">
+                            {item.title}
+                          </h3>
+                          <span className="font-mono text-xs text-cyan-300/60">
+                            0{index + 1}
+                          </span>
+                        </div>
+
+                        <p className="mt-2 text-xs leading-6 text-slate-300 sm:text-sm">
+                          {item.desc}
+                        </p>
+
+                        <span className="mt-3 inline-flex items-center gap-2 text-[11px] font-semibold text-[#4EF0C5]">
+                          <Check size={14} />
+                          {item.detail}
+                        </span>
+                      </div>
+
+                      <ArrowUpRight
+                        size={17}
+                        className="hidden shrink-0 text-slate-500 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-cyan-200 sm:block"
+                      />
+                    </div>
+                  </article>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Bottom strip */}
+          <div className="relative flex flex-col gap-3 border-t border-white/10 bg-black/10 px-6 py-5 sm:flex-row sm:items-center sm:justify-between sm:px-10">
+            <p className="text-xs leading-6 text-slate-300 sm:text-sm">
+              Architecture. Quality. Reliability. Long-term thinking.
+            </p>
+            <span className="inline-flex items-center gap-2 text-xs font-bold text-cyan-200">
+              Engineering with intent
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+            </span>
+          </div>
+        </div>
+      </section>
+
 
       {/* CTA Section */}
       <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-12">

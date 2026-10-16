@@ -63,28 +63,30 @@ body {
   border: 1px solid rgba(0, 216, 255, 0.15);
 }
 
+
 /* Infinite Marquee Animations */
 @keyframes marquee-left {
-  0% {
-    transform: translateX(0%);
+  from {
+    transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
 
 @keyframes marquee-right {
-  0% {
+  from {
     transform: translateX(-50%);
   }
-  100% {
-    transform: translateX(0%);
+  to {
+    transform: translateX(0);
   }
 }
 
 .animate-marquee-left {
   display: flex;
   width: max-content;
+  will-change: transform;
   animation: marquee-left 35s linear infinite;
 }
 
@@ -95,10 +97,23 @@ body {
 .animate-marquee-right {
   display: flex;
   width: max-content;
+  will-change: transform;
   animation: marquee-right 35s linear infinite;
 }
 
 .animate-marquee-right:hover {
+  animation-play-state: paused;
+}
+
+
+
+.animate-marquee-left {
+  display: flex;
+  animation: marquee-left 35s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-left:hover {
   animation-play-state: paused;
 }
 

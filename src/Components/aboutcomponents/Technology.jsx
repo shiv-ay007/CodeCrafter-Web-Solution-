@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef } from 'react'
+import React from "react";
 import { Link } from 'react-router-dom'
 
 // Comprehensive, High-Fidelity Tech Stack Data (16 Enterprise Modules)
@@ -717,546 +717,162 @@ const SpotlightTechCard = ({ tech, isSelected, onClick, onSelect }) => {
 }
 
 const Technology = () => {
-  const [selectedCategory, setSelectedCategory] = useState('All')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [activeTechId, setActiveTechId] = useState('react')
-  const [inspectModalTech, setInspectModalTech] = useState(null)
-  const [copiedSnippet, setCopiedSnippet] = useState(false)
-  const [viewMode, setViewMode] = useState('grid') // 'grid' | 'pipeline'
+  const technologies = techStackData;
 
-  // Filtered dataset based on category and search query
-  const filteredTech = useMemo(() => {
-    return techStackData.filter((tech) => {
-      const matchesCategory =
-        selectedCategory === 'All' ? true : tech.category === selectedCategory
-      const matchesSearch =
-        searchQuery.trim() === ''
-          ? true
-          : tech.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            tech.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            tech.capabilities.some((c) =>
-              c.toLowerCase().includes(searchQuery.toLowerCase())
-            ) ||
-            tech.type.toLowerCase().includes(searchQuery.toLowerCase())
-      return matchesCategory && matchesSearch
-    })
-  }, [selectedCategory, searchQuery])
+  const TechItem = ({ tech }) => (
+    <div
+      className="group relative flex shrink-0 items-center gap-3 rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-3 shadow-[0_4px_18px_rgba(0,70,88,0.05)] backdrop-blur-xl transition-all duration-300 hover:z-10 hover:-translate-y-1 hover:border-[#004658]/30 hover:shadow-[0_10px_28px_rgba(0,70,88,0.15)] sm:gap-3.5 sm:px-5 sm:py-3.5"
+      style={{ "--tech-color": tech.color }}
+    >
+      {/* Brand glow on hover */}
+      <span
+        className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        style={{
+          background: `radial-gradient(circle at 20% 50%, ${tech.color}18, transparent 75%)`,
+        }}
+      />
 
-  // Active detail item for the bottom interactive inspector or pipeline
-  const activeTech = useMemo(() => {
-    return (
-      techStackData.find((t) => t.id === activeTechId) || techStackData[0]
-    )
-  }, [activeTechId])
+      {/* Technology icon */}
+      <span
+        className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-100 bg-white p-2 transition-all duration-300 group-hover:scale-110 group-hover:border-transparent sm:h-12 sm:w-12 sm:p-2.5"
+        style={{
+          boxShadow: `0 0 0 0 ${tech.color}00`,
+        }}
+      >
+        <span
+          className="absolute inset-0 rounded-xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          style={{
+            backgroundColor: `${tech.color}12`,
+            boxShadow: `0 0 18px ${tech.color}25`,
+          }}
+        />
+        <span className="relative block h-full w-full">
+          {tech.icon}
+        </span>
+      </span>
 
-  const copyToClipboard = (text) => {
-    navigator.clipboard?.writeText(text)
-    setCopiedSnippet(true)
-    setTimeout(() => setCopiedSnippet(false), 2000)
-  }
+      {/* Only technology name */}
+      <span className="relative whitespace-nowrap text-sm font-bold tracking-tight text-slate-800 transition-colors duration-300 group-hover:text-[#004658] sm:text-base">
+        {tech.name}
+      </span>
+
+      {/* Small brand accent */}
+      <span
+        className="relative h-1.5 w-1.5 shrink-0 rounded-full opacity-60 transition-all duration-300 group-hover:scale-150 group-hover:opacity-100"
+        style={{ backgroundColor: tech.color }}
+      />
+    </div>
+  );
 
   return (
     <section
-      className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden"
       id="technology"
+      className="relative isolate overflow-hidden bg-gradient-to-b from-white via-[#f5fafb] to-white py-14 sm:py-16 lg:py-20"
     >
-      {/* Background Precision Grid & Ambient Glowing Sphere */}
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none -z-20"
-        style={{
-          backgroundImage: `radial-gradient(#004658 1px, transparent 1px)`,
-          backgroundSize: '24px 24px'
-        }}
-      />
+      <style>{`
+        @keyframes tech-scroll-left {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
 
-      <div
-        className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[550px] pointer-events-none rounded-full opacity-25 blur-3xl -z-10"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(0, 70, 88, 0.35) 0%, rgba(0, 216, 255, 0.15) 45%, rgba(255, 255, 255, 0) 70%)'
-        }}
-      />
+        @keyframes tech-scroll-right {
+          from { transform: translateX(-50%); }
+          to { transform: translateX(0); }
+        }
 
-      <div className="relative z-10">
-        {/* =========================================================================
-            1. SECTION HEADER (Spacious, Minimalist Silicon-Grade Aesthetic)
-           ========================================================================= */}
-        <div className="flex flex-col items-center text-center max-w-4xl mx-auto mb-10">
-          
-          {/* Status Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[#004658] text-[11px] font-mono font-bold uppercase tracking-widest mb-3.5 shadow-2xs">
-            <span className="w-2 h-2 rounded-full bg-[#00D8FF] animate-ping" />
-            <span>ENTERPRISE ARCHITECTURE & ECOSYSTEM</span>
+        .tech-track-left {
+          animation: tech-scroll-left 38s linear infinite;
+        }
+
+        .tech-track-right {
+          animation: tech-scroll-right 42s linear infinite;
+        }
+
+        .tech-marquee:hover .tech-track-left,
+        .tech-marquee:hover .tech-track-right {
+          animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .tech-track-left,
+          .tech-track-right {
+            animation-play-state: paused;
+          }
+        }
+      `}</style>
+
+      {/* Ambient background decoration */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-cyan-100/50 blur-3xl" />
+        <div className="absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-teal-100/50 blur-3xl" />
+
+        <div
+          className="absolute inset-0 opacity-[0.035]"
+          style={{
+            backgroundImage:
+              "radial-gradient(#004658 1px, transparent 1px)",
+            backgroundSize: "24px 24px",
+          }}
+        />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-[1500px]">
+        {/* Heading */}
+        <div className="mx-auto mb-10 max-w-4xl px-5 text-center sm:mb-12">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#004658]/15 bg-white/80 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#004658] shadow-sm sm:text-xs">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#004658]" />
+            </span>
+            Our Technology Ecosystem
           </div>
 
-          {/* Main Title */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 leading-[1.15]">
-            Engineered with <br className="hidden sm:inline" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#00738e] to-[#00D8FF]">
+          <h2 className="text-3xl font-black leading-tight tracking-tight text-slate-950 sm:text-4xl lg:text-5xl">
+            Engineered with
+            <span className="block bg-gradient-to-r from-[#004658] via-[#00738e] to-cyan-400 bg-clip-text text-transparent">
               Silicon-Grade Precision
             </span>
           </h2>
 
-          <p className="mt-3 text-xs sm:text-sm text-slate-600 font-medium max-w-2xl leading-relaxed">
-            A production-hardened stack of 16 modern frameworks, distributed runtimes, and atomic design systems orchestrated for zero-downtime scalability.
+          <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
+            The technologies powering our modern digital experiences.
           </p>
         </div>
 
-        {/* WIDE CONTROL BAR (Single Clean Linear Strip for Filters, Search & View Modes) */}
-        <div className="w-full max-w-[1360px] mx-auto mb-10 p-2 bg-white/90 backdrop-blur-xl border border-slate-200/90 rounded-2xl shadow-lg shadow-slate-200/30 flex flex-col md:flex-row items-center justify-between gap-3">
-          
-          {/* Left: Category Filter Pills */}
-          <div className="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none">
-            {categories.map((cat) => {
-              const count =
-                cat === 'All'
-                  ? techStackData.length
-                  : techStackData.filter((t) => t.category === cat).length
-
-              return (
-                <button
-                  key={cat}
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all duration-300 whitespace-nowrap cursor-pointer flex items-center gap-1.5 ${
-                    selectedCategory === cat
-                      ? 'bg-[#004658] text-white shadow-sm shadow-[#004658]/20'
-                      : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100'
-                  }`}
-                >
-                  <span>{cat}</span>
-                  <span
-                    className={`text-[10px] font-mono px-1.5 py-0.2 rounded-md ${
-                      selectedCategory === cat
-                        ? 'bg-white/20 text-white'
-                        : 'bg-slate-200/70 text-slate-500'
-                    }`}
-                  >
-                    {count}
-                  </span>
-                </button>
-              )
-            })}
+        {/* Two opposite-moving rows */}
+        <div className="tech-marquee flex flex-col gap-4 overflow-hidden py-3 sm:gap-5 sm:py-4">
+          {/* Row 1: moves left */}
+          <div className="relative">
+            <div className="tech-track-left flex w-max gap-3 px-3 sm:gap-4 sm:px-4">
+              {[...technologies, ...technologies].map((tech, index) => (
+                <TechItem key={`left-${tech.id}-${index}`} tech={tech} />
+              ))}
+            </div>
           </div>
 
-          {/* Right: Search Bar & Grid/Pipeline Toggle */}
-          <div className="flex items-center gap-2.5 w-full md:w-auto justify-end">
-            <div className="relative flex-1 md:w-64">
-              <input
-                type="text"
-                placeholder="Search stack, framework..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-8.5 pr-8 py-1.5 text-xs bg-slate-50 border border-slate-200 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#004658] focus:bg-white transition-all font-medium"
-              />
-              <svg
-                className="w-3.5 h-3.5 text-slate-400 absolute left-2.5 top-1/2 -translate-y-1/2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs font-bold"
-                >
-                  ✕
-                </button>
+          {/* Row 2: moves right */}
+          <div className="relative">
+            <div className="tech-track-right flex w-max gap-3 px-3 sm:gap-4 sm:px-4">
+              {[...technologies.slice().reverse(), ...technologies.slice().reverse()].map(
+                (tech, index) => (
+                  <TechItem key={`right-${tech.id}-${index}`} tech={tech} />
+                )
               )}
             </div>
-
-            {/* View Switcher Button (Grid vs Pipeline Flow) */}
-            <div className="flex items-center bg-slate-100 p-0.5 rounded-xl border border-slate-200">
-              <button
-                onClick={() => setViewMode('grid')}
-                title="Grid Matrix View"
-                className={`p-1.5 rounded-lg text-xs font-bold transition-all ${
-                  viewMode === 'grid'
-                    ? 'bg-white text-[#004658] shadow-2xs'
-                    : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-                </svg>
-              </button>
-
-              <button
-                onClick={() => setViewMode('pipeline')}
-                title="Architecture Pipeline View"
-                className={`p-1.5 rounded-lg text-xs font-bold transition-all ${
-                  viewMode === 'pipeline'
-                    ? 'bg-white text-[#004658] shadow-2xs'
-                    : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </button>
-            </div>
-
           </div>
         </div>
 
-        {/* =========================================================================
-            2. MAIN CARDS GRID (Sleek, Compact 4x4 Grid with Full-Card Background Art)
-           ========================================================================= */}
-        {viewMode === 'grid' ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-4.5 mb-14">
-            {filteredTech.map((tech) => (
-              <SpotlightTechCard
-                key={tech.id}
-                tech={tech}
-                isSelected={tech.id === activeTechId}
-                onClick={(t) => setInspectModalTech(t)}
-                onSelect={(id) => setActiveTechId(id)}
-              />
-            ))}
-          </div>
-        ) : (
-          /* Architecture Pipeline & Synergy Flow View */
-          <div className="mb-14 p-6 sm:p-8 bg-white border border-slate-200/90 rounded-3xl shadow-lg shadow-slate-200/30">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-5 mb-6 border-b border-slate-100">
-              <div>
-                <span className="text-[11px] font-mono font-bold text-[#004658] uppercase tracking-widest">
-                  End-to-End Synergy Pipeline
-                </span>
-                <h3 className="text-xl sm:text-2xl font-black text-slate-900">
-                  How Our Technology Ecosystem Communicates
-                </h3>
-              </div>
-              <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-mono font-bold border border-emerald-200">
-                ● High Cohesion / Loose Coupling
-              </span>
-            </div>
-
-            {/* 4 Pipeline Stages */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
-              {/* Stage 1: UI & Client */}
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-xs font-mono font-bold text-slate-400">LAYER 01</span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#00D8FF]" />
-                  </div>
-                  <h4 className="text-base font-extrabold text-slate-900 mb-1">
-                    Client & Reactive UI
-                  </h4>
-                  <p className="text-xs text-slate-600 mb-3 leading-relaxed">
-                    React 19 + TypeScript + Tailwind CSS delivering 60 FPS interfaces and atomic design systems.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 pt-2.5 border-t border-slate-200/60 font-mono text-[10px] text-slate-500">
-                  <span>⚡ DOM Diff &lt;16ms</span>
-                </div>
-              </div>
-
-              {/* Stage 2: Edge & Gateway */}
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-xs font-mono font-bold text-slate-400">LAYER 02</span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#0F172A]" />
-                  </div>
-                  <h4 className="text-base font-extrabold text-slate-900 mb-1">
-                    Edge SSR & Router
-                  </h4>
-                  <p className="text-xs text-slate-600 mb-3 leading-relaxed">
-                    Next.js 15 App Router streaming pre-rendered HTML and executing low-latency edge middlewares.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 pt-2.5 border-t border-slate-200/60 font-mono text-[10px] text-slate-500">
-                  <span>🌍 Edge TTL &lt;5ms</span>
-                </div>
-              </div>
-
-              {/* Stage 3: Enterprise Services */}
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-xs font-mono font-bold text-slate-400">LAYER 03</span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#512BD4]" />
-                  </div>
-                  <h4 className="text-base font-extrabold text-slate-900 mb-1">
-                    Async Microservices
-                  </h4>
-                  <p className="text-xs text-slate-600 mb-3 leading-relaxed">
-                    Node.js 24 + Express + .NET 9 + GraphQL federated microservices processing heavy logic.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 pt-2.5 border-t border-slate-200/60 font-mono text-[10px] text-slate-500">
-                  <span>🚀 150k req/sec</span>
-                </div>
-              </div>
-
-              {/* Stage 4: State & Storage */}
-              <div className="p-5 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-xs font-mono font-bold text-slate-400">LAYER 04</span>
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#47A248]" />
-                  </div>
-                  <h4 className="text-base font-extrabold text-slate-900 mb-1">
-                    Distributed Persistence
-                  </h4>
-                  <p className="text-xs text-slate-600 mb-3 leading-relaxed">
-                    MongoDB + PostgreSQL + Redis + Kubernetes auto-healing mesh for sub-millisecond retrieval.
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 pt-2.5 border-t border-slate-200/60 font-mono text-[10px] text-slate-500">
-                  <span>🔒 ACID & K8s Mesh</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* =========================================================================
-            3. LIVE TECH SPECIFICATION & CODE SYNERGY DRAWER
-           ========================================================================= */}
-        <div className="mb-12 rounded-3xl bg-slate-950 text-white p-6 sm:p-9 border border-slate-800 shadow-2xl relative overflow-hidden">
-          {/* Animated Background Mesh Accent */}
-          <div
-            className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-20 pointer-events-none"
-            style={{ backgroundColor: activeTech.color }}
-          />
-
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
-            
-            {/* Left: Active Tech Telemetry & Capabilities */}
-            <div className="lg:col-span-6">
-              <div className="flex items-center gap-3 mb-3.5">
-                <div
-                  className="w-11 h-11 rounded-xl bg-white/10 p-2.5 border border-white/15 flex items-center justify-center shadow-md"
-                  style={{ color: activeTech.color }}
-                >
-                  {activeTech.icon}
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono font-bold text-cyan-400 uppercase tracking-widest block">
-                    {activeTech.category} // {activeTech.version}
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-black text-white leading-tight">
-                    {activeTech.name}
-                  </h3>
-                </div>
-              </div>
-
-              <p className="text-xs sm:text-sm text-slate-300 mb-5 leading-relaxed">
-                {activeTech.tagline}. Optimized for enterprise throughput, zero-latency caching, and maintainable codebase architectures.
-              </p>
-
-              {/* Telemetry Metrics Grid */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-5">
-                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                  <span className="text-[9px] font-mono text-slate-400 uppercase block mb-0.5">
-                    Benchmark Metric
-                  </span>
-                  <span className="text-xs sm:text-sm font-black text-cyan-300 font-mono">
-                    {activeTech.metric}
-                  </span>
-                </div>
-
-                <div className="p-3 rounded-xl bg-white/5 border border-white/10">
-                  <span className="text-[9px] font-mono text-slate-400 uppercase block mb-0.5">
-                    Role in Stack
-                  </span>
-                  <span className="text-xs sm:text-sm font-black text-emerald-300 truncate block">
-                    {activeTech.badge}
-                  </span>
-                </div>
-
-                <div className="p-3 rounded-xl bg-white/5 border border-white/10 col-span-2 sm:col-span-1">
-                  <span className="text-[9px] font-mono text-slate-400 uppercase block mb-0.5">
-                    Stack Synergy
-                  </span>
-                  <span className="text-xs font-mono font-bold text-purple-300 truncate block">
-                    {activeTech.synergy.join(', ')}
-                  </span>
-                </div>
-              </div>
-
-              {/* Capability Tags */}
-              <div className="flex flex-wrap gap-1.5">
-                {activeTech.capabilities.map((cap, i) => (
-                  <span
-                    key={i}
-                    className="px-2.5 py-1 rounded-lg bg-white/10 border border-white/15 text-[11px] text-slate-200 font-mono"
-                  >
-                    ✓ {cap}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Right: Code Sample & Real-Time Configuration Terminal */}
-            <div className="lg:col-span-6">
-              <div className="rounded-2xl bg-slate-900/95 border border-slate-800 overflow-hidden shadow-2xl">
-                {/* Terminal Header */}
-                <div className="px-3.5 py-2.5 bg-slate-900 border-b border-slate-800 flex items-center justify-between text-xs">
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80" />
-                    <span className="ml-2 font-mono text-[10px] text-slate-400">
-                      {activeTech.id}-spec.config.ts
-                    </span>
-                  </div>
-
-                  <button
-                    onClick={() => copyToClipboard(activeTech.codeSnippet)}
-                    className="px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-[10px] font-mono text-slate-300 hover:text-white transition-colors cursor-pointer flex items-center gap-1"
-                  >
-                    {copiedSnippet ? (
-                      <span className="text-emerald-400">✓ Copied!</span>
-                    ) : (
-                      <>
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
-                        </svg>
-                        <span>Copy Code</span>
-                      </>
-                    )}
-                  </button>
-                </div>
-
-                {/* Code Body */}
-                <pre className="p-4 font-mono text-xs text-cyan-200/90 leading-relaxed overflow-x-auto selection:bg-cyan-500 selection:text-slate-900">
-                  <code>{activeTech.codeSnippet}</code>
-                </pre>
-              </div>
-            </div>
-
-          </div>
+        {/* Bottom minimal accent */}
+        <div className="mt-7 flex items-center justify-center gap-3 px-5 sm:mt-9">
+          <span className="h-px w-10 bg-gradient-to-r from-transparent to-[#004658]/40" />
+          <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-500 sm:text-xs">
+            Built for modern digital products
+          </span>
+          <span className="h-px w-10 bg-gradient-to-l from-transparent to-[#004658]/40" />
         </div>
-
-        {/* =========================================================================
-            4. MODAL INSPECTOR (Detailed View for Clicked Item)
-           ========================================================================= */}
-        {inspectModalTech && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md animate-fadeIn"
-            onClick={() => setInspectModalTech(null)}
-          >
-            <div
-              className="relative w-full max-w-lg bg-white rounded-3xl p-6 sm:p-7 shadow-2xl border border-slate-200 overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {/* Top Accent Gradient Bar */}
-              <div
-                className="absolute top-0 left-0 right-0 h-1.5"
-                style={{ backgroundColor: inspectModalTech.color }}
-              />
-
-              {/* Close Button */}
-              <button
-                onClick={() => setInspectModalTech(null)}
-                className="absolute top-4 right-4 w-7 h-7 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors cursor-pointer text-xs"
-              >
-                ✕
-              </button>
-
-              <div className="flex items-center gap-3.5 mb-4">
-                <div
-                  className="w-12 h-12 rounded-2xl bg-slate-50 border border-slate-200 p-2.5 flex items-center justify-center shadow-xs"
-                  style={{ color: inspectModalTech.color }}
-                >
-                  {inspectModalTech.icon}
-                </div>
-                <div>
-                  <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider block">
-                    {inspectModalTech.category} // {inspectModalTech.version}
-                  </span>
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-900">
-                    {inspectModalTech.name}
-                  </h3>
-                </div>
-              </div>
-
-              <p className="text-xs sm:text-sm text-slate-600 mb-5 leading-relaxed">
-                {inspectModalTech.tagline}. Designed for high-concurrency systems and resilient product delivery.
-              </p>
-
-              <div className="space-y-3.5 mb-5">
-                <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/80">
-                  <span className="text-[10px] font-mono font-bold text-slate-400 uppercase block mb-1">
-                    Key Architectural Capabilities
-                  </span>
-                  <div className="flex flex-wrap gap-1.5 mt-1">
-                    {inspectModalTech.capabilities.map((c, i) => (
-                      <span
-                        key={i}
-                        className="px-2 py-0.5 rounded-md bg-white border border-slate-200 text-xs font-medium text-slate-700"
-                      >
-                        {c}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-2.5">
-                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
-                    <span className="text-[9px] font-mono text-slate-400 uppercase block">
-                      Production Benchmark
-                    </span>
-                    <span className="text-xs sm:text-sm font-black text-[#004658] font-mono">
-                      {inspectModalTech.metric}
-                    </span>
-                  </div>
-                  <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80">
-                    <span className="text-[9px] font-mono text-slate-400 uppercase block">
-                      Stack Synergies
-                    </span>
-                    <span className="text-xs font-mono font-bold text-slate-800 truncate block">
-                      {inspectModalTech.synergy.join(', ')}
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-end gap-2.5 pt-3.5 border-t border-slate-100">
-                <button
-                  onClick={() => {
-                    setActiveTechId(inspectModalTech.id)
-                    setInspectModalTech(null)
-                  }}
-                  className="px-4 py-1.5 rounded-xl bg-[#004658] text-white text-xs font-bold hover:bg-[#003746] transition-colors cursor-pointer"
-                >
-                  View in Code Terminal
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* =========================================================================
-            5. FOOTER ECOSYSTEM MARQUEE & METRICS STRIP
-           ========================================================================= */}
-        <div className="pt-6 border-t border-slate-200/90 flex flex-wrap items-center justify-between gap-4 text-xs font-medium text-slate-500">
-          <div className="flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="font-semibold text-slate-700">
-              All 16 core stack modules battle-tested for enterprise reliability
-            </span>
-          </div>
-
-          <div className="flex items-center gap-3 sm:gap-4 flex-wrap font-mono text-[10px] text-slate-400">
-            <Link to="/engineering-standards" className="hover:text-[#004658] transition-colors">• Engineering Standards</Link>
-            <Link to="/security-ip-protection" className="hover:text-[#004658] transition-colors">• Security & IP Protection</Link>
-            <Link to="/schedule-consultation" className="hover:text-[#004658] transition-colors">• Schedule Consultation</Link>
-          </div>
-        </div>
-
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Technology
+export default Technology;

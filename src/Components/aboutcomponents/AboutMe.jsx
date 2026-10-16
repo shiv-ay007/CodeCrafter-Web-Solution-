@@ -43,15 +43,15 @@ const AboutMe = () => {
           {/* Bottom Stats Counters Bar */}
           <div className="pt-6 border-t border-slate-200/80 grid grid-cols-3 gap-6">
             <div>
-              <div className="text-2xl sm:text-4xl font-extrabold text-[#004658] tracking-tight">2019</div>
+              <div className="text-2xl sm:text-4xl font-extrabold text-[#004658] tracking-tight">2023</div>
               <div className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Founded</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-4xl font-extrabold text-[#004658] tracking-tight">120+</div>
+              <div className="text-2xl sm:text-4xl font-extrabold text-[#004658] tracking-tight">500</div>
               <div className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Happy Clients</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-4xl font-extrabold text-[#004658] tracking-tight">250+</div>
+              <div className="text-2xl sm:text-4xl font-extrabold text-[#004658] tracking-tight">300+</div>
               <div className="text-xs sm:text-sm font-medium text-slate-500 mt-1">Projects Delivered</div>
             </div>
           </div>

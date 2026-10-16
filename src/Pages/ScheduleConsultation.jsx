@@ -73,19 +73,23 @@ const ScheduleConsultation = () => {
 
       {/* Form & Benefits Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-10 gap-y-6 items-start">
           
-          {/* Left Column: Benefits & Trust Points */}
-          <div className="lg:col-span-5 space-y-8">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 font-['Outfit',sans-serif]">
-                Why Book a Strategy Call With CodeCrafter?
-              </h2>
-              <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-                Get high-level technical clarity before spending a single dollar on software development.
-              </p>
-            </div>
+          {/* Header above Benefits */}
+          <div className="lg:col-span-5">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 font-['Outfit',sans-serif]">
+              Why Book a Strategy Call With CodeCrafter?
+            </h2>
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
+              Get high-level technical clarity before spending a single dollar on software development.
+            </p>
+          </div>
 
+          {/* Spacer to push form into row 2 on desktop */}
+          <div className="hidden lg:block lg:col-span-7" />
+
+          {/* Left Column: Benefits Cards & Direct Contact Callout */}
+          <div className="lg:col-span-5 space-y-6">
             <div className="space-y-4">
               {benefits.map((b, idx) => (
                 <div key={idx} className="p-5 rounded-2xl bg-white border border-[#004658]/15 shadow-sm flex items-start gap-4">

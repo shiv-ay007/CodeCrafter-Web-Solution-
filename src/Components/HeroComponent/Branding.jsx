@@ -683,28 +683,33 @@ const Branding = () => {
         {/* ─────────────────────────────────────────────────────────────
             SEAMLESS INFINITE BOTTOM MARQUEE & TRANSITION ACCENTS
         ─────────────────────────────────────────────────────────────── */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-30px" }}
-          transition={{ duration: 0.5 }}
-          className="mt-12 sm:mt-16 overflow-hidden relative rounded-2xl sm:rounded-3xl border border-[#004658]/15 bg-gradient-to-r from-white via-[#f0f9fa]/60 to-white py-5 shadow-[0_8px_30px_rgba(0,70,88,0.06)] backdrop-blur-xl group"
-        >
-          {/* Subtle Ambient Shimmer Track */}
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#00D8FF]/8 to-transparent pointer-events-none" />
+        
+{/* Full-Width Infinite Scrolling Marquee */}
+<motion.div
+  initial={{ opacity: 0, y: 16 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true, margin: "-30px" }}
+  transition={{ duration: 0.5 }}
+  className="relative left-1/2 mt-12 sm:mt-16 w-screen -translate-x-1/2 overflow-hidden border-y border-[#004658]/15 bg-gradient-to-r from-white via-[#f0f9fa] to-white py-5 shadow-[0_8px_30px_rgba(0,70,88,0.06)]"
+>
+  {/* Soft Background Shimmer */}
+  <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-transparent via-cyan-100/50 to-transparent" />
 
-          <div className="animate-marquee-left items-center gap-8 whitespace-nowrap">
-            {/* Double the marquee items list to ensure seamless zero-gap infinite looping */}
-            {[...marqueeItems, ...marqueeItems].map((item, index) => (
-              <React.Fragment key={index}>
-                <span className="text-xs sm:text-[13px] font-bold tracking-[0.2em] text-slate-700 hover:text-[#004658] transition-colors cursor-default">
-                  {item}
-                </span>
-                <span className="text-xs text-[#EA580C] font-bold">✦</span>
-              </React.Fragment>
-            ))}
-          </div>
-        </motion.div>
+  {/* Scrolling Track */}
+  <div className="relative flex w-max animate-marquee-left items-center gap-8 whitespace-nowrap">
+    {[...marqueeItems, ...marqueeItems].map((item, index) => (
+      <React.Fragment key={`${item}-${index}`}>
+        <span className="cursor-default text-xs font-bold tracking-[0.2em] text-slate-700 transition-colors hover:text-[#004658] sm:text-[13px]">
+          {item}
+        </span>
+
+        <span className="text-xs font-bold text-[#EA580C]">
+          ✦
+        </span>
+      </React.Fragment>
+    ))}
+  </div>
+</motion.div>
 
       </div>
 
