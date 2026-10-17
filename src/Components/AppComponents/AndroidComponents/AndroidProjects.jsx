@@ -60,15 +60,15 @@ const AndroidProjects = () => {
         </div>
 
         {/* Project Cards */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="flex flex-col gap-8 sm:gap-10">
           {projects.map((project) => (
             <article
               key={project.number}
-              className="group overflow-hidden rounded-[26px] border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
+              className="group grid grid-cols-1 items-stretch overflow-hidden rounded-[28px] border border-slate-200 bg-white shadow-sm transition-all duration-500 hover:-translate-y-1.5 hover:shadow-xl md:grid-cols-12"
             >
-              {/* Project Image */}
-              <div className="relative flex min-h-[300px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#EAF7F7] via-white to-[#E5F4F8] p-5 sm:min-h-[360px]">
-                <span className="absolute left-6 top-6 z-10 rounded-full bg-white/90 px-3 py-2 text-[10px] font-bold tracking-widest text-[#004658] shadow-sm">
+              {/* Project Image (Left Side) */}
+              <div className="relative flex min-h-[360px] items-center justify-center overflow-hidden bg-gradient-to-br from-[#EAF7F7] via-white to-[#E5F4F8] p-4 sm:p-6 md:col-span-5 md:min-h-[460px] lg:col-span-5 lg:min-h-[500px]">
+                <span className="absolute left-6 top-6 z-10 rounded-full bg-white/95 px-3 py-2 text-[10px] font-bold tracking-widest text-[#004658] shadow-sm backdrop-blur-sm">
                   PROJECT / {project.number}
                 </span>
 
@@ -76,64 +76,64 @@ const AndroidProjects = () => {
                   src={project.image}
                   alt={`${project.title} application preview`}
                   loading="lazy"
-                  className="max-h-[330px] max-w-full rounded-xl object-contain transition-transform duration-500 group-hover:scale-[1.03]"
+                  className="h-[340px] w-auto max-w-full rounded-2xl object-contain shadow-[0_20px_40px_rgba(0,70,88,0.14)] border border-slate-200/80 transition-transform duration-500 group-hover:scale-[1.03] sm:h-[400px] md:h-[420px] lg:h-[460px]"
                 />
               </div>
 
-              {/* Project Details */}
-              <div className="p-6 sm:p-8">
+              {/* Project Details (Right Side) */}
+              <div className="flex flex-col justify-center p-6 sm:p-8 md:col-span-7 md:p-8 lg:col-span-7 lg:p-12">
                 <p className="text-xs font-extrabold tracking-[0.16em] text-[#00869A]">
                   {project.category}
                 </p>
 
-                <h3 className="mt-3 font-['Outfit',sans-serif] text-2xl font-extrabold text-slate-950 sm:text-3xl">
+                <h3 className="mt-3 font-['Outfit',sans-serif] text-2xl font-extrabold text-slate-950 sm:text-3xl lg:text-4xl">
                   {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-base">
+                <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
                   {project.description}
                 </p>
 
                 {/* Technology Tags */}
-                <div className="mt-5 flex flex-wrap gap-2">
+                <div className="mt-6 flex flex-wrap gap-2">
                   {project.technologies.map((technology) => (
                     <span
                       key={technology}
-                      className="rounded-full bg-[#EAF5F5] px-3 py-1.5 text-xs font-semibold text-[#004658]"
+                      className="rounded-full bg-[#EAF5F5] px-3.5 py-1.5 text-xs font-semibold text-[#004658]"
                     >
                       {technology}
                     </span>
                   ))}
                 </div>
 
-               {/* Project Links */}
-{(project.link || project.secondaryLink) && (
-  <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-slate-100 pt-5">
-    {project.link && (
-      <a
-        href={project.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 rounded-full bg-[#004658] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#006174]"
-      >
-        {project.linkLabel || "View Live Project"}
-        <span>↗</span>
-      </a>
-    )}
+                {/* Project Links */}
+                {(project.link || project.secondaryLink) && (
+                  <div className="mt-8 flex flex-wrap items-center gap-3 border-t border-slate-100 pt-6">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full bg-[#004658] px-6 py-3 text-sm font-bold text-white transition hover:bg-[#006174]"
+                      >
+                        {project.linkLabel || "View Live Project"}
+                        <span>↗</span>
+                      </a>
+                    )}
 
-    {project.secondaryLink && (
-      <a
-        href={project.secondaryLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 rounded-full border border-[#004658] bg-white px-5 py-3 text-sm font-bold text-[#004658] transition hover:bg-[#EAF7F7]"
-      >
-        View on Play Store
-        <span>↗</span>
-      </a>
-    )}
-  </div>
-)}
+                    {project.secondaryLink && (
+                      <a
+                        href={project.secondaryLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-full border border-[#004658] bg-white px-6 py-3 text-sm font-bold text-[#004658] transition hover:bg-[#EAF7F7]"
+                      >
+                        View on Play Store
+                        <span>↗</span>
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </article>
           ))}

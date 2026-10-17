@@ -63,12 +63,9 @@ import SoftwareOutsourcing from '../Pages/SoftwareOutsourcing'
 import AiTransformation from '../Pages/AiTransformation'
 import FrontendDevelopment from '../Pages/FrontendDevelopment'
 import BackendDevelopment from '../Pages/BackendDevelopment'
-import CmsDevelopment from '../Pages/CmsDevelopment'
 import ApiIntegration from '../Pages/ApiIntegration'
 import WireframingPrototyping from '../Pages/WireframingPrototyping'
-import DesignSystems from '../Pages/DesignSystems'
 import LandingPageDesign from '../Pages/LandingPageDesign'
-import SaasWebPlatforms from '../Pages/SaasWebPlatforms'
 import WebPerformanceOptimization from '../Pages/WebPerformanceOptimization'
 import QaTestingAutomation from '../Pages/QaTestingAutomation'
 
@@ -119,12 +116,9 @@ const AppRoute = () => {
         <Route path="/services/ai-transformation" element={<PageWrapper><AiTransformation /></PageWrapper>} />
         <Route path="/services/frontend-development" element={<PageWrapper><FrontendDevelopment /></PageWrapper>} />
         <Route path="/services/backend-development" element={<PageWrapper><BackendDevelopment /></PageWrapper>} />
-        <Route path="/services/cms-development" element={<PageWrapper><CmsDevelopment /></PageWrapper>} />
         <Route path="/services/api-integration" element={<PageWrapper><ApiIntegration /></PageWrapper>} />
         <Route path="/services/wireframing-prototyping" element={<PageWrapper><WireframingPrototyping /></PageWrapper>} />
-        <Route path="/services/design-systems" element={<PageWrapper><DesignSystems /></PageWrapper>} />
         <Route path="/services/landing-page-design" element={<PageWrapper><LandingPageDesign /></PageWrapper>} />
-        <Route path="/services/saas-web-platforms" element={<PageWrapper><SaasWebPlatforms /></PageWrapper>} />
         <Route path="/services/web-performance-optimization" element={<PageWrapper><WebPerformanceOptimization /></PageWrapper>} />
         <Route path="/services/qa-testing-automation" element={<PageWrapper><QaTestingAutomation /></PageWrapper>} />
 

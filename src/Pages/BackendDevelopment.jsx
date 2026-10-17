@@ -1142,7 +1142,7 @@ const BackendDevelopment = () => {
                 <img
                   src={image.src}
                   alt={image.label}
-                  className="aspect-[16/10] w-full object-contain p-0.5 transition-transform duration-300 group-hover:scale-105"
+                  className="aspect-[16/10] w-full object-contain p-0.5 blur-[2px] transition-all duration-300 group-hover:scale-105"
                 />
 
                 {activeProjectImage === index && (

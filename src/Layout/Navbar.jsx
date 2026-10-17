@@ -50,21 +50,18 @@ const menuItems = [
       { name: "Web App Development", path: "/web-development" },
       { name: "Front-end Development", path: "/services/frontend-development" },
       { name: "Back-end Development", path: "/services/backend-development" },
-      { name: "CMS Development (WordPress, Custom CMS)", path: "/services/cms-development" },
       { name: "API & Microservices Integration", path: "/services/api-integration" }
     ],
     col2Heading: "UX/UI & DESIGN",
     topCol2: [
       { name: "UI/UX Design", path: "/web-design" },
       { name: "Wireframing & Prototyping", path: "/services/wireframing-prototyping" },
-      { name: "Design Systems", path: "/services/design-systems" },
       { name: "Website Redesign", path: "/website-redesign" },
       { name: "Landing Page Design", path: "/services/landing-page-design" }
     ],
     enterpriseHeading: "WEB-SPECIFIC ENTERPRISE",
     enterpriseCol: [
       { name: "Ecommerce Development", path: "/e-commerce" },
-      { name: "SaaS Web Platforms", path: "/services/saas-web-platforms" },
       { name: "Web Performance Optimization", path: "/services/web-performance-optimization" },
       { name: "QA Testing & Automation", path: "/services/qa-testing-automation" },
       { name: "Website Maintenance & Support", path: "/website-maintenance" }
