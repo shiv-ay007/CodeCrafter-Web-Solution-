@@ -954,7 +954,7 @@ const PwaApp = () => {
       {/* =====================================================
           9. EXISTING CTA SECTION — PRESERVED
       ====================================================== */}
-      <section className="relative mx-auto max-w-5xl px-4 pb-20 pt-8 sm:px-6 sm:pb-24 lg:px-8">
+      <section className="relative mx-auto max-w-[1360px] px-4 pb-20 pt-8 sm:px-6 sm:pb-24 lg:px-8">
         <div className="rounded-3xl bg-[#004658] p-8 text-center text-white shadow-xl sm:p-12">
           <h2 className="mb-4 font-['Outfit',sans-serif] text-2xl font-bold sm:text-4xl">
             Want to Turn Your Web App into a PWA?

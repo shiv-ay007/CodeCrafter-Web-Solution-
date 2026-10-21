@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import dssCrmImage from "../../../assets/images/dss.jpeg";
 import kaashtkartImage from "../../../assets/images/kaashkart.jpeg";
+import mdsImage from "../../../assets/images/mds.jpeg";
 
 const projects = [
   {
@@ -29,6 +30,17 @@ const projects = [
   secondaryLink:
     "https://play.google.com/store/apps/details?id=com.kaashtkart.kaashtkart",
   linkLabel: "View Project",
+  },
+  {
+    number: "03",
+    category: "LIVE RESULTS & UPDATES",
+    title: "MDS Results",
+    description:
+      "A fast and reliable online platform for tracking real-time live results, instant updates, and seamless mobile access.",
+    image: mdsImage,
+    technologies: ["Mobile App", "Live Results", "Real-Time Updates", "Android"],
+    link: "https://mdsresults.com/",
+    linkLabel: "View Project",
 },
 ];
 

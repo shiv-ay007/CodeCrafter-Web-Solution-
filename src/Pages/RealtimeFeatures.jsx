@@ -673,7 +673,7 @@ const RealtimeFeatures = () => {
       </section>
 
       {/* 8. EXISTING CTA */}
-      <section className="relative z-10 mx-auto max-w-5xl px-4 pt-8 sm:px-6 lg:px-8">
+      <section className="relative z-10 mx-auto max-w-[1360px] px-4 pt-8 sm:px-6 lg:px-8">
         <div className="rounded-3xl bg-[#004658] p-8 text-center text-white shadow-xl sm:p-12">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-wider text-[#4EF0C5]">
             <CircleDot size={14} />

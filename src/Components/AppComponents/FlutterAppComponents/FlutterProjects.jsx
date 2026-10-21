@@ -1,9 +1,9 @@
-
 import React from "react";
-import { ArrowUpRight, ExternalLink, Layers3, ShoppingBag } from "lucide-react";
+import { Activity, ArrowUpRight, Building2, ExternalLink, Layers3, ShoppingBag } from "lucide-react";
 
 import kaashtkartImage from "../../../assets/images/kashcart.png";
-import dssImage from "../../../assets/images/crm2.png";
+import shanyaImage from "../../../assets/images/ShanyasScan.png";
+import dssInfrabuildImage from "../../../assets/images/DSS.png";
 
 const projects = [
   {
@@ -22,17 +22,31 @@ const projects = [
   },
   {
     number: "02",
-    category: "ENTERPRISE SOFTWARE",
-    title: "DSS Infra CRM",
-    subtitle: "Smarter workflows. Better visibility.",
+    category: "HEALTHCARE & DIAGNOSTICS",
+    title: "Shanya Scans & Theranostics",
+    subtitle: "Precision diagnostic imaging and healthcare excellence.",
     description:
-      "A CRM solution for managing leads, follow-ups, project tracking, suppliers, and payments through organized workflows and data-driven dashboards.",
-    image: dssImage,
-    imageAlt: "DSS Infra CRM project preview",
-    icon: Layers3,
-    tags: ["CRM Dashboard", "Project Tracking", "Lead Management"],
-    link: "https://crm.dssinfra.in/",
-    linkText: "Explore CRM",
+      "A healthcare website presenting diagnostic services, advanced medical imaging, pathology testing, and patient-focused healthcare information.",
+    image: shanyaImage,
+    imageAlt: "Shanya Scans & Theranostics project preview",
+    icon: Activity,
+    tags: ["Healthcare", "Service Website", "Responsive UI"],
+    link: "https://shanyascans.com/",
+    linkText: "Explore Website",
+  },
+  {
+    number: "03",
+    category: "CONSTRUCTION & INFRASTRUCTURE",
+    title: "DSS Infrabuild Pvt. Ltd.",
+    subtitle: "Construction & Infrastructure Excellence.",
+    description:
+      "A premier corporate web platform highlighting infrastructure engineering, commercial construction, architectural capability, and high-standard project execution.",
+    image: dssInfrabuildImage,
+    imageAlt: "DSS Infrabuild Pvt. Ltd. project preview",
+    icon: Building2,
+    tags: ["Construction", "Infrastructure", "Corporate Website"],
+    link: "https://dss-infrabuild-pvt-ltd.vercel.app/",
+    linkText: "Explore Website",
   },
 ];
 
@@ -40,7 +54,7 @@ const FlutterProjects = () => {
   return (
     <section
       id="flutter-projects"
-      className="relative overflow-hidden bg-white py-20 sm:py-24 lg:py-28"
+      className="relative overflow-hidden bg-[#f3f7fb] py-20 sm:py-24 lg:py-28"
     >
       {/* Subtle brand-colored background */}
       <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#00A8CC]/[0.06] blur-3xl" />
@@ -69,30 +83,33 @@ const FlutterProjects = () => {
         </div>
 
         {/* Project cards */}
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {projects.map((project) => {
+        <div className="flex flex-col gap-8 sm:gap-10">
+          {projects.map((project, index) => {
             const Icon = project.icon;
+            const isEven = index % 2 === 0;
 
             return (
               <article
                 key={project.number}
-                className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-1 hover:border-[#00A8CC]/40 hover:shadow-2xl hover:shadow-[#003B46]/[0.08]"
+                className="group grid grid-cols-1 items-stretch overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-500 hover:-translate-y-1 hover:border-[#00A8CC]/40 hover:shadow-2xl hover:shadow-[#003B46]/[0.08] lg:grid-cols-12"
               >
                 {/* Image area */}
-                <div className="relative overflow-hidden bg-slate-100">
-                  <div className="w-full overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.imageAlt}
-                      loading="lazy"
-                      className="w-full h-auto block object-contain transition-transform duration-700 group-hover:scale-105"
-                    />
-                  </div>
+                <div
+                  className={`relative flex min-h-[240px] sm:min-h-[280px] lg:min-h-[320px] items-center justify-center overflow-hidden bg-slate-100 lg:col-span-6 ${
+                    isEven ? "order-1" : "order-1 lg:order-2"
+                  }`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.imageAlt}
+                    loading="lazy"
+                    className="h-full w-full object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                  />
 
                   {/* Image overlay */}
-                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071827]/50 via-transparent to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#071827]/40 via-transparent to-transparent" />
 
-                  <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/30 bg-[#071827]/70 px-3 py-2 text-xs font-semibold text-white backdrop-blur-md">
+                  <div className="absolute left-5 top-5 flex items-center gap-2 rounded-full border border-white/30 bg-[#071827]/70 px-3.5 py-2 text-xs font-semibold text-white backdrop-blur-md">
                     <Icon size={15} />
                     {project.category}
                   </div>
@@ -103,7 +120,11 @@ const FlutterProjects = () => {
                 </div>
 
                 {/* Project information */}
-                <div className="p-6 sm:p-8">
+                <div
+                  className={`flex flex-col justify-center p-6 sm:p-8 lg:col-span-6 lg:p-12 ${
+                    isEven ? "order-2" : "order-2 lg:order-1"
+                  }`}
+                >
                   <div className="mb-3 flex items-center gap-2">
                     <span className="h-1 w-8 rounded-full bg-[#00A8CC]" />
                     <span className="text-xs font-bold uppercase tracking-wider text-[#008EAC]">
@@ -119,7 +140,7 @@ const FlutterProjects = () => {
                     {project.subtitle}
                   </p>
 
-                  <p className="mt-4 text-sm leading-7 text-slate-600 sm:text-base">
+                  <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
                     {project.description}
                   </p>
 
@@ -128,7 +149,7 @@ const FlutterProjects = () => {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-2 text-xs font-medium text-slate-700"
+                        className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700"
                       >
                         {tag}
                       </span>

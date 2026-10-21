@@ -247,7 +247,7 @@ const WireframingPrototyping = () => {
       </div>
 
       {/* CTA */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8">
         <div className="bg-[#004658] text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl">
           <h3 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif] mb-4">Ready to Wireframe Your Next Application?</h3>
           <p className="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto mb-8">Schedule a UX discovery session with our Lead Product Designers.</p>

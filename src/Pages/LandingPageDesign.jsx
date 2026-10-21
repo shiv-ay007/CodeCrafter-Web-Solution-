@@ -622,7 +622,7 @@ const LandingPageDesign = () => {
       </section>
 
       {/* 08. FINAL CTA */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-4">
         <div className="relative overflow-hidden bg-[#002B34] text-white rounded-[28px] p-8 sm:p-12 lg:p-16 text-center shadow-2xl">
           <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-[#00A8CC]/20 blur-3xl" />
           <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-[#4EF0C5]/15 blur-3xl" />
