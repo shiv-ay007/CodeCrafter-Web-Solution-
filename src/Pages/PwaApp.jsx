@@ -22,6 +22,10 @@ import {
   Layers3,
 } from "lucide-react";
 
+import kaashtkartImg from "../assets/images/kashcart.png";
+import dssImg from "../assets/images/DSS.png";
+import shanyaImg from "../assets/images/ShanyasScan.png";
+
 const PwaApp = () => {
   const [installed, setInstalled] = useState(false);
 
@@ -51,42 +55,60 @@ const PwaApp = () => {
   const projects = [
     {
       number: "01",
-      name: "ShopLite",
+      name: "KaashtKart",
       category: "E-COMMERCE PWA",
-      subtitle: "Shopping, simplified.",
+      subtitle: "Farm-to-Consumer Produce & Grocery Platform",
       description:
-        "A sample shopping PWA concept with product discovery, a mobile-friendly cart, saved items, and an installable browsing experience.",
+        "A high-performance progressive web application with instant home-screen installability, offline product browsing, and seamless mobile checkout for agricultural produce.",
       icon: ShoppingBag,
       accent: "#00A8CC",
       light: "#E4F9FC",
-      features: ["Product catalog", "Shopping cart", "Installable interface"],
-      preview: "shop",
+      features: [
+        "Offline product catalog browsing",
+        "1-Tap home screen installation",
+        "Push notifications for order updates",
+      ],
+      image: kaashtkartImg,
+      url: "kaashtkart.com",
+      link: "https://www.kaashtkart.com/",
     },
     {
       number: "02",
-      name: "FlowDesk",
-      category: "BUSINESS PWA",
-      subtitle: "Your work, in one place.",
+      name: "DSS Infra CRM",
+      category: "OPERATIONS & CRM PWA",
+      subtitle: "Field Engineering & Project Milestone Suite",
       description:
-        "A sample business dashboard concept for viewing tasks, organizing workflows, and accessing key information from different devices.",
+        "An enterprise progressive web app empowering field teams and managers to track real-time project milestones, lead workflows, and team telemetry across desktop and mobile browsers.",
       icon: BriefcaseBusiness,
       accent: "#087F8C",
       light: "#E5F7F5",
-      features: ["Task overview", "Activity dashboard", "Responsive layout"],
-      preview: "business",
+      features: [
+        "Real-time pipeline & lead tracking",
+        "Service-worker cached operations data",
+        "Unified responsive UX on mobile & desktop",
+      ],
+      image: dssImg,
+      url: "dss-infrabuild.com",
+      link: "https://dss-infrabuild-pvt-ltd.vercel.app/",
     },
     {
       number: "03",
-      name: "LearnSphere",
-      category: "EDUCATION PWA",
-      subtitle: "Learning that moves with you.",
+      name: "Shanya Scans & Theranostics",
+      category: "HEALTHCARE PWA",
+      subtitle: "Diagnostic Imaging & Patient Report Access",
       description:
-        "A sample learning platform concept with course discovery, saved learning material, and offline access to previously cached content.",
-      icon: GraduationCap,
-      accent: "#3683B8",
+        "A secure healthcare progressive web application enabling patients and doctors to view diagnostic lab results, book appointments, and access clinical records with bank-grade encryption.",
+      icon: ShieldCheck,
+      accent: "#004658",
       light: "#EAF4FC",
-      features: ["Course catalog", "Saved content", "Offline-ready pages"],
-      preview: "learn",
+      features: [
+        "Instant patient report access & downloads",
+        "Online scan appointment scheduler",
+        "Sub-second load speeds on low connectivity",
+      ],
+      image: shanyaImg,
+      url: "shanyascans.com",
+      link: "https://shanyascans.com/",
     },
   ];
 
@@ -286,8 +308,8 @@ const PwaApp = () => {
             </h2>
 
             <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
-              Explore sample concepts showing how progressive web apps can
-              support commerce, business operations, and digital learning.
+              Explore production-grade Progressive Web Applications built for
+              frictionless commerce, enterprise operations, and real-time healthcare access.
             </p>
           </div>
 
@@ -298,243 +320,108 @@ const PwaApp = () => {
               return (
                 <article
                   key={project.number}
-                  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:border-[#00A8CC]/40 hover:shadow-2xl hover:shadow-[#004658]/[0.07]"
+                  className="group overflow-hidden rounded-3xl border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:border-[#00A8CC]/40 hover:shadow-2xl hover:shadow-[#004658]/[0.07] flex flex-col justify-between"
                 >
-                  {/* Custom app preview */}
-                  <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-white p-5 sm:p-6">
+                  {/* Real Project Image Preview */}
+                  <div className="relative overflow-hidden bg-gradient-to-br from-slate-50 to-white p-4 sm:p-5">
                     <div
-                      className="absolute -right-10 -top-12 h-40 w-40 rounded-full opacity-70 blur-3xl"
+                      className="absolute -right-10 -top-12 h-40 w-40 rounded-full opacity-60 blur-3xl"
                       style={{ backgroundColor: project.light }}
                     />
 
-                    <div className="relative rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                      <div className="mb-5 flex items-center justify-between border-b border-slate-100 pb-3">
-                        <div className="flex items-center gap-2">
-                          <div
-                            className="flex h-9 w-9 items-center justify-center rounded-xl"
-                            style={{
-                              color: project.accent,
-                              backgroundColor: project.light,
-                            }}
-                          >
-                            <Icon size={19} />
-                          </div>
-                          <div>
-                            <p className="text-xs font-extrabold text-slate-900">
-                              {project.name}
-                            </p>
-                            <p className="mt-0.5 text-[9px] text-slate-400">
-                              Sample PWA Interface
-                            </p>
-                          </div>
+                    <div className="relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white shadow-xs group-hover:shadow-md transition-shadow">
+                      {/* Browser Window Bar */}
+                      <div className="flex items-center justify-between border-b border-slate-100 bg-slate-50/90 px-3.5 py-2">
+                        <div className="flex items-center gap-1.5">
+                          <span className="h-2 w-2 rounded-full bg-rose-400" />
+                          <span className="h-2 w-2 rounded-full bg-amber-400" />
+                          <span className="h-2 w-2 rounded-full bg-emerald-400" />
+                          <span className="ml-2 text-[10px] font-mono text-slate-400 truncate max-w-[130px]">
+                            {project.url}
+                          </span>
                         </div>
-
-                        <Globe size={16} className="text-slate-400" />
+                        <span className="inline-flex items-center gap-1 text-[8.5px] font-mono font-bold text-[#007F9B] bg-[#00A8CC]/10 px-2 py-0.5 rounded-full">
+                          <span className="h-1.5 w-1.5 rounded-full bg-[#00A8CC] animate-pulse" />
+                          PWA READY
+                        </span>
                       </div>
 
-                      {project.preview === "shop" && (
-                        <>
-                          <div
-                            className="rounded-xl p-4"
-                            style={{ backgroundColor: project.light }}
-                          >
-                            <p
-                              className="text-[10px] font-bold uppercase tracking-wider"
-                              style={{ color: project.accent }}
-                            >
-                              DISCOVER MORE
-                            </p>
-                            <p className="mt-2 text-xl font-extrabold text-slate-900">
-                              Shop your way.
-                            </p>
-                            <div className="mt-3 flex items-center justify-between">
-                              <span className="rounded-full bg-white px-3 py-2 text-[10px] font-bold text-slate-700">
-                                Explore products
-                              </span>
-                              <ShoppingBag
-                                size={32}
-                                style={{ color: project.accent }}
-                              />
-                            </div>
-                          </div>
-
-                          <div className="mt-3 grid grid-cols-2 gap-3">
-                            {["Popular products", "New arrivals"].map((item) => (
-                              <div
-                                key={item}
-                                className="rounded-xl border border-slate-100 p-3"
-                              >
-                                <div
-                                  className="mb-2 flex h-12 items-center justify-center rounded-lg"
-                                  style={{ backgroundColor: project.light }}
-                                >
-                                  <ShoppingBag
-                                    size={20}
-                                    style={{ color: project.accent }}
-                                  />
-                                </div>
-                                <p className="text-[10px] font-bold text-slate-700">
-                                  {item}
-                                </p>
-                              </div>
-                            ))}
-                          </div>
-                        </>
-                      )}
-
-                      {project.preview === "business" && (
-                        <>
-                          <div className="rounded-xl bg-[#002B34] p-4 text-white">
-                            <p className="text-[10px] text-[#4EF0C5]">
-                              WORKSPACE OVERVIEW
-                            </p>
-                            <p className="mt-2 text-xl font-extrabold">
-                              Dashboard
-                            </p>
-                            <div className="mt-4 grid grid-cols-2 gap-3">
-                              <div className="rounded-lg bg-white/10 p-3">
-                                <p className="text-[9px] text-slate-300">
-                                  Active tasks
-                                </p>
-                                <p className="mt-1 text-lg font-bold">24</p>
-                              </div>
-                              <div className="rounded-lg bg-white/10 p-3">
-                                <p className="text-[9px] text-slate-300">
-                                  Projects
-                                </p>
-                                <p className="mt-1 text-lg font-bold">08</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          {["Review project progress", "Organize team tasks"].map(
-                            (item) => (
-                              <div
-                                key={item}
-                                className="mt-3 flex items-center gap-2 rounded-lg border border-slate-100 p-3"
-                              >
-                                <CheckCircle2
-                                  size={15}
-                                  className="text-[#00A878]"
-                                />
-                                <span className="text-[10px] font-medium text-slate-700">
-                                  {item}
-                                </span>
-                              </div>
-                            )
-                          )}
-                        </>
-                      )}
-
-                      {project.preview === "learn" && (
-                        <>
-                          <div
-                            className="rounded-xl p-4"
-                            style={{ backgroundColor: project.light }}
-                          >
-                            <p
-                              className="text-[10px] font-bold uppercase tracking-wider"
-                              style={{ color: project.accent }}
-                            >
-                              KEEP LEARNING
-                            </p>
-                            <p className="mt-2 text-xl font-extrabold text-slate-900">
-                              Grow your skills.
-                            </p>
-                            <div className="mt-4 flex items-center justify-between">
-                              <span className="rounded-full bg-white px-3 py-2 text-[10px] font-bold text-slate-700">
-                                View courses
-                              </span>
-                              <GraduationCap
-                                size={32}
-                                style={{ color: project.accent }}
-                              />
-                            </div>
-                          </div>
-
-                          <div className="mt-3 rounded-xl border border-slate-100 p-4">
-                            <div className="flex items-center justify-between">
-                              <p className="text-xs font-bold text-slate-800">
-                                Saved learning
-                              </p>
-                              <Database size={15} className="text-slate-400" />
-                            </div>
-                            <div className="mt-3 h-2 overflow-hidden rounded-full bg-slate-100">
-                              <div
-                                className="h-full w-2/3 rounded-full"
-                                style={{ backgroundColor: project.accent }}
-                              />
-                            </div>
-                            <p className="mt-2 text-[10px] text-slate-500">
-                              Sample progress indicator
-                            </p>
-                          </div>
-                        </>
-                      )}
-
-                      <div className="mt-4 flex items-center justify-between border-t border-slate-100 pt-3">
-                        <span className="text-[9px] font-semibold text-slate-400">
-                          MOBILE + DESKTOP
-                        </span>
-                        <span
-                          className="text-[9px] font-bold"
-                          style={{ color: project.accent }}
-                        >
-                          PWA CONCEPT
-                        </span>
+                      {/* Project Image */}
+                      <div className="relative w-full aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img
+                          src={project.image}
+                          alt={project.name}
+                          loading="lazy"
+                          className="h-full w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
+                        />
                       </div>
                     </div>
 
-                    <span className="absolute right-7 top-7 rounded-full border border-white bg-white/90 px-3 py-1.5 text-[9px] font-bold text-slate-600 shadow-sm">
+                    <span className="absolute right-7 top-7 rounded-full border border-white bg-white/95 px-2.5 py-1 text-[10px] font-mono font-bold text-slate-700 shadow-xs z-10">
                       {project.number}
                     </span>
                   </div>
 
-                  <div className="p-6">
-                    <span
-                      className="inline-flex rounded-full px-3 py-1.5 text-[10px] font-bold tracking-wider"
-                      style={{
-                        backgroundColor: project.light,
-                        color: project.accent,
-                      }}
-                    >
-                      {project.category}
-                    </span>
+                  {/* Project Details Below Image */}
+                  <div className="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span
+                        className="inline-flex rounded-full px-3 py-1.5 text-[10px] font-mono font-bold tracking-wider uppercase"
+                        style={{
+                          backgroundColor: project.light,
+                          color: project.accent,
+                        }}
+                      >
+                        {project.category}
+                      </span>
 
-                    <h3 className="mt-4 font-['Outfit',sans-serif] text-2xl font-extrabold text-slate-950">
-                      {project.name}
-                    </h3>
+                      <h3 className="mt-3.5 font-['Outfit',sans-serif] text-2xl font-extrabold text-slate-950">
+                        {project.name}
+                      </h3>
 
-                    <p className="mt-2 text-sm font-semibold text-[#004658]">
-                      {project.subtitle}
-                    </p>
+                      <p className="mt-1.5 text-xs sm:text-sm font-semibold text-[#004658]">
+                        {project.subtitle}
+                      </p>
 
-                    <p className="mt-4 text-sm leading-7 text-slate-600">
-                      {project.description}
-                    </p>
+                      <p className="mt-3.5 text-xs sm:text-sm leading-relaxed text-slate-600">
+                        {project.description}
+                      </p>
 
-                    <div className="mt-5 space-y-3">
-                      {project.features.map((feature) => (
-                        <div
-                          key={feature}
-                          className="flex items-center gap-2.5"
-                        >
-                          <CheckCircle2
-                            size={16}
-                            style={{ color: project.accent }}
-                          />
-                          <span className="text-xs font-medium text-slate-700">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
+                      <div className="mt-5 space-y-2.5">
+                        {project.features.map((feature) => (
+                          <div
+                            key={feature}
+                            className="flex items-center gap-2.5"
+                          >
+                            <CheckCircle2
+                              size={15}
+                              style={{ color: project.accent }}
+                              className="shrink-0"
+                            />
+                            <span className="text-xs font-medium text-slate-700">
+                              {feature}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
-                    <div className="mt-6 border-t border-slate-100 pt-4">
-                      <span className="inline-flex items-center gap-2 text-xs font-bold text-slate-500">
-                        <Layers3 size={15} />
-                        Illustrative concept — not a live project
+                    <div className="mt-6 border-t border-slate-100 pt-4 flex items-center justify-between text-xs">
+                      <span className="inline-flex items-center gap-1.5 font-bold text-slate-600">
+                        <Smartphone size={14} className="text-[#00A8CC]" />
+                        Installable PWA
                       </span>
+                      {project.link && (
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-bold text-[#007F9B] hover:text-[#004658] hover:underline inline-flex items-center gap-1 group/link"
+                        >
+                          <span>Explore</span>
+                          <ArrowUpRight size={13} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </article>

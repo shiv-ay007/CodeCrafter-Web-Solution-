@@ -24,7 +24,7 @@ const EcommerceProjects = () => {
       <div className="pointer-events-none absolute -left-32 top-10 h-72 w-72 rounded-full bg-[#00A8CC]/[0.08] blur-3xl" />
       <div className="pointer-events-none absolute -right-32 bottom-10 h-72 w-72 rounded-full bg-[#004658]/[0.06] blur-3xl" />
 
-      <div className="relative mx-auto max-w-[1480px] px-4 sm:px-6 lg:px-12">
+      <div className="relative mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/15 text-[#004658] text-xs font-bold uppercase tracking-wider mb-2.5">

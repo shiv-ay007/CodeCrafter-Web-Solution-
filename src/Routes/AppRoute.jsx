@@ -104,6 +104,7 @@ const AppRoute = () => {
 
         {/* Web Solutions Routes */}
         <Route path="/web-design" element={<PageWrapper><WebDesign /></PageWrapper>} />
+        <Route path="/web_design" element={<PageWrapper><WebDesign /></PageWrapper>} />
         <Route path="/web-development" element={<PageWrapper><WebDevelopment /></PageWrapper>} />
         <Route path="/website-redesign" element={<PageWrapper><WebsiteRedesign /></PageWrapper>} />
         <Route path="/e-commerce" element={<PageWrapper><Ecommerce /></PageWrapper>} />

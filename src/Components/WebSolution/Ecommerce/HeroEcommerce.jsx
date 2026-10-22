@@ -5,7 +5,7 @@ const HeroEcommerce = () => {
   const [selectedCurrency, setSelectedCurrency] = useState('USD')
 
   return (
-    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden">
+    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden">
       {/* Glow Effects */}
       <div 
         className="absolute top-1/4 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] pointer-events-none rounded-full opacity-20 blur-3xl -z-10"

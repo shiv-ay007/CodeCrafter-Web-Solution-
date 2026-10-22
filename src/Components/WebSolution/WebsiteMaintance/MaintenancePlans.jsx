@@ -53,7 +53,7 @@ const plans = [
 
 const MaintenancePlans = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto" id="plans">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto" id="plans">
       <div className="text-center max-w-2xl mx-auto mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#004658]/10 text-[#004658] text-xs font-bold uppercase tracking-wider mb-4">
           Predictable Monthly Care

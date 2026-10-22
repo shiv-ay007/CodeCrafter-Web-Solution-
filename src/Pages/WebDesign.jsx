@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroWeb from '../Components/WebSolution/WebDesign/HeroWeb'
 import Trusted from '../Components/WebSolution/WebDesign/Trusted'
+import WebDesignProjects from '../Components/WebSolution/WebDesign/WebDesignProjects'
 import DesignProcess from '../Components/WebSolution/WebDesign/DesignProcess'
 import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
@@ -10,6 +11,7 @@ const WebDesign = () => {
     <>
       <HeroWeb />
       <Trusted />
+      <WebDesignProjects />
       <DesignProcess />
       <Contactus />
       <Cta />

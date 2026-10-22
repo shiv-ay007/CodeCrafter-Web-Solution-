@@ -192,43 +192,52 @@ const FrontendDevelopment = () => {
   };
 
   return (
-    <div className="w-full bg-[#FBFDFD] pt-32 sm:pt-40 pb-24 text-slate-800 font-['Plus_Jakarta_Sans',sans-serif]">
-      {/* Background Gradient */}
-      <div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] pointer-events-none rounded-full opacity-50 blur-[130px] -z-10"
-        style={{
-          background: "radial-gradient(circle at 50% 20%, rgba(0, 70, 88, 0.22) 0%, rgba(0, 168, 204, 0.08) 50%, rgba(251, 253, 253, 0) 80%)"
-        }}
-      />
+    <div className="w-full bg-[#FBFDFD] pb-24 text-slate-800 font-['Plus_Jakarta_Sans',sans-serif]">
+      {/* Hero Header Section matching Get In Touch background */}
+      <section className="relative w-full bg-[#f3f7fb] pt-32 sm:pt-40 pb-16 sm:pb-20 overflow-hidden select-none">
+        {/* Multi-Color Ambient Glow matching Get In Touch */}
+        <div 
+          className="absolute top-1/2 -left-32 w-[600px] h-[600px] pointer-events-none rounded-full opacity-25 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, rgba(0, 70, 88, 0.3) 0%, rgba(236, 72, 153, 0.15) 40%, rgba(255, 255, 255, 0) 70%)'
+          }}
+        />
+        <div 
+          className="absolute top-1/3 -right-32 w-[600px] h-[600px] pointer-events-none rounded-full opacity-25 blur-3xl"
+          style={{
+            background: 'radial-gradient(circle, rgba(234, 88, 12, 0.25) 0%, rgba(139, 92, 246, 0.15) 40%, transparent 70%)'
+          }}
+        />
 
-      {/* Hero Header */}
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#004658]/10 border border-[#004658]/20 text-[#004658] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6">
-          <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse" />
-          <span>⚡ Next-Gen Front-end Engineering</span>
-        </div>
+        {/* Hero Header Content */}
+        <div className="relative z-10 max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#004658]/10 border border-[#004658]/20 text-[#004658] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6">
+            <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse" />
+            <span>⚡ Next-Gen Front-end Engineering</span>
+          </div>
 
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-6 font-['Outfit',sans-serif]">
-          Pixel-Perfect, Lightning-Fast{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#00a8cc]">
-            Front-End Development
-          </span>
-        </h1>
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-6 font-['Outfit',sans-serif]">
+            Pixel-Perfect, Lightning-Fast{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#00a8cc]">
+              Front-End Development
+            </span>
+          </h1>
 
-        <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
-          We craft ultra-responsive web interfaces with React, Next.js, or Blazor — engineered for flawless 60 FPS performance across all devices.
-        </p>
+          <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
+            We craft ultra-responsive web interfaces with React, Next.js, or Blazor — engineered for flawless 60 FPS performance across all devices.
+          </p>
 
-        {/* Lighthouse Score Card with Circular Scroll Animation */}
-        <div className="bg-white border border-[#004658]/15 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto shadow-xl">
-          <p className="text-xs font-bold text-[#004658] uppercase tracking-wider mb-4">Google Lighthouse Benchmark Target</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {scores.map((s, idx) => (
-              <AnimatedLighthouseScore key={idx} label={s.label} targetScore={100} />
-            ))}
+          {/* Lighthouse Score Card with Circular Scroll Animation */}
+          <div className="bg-white border border-[#004658]/15 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto shadow-xl">
+            <p className="text-xs font-bold text-[#004658] uppercase tracking-wider mb-4">Google Lighthouse Benchmark Target</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {scores.map((s, idx) => (
+                <AnimatedLighthouseScore key={idx} label={s.label} targetScore={100} />
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* NEW SECTION 1: Everything users see, touch & experience */}
       <SectionEverythingUsersSee />

@@ -25,7 +25,7 @@ const securityChecks = [
 
 const SecurityAudit = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto bg-slate-50/60 rounded-3xl border border-slate-200/80 my-10">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto bg-slate-50/60 rounded-3xl border border-slate-200/80 my-10">
       <div className="text-center max-w-2xl mx-auto mb-14">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-4">
           Enterprise Security Standard

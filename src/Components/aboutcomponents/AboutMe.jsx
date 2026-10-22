@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import teamWorkspace from "../../assets/images/aboutstory.jpg";
+import teamWorkspace from "../../assets/images/grp1.png";
 const AboutMe = () => {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto overflow-hidden" id="about">

@@ -29,7 +29,7 @@ const stacks = [
 
 const EcommerceTechStack = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto bg-slate-900 text-white rounded-3xl my-10 relative overflow-hidden">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto bg-slate-900 text-white rounded-3xl my-10 relative overflow-hidden">
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#00D8FF]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="text-center max-w-2xl mx-auto mb-14">

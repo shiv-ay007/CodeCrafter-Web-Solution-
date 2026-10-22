@@ -23,7 +23,7 @@ const MaintenanceFaq = () => {
   const [openIdx, setOpenIdx] = useState(0)
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-12 max-w-[1000px] mx-auto">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto">
       <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl font-black text-slate-900 tracking-tight mb-3">
           Maintenance & SLA FAQs
@@ -33,7 +33,7 @@ const MaintenanceFaq = () => {
         </p>
       </div>
 
-      <div className="space-y-4">
+      <div className="max-w-4xl mx-auto space-y-4">
         {faqs.map((faq, idx) => (
           <div
             key={idx}
