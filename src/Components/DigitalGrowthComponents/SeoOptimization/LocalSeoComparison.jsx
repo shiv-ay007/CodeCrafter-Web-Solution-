@@ -41,7 +41,7 @@ const LocalSeoComparison = () => {
     <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto select-none">
       
       {/* Container */}
-      <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-[#004658]/40 rounded-3xl p-6 sm:p-10 lg:p-12 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
+      <div className="bg-gradient-to-br from-slate-950 via-slate-900 to-[#004658] rounded-3xl p-6 sm:p-10 lg:p-12 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
         
         {/* Top Glow Background */}
         <div 
@@ -69,7 +69,7 @@ const LocalSeoComparison = () => {
           <table className="w-full text-left border-collapse min-w-[640px]">
             <thead>
               <tr className="border-b border-slate-800 text-xs font-mono font-bold text-slate-400 uppercase tracking-wider">
-                <th className="py-4 px-4">Feature / Metric</th>
+                <th className="py-4 px-4 text-white font-bold">Feature / Metric</th>
                 <th className="py-4 px-4 text-emerald-400 bg-emerald-950/30 rounded-t-xl border-t border-x border-emerald-500/30">
                   <span className="flex items-center gap-1.5 text-sm">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400" />
@@ -82,7 +82,7 @@ const LocalSeoComparison = () => {
             <tbody className="divide-y divide-slate-800/80 text-xs sm:text-sm">
               {comparisonData.map((row, idx) => (
                 <tr key={idx} className="hover:bg-slate-900/60 transition-colors">
-                  <td className="py-4 px-4 font-bold text-slate-200">{row.feature}</td>
+                  <td className="py-4 px-4 font-bold text-white">{row.feature}</td>
                   <td className="py-4 px-4 font-semibold text-emerald-300 bg-emerald-950/20 border-x border-emerald-500/20 flex items-start gap-2">
                     <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                     <span>{row.localSeo}</span>
@@ -103,7 +103,7 @@ const LocalSeoComparison = () => {
         <div className="mt-10 pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
           <div className="flex items-center gap-2 text-xs text-slate-300">
             <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-            <span>Guaranteed White-Hat Google Guidelines & NAP Consistency</span>
+            <span className="text-white font-medium">Guaranteed White-Hat Google Guidelines & NAP Consistency</span>
           </div>
 
           <Link

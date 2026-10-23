@@ -163,7 +163,7 @@ const StoreSubmission = () => {
       />
 
       {/* HERO */}
-      <section className="relative z-10 mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+      <section className="relative z-10 mx-auto max-w-[1360px] px-4 text-center sm:px-6 lg:px-8">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#004658]/20 bg-[#004658]/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[#004658] sm:text-sm">
           <span className="h-2 w-2 animate-pulse rounded-full bg-[#00A8CC]" />
           <Smartphone size={16} />
@@ -223,7 +223,7 @@ const StoreSubmission = () => {
       {/* PLATFORM SUPPORT */}
       <section
         id="submission-platforms"
-        className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-28 lg:px-8"
+        className="relative z-10 mx-auto max-w-[1360px] px-4 py-24 sm:px-6 sm:py-28 lg:px-8"
       >
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#0085A0]">
@@ -285,7 +285,7 @@ const StoreSubmission = () => {
 
       {/* STORE LISTING OPTIMISATION */}
       <section className="border-y border-[#004658]/10 bg-[#F0F7F8] py-24 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-12 max-w-3xl text-center">
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#0085A0]">
               Store Listing
@@ -325,7 +325,7 @@ const StoreSubmission = () => {
       </section>
 
       {/* COMPLIANCE CHECKLIST */}
-      <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-28 lg:px-8">
+      <section className="mx-auto max-w-[1360px] px-4 py-24 sm:px-6 sm:py-28 lg:px-8">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <div>
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#0085A0]">
@@ -383,7 +383,7 @@ const StoreSubmission = () => {
 
       {/* SUBMISSION JOURNEY */}
       <section className="bg-[#003B49] py-24 text-white sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#72D8E9]">
               How It Works
@@ -471,8 +471,8 @@ const StoreSubmission = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="px-4 pb-24 sm:px-6">
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-[#004658] px-6 py-12 text-center text-white shadow-xl shadow-[#004658]/15 sm:px-12 sm:py-16">
+      <section className="mx-auto max-w-[1360px] px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#004658] px-6 py-12 text-center text-white shadow-xl shadow-[#004658]/15 sm:px-12 sm:py-16">
           <div className="pointer-events-none absolute -right-16 -top-20 h-64 w-64 rounded-full bg-[#00A8CC]/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-16 h-64 w-64 rounded-full bg-[#00A8CC]/15 blur-3xl" />
 

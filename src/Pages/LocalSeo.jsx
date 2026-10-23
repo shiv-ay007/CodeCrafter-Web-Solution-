@@ -4,7 +4,6 @@ import LocalSeoServicesGrid from '../Components/DigitalGrowthComponents/SeoOptim
 import LocalSeoSteps from '../Components/DigitalGrowthComponents/SeoOptimization/LocalSeoSteps'
 import LocalSeoComparison from '../Components/DigitalGrowthComponents/SeoOptimization/LocalSeoComparison'
 import LocalSeoFaq from '../Components/DigitalGrowthComponents/SeoOptimization/LocalSeoFaq'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 
 const LocalSeo = () => {
@@ -15,7 +14,7 @@ const LocalSeo = () => {
       <LocalSeoSteps />
       <LocalSeoComparison />
       <LocalSeoFaq />
-      <Contactus />
+     
       <Cta />
     </>
   )

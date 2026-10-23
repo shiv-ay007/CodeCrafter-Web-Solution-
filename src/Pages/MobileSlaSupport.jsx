@@ -651,8 +651,8 @@ const MobileSlaSupport = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="px-4 pb-24 sm:px-6">
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-[#004658] px-6 py-12 text-center text-white shadow-xl shadow-[#004658]/15 sm:px-12 sm:py-16">
+      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#004658] px-6 py-12 text-center text-white shadow-xl shadow-[#004658]/15 sm:px-12 sm:py-16">
           <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#00A8CC]/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-20 h-64 w-64 rounded-full bg-[#00A8CC]/15 blur-3xl" />
 

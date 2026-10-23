@@ -127,7 +127,7 @@ const WebPerformanceOptimization = () => {
       />
 
       {/* 01. HERO HEADER */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+      <section className="relative max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#004658]/10 border border-[#004658]/20 text-[#004658] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6">
           <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse" />
           <span>⚡ Web Performance Optimization</span>
@@ -163,7 +163,7 @@ const WebPerformanceOptimization = () => {
       </section>
 
       {/* 02. BEFORE / AFTER BENCHMARK */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <section className="relative max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-[#002B34] text-white rounded-3xl p-6 sm:p-10 shadow-2xl">
           <div className="max-w-3xl mb-8">
             <span className="text-[#4EF0C5] text-xs font-bold uppercase tracking-widest block mb-2">
@@ -208,7 +208,7 @@ const WebPerformanceOptimization = () => {
       </section>
 
       {/* 03. PERFORMANCE SCORE DASHBOARD */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid lg:grid-cols-[.8fr_1.2fr] gap-10 items-center">
           <div>
             <span className="text-sm font-bold uppercase tracking-widest text-[#00869A]">
@@ -314,7 +314,7 @@ const WebPerformanceOptimization = () => {
 
       {/* 04. CORE WEB VITALS */}
       <section className="bg-white border-y border-slate-100 py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <span className="text-sm font-bold uppercase tracking-widest text-[#00869A]">
               Core Web Vitals
@@ -377,7 +377,7 @@ const WebPerformanceOptimization = () => {
       </section>
 
       {/* 05. OPTIMIZATION TACTICS */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="max-w-3xl mb-10">
           <span className="text-sm font-bold uppercase tracking-widest text-[#00869A]">
             Our Optimization Toolkit
@@ -434,7 +434,7 @@ const WebPerformanceOptimization = () => {
         id="optimization-process"
         className="bg-white border-y border-slate-100 py-16 sm:py-20"
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-sm font-bold uppercase tracking-widest text-[#00869A]">
               Our Process
@@ -483,7 +483,7 @@ const WebPerformanceOptimization = () => {
       </section>
 
       {/* 07. FREE AUDIT CTA */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
+      <section className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-10">
         <div className="relative overflow-hidden bg-[#004658] text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl">
           <div className="absolute -top-16 -right-12 w-48 h-48 rounded-full bg-[#00A8CC]/20 blur-3xl" />
 

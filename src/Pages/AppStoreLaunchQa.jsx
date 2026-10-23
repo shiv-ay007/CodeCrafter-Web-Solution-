@@ -165,7 +165,7 @@ const AppStoreLaunchQa = () => {
       />
 
       {/* Hero */}
-      <section className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+      <section className="relative z-10 mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8 text-center">
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-[#004658]/20 bg-[#004658]/10 px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#004658]">
           <span className="h-2 w-2 animate-pulse rounded-full bg-[#00A8CC]" />
           <Rocket size={16} />
@@ -229,7 +229,7 @@ const AppStoreLaunchQa = () => {
       </section>
 
       {/* Services */}
-      <section id="qa-services" className="relative z-10 mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 sm:py-28">
+      <section id="qa-services" className="relative z-10 mx-auto max-w-[1360px] px-4 py-24 sm:px-6 lg:px-8 sm:py-28">
         <div className="mx-auto mb-12 max-w-3xl text-center">
           <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#0085A0]">
             What We Test
@@ -271,7 +271,7 @@ const AppStoreLaunchQa = () => {
 
       {/* Process */}
       <section className="border-y border-[#004658]/10 bg-[#F0F7F8] py-24 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1360px] px-4 sm:px-6 lg:px-8">
           <div className="mx-auto mb-14 max-w-3xl text-center">
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#0085A0]">
               Our Approach
@@ -311,7 +311,7 @@ const AppStoreLaunchQa = () => {
       </section>
 
       {/* Platform coverage */}
-      <section className="mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 sm:py-28">
+      <section className="mx-auto max-w-[1360px] px-4 py-24 sm:px-6 lg:px-8 sm:py-28">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
           <div>
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#0085A0]">
@@ -376,7 +376,7 @@ const AppStoreLaunchQa = () => {
 
       {/* Deliverables */}
       <section className="bg-[#003B49] py-24 text-white sm:py-28">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
+        <div className="mx-auto grid max-w-[1360px] grid-cols-1 gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center lg:px-8">
           <div>
             <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#72D8E9]">
               Clear Outcomes
@@ -468,8 +468,8 @@ const AppStoreLaunchQa = () => {
       </section>
 
       {/* CTA */}
-      <section className="px-4 pb-24 sm:px-6">
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-[2rem] bg-[#004658] px-6 py-12 text-center text-white shadow-xl shadow-[#004658]/15 sm:px-12 sm:py-16">
+      <section className="mx-auto max-w-[1360px] px-4 pb-24 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#004658] px-6 py-12 text-center text-white shadow-xl shadow-[#004658]/15 sm:px-12 sm:py-16">
           <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[#00A8CC]/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-28 -left-20 h-64 w-64 rounded-full bg-[#00A8CC]/15 blur-3xl" />
 
