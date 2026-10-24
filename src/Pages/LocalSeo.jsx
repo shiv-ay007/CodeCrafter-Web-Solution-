@@ -5,11 +5,13 @@ import LocalSeoSteps from '../Components/DigitalGrowthComponents/SeoOptimization
 import LocalSeoComparison from '../Components/DigitalGrowthComponents/SeoOptimization/LocalSeoComparison'
 import LocalSeoFaq from '../Components/DigitalGrowthComponents/SeoOptimization/LocalSeoFaq'
 import Cta from '../Components/HeroComponent/Cta'
+import LocalSeoMapVisualization from '../Components/DigitalGrowthComponents/SeoOptimization/LocalSeoMapVisualization'
 
 const LocalSeo = () => {
   return (
     <>
       <HeroLocalSeo />
+      <LocalSeoMapVisualization/>
       <LocalSeoServicesGrid />
       <LocalSeoSteps />
       <LocalSeoComparison />
