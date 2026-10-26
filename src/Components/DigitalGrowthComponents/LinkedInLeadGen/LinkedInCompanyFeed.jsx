@@ -16,7 +16,7 @@ const LinkedInCompanyFeed = () => {
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-[1360px] mx-auto select-none" id="linkedin-community">
-      <div className="rounded-3xl bg-gradient-to-br from-slate-950 via-[#0A192F] to-[#0A66C2]/30 p-8 sm:p-12 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
+      <div className="rounded-3xl bg-gradient-to-br from-slate-950 via-[#0A192F] to-[#0B2545] p-8 sm:p-12 text-white border border-slate-800 shadow-2xl relative overflow-hidden">
         
         {/* Background Ambient Glow */}
         <div 
