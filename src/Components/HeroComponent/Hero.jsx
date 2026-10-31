@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import heroBg from "../../assets/images/hero1.png";
+import heroBg from "../../assets/images/hero1.webp";
 
 // Number Shuffle & Count-up Animation Component
 const NumberShuffleCounter = ({ value, suffix = "", duration = 1200, triggerKey }) => {
@@ -166,6 +166,11 @@ const Hero = () => {
           src={heroBg}
           alt="CodeCrafter Workspace & Software Studio"
           className="w-full h-full object-cover object-right sm:object-center"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          width="1672"
+          height="941"
         />
         {/* Soft Multi-Stop Ambient & Readability Gradient Overlay matching Image 1 */}
         <div 
