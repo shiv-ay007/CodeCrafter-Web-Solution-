@@ -1,7 +1,6 @@
 import React from 'react'
 import HeroHrms from '../Components/OurWorkComponents/EnterPriseComponets/HeroHrms'
 import HrmsFeatures from '../Components/OurWorkComponents/EnterPriseComponets/HrmsFeatures'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 import HrmsWorkflow from '../Components/OurWorkComponents/EnterPriseComponets/HrmsWorkflow'
 import HrmsDashboardPreview from '../Components/OurWorkComponents/EnterPriseComponets/Hrms DashboardPreview'
@@ -15,7 +14,7 @@ const HrmsSoftware = () => {
       <HrmsFeatures />
       <HrmsWorkflow/>
       <HrmsEmployeePortal/>
-      <Contactus />
+    
       <Cta />
     </>
   )

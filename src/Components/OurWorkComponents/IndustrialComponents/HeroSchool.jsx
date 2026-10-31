@@ -3,7 +3,7 @@ import React from 'react'
 
 const HeroSchool = () => {
   return (
-    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-12 max-w-[1480px] mx-auto overflow-hidden">
+    <section className="relative pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-40 px-4 sm:px-6 lg:px-8 max-w-[1280px] mx-auto overflow-hidden">
       <div 
         className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[400px] pointer-events-none rounded-full opacity-25 blur-3xl -z-10"
         style={{
@@ -30,18 +30,18 @@ const HeroSchool = () => {
           </p>
 
           <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-white border border-[#004658]/15 shadow-sm mb-8">
-            <div>
+            <a href="#modules" className="p-1 rounded-xl hover:bg-slate-50 transition-colors">
               <span className="text-xl font-black text-[#004658] block">Online</span>
               <span className="text-xs font-bold text-slate-900">Fee Gateway</span>
-            </div>
-            <div>
+            </a>
+            <a href="#school-ecosystem" className="p-1 rounded-xl hover:bg-slate-50 transition-colors">
               <span className="text-xl font-black text-emerald-600 block">Parent App</span>
               <span className="text-xs font-bold text-slate-900">Live Attendance</span>
-            </div>
-            <div>
+            </a>
+            <a href="#school-ecosystem" className="p-1 rounded-xl hover:bg-slate-50 transition-colors">
               <span className="text-xl font-black text-cyan-600 block">LMS</span>
               <span className="text-xs font-bold text-slate-900">Quiz & Video Hub</span>
-            </div>
+            </a>
           </div>
 
           <div className="flex flex-wrap items-center gap-4">

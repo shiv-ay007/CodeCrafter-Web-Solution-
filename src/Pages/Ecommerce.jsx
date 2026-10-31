@@ -4,7 +4,6 @@ import EcommerceFeatures from '../Components/WebSolution/Ecommerce/EcommerceFeat
 import EcommerceProjects from '../Components/WebSolution/Ecommerce/EcommerceProjects'
 import EcommerceTechStack from '../Components/WebSolution/Ecommerce/EcommerceTechStack'
 import EcommercePricing from '../Components/WebSolution/Ecommerce/EcommercePricing'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 
 const Ecommerce = () => {
@@ -15,7 +14,7 @@ const Ecommerce = () => {
       <EcommerceProjects />
       <EcommerceTechStack />
       <EcommercePricing />
-      <Contactus />
+    
       <Cta />
     </>
   )

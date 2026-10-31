@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -30,27 +31,54 @@ const ApiIntegration = () => {
       id: "payment",
       name: "POST /v1/payments/charge",
       status: "200 OK - 42ms",
-      response: `{\n  "status": "success",\n  "transaction_id": "tx_9482019482",\n  "amount": 250.00,\n  "currency": "USD",\n  "gateway": "Stripe / Plaid Sync"\n}`
+      response: `{
+  "status": "success",
+  "transaction_id": "tx_9482019482",
+  "amount": 250.00,
+  "currency": "USD",
+  "gateway": "Stripe / Plaid Sync"
+}`,
     },
     {
       id: "crm",
       name: "POST /v1/crm/lead-sync",
       status: "201 Created - 38ms",
-      response: `{\n  "sync_status": "synced",\n  "lead_id": "lead_7739182",\n  "platform": "HubSpot & Salesforce",\n  "webhook_triggered": true\n}`
+      response: `{
+  "sync_status": "synced",
+  "lead_id": "lead_7739182",
+  "platform": "HubSpot & Salesforce",
+  "webhook_triggered": true
+}`,
     },
     {
       id: "shipping",
       name: "GET /v1/logistics/rates",
       status: "200 OK - 55ms",
-      response: `{\n  "carrier": "FedEx Express",\n  "estimated_delivery": "2026-09-26T10:00:00Z",\n  "tracking_enabled": true\n}`
-    }
+      response: `{
+  "carrier": "FedEx Express",
+  "estimated_delivery": "2026-09-26T10:00:00Z",
+  "tracking_enabled": true
+}`,
+    },
   ];
 
   const features = [
-    { title: "RESTful & GraphQL API Architecture", desc: "Design clean, type-safe API schemas with OpenAPI 3.0 / Swagger and Apollo GraphQL servers." },
-    { title: "Third-Party Payment & ERP Connectors", desc: "Seamlessly connect Stripe, PayPal, Salesforce, SAP, and custom legacy enterprise ERP systems." },
-    { title: "Real-Time WebSockets & Event Streaming", desc: "Build low-latency live notification pipelines, chat applications, and real-time dashboard telemetry." },
-    { title: "API Security & Rate Limiting", desc: "Enforce OAuth 2.0, API keys, JWT validation, and automated Cloudflare rate limiting rules." }
+    {
+      title: "RESTful & GraphQL API Architecture",
+      desc: "Design clean, type-safe API schemas with OpenAPI 3.0 / Swagger and Apollo GraphQL servers.",
+    },
+    {
+      title: "Third-Party Payment & ERP Connectors",
+      desc: "Seamlessly connect Stripe, PayPal, Salesforce, SAP, and custom legacy enterprise ERP systems.",
+    },
+    {
+      title: "Real-Time WebSockets & Event Streaming",
+      desc: "Build low-latency live notification pipelines, chat applications, and real-time dashboard telemetry.",
+    },
+    {
+      title: "API Security & Rate Limiting",
+      desc: "Enforce OAuth 2.0, API keys, JWT validation, and automated Cloudflare rate limiting rules.",
+    },
   ];
 
   const integrationCapabilities = [
@@ -165,89 +193,109 @@ const ApiIntegration = () => {
   ];
 
   return (
-    <div className="w-full bg-[#FBFDFD] pt-32 sm:pt-40 pb-24 text-slate-800 font-['Plus_Jakarta_Sans',sans-serif]">
+    <div className="relative isolate w-full overflow-hidden bg-[#F0F8FA] pt-32 sm:pt-40 pb-24 text-slate-800 font-['Plus_Jakarta_Sans',sans-serif]">
+
       {/* Background Gradient */}
       <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] pointer-events-none rounded-full opacity-50 blur-[130px] -z-10"
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[1100px] h-[600px] pointer-events-none rounded-full opacity-60 blur-[130px] -z-10"
         style={{
-          background: "radial-gradient(circle at 50% 20%, rgba(0, 70, 88, 0.22) 0%, rgba(0, 168, 204, 0.08) 50%, rgba(251, 253, 253, 0) 80%)"
+          background:
+            "radial-gradient(circle at 50% 20%, rgba(0, 70, 88, 0.22) 0%, rgba(0, 168, 204, 0.12) 50%, rgba(240, 248, 250, 0) 80%)",
         }}
       />
 
       {/* Hero Header */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#004658]/10 border border-[#004658]/20 text-[#004658] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6">
-          <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse" />
-          <span>🔌 API & Microservices Integration</span>
+      <div className="relative bg-gradient-to-br from-[#E7F5F8] via-[#F3F9FB] to-[#EAF4F8] max-w-full px-4 sm:px-6 lg:px-8 text-center mb-0 pt-0 pb-16">
+
+        <div className="pointer-events-none absolute -top-24 -left-40 h-[420px] w-[420px] rounded-full bg-cyan-200/30 blur-[120px]" />
+
+        <div className="pointer-events-none absolute -right-40 top-10 h-[420px] w-[420px] rounded-full bg-sky-200/30 blur-[120px]" />
+
+        <div className="relative max-w-7xl mx-auto">
+
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-[#004658]/20 text-[#004658] text-xs sm:text-sm font-semibold uppercase tracking-wider mb-6 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-[#004658] animate-pulse" />
+            <span>🔌 API & Microservices Integration</span>
+          </div>
+
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-6 font-['Outfit',sans-serif]">
+            Connect Any System with{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#00a8cc]">
+              Robust API Architecture
+            </span>
+          </h1>
+
+          <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
+            We engineer high-speed RESTful, GraphQL, and WebSocket APIs that seamlessly bridge software platforms, databases, and third-party SaaS tools.
+          </p>
         </div>
-
-        <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-950 tracking-tight leading-[1.15] max-w-4xl mx-auto mb-6 font-['Outfit',sans-serif]">
-          Connect Any System with{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#004658] via-[#005a72] to-[#00a8cc]">
-            Robust API Architecture
-          </span>
-        </h1>
-
-        <p className="text-base sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed mb-10 font-normal">
-          We engineer high-speed RESTful, GraphQL, and WebSocket APIs that seamlessly bridge software platforms, databases, and third-party SaaS tools.
-        </p>
       </div>
 
       {/* Live API Inspector Component */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="bg-[#002B34] text-white rounded-3xl p-6 sm:p-10 shadow-2xl">
-          <div className="max-w-3xl mb-8">
-            <span className="text-[#4EF0C5] text-xs font-bold uppercase tracking-widest block mb-2">Interactive API Console</span>
-            <h2 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif]">
-              Test Integration Payloads
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Endpoints */}
-            <div className="lg:col-span-5 space-y-3">
-              {endpoints.map((ep) => (
-                <button
-                  key={ep.id}
-                  onClick={() => setActiveEndpoint(ep.id)}
-                  className={`w-full p-4 rounded-xl text-left border transition-all cursor-pointer font-mono text-xs sm:text-sm ${activeEndpoint === ep.id
-                      ? "bg-[#004658] border-[#4EF0C5] text-white shadow-lg"
-                      : "bg-white/5 border-white/10 text-slate-300 hover:bg-white/10"
-                    }`}
-                >
-                  <p className="font-bold text-[#4EF0C5]">{ep.name}</p>
-                </button>
-              ))}
+      <div className="relative bg-gradient-to-b from-[#EAF5F8] to-[#F0F8FA] max-w-full px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto">
+          <div className="bg-[#002B34] text-white rounded-3xl p-6 sm:p-10 shadow-[0_25px_65px_rgba(0,43,52,0.18)]">
+            <div className="max-w-3xl mb-8">
+              <span className="text-[#4EF0C5] text-xs font-bold uppercase tracking-widest block mb-2">
+                Interactive API Console
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif]">
+                Test Integration Payloads
+              </h2>
             </div>
 
-            {/* Code Response Box */}
-            <div className="lg:col-span-7 bg-[#001D25] border border-white/15 p-6 rounded-2xl font-mono text-xs sm:text-sm">
-              {endpoints.map((ep) => {
-                if (ep.id !== activeEndpoint) return null;
-                return (
-                  <div key={ep.id} className="space-y-4">
-                    <div className="flex items-center justify-between border-b border-white/10 pb-3">
-                      <span className="text-slate-400">Response Status:</span>
-                      <span className="text-emerald-400 font-bold">{ep.status}</span>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+              {/* Endpoints */}
+              <div className="lg:col-span-5 space-y-3">
+                {endpoints.map((ep) => (
+                  <button
+                    key={ep.id}
+                    onClick={() => setActiveEndpoint(ep.id)}
+                    className={`w-full p-4 rounded-xl text-left border transition-all cursor-pointer font-mono text-xs sm:text-sm ${
+                      activeEndpoint === ep.id
+                        ? "bg-[#004658] border-[#4EF0C5] text-white shadow-lg"
+                        : "bg-white/5 border-white/10 text-slate-300 hover:bg-white/10"
+                    }`}
+                  >
+                    <p className="font-bold text-[#4EF0C5]">{ep.name}</p>
+                  </button>
+                ))}
+              </div>
+
+              {/* Code Response Box */}
+              <div className="lg:col-span-7 bg-[#001D25] border border-white/15 p-6 rounded-2xl font-mono text-xs sm:text-sm">
+                {endpoints.map((ep) => {
+                  if (ep.id !== activeEndpoint) return null;
+
+                  return (
+                    <div key={ep.id} className="space-y-4">
+                      <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                        <span className="text-slate-400">
+                          Response Status:
+                        </span>
+                        <span className="text-emerald-400 font-bold">
+                          {ep.status}
+                        </span>
+                      </div>
+                      <pre className="text-[#4EF0C5] leading-relaxed whitespace-pre-wrap">
+                        {ep.response}
+                      </pre>
                     </div>
-                    <pre className="text-[#4EF0C5] leading-relaxed whitespace-pre-wrap">{ep.response}</pre>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* ==================================================
-    API INTEGRATION CAPABILITIES
-================================================== */}
+      {/* API INTEGRATION CAPABILITIES */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#E7F5F8] via-[#F2F9FB] to-[#EAF5FA] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
 
-      <section className="relative overflow-hidden bg-[#F5FAFB] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-cyan-200/40 blur-[130px]" />
 
-        <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-cyan-200/30 blur-[130px]" />
-
-        <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-sky-200/30 blur-[130px]" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-sky-200/40 blur-[130px]" />
 
         <div className="relative mx-auto max-w-7xl">
 
@@ -258,7 +306,7 @@ const ApiIntegration = () => {
             transition={{ duration: 0.7 }}
             className="mx-auto mb-14 max-w-3xl text-center"
           >
-            <span className="inline-flex rounded-full border border-[#004658]/20 bg-white px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658] shadow-sm">
+            <span className="inline-flex rounded-full border border-[#004658]/20 bg-white/90 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658] shadow-sm">
               API Integration Capabilities
             </span>
 
@@ -291,10 +339,10 @@ const ApiIntegration = () => {
                     delay: index * 0.06,
                   }}
                   whileHover={{ y: -7 }}
-                  className="group rounded-[26px] border border-slate-200 bg-white p-6 shadow-sm transition-all hover:border-[#004658]/20 hover:shadow-xl sm:p-7"
+                  className="group rounded-[26px] border border-[#004658]/10 bg-gradient-to-br from-white via-white to-[#F0F9FB] p-6 shadow-[0_8px_30px_rgba(0,70,88,0.06)] transition-all hover:border-[#004658]/25 hover:shadow-xl sm:p-7"
                 >
 
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#004658]/8 text-[#004658] transition-all group-hover:bg-[#004658] group-hover:text-white">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#E5F2F5] text-[#004658] transition-all group-hover:bg-[#004658] group-hover:text-white">
                     <Icon size={22} />
                   </div>
 
@@ -322,18 +370,16 @@ const ApiIntegration = () => {
         </div>
       </section>
 
+      {/* INTEGRATION ARCHITECTURE */}
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#F0F8FA] via-[#E8F4F7] to-[#F3F8FB] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
 
-      {/* ==================================================
-    INTEGRATION ARCHITECTURE
-================================================== */}
-
-      <section className="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="pointer-events-none absolute -right-40 top-10 h-[420px] w-[420px] rounded-full bg-cyan-200/30 blur-[130px]" />
 
         <div className="relative mx-auto max-w-7xl">
 
           <div className="mx-auto mb-14 max-w-3xl text-center">
 
-            <span className="inline-flex rounded-full border border-[#004658]/20 bg-[#004658]/5 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658]">
+            <span className="inline-flex rounded-full border border-[#004658]/20 bg-white/90 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658] shadow-sm">
               Integration Architecture
             </span>
 
@@ -370,10 +416,10 @@ const ApiIntegration = () => {
                         delay: index * 0.08,
                       }}
                       whileHover={{ y: -6 }}
-                      className="rounded-[24px] border border-slate-200 bg-white p-5 text-center shadow-sm"
+                      className="rounded-[24px] border border-[#004658]/10 bg-gradient-to-br from-white to-[#F0F8FA] p-5 text-center shadow-sm"
                     >
 
-                      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#004658]/8 text-[#004658]">
+                      <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#E5F2F5] text-[#004658]">
                         <Icon size={23} />
                       </div>
 
@@ -403,7 +449,7 @@ const ApiIntegration = () => {
 
             </div>
 
-            <div className="mt-8 border-t border-slate-200 pt-6">
+            <div className="mt-8 border-t border-[#004658]/10 pt-6">
 
               <div className="flex flex-wrap justify-center gap-3">
 
@@ -418,7 +464,7 @@ const ApiIntegration = () => {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="rounded-full border border-slate-200 bg-white px-4 py-2 text-[10px] font-bold text-[#315466]"
+                    className="rounded-full border border-[#004658]/10 bg-white px-4 py-2 text-[10px] font-bold text-[#315466] shadow-sm"
                   >
                     {item}
                   </span>
@@ -432,30 +478,41 @@ const ApiIntegration = () => {
         </div>
       </section>
 
-
       {/* Features Grid */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {features.map((item, idx) => (
-            <div key={idx} className="p-6 sm:p-8 rounded-3xl bg-white border border-[#004658]/15 shadow-sm hover:shadow-md transition-all">
-              <h3 className="text-xl font-bold text-slate-900 mb-3 font-['Outfit',sans-serif]">{item.title}</h3>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed">{item.desc}</p>
-            </div>
-          ))}
+      <div className="relative bg-gradient-to-br from-[#E8F4F7] via-[#F2F8FA] to-[#EAF5F8] px-4 sm:px-6 lg:px-8 py-20">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            {features.map((item, idx) => (
+              <div
+                key={idx}
+                className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white to-[#F0F8FA] border border-[#004658]/10 shadow-sm hover:shadow-lg hover:border-[#004658]/20 transition-all"
+              >
+                <h3 className="text-xl font-bold text-slate-900 mb-3 font-['Outfit',sans-serif]">
+                  {item.title}
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+
+          </div>
         </div>
       </div>
 
-      {/* ==================================================
-    INTEGRATION WORKFLOW
-================================================== */}
+      {/* INTEGRATION WORKFLOW */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#EAF5F8] via-[#F3F9FB] to-[#E5F2F6] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
 
-      <section className="relative overflow-hidden bg-[#F5FAFB] px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+        <div className="pointer-events-none absolute -left-40 bottom-0 h-[420px] w-[420px] rounded-full bg-cyan-200/30 blur-[130px]" />
 
         <div className="relative mx-auto max-w-7xl">
 
           <div className="mx-auto mb-14 max-w-3xl text-center">
 
-            <span className="inline-flex rounded-full border border-[#004658]/20 bg-white px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658] shadow-sm">
+            <span className="inline-flex rounded-full border border-[#004658]/20 bg-white/90 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658] shadow-sm">
               Integration Workflow
             </span>
 
@@ -497,13 +554,13 @@ const ApiIntegration = () => {
 
                     <div className="relative z-10 mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#004658]/15 bg-white shadow-lg">
 
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#004658]/8 text-[#004658]">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-[#E5F2F5] text-[#004658]">
                         <Icon size={22} />
                       </div>
 
                     </div>
 
-                    <div className="mt-5 rounded-[26px] border border-slate-200 bg-white p-6 text-center shadow-sm">
+                    <div className="mt-5 rounded-[26px] border border-[#004658]/10 bg-gradient-to-br from-white to-[#F0F8FA] p-6 text-center shadow-sm hover:shadow-lg transition-all">
 
                       <span className="font-mono text-xs font-black text-[#087F99]">
                         {step.number}
@@ -530,21 +587,19 @@ const ApiIntegration = () => {
         </div>
       </section>
 
+      {/* API SECURITY & RELIABILITY */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#E5F3F6] via-[#F2F8FA] to-[#EAF5F8] px-4 py-24 sm:px-6 lg:px-8 lg:py-28">
 
-      {/* ==================================================
-    API SECURITY & RELIABILITY
-================================================== */}
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-cyan-200/30 blur-[130px]" />
 
-      <section className="relative overflow-hidden bg-white px-4 py-24 sm:px-6 lg:px-8 lg:py-28">
-
-        <div className="mx-auto max-w-7xl">
+        <div className="relative mx-auto max-w-7xl">
 
           <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
 
             {/* Left */}
             <div>
 
-              <span className="inline-flex rounded-full border border-[#004658]/20 bg-[#004658]/5 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658]">
+              <span className="inline-flex rounded-full border border-[#004658]/20 bg-white/90 px-4 py-2 text-[10px] font-extrabold uppercase tracking-[0.16em] text-[#004658] shadow-sm">
                 Security & Reliability
               </span>
 
@@ -560,7 +615,7 @@ const ApiIntegration = () => {
                 rate limiting, encrypted communication and continuous API monitoring.
               </p>
 
-              <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-[#004658]/10 bg-[#F5FAFB] px-5 py-4">
+              <div className="mt-7 inline-flex items-center gap-3 rounded-2xl border border-[#004658]/10 bg-white/90 px-5 py-4 shadow-sm">
 
                 <ShieldCheck className="text-[#087F99]" size={22} />
 
@@ -595,10 +650,10 @@ const ApiIntegration = () => {
                       delay: index * 0.08,
                     }}
                     whileHover={{ y: -5 }}
-                    className="rounded-[24px] border border-slate-200 bg-white p-6 shadow-sm hover:shadow-lg"
+                    className="rounded-[24px] border border-[#004658]/10 bg-gradient-to-br from-white to-[#F0F8FA] p-6 shadow-sm hover:shadow-lg transition-all"
                   >
 
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#004658]/8 text-[#004658]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#E5F2F5] text-[#004658]">
                       <Icon size={21} />
                     </div>
 
@@ -621,15 +676,38 @@ const ApiIntegration = () => {
       </section>
 
       {/* CTA */}
-      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="bg-[#004658] text-white rounded-3xl p-8 sm:p-12 text-center shadow-xl">
-          <h3 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif] mb-4">Need Custom API Integrations for Your Business?</h3>
-          <p className="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto mb-8">Consult with our API Integration Specialists to connect your digital ecosystem.</p>
-          <Link to="/schedule-consultation" className="px-8 py-3.5 rounded-full bg-white text-[#004658] font-bold text-sm sm:text-base hover:bg-slate-100 transition-all inline-block shadow-lg">
-            Schedule API Strategy Call
-          </Link>
+      <div className="relative bg-gradient-to-b from-[#EAF5F8] to-[#F1F8FA] px-4 sm:px-6 lg:px-8 pt-12 pb-8">
+
+        <div className="max-w-7xl mx-auto">
+
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#003B4B] via-[#004658] to-[#006B82] text-white rounded-3xl p-8 sm:p-12 text-center shadow-[0_20px_60px_rgba(0,70,88,0.20)]">
+
+            <div className="absolute -top-28 -right-20 w-80 h-80 bg-[#00b4d8]/20 rounded-full blur-3xl" />
+
+            <div className="absolute -bottom-28 -left-20 w-80 h-80 bg-[#00a8cc]/20 rounded-full blur-3xl" />
+
+            <div className="relative z-10">
+
+              <h3 className="text-2xl sm:text-4xl font-bold font-['Outfit',sans-serif] mb-4">
+                Need Custom API Integrations for Your Business?
+              </h3>
+
+              <p className="text-slate-200 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+                Consult with our API Integration Specialists to connect your digital ecosystem.
+              </p>
+
+              <Link
+                to="/schedule-consultation"
+                className="px-8 py-3.5 rounded-full bg-white text-[#004658] font-bold text-sm sm:text-base hover:bg-slate-100 transition-all inline-block shadow-lg"
+              >
+                Schedule API Strategy Call
+              </Link>
+
+            </div>
+          </div>
         </div>
       </div>
+
     </div>
   );
 };

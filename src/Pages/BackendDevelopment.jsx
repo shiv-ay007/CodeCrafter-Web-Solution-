@@ -814,7 +814,7 @@ const BackendDevelopment = () => {
 
           {/* Data Flow Diagram */}
 
-          <div className="relative mx-auto max-w-6xl">
+          <div className="relative mx-auto w-full">
 
             {/* Desktop connecting line */}
 
@@ -923,7 +923,7 @@ const BackendDevelopment = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="mx-auto mt-12 max-w-5xl rounded-[28px] border border-[#004658]/15 bg-white p-5 shadow-sm sm:p-7"
+            className="mx-auto mt-12 w-full rounded-[28px] border border-[#004658]/15 bg-white p-5 shadow-sm sm:p-7"
           >
 
             <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">

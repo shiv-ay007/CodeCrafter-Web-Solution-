@@ -5,7 +5,7 @@ const careerHighlights = [
   {
     id: 1,
     icon: '⚡',
-    title: '$2,500 Setup Stipend',
+    title: '2,500 Setup Stipend',
     desc: 'MacBook Pro, 4K display, and ergonomic furniture.',
     badge: 'Hardware Included'
   },

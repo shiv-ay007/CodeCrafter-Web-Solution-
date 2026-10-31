@@ -3,7 +3,6 @@ import HeroSearchIntentMapping from '../Components/DigitalGrowthComponents/Searc
 import SearchIntentMappingGrid from '../Components/DigitalGrowthComponents/SearchIntentMapping/SearchIntentMappingGrid'
 import SearchIntentMappingSteps from '../Components/DigitalGrowthComponents/SearchIntentMapping/SearchIntentMappingSteps'
 import SearchIntentMappingFaq from '../Components/DigitalGrowthComponents/SearchIntentMapping/SearchIntentMappingFaq'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 
 const SearchIntentMapping = () => {
@@ -13,7 +12,7 @@ const SearchIntentMapping = () => {
       <SearchIntentMappingGrid />
       <SearchIntentMappingSteps />
       <SearchIntentMappingFaq />
-      <Contactus />
+     
       <Cta />
     </>
   )

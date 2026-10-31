@@ -99,14 +99,14 @@ const cardAnimation = {
 
 const WebDevProcess = () => {
   return (
-    <section className="relative overflow-hidden bg-[#FBFDFD] px-5 py-24 sm:px-8 lg:px-10 lg:py-32">
-      
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(135deg,#EAF5F6_0%,#F4F9FA_48%,#E5F2F5_100%)] px-5 py-24 sm:px-8 lg:px-10 lg:py-32">
+
       {/* ==================================================
           BACKGROUND
       ================================================== */}
 
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.028]"
+        className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
           backgroundImage:
             "radial-gradient(#004658 1.2px, transparent 1.2px)",
@@ -114,17 +114,15 @@ const WebDevProcess = () => {
         }}
       />
 
-      <div className="pointer-events-none absolute -left-40 top-[15%] h-[430px] w-[430px] rounded-full bg-cyan-200/20 blur-[130px]" />
+      <div className="pointer-events-none absolute -left-40 top-[12%] h-[480px] w-[480px] rounded-full bg-[#78D5DE]/25 blur-[140px]" />
 
-      <div className="pointer-events-none absolute -right-40 bottom-[10%] h-[430px] w-[430px] rounded-full bg-cyan-300/15 blur-[130px]" />
-
+      <div className="pointer-events-none absolute -right-40 bottom-[8%] h-[480px] w-[480px] rounded-full bg-[#70B8D0]/20 blur-[145px]" />
 
       {/* ==================================================
           CONTAINER
       ================================================== */}
 
       <div className="relative z-10 mx-auto max-w-[1280px]">
-
 
         {/* ==================================================
             HEADER
@@ -151,7 +149,6 @@ const WebDevProcess = () => {
 
           </div>
 
-
           <h2 className="text-4xl font-black leading-[1.05] tracking-[-2px] text-[#0B1B2C] sm:text-5xl lg:text-6xl">
             How We Build{" "}
 
@@ -160,7 +157,6 @@ const WebDevProcess = () => {
             </span>
           </h2>
 
-
           <p className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-slate-600 sm:text-base lg:text-[17px]">
             From the initial architectural blueprint to automated zero-downtime
             deployment, our process guarantees enterprise reliability.
@@ -168,13 +164,11 @@ const WebDevProcess = () => {
 
         </motion.div>
 
-
         {/* ==================================================
             PROCESS TIMELINE
         ================================================== */}
 
         <div className="relative">
-
 
           {/* ==================================================
               CONNECTING LINE — DESKTOP ONLY
@@ -182,11 +176,7 @@ const WebDevProcess = () => {
 
           <div className="pointer-events-none absolute left-[10%] right-[10%] top-[39px] hidden lg:block">
 
-            {/* Base line */}
-
             <div className="h-px w-full bg-[#BFDDE2]" />
-
-            {/* Animated line */}
 
             <motion.div
               initial={{ width: 0 }}
@@ -204,14 +194,8 @@ const WebDevProcess = () => {
 
           </div>
 
-
           {/* ==================================================
               STEP GRID
-
-              IMPORTANT:
-              Numbers are ABSOLUTE.
-              Cards are in normal document flow.
-              This prevents overlap.
           ================================================== */}
 
           <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4 lg:gap-7">
@@ -236,12 +220,7 @@ const WebDevProcess = () => {
                   className="relative pt-16 lg:pt-20"
                 >
 
-                  {/* ==================================================
-                      NUMBER NODE
-
-                      This is ABSOLUTE so it does not affect card
-                      height or flow.
-                  ================================================== */}
+                  {/* NUMBER NODE */}
 
                   <div className="absolute left-1/2 top-0 z-20 flex -translate-x-1/2 items-center justify-center">
 
@@ -262,17 +241,13 @@ const WebDevProcess = () => {
 
                   </div>
 
-
-                  {/* ==================================================
-                      CARD
-                  ================================================== */}
+                  {/* CARD */}
 
                   <div className="group relative min-h-[395px] overflow-hidden rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_15px_40px_rgba(16,58,73,0.05)] transition-all duration-500 hover:-translate-y-2 hover:border-[#004658]/20 hover:shadow-[0_25px_65px_rgba(16,58,73,0.12)] sm:p-7">
 
                     {/* Glow */}
 
                     <div className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full bg-cyan-100/50 blur-3xl transition-all duration-500 group-hover:bg-cyan-200/70" />
-
 
                     {/* Decorative Grid */}
 
@@ -284,7 +259,6 @@ const WebDevProcess = () => {
                         backgroundSize: "12px 12px",
                       }}
                     />
-
 
                     {/* Top area */}
 
@@ -300,13 +274,11 @@ const WebDevProcess = () => {
                         <Icon size={22} />
                       </motion.div>
 
-
                       <span className="text-[9px] font-bold uppercase tracking-[0.13em] text-slate-400">
                         {step.accent}
                       </span>
 
                     </div>
-
 
                     {/* Badge */}
 
@@ -322,20 +294,17 @@ const WebDevProcess = () => {
 
                     </div>
 
-
                     {/* Title */}
 
                     <h3 className="relative z-10 mt-3 text-xl font-black leading-tight tracking-[-0.5px] text-[#0B1B2C] transition-colors duration-300 group-hover:text-[#004658] sm:text-[22px]">
                       {step.title}
                     </h3>
 
-
                     {/* Description */}
 
                     <p className="relative z-10 mt-4 text-sm leading-7 text-slate-600">
                       {step.desc}
                     </p>
-
 
                     {/* Bottom Accent */}
 
@@ -355,13 +324,9 @@ const WebDevProcess = () => {
 
           </div>
 
-
-          {/* ==================================================
-              LARGE FIXED GAP BEFORE ENGINEERING FLOW
-          ================================================== */}
+          {/* GAP BEFORE ENGINEERING FLOW */}
 
           <div className="h-16 lg:h-20" />
-
 
           {/* ==================================================
               ENGINEERING FLOW VISUAL
@@ -390,13 +355,9 @@ const WebDevProcess = () => {
 
             <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-cyan-200/35 blur-[100px]" />
 
-
             <div className="relative grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
 
-
-              {/* ==================================================
-                  LEFT CONTENT
-              ================================================== */}
+              {/* LEFT CONTENT */}
 
               <div className="lg:col-span-4">
 
@@ -405,14 +366,12 @@ const WebDevProcess = () => {
                   Engineering Flow
                 </div>
 
-
                 <h3 className="text-2xl font-black tracking-[-1px] text-[#0B1B2C] sm:text-3xl">
                   From blueprint to{" "}
                   <span className="text-[#087F99]">
                     production.
                   </span>
                 </h3>
-
 
                 <p className="mt-4 max-w-md text-sm leading-6 text-slate-600">
                   Each stage builds on the previous one to create a complete,
@@ -421,15 +380,7 @@ const WebDevProcess = () => {
 
               </div>
 
-
-              {/* ==================================================
-                  RIGHT FLOW
-
-                  FIX:
-                  Use 4 cards in a flex row.
-                  Arrows are inside each item instead of becoming
-                  separate grid items.
-              ================================================== */}
+              {/* RIGHT FLOW */}
 
               <div className="lg:col-span-8">
 
@@ -484,7 +435,6 @@ const WebDevProcess = () => {
 
                         </motion.div>
 
-
                         {/* Arrow */}
 
                         {index < 3 && (
@@ -503,17 +453,13 @@ const WebDevProcess = () => {
 
             </div>
 
-
-            {/* ==================================================
-                ENGINEERING FOCUS
-            ================================================== */}
+            {/* ENGINEERING FOCUS */}
 
             <div className="relative mt-8 flex flex-wrap items-center gap-3 border-t border-slate-200/80 pt-6">
 
               <span className="mr-1 text-[9px] font-extrabold uppercase tracking-wider text-slate-400">
                 Engineering Focus
               </span>
-
 
               {[
                 {

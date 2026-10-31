@@ -3,7 +3,6 @@ import HeroSocialMedia from '../Components/DigitalGrowthComponents/BrandComponet
 import SocialGrowthProcess from '../Components/DigitalGrowthComponents/BrandComponets/SocialGrowthProcess'
 import InstagramFeed from '../Components/ScrollPage/InstagramFeed'
 import LinkedInFeed from '../Components/ScrollPage/LinkedInFeed'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 
 const SocialMedia = () => {
@@ -13,7 +12,7 @@ const SocialMedia = () => {
       <SocialGrowthProcess />
       <InstagramFeed />
       <LinkedInFeed />
-      <Contactus />
+     
       <Cta />
     </>
   )

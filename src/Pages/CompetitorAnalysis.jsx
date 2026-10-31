@@ -3,7 +3,6 @@ import HeroCompetitorAnalysis from '../Components/DigitalGrowthComponents/Compet
 import CompetitorAnalysisGrid from '../Components/DigitalGrowthComponents/CompetitorAnalysis/CompetitorAnalysisGrid'
 import CompetitorAnalysisSteps from '../Components/DigitalGrowthComponents/CompetitorAnalysis/CompetitorAnalysisSteps'
 import CompetitorAnalysisFaq from '../Components/DigitalGrowthComponents/CompetitorAnalysis/CompetitorAnalysisFaq'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 
 const CompetitorAnalysis = () => {
@@ -13,7 +12,7 @@ const CompetitorAnalysis = () => {
       <CompetitorAnalysisGrid />
       <CompetitorAnalysisSteps />
       <CompetitorAnalysisFaq />
-      <Contactus />
+      
       <Cta />
     </>
   )

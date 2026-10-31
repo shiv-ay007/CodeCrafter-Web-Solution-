@@ -15,7 +15,6 @@ import {
   Zap,
 } from "lucide-react";
 
-
 // ======================================================
 // TECH STACK DATA
 // ======================================================
@@ -134,7 +133,6 @@ const techCategories = [
   },
 ];
 
-
 // ======================================================
 // ANIMATIONS
 // ======================================================
@@ -173,21 +171,20 @@ const cardReveal = {
   },
 };
 
-
 // ======================================================
 // MAIN COMPONENT
 // ======================================================
 
 const WebDevTechStack = () => {
   return (
-    <section className="relative overflow-hidden bg-[#F8FBFC] px-5 py-24 sm:px-8 lg:px-10 lg:py-32">
+    <section className="relative isolate overflow-hidden bg-[linear-gradient(145deg,#F3F7FB_0%,#E8F3F5_48%,#F0F7F8_100%)] px-5 py-24 sm:px-8 lg:px-10 lg:py-32">
 
       {/* =================================================
           BACKGROUND
       ================================================= */}
 
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
           backgroundImage:
             "radial-gradient(#004658 1.2px, transparent 1.2px)",
@@ -195,17 +192,15 @@ const WebDevTechStack = () => {
         }}
       />
 
-      <div className="pointer-events-none absolute -left-48 top-20 h-[450px] w-[450px] rounded-full bg-cyan-300/15 blur-[130px]" />
+      <div className="pointer-events-none absolute -left-48 top-16 h-[480px] w-[480px] rounded-full bg-[#9CC9E8]/20 blur-[140px]" />
 
-      <div className="pointer-events-none absolute -right-48 bottom-10 h-[450px] w-[450px] rounded-full bg-cyan-200/20 blur-[140px]" />
-
+      <div className="pointer-events-none absolute -right-48 bottom-8 h-[480px] w-[480px] rounded-full bg-[#72D0D5]/20 blur-[145px]" />
 
       {/* =================================================
           CONTAINER
       ================================================= */}
 
       <div className="relative z-10 mx-auto max-w-[1280px]">
-
 
         {/* =================================================
             HEADER
@@ -234,7 +229,6 @@ const WebDevTechStack = () => {
 
           </div>
 
-
           {/* Heading */}
 
           <h2 className="text-4xl font-black leading-[1.04] tracking-[-2px] text-[#0B1B2C] sm:text-5xl lg:text-6xl">
@@ -247,7 +241,6 @@ const WebDevTechStack = () => {
 
           </h2>
 
-
           {/* Description */}
 
           <p className="mx-auto mt-6 max-w-3xl text-sm font-medium leading-7 text-slate-600 sm:text-base lg:text-[17px]">
@@ -256,7 +249,6 @@ const WebDevTechStack = () => {
           </p>
 
         </motion.div>
-
 
         {/* =================================================
             FULL STACK ARCHITECTURE VISUAL
@@ -276,7 +268,6 @@ const WebDevTechStack = () => {
           {/* Glow */}
 
           <div className="pointer-events-none absolute -right-28 -top-28 h-72 w-72 rounded-full bg-cyan-200/30 blur-[100px]" />
-
 
           <div className="relative grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
 
@@ -308,7 +299,6 @@ const WebDevTechStack = () => {
 
             </div>
 
-
             {/* Architecture Flow */}
 
             <div className="lg:col-span-8">
@@ -318,7 +308,6 @@ const WebDevTechStack = () => {
                 {/* Connecting line */}
 
                 <div className="absolute left-[8%] right-[8%] top-[37px] hidden h-px bg-gradient-to-r from-[#004658]/10 via-[#00A3C4]/60 to-[#004658]/10 md:block" />
-
 
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
 
@@ -380,7 +369,6 @@ const WebDevTechStack = () => {
 
           </div>
 
-
           {/* Bottom architecture benefits */}
 
           <div className="relative mt-8 flex flex-wrap gap-3 border-t border-slate-200/80 pt-6">
@@ -425,7 +413,6 @@ const WebDevTechStack = () => {
 
         </motion.div>
 
-
         {/* =================================================
             TECHNOLOGY CATEGORIES
         ================================================= */}
@@ -456,7 +443,6 @@ const WebDevTechStack = () => {
 
                 <div className="pointer-events-none absolute -right-20 -top-20 h-52 w-52 rounded-full bg-cyan-100/50 blur-3xl transition-all duration-500 group-hover:bg-cyan-200/70" />
 
-
                 {/* Decorative Grid */}
 
                 <div
@@ -468,10 +454,7 @@ const WebDevTechStack = () => {
                   }}
                 />
 
-
-                {/* =================================================
-                    CARD HEADER
-                ================================================= */}
+                {/* CARD HEADER */}
 
                 <div className="relative z-10 flex items-start justify-between">
 
@@ -495,7 +478,6 @@ const WebDevTechStack = () => {
 
                   </div>
 
-
                   {/* Number */}
 
                   <span className="font-mono text-sm font-black text-[#004658]/20 transition-colors duration-300 group-hover:text-[#004658]">
@@ -504,26 +486,21 @@ const WebDevTechStack = () => {
 
                 </div>
 
-
                 {/* Description */}
 
                 <p className="relative z-10 mt-5 max-w-xl text-sm leading-6 text-slate-600">
                   {category.description}
                 </p>
 
-
                 {/* Divider */}
 
                 <div className="my-6 h-px bg-slate-100" />
 
-
-                {/* =================================================
-                    TECH ITEMS
-                ================================================= */}
+                {/* TECH ITEMS */}
 
                 <div className="relative z-10 grid gap-3 sm:grid-cols-2">
 
-                  {category.items.map((item, itemIndex) => (
+                  {category.items.map((item) => (
 
                     <motion.div
                       key={item.name}
@@ -547,7 +524,6 @@ const WebDevTechStack = () => {
 
                         </div>
 
-
                         <ArrowRight
                           size={14}
                           className="mt-0.5 shrink-0 text-[#00A3C4] opacity-0 transition-all duration-300 group-hover/item:translate-x-1 group-hover/item:opacity-100"
@@ -560,7 +536,6 @@ const WebDevTechStack = () => {
                   ))}
 
                 </div>
-
 
                 {/* Bottom Accent */}
 
@@ -579,7 +554,6 @@ const WebDevTechStack = () => {
           })}
 
         </div>
-
 
         {/* =================================================
             BOTTOM MESSAGE
@@ -621,7 +595,6 @@ const WebDevTechStack = () => {
     </section>
   );
 };
-
 
 // ======================================================
 // SMALL LOCAL ICON COMPONENT

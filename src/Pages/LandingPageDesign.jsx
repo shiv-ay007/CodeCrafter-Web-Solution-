@@ -129,7 +129,7 @@ const LandingPageDesign = () => {
       </section>
 
       {/* 02. GRAPHICAL LANDING PAGE MOCKUP */}
-      <section className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-24">
+      <section className="relative max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 mb-24">
         <div className="rounded-[28px] border border-slate-200 bg-white p-3 sm:p-5 shadow-xl shadow-[#004658]/10">
           {/* Browser bar */}
           <div className="flex items-center justify-between px-3 py-3 border-b border-slate-100 mb-4">

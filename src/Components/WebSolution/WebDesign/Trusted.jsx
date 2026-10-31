@@ -1,5 +1,5 @@
-import React, { useState, useRef } from 'react'
 
+import React, { useState, useRef } from 'react'
 
 const techPartners = [
   {
@@ -145,11 +145,13 @@ const Trusted = () => {
   const [activeTech, setActiveTech] = useState(null)
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
   const [isHovered, setIsHovered] = useState(false)
-  const [viewMode, setViewMode] = useState('grid') // 'grid' | 'marquee'
+  const [viewMode, setViewMode] = useState('grid')
 
   const handleMouseMove = (e) => {
     if (!containerRef.current) return
+
     const rect = containerRef.current.getBoundingClientRect()
+
     setMousePos({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top
@@ -162,60 +164,60 @@ const Trusted = () => {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative py-16 px-4 sm:px-6 lg:px-12 bg-gradient-to-b from-[#F0F7F9] via-[#F6FAFB] to-[#FBFDFD] text-slate-900 overflow-hidden select-none"
+      className="relative py-16 px-4 sm:px-6 lg:px-12 bg-gradient-to-b from-[#E5F7FA] via-[#F0F8FA] to-[#EAF4F7] text-slate-900 overflow-hidden select-none"
       id="trusted-technologies"
     >
-      {/* 1. Precision Teal Dot Matrix Background */}
+      {/* Animated Dot Background */}
       <div
-        className="absolute inset-0 opacity-[0.045] pointer-events-none -z-20"
+        className="absolute inset-0 opacity-[0.07] pointer-events-none"
         style={{
           backgroundImage: 'radial-gradient(#004658 1.5px, transparent 1.5px)',
           backgroundSize: '28px 28px'
         }}
       />
 
-      {/* 2. Signature Animated Brand Aurora Glow Spheres (#004658 & #00D8FF) */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+      {/* Animated Aurora Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
           className="absolute -top-24 left-1/2 -translate-x-1/2 w-[650px] h-[350px] rounded-full blur-[110px] opacity-40 animate-pulse"
           style={{
-            background: 'radial-gradient(circle, rgba(0, 70, 88, 0.28) 0%, rgba(0, 216, 255, 0.2) 50%, transparent 80%)'
+            background: 'radial-gradient(circle, rgba(0,70,88,0.28) 0%, rgba(0,216,255,0.2) 50%, transparent 80%)'
           }}
         />
 
         <div
           className="absolute top-1/2 -left-20 w-80 h-80 rounded-full blur-[100px] opacity-25 animate-[spin_20s_linear_infinite]"
           style={{
-            background: 'radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(0, 70, 88, 0.15) 70%, transparent 100%)'
+            background: 'radial-gradient(circle, rgba(6,182,212,0.3) 0%, rgba(0,70,88,0.15) 70%, transparent 100%)'
           }}
         />
 
         <div
           className="absolute top-1/2 -right-20 w-80 h-80 rounded-full blur-[100px] opacity-25 animate-[spin_24s_linear_infinite_reverse]"
           style={{
-            background: 'radial-gradient(circle, rgba(0, 216, 255, 0.25) 0%, rgba(0, 70, 88, 0.12) 70%, transparent 100%)'
+            background: 'radial-gradient(circle, rgba(0,216,255,0.25) 0%, rgba(0,70,88,0.12) 70%, transparent 100%)'
           }}
         />
       </div>
 
-      {/* 3. Interactive Cursor Spotlight */}
+      {/* Interactive Cursor Spotlight */}
       {isHovered && (
         <div
-          className="absolute pointer-events-none -inset-px transition-opacity duration-300 opacity-100 -z-5"
+          className="absolute inset-0 pointer-events-none transition-opacity duration-300"
           style={{
-            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(0, 70, 88, 0.08), transparent 80%)`
+            background: `radial-gradient(400px circle at ${mousePos.x}px ${mousePos.y}px, rgba(0,70,88,0.09), transparent 80%)`
           }}
         />
       )}
 
-      {/* 4. Master Frosted Glass Theme Container */}
-      <div className="relative max-w-7xl mx-auto rounded-3xl bg-white/90 backdrop-blur-2xl border border-slate-200/90 p-6 sm:p-9 shadow-xl shadow-[#004658]/8 overflow-hidden">
-        
-        {/* Animated Brand Scanning Laser Accent Beam */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#004658] to-transparent opacity-60 animate-[pulse_3s_ease-in-out_infinite]" />
+      {/* Main Container */}
+      <div className="relative max-w-7xl mx-auto rounded-3xl bg-white/85 backdrop-blur-2xl border border-white/90 p-6 sm:p-9 shadow-2xl shadow-[#004658]/10 overflow-hidden">
 
-        {/* Section Header */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-7 pb-4 border-b border-slate-100 text-center sm:text-left">
+        {/* Top Animated Accent */}
+        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#004658] via-[#00D8FF] to-[#004658] animate-pulse" />
+
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-7 pb-4 border-b border-slate-200/80 text-center sm:text-left">
           <div>
             <div className="flex items-center justify-center sm:justify-start gap-2 mb-1.5">
               <span className="w-2.5 h-2.5 rounded-full bg-[#00D8FF] animate-ping" />
@@ -223,37 +225,38 @@ const Trusted = () => {
                 TRUSTED TECHNOLOGIES & ECOSYSTEM
               </span>
             </div>
+
             <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
               Engineered with Silicon-Grade Precision
             </h3>
           </div>
 
-          {/* Right Controls: View Switcher + Status Badge */}
+          {/* Controls */}
           <div className="flex items-center gap-3">
-            <span className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#004658]/8 border border-[#004658]/20 text-[11px] font-mono font-bold text-[#004658]">
+            <span className="hidden md:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#004658]/10 border border-[#004658]/20 text-[11px] font-mono font-bold text-[#004658]">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
               Zero Legacy Debt
             </span>
 
-            {/* Mode Switcher */}
-            <div className="flex items-center bg-slate-100/90 p-1 rounded-xl border border-slate-200 shadow-2xs">
+            <div className="flex items-center bg-slate-100 p-1 rounded-xl border border-slate-200 shadow-sm">
               <button
                 onClick={() => setViewMode('grid')}
                 title="Grid Matrix Mode"
-                className={`px-3 py-1 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
                   viewMode === 'grid'
-                    ? 'bg-[#004658] text-white shadow-xs'
+                    ? 'bg-[#004658] text-white shadow-md'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 Grid
               </button>
+
               <button
                 onClick={() => setViewMode('marquee')}
                 title="Streaming Marquee Mode"
-                className={`px-3 py-1 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono font-bold transition-all cursor-pointer ${
                   viewMode === 'marquee'
-                    ? 'bg-[#004658] text-white shadow-xs'
+                    ? 'bg-[#004658] text-white shadow-md'
                     : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
@@ -263,7 +266,7 @@ const Trusted = () => {
           </div>
         </div>
 
-        {/* 5. TECH LOGO DISPLAY (FULL-CARD WATERMARK BACKGROUND ON EVERY CARD) */}
+        {/* Technology Grid */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3.5 sm:gap-4">
             {techPartners.map((tech) => {
@@ -274,106 +277,153 @@ const Trusted = () => {
                   key={tech.id}
                   onMouseEnter={() => setActiveTech(tech.id)}
                   onMouseLeave={() => setActiveTech(null)}
-                  className={`group relative rounded-2xl p-4 border transition-all duration-400 flex flex-col items-center justify-between text-center cursor-pointer select-none min-h-[135px] overflow-hidden ${
+                  className={`group relative rounded-2xl p-4 border flex flex-col items-center justify-between text-center cursor-pointer min-h-[165px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] ${
                     isCurrent
-                      ? 'bg-white border-[#004658] ring-2 ring-[#004658]/25 shadow-xl shadow-[#004658]/12 -translate-y-1.5'
-                      : 'bg-white/95 border-slate-200/90 hover:border-[#004658]/50 hover:shadow-lg hover:shadow-slate-200/60 hover:-translate-y-1'
+                      ? 'ring-2 ring-[#004658]/20'
+                      : ''
                   }`}
+                  style={{
+                    background: `linear-gradient(145deg, ${tech.color}30 0%, ${tech.color}15 48%, #FFFFFF 100%)`,
+                    borderColor: `${tech.color}65`,
+                    boxShadow: isCurrent
+                      ? `0 18px 38px ${tech.color}35`
+                      : `0 8px 24px ${tech.color}18`
+                  }}
                 >
-                  {/* FULL-CARD BACKGROUND WATERMARK SVG */}
-                  <div className="absolute -bottom-3 -right-3 w-24 h-24 sm:w-28 sm:h-28 opacity-[0.08] group-hover:opacity-[0.20] group-hover:scale-115 group-hover:-rotate-6 transition-all duration-500 pointer-events-none">
-                    {tech.icon}
-                  </div>
-
-                  {/* Glowing Ambient Radial Wash on Hover */}
+                  {/* Ambient Glow */}
                   <div
-                    className="absolute -top-10 -right-10 w-24 h-24 rounded-full blur-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 pointer-events-none"
+                    className="absolute -right-8 -bottom-10 h-32 w-32 rounded-full blur-2xl opacity-30 transition-all duration-700 group-hover:scale-150 group-hover:opacity-60 pointer-events-none"
                     style={{ backgroundColor: tech.color }}
                   />
 
-                  {/* Top Mini Badge & Colored Dot */}
-                  <div className="relative z-10 w-full flex items-center justify-between text-[9px] font-mono text-slate-400 mb-1">
-                    <span className="opacity-0 group-hover:opacity-100 text-[#004658] transition-opacity font-bold">
+                  {/* Background Watermark */}
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 sm:w-28 sm:h-28 opacity-[0.10] group-hover:opacity-[0.23] group-hover:scale-110 group-hover:-rotate-12 transition-all duration-700 pointer-events-none">
+                    {tech.icon}
+                  </div>
+
+                  {/* Top Badge */}
+                  <div className="relative z-10 w-full flex items-center justify-between text-[9px] font-mono mb-1">
+                    <span className="text-slate-700 font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {tech.badge}
                     </span>
-                    <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: tech.color }} />
+
+                    <span
+                      className="w-2 h-2 rounded-full animate-pulse ring-4 ring-white/70"
+                      style={{ backgroundColor: tech.color }}
+                    />
                   </div>
 
-                  {/* Foreground Mini Icon Container */}
-                  <div className="relative z-10 my-1 group-hover:scale-110 transition-transform duration-300">
-                    <div className="w-9 h-9 rounded-xl bg-white/90 border border-slate-200/80 p-1.5 flex items-center justify-center shadow-xs">
-                      {tech.icon}
-                    </div>
+                  {/* Main Icon */}
+                  <div
+                    className="relative z-10 my-1 w-14 h-14 rounded-2xl bg-white/95 border border-white p-3 flex items-center justify-center shadow-lg transition-all duration-500 group-hover:scale-110 group-hover:-rotate-6"
+                    style={{
+                      boxShadow: `0 8px 22px ${tech.color}35`
+                    }}
+                  >
+                    {tech.icon}
                   </div>
 
-                  {/* Tech Info */}
-                  <div className="relative z-10 mt-1">
+                  {/* Technology Details */}
+                  <div className="relative z-10 mt-2">
                     <h4 className="text-xs sm:text-sm font-extrabold text-slate-900 group-hover:text-[#004658] transition-colors tracking-tight">
                       {tech.name}
                     </h4>
-                    <span className="text-[10px] font-mono text-slate-500 font-medium block mt-0.5">
+
+                    <span className="text-[10px] font-mono text-slate-600 font-semibold block mt-1">
                       {tech.role}
                     </span>
                   </div>
+
+                  {/* Bottom Animated Accent */}
+                  <span
+                    className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[3px] w-0 rounded-full group-hover:w-2/3 transition-all duration-500"
+                    style={{ backgroundColor: tech.color }}
+                  />
                 </div>
               )
             })}
           </div>
         ) : (
-          /* INFINITE ANIMATED SMOOTH MARQUEE STREAM (With Full-Card Background Art) */
+          /* Animated Stream Mode */
           <div className="relative w-full overflow-hidden py-3">
-            {/* Left & Right Gradient Soft Faders */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-[#F0F8FA] to-transparent z-10 pointer-events-none" />
+
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-[#F0F8FA] to-transparent z-10 pointer-events-none" />
 
             <div className="flex gap-4 animate-[marquee_20s_linear_infinite] hover:[animation-play-state:paused] w-max">
               {[...techPartners, ...techPartners].map((tech, index) => (
                 <div
                   key={`${tech.id}-${index}`}
-                  className="group relative flex items-center gap-3 px-5 py-3 rounded-2xl bg-white/95 border border-slate-200/90 hover:border-[#004658]/50 hover:shadow-lg hover:shadow-[#004658]/10 transition-all duration-300 min-w-[200px] overflow-hidden"
+                  className="group relative flex items-center gap-3 px-5 py-4 rounded-2xl border transition-all duration-500 min-w-[215px] overflow-hidden hover:-translate-y-1 hover:shadow-xl"
+                  style={{
+                    background: `linear-gradient(120deg, ${tech.color}28 0%, ${tech.color}12 55%, #FFFFFF 100%)`,
+                    borderColor: `${tech.color}65`,
+                    boxShadow: `0 6px 18px ${tech.color}18`
+                  }}
                 >
-                  {/* Background Full-Card Logo Watermark in Marquee item */}
-                  <div className="absolute -bottom-2 -right-2 w-16 h-16 opacity-[0.08] group-hover:opacity-[0.20] group-hover:scale-120 transition-all duration-500 pointer-events-none">
+                  {/* Stream Watermark */}
+                  <div className="absolute -bottom-3 -right-3 w-20 h-20 opacity-[0.10] group-hover:opacity-[0.22] group-hover:scale-110 group-hover:-rotate-6 transition-all duration-700 pointer-events-none">
                     {tech.icon}
                   </div>
 
-                  <div className="relative z-10 w-9 h-9 rounded-xl bg-slate-50 p-1.5 border border-slate-200/80 flex items-center justify-center shadow-2xs group-hover:scale-110 transition-transform">
+                  {/* Icon */}
+                  <div
+                    className="relative z-10 w-12 h-12 rounded-xl bg-white/95 p-2.5 border border-white flex items-center justify-center shadow-md group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-500"
+                    style={{
+                      boxShadow: `0 6px 18px ${tech.color}30`
+                    }}
+                  >
                     {tech.icon}
                   </div>
+
+                  {/* Name and Role */}
                   <div className="relative z-10 text-left">
-                    <span className="text-xs font-bold text-slate-900 group-hover:text-[#004658] transition-colors block">
+                    <span className="text-xs font-extrabold text-slate-900 group-hover:text-[#004658] transition-colors block">
                       {tech.name}
                     </span>
-                    <span className="text-[10px] font-mono text-slate-500 block">
+
+                    <span className="text-[10px] font-mono text-slate-600 font-semibold block mt-1">
                       {tech.role}
                     </span>
                   </div>
+
+                  <span
+                    className="absolute right-3 top-3 w-2 h-2 rounded-full animate-pulse"
+                    style={{ backgroundColor: tech.color }}
+                  />
                 </div>
               ))}
             </div>
           </div>
         )}
 
-        {/* 6. Footer Dot Strip */}
-        <div className="mt-7 pt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-500 text-center">
+        {/* Footer */}
+        <div className="mt-7 pt-4 border-t border-slate-200/80 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-slate-500 text-center">
           <div className="flex items-center gap-2">
             <span className="text-[#004658] font-bold">⚡</span>
-            <span>React 19 · Next.js · WordPress · Shopify · Framer · Figma · Webflow · Tailwind CSS</span>
+
+            <span>
+              React 19 · Next.js · WordPress · Shopify · Framer · Figma · Webflow · Tailwind CSS
+            </span>
           </div>
 
-          <div className="flex items-center gap-3 text-slate-400">
+          <div className="flex items-center gap-3 text-slate-500">
             <span>• 100% Production-Ready</span>
             <span>• 60 FPS Native</span>
           </div>
         </div>
-
       </div>
 
-      {/* Global CSS for Marquee Animation Keyframes */}
+      {/* Marquee Animation */}
       <style>{`
         @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
+          0% {
+            transform: translateX(0%);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
         }
       `}</style>
     </section>

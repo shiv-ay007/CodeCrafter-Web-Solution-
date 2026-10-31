@@ -3,7 +3,6 @@ import HeroMaintenance from '../Components/WebSolution/WebsiteMaintance/HeroMain
 import MaintenancePlans from '../Components/WebSolution/WebsiteMaintance/MaintenancePlans'
 import SecurityAudit from '../Components/WebSolution/WebsiteMaintance/SecurityAudit'
 import MaintenanceFaq from '../Components/WebSolution/WebsiteMaintance/MaintenanceFaq'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 
 const WebsiteMaintenance = () => {
@@ -13,7 +12,7 @@ const WebsiteMaintenance = () => {
       <MaintenancePlans />
       <SecurityAudit />
       <MaintenanceFaq />
-      <Contactus />
+    
       <Cta />
     </>
   )

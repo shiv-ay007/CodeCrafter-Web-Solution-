@@ -4,7 +4,6 @@ import LinkedInLeadGenGrid from '../Components/DigitalGrowthComponents/LinkedInL
 import LinkedInLeadGenSteps from '../Components/DigitalGrowthComponents/LinkedInLeadGen/LinkedInLeadGenSteps'
 import LinkedInCompanyFeed from '../Components/DigitalGrowthComponents/LinkedInLeadGen/LinkedInCompanyFeed'
 import LinkedInLeadGenFaq from '../Components/DigitalGrowthComponents/LinkedInLeadGen/LinkedInLeadGenFaq'
-import Contactus from '../Components/HeroComponent/Contactus'
 import Cta from '../Components/HeroComponent/Cta'
 
 const LinkedInLeadGen = () => {
@@ -15,7 +14,7 @@ const LinkedInLeadGen = () => {
       <LinkedInLeadGenSteps />
       <LinkedInCompanyFeed />
       <LinkedInLeadGenFaq />
-      <Contactus />
+    
       <Cta />
     </>
   )

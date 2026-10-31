@@ -9,6 +9,14 @@ import review5 from "../../assets/images/review5.png";
 import review6 from "../../assets/images/reviews6.png";
 import review7 from "../../assets/images/review9.png";
 import review8 from "../../assets/images/review8.png";
+import review9 from "../../assets/images/review10.png";
+import review10 from "../../assets/images/review11.png";
+import review11 from "../../assets/images/review12.png";
+import review12 from "../../assets/images/review13.png";
+import review13 from "../../assets/images/review14.png";
+import review15 from "../../assets/images/review15.png";
+import review16 from "../../assets/images/review9.png";
+import review17 from "../../assets/images/review8.png";
 
 const GOOGLE_REVIEWS_URL =
   "https://maps.app.goo.gl/CZADrx1bTFs5b5R47";
@@ -22,6 +30,14 @@ const reviews = [
   { image: review6, name: "Rahul Kumar", rotate: 3 },
   { image: review7, name: "Ariz Niyaz", rotate: -4 },
   { image: review8, name: "Shivam Yadav", rotate: 3 },
+   { image: review9, name: "Google Reviewer 9", rotate: -3 },
+  { image: review10, name: "Google Reviewer 10", rotate: 4 },
+  { image: review11, name: "Google Reviewer 11", rotate: -5 },
+  { image: review12, name: "Google Reviewer 12", rotate: 3 },
+  { image: review13, name: "Google Reviewer 13", rotate: -4 },
+   { image: review15, name: "Google Reviewer 15", rotate: -3 },
+   { image: review16, name: "Ariz Niyaz", rotate: -4 },
+  { image: review17, name: "Shivam Yadav", rotate: 3 },
 ];
 
 const Reviews = () => {
