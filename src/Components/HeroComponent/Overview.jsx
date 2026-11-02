@@ -221,7 +221,7 @@ const Overview = () => {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#004658]" />
                 </span>
                 <span className="text-[11px] sm:text-xs font-mono font-semibold tracking-[0.2em] text-[#004658] uppercase">
-                  ABOUT CODECRAFTER
+                  ABOUT CODECRAFTER heheheheh
                 </span>
               </motion.div>
 
@@ -469,4 +469,4 @@ const Overview = () => {
   );
 };
 
-export default Overview;
+export default Overview;
