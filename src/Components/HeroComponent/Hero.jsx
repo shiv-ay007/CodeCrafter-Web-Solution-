@@ -203,22 +203,12 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           
           {/* LEFT COLUMN: Clean & Scaled Headline & Typography */}
-          <motion.div 
-            className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left"
-            initial={{ opacity: 0, x: -25 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1.0] }}
-          >
+          <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left">
             {/* Tagline Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.4 }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/90 text-[#004658] text-xs sm:text-[13px] font-medium tracking-wide mb-4 sm:mb-5 shadow-xs"
-            >
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-50 border border-cyan-200/90 text-[#004658] text-xs sm:text-[13px] font-medium tracking-wide mb-4 sm:mb-5 shadow-xs">
               <span className="text-cyan-600 font-semibold text-sm">✦</span>
               <span className="uppercase tracking-wider">Advanced Web & Software Engineering Studio</span>
-            </motion.div>
+            </div>
 
             {/* Scaled Hero Headline */}
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[58px] xl:text-[66px] font-bold tracking-[-0.035em] text-slate-950 leading-[1.08] sm:leading-[1.06] mb-4 sm:mb-5">
@@ -281,7 +271,7 @@ const Hero = () => {
               </div>
             </div>
 
-          </motion.div>
+          </div>
 
         </div>
 
@@ -333,7 +323,7 @@ const Hero = () => {
           </div>
 
           {/* Dynamic Animated Slide Content */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait" initial={false}>
             <motion.div
               key={metricSlide}
               initial={{ opacity: 0, y: 10 }}
