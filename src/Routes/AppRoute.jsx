@@ -89,7 +89,7 @@ const AppRoute = () => {
 
   return (
     <Suspense fallback={<div className="min-h-screen bg-white" />}>
-      <AnimatePresence mode="wait" initial={false}>
+      <>
         <Routes location={location} key={location.pathname}>
           {/* Core Company Routes */}
           <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
@@ -174,7 +174,7 @@ const AppRoute = () => {
           {/* Fallback route */}
           <Route path="*" element={<PageWrapper><Home /></PageWrapper>} />
         </Routes>
-      </AnimatePresence>
+      </>
     </Suspense>
   )
 }

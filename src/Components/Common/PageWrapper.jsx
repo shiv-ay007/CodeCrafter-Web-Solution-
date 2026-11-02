@@ -27,15 +27,9 @@ const pageVariants = {
 
 export const PageWrapper = ({ children }) => {
   return (
-    <motion.div
-      variants={pageVariants}
-      initial={false}
-      animate="animate"
-      exit="exit"
-      className="w-full min-h-screen"
-    >
+    <div className="w-full min-h-screen">
       {children}
-    </motion.div>
+    </div>
   )
 }
 

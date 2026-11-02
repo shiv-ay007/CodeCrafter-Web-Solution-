@@ -161,7 +161,7 @@ const Hero = () => {
       className="w-full relative overflow-hidden pt-20 sm:pt-22 lg:pt-24 pb-6 sm:pb-8"
     >
       {/* Background Image Layer: Perfectly Framed & Fitted */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
         <img
           src={heroBg}
           alt="CodeCrafter Workspace & Software Studio"
@@ -169,8 +169,8 @@ const Hero = () => {
           fetchpriority="high"
           loading="eager"
           decoding="async"
-          width="1672"
-          height="941"
+          width="1400"
+          height="788"
         />
         {/* Soft Multi-Stop Ambient & Readability Gradient Overlay matching Image 1 */}
         <div 
@@ -251,10 +251,10 @@ const Hero = () => {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3.5 pt-0.5">
               {/* Overlapping Avatars */}
               <div className="flex items-center -space-x-2">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Enterprise Web Portal Project" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Dedicated Engineering Squad" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Custom Software Architecture" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&h=100&q=80" alt="Client Review - Mobile App Development" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=72&h=72&q=75" alt="Client Review - Enterprise Web Portal Project" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=72&h=72&q=75" alt="Client Review - Dedicated Engineering Squad" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=72&h=72&q=75" alt="Client Review - Custom Software Architecture" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=72&h=72&q=75" alt="Client Review - Mobile App Development" width="36" height="36" loading="lazy" decoding="async" className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full border-2 border-white object-cover shadow-xs" />
                 <div className="w-8.5 h-8.5 sm:w-9 sm:h-9 rounded-full bg-[#004658] border-2 border-white text-white text-[10.5px] sm:text-[11px] font-semibold flex items-center justify-center shadow-xs">
                   50+
                 </div>
@@ -325,8 +325,7 @@ const Hero = () => {
           {/* Dynamic Animated Slide Content */}
           <AnimatePresence mode="wait" initial={false}>
             <motion.div
-              key={metricSlide}
-              initial={{ opacity: 0, y: 10 }}
+              key={metricSlide} initial={false}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}

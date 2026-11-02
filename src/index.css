@@ -22,11 +22,6 @@ body {
   background-color: #ffffff;
   color: #0f172a;
   letter-spacing: -0.011em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-touch-callout: none;
 }
 
 /* Allow text selection inside form inputs and textareas so users can type and edit freely */
